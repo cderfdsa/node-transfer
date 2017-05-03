@@ -13,6 +13,7 @@ gulp.task("clean",function(){
 	return stream;
 });
 
+// copy
 gulp.task("copyBin",function(){
 	var stream = gulp.src("src/bin/**/*")
 	.pipe(gulp.dest('dist/bin'));
@@ -23,13 +24,11 @@ gulp.task("copyConfig",function(){
 	.pipe(gulp.dest('dist/config'));
 	return stream;
 });
-
 gulp.task("copyAsst",function(){
 	var stream = gulp.src("src/asst/**/*")
 	.pipe(gulp.dest('dist/asst'));
 	return stream;
 });
-// copy views
 gulp.task("copyViews",function(){
 	var stream = gulp.src("src/views/**/*")
 	.pipe(gulp.dest('dist/views'));
