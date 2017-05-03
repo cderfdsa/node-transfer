@@ -40,4 +40,5 @@ wilddogConfig.get "web"
     res.redirect "/auth/weixinDistribute"
   router.get "/auth/weixinDistribute",passport.authenticate("weixinDistribute"),(req,res) ->
   router.get "/auth/weixinDistribute/callback",passport.authenticate("weixinDistribute", failureRedirect:"/login",session:false),WeixinDistributeCtrl.callback
+
 module.exports = router
