@@ -1,3 +1,4 @@
+# 本项目下的 routers
 express = require "express"
 router = express.Router()
 Proxy = require "./../proxy/index"
@@ -29,7 +30,6 @@ router.get "/download",(req,res) ->
   else
     console.log "ANDROID 下载"
     res.redirect "http://wap.beautysite.cn/downloads/meiwan.apk"
-
 
 router.get "/logout",(req,res) ->
   res.clearCookie "backUrl",{domain:req.app.get("domain")}

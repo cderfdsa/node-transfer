@@ -1,4 +1,5 @@
-# 微信授权登录
+# passport 实现微信登录
+
 express = require "express"
 router = express.Router()
 passport = require "passport"

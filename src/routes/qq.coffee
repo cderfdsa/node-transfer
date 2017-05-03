@@ -1,3 +1,4 @@
+# passport 实现 QQ 登录
 express = require "express"
 router = express.Router()
 passport = require "passport"
