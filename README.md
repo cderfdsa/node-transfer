@@ -24,13 +24,27 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 |    |
 |    |--- src		# 开发目录
 |    |    |
-|    |    |─── bin	# node 入口
+|    |    |─── public	# 前端 build 后的代码拷贝到这里
+|    |    |
+|    |    |─── views	# 前端 html 目录
+|    |    |
+|    |    |─── routes	# 路由
+|    |    |
+|    |    |─── ctrl	# 控制器
+|    |    |
+|    |    |─── modal	# modal
 |    |    |
 |    |    |─── db	# 数据库服务
 |    |    |    |
 |    |    |    └── redis.coffee   # redis 服务
 |    |    |
-|    |    └─── proxy	# api 转发
+|    |    |─── proxy	# api 转发
+|    |    |
+|    |    |─── config	# 项目配置
+|    |    |
+|    |    |─── test	# 测试（unit/e2e）
+|    |    |
+|    |    └─── bin	# node 入口
 |    |
 |    |─── dist		# 产出目录
 |    |
@@ -48,4 +62,21 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 |    |
 |    |─── .gitigore	# git 忽略文件列表
 		......
+```
+
+> 前端代码产出后，重启服务
+restart.sh
+
+```bash
+#! /bin/bash
+export NODE_ENV=development
+cd /root/project/node-transfer/
+git pull
+gulp release
+mkdir -p /root/project/node-transfer/dist/public
+ln -s /root/project/[feLibraryName]/dist/ /root/project/node-transfer/dist/public/dist
+# 如果html也改变了（文件md5，hash，时间戳等）
+cp /root/project/[feLibraryName]/src/index.html /root/project/node-transfer/dist/views/index.ejs
+
+pm2 restart node-transfer
 ```
