@@ -28,7 +28,6 @@ weixinAuth = require "./routes/weixin"
 weixinDistribute = require "./routes/weixinDistribute"
 api = require "./routes/api"
 h5 = require "./routes/h5"
-share = require "./routes/share"
 AuthCtrl = require "./ctrl/authCtrl"
 
 app = express()
@@ -70,7 +69,6 @@ app.use session(
 app.use log4js.connectLogger(logger, level: log4js.levels.INFO)
 app.use subdomain("dist",weixinDistribute)
 
-app.use "/share",share
 app.use AuthCtrl.setBackUrl
 app.use "/auth/weibo", weiboAuth
 app.use "/auth/qq", qqAuth
