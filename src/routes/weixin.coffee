@@ -26,8 +26,8 @@ weixinStrategy = new WeixinStrategy opt,(accessToken, refreshToken, profile, don
 		unionid:profile._json.unionid
 	done null,user
 
-passport.use "weixin",weixinStrategy
-router.get "/",passport.authenticate("weixin"),(req,res) ->
-router.get "/callback",passport.authenticate("weixin", failureRedirect:"/login",session:false),AuthCtrl.callback
+passport.use "weixin", weixinStrategy
+router.get "/", passport.authenticate("weixin"), (req,res) ->
+router.get "/callback", passport.authenticate("weixin", failureRedirect: "/login", session: false), AuthCtrl.callback
 
 module.exports = router
