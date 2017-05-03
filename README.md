@@ -20,30 +20,30 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 > 目录结构
 
 ```
-|---node-transfer
+|--- node-transfer
 |	|
-|	|---src			# 开发目录
+|	|--- src			# 开发目录
 |	|    |
-|	|    |───config 配置文件
+|	|    |─── config 配置文件
 |	|    |	|
 |	|    |	└── menu   #widget模板组件
 |	|    |
-|	|    └───config 配置文件
+|	|    └─── config 配置文件
 |	|
-|	|---dist		# 产出目录
+|	|--- dist		# 产出目录
 |	|
-|	|---node_modules	# npm 包依赖
+|	|--- node_modules	# npm 包依赖
 |	|
-|	|---buildDocker.sh	# Docker
+|	|--- buildDocker.sh	# Docker
 |	|
-|	|---Dockerfile		# Docker
+|	|--- Dockerfile		# Docker
 |	|
-|	|---gulpfile.js		# gulp 配置文件
+|	|--- gulpfile.js		# gulp 配置文件
 |	|
-|	|---package.json	# npm 包配置
+|	|--- package.json	# npm 包配置
 |	|
-|	|---README.md		# 入口文档
+|	|--- README.md		# 入口文档
 |	|
-|	|---.gitigore		# git 忽略文件列表
+|	|--- .gitigore		# git 忽略文件列表
 		......
 ```
