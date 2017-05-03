@@ -1,1 +1,0 @@
-define(["app"],function(n){n.angular.service("initService",["$location",function(){return{headinfo:{description:"",keywords:"",title:""},contact:{link:[{name:"",src:""}],copyright:"",addr:"",tel:"",contactinfo:[{}]}}}])});

@@ -1,1 +1,0 @@
-@keyframes load_fadeIn{from{opacity:0}to{opacity:1}}@-webkit-keyframes load_fadeIn{from{opacity:0}to{opacity:1}}.loading_fadeIn{animation:load_fadeIn .5s;-webkit-animation:load_fadeIn .5s;animation-fill-mode:forwards;-webkit-animation-fill-mode:forwards}

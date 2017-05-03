@@ -36,7 +36,7 @@ app.use bodyParser.json()
 app.use bodyParser.urlencoded(extended: false)
 # 带有签名的cookie
 app.use cookieParser("meiwan")
-app.use express.static(path.join(__dirname, 'asst'))
+# app.use express.static(path.join(__dirname, 'static'))
 app.use log4js.connectLogger(logger, level: log4js.levels.INFO)
 
 weixinDistribute = require './routes/weixinDistribute'
@@ -48,7 +48,6 @@ qqAuth = require './routes/qq'
 weiboAuth = require './routes/weibo'
 weixinAuth = require './routes/weixin'
 api = require './routes/api'
-h5 = require './routes/h5'
 AuthCtrl = require './ctrl/authCtrl'
 
 # 路由分发，授权
@@ -58,7 +57,6 @@ app.use "/auth/qq", qqAuth
 app.use "/auth/weixin", weixinAuth
 
 app.use AuthCtrl.checkIsWeixin
-app.use "/h5", h5
 app.use "/", routes
 app.use "/api", api
 
