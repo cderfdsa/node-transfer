@@ -1,4 +1,4 @@
-# created by zl at 2016-08-12 11:34
+# Created by zl on 17-05-03 11:34
 Product = require "./../model/product"
 Member = require "./../model/member"
 async = require "async"
