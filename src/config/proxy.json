@@ -1,4 +1,6 @@
 {
-  "host":"http://apiv3.localdomain:3000/mobile",
-  "/site/sysconf":"/mobile/system/config"
+	"dev-host":"http://192.168.4.224:3000/mobile",
+	"test-host":"http://192.168.101.7:3000/mobile",
+	"host":"http://apiv3.localdomain:3000/mobile",
+	"/site/sysconf":"/mobile/system/config"
 }
