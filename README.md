@@ -29,14 +29,14 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 |     |
 |     |---buildDocker.sh# Docker
 |     |
-|     |---Dockerfile    # Docker
+|     |---Dockerfile	# Docker
 |     |
-|     |---gulpfile.js   # gulp 配置文件
+|     |---gulpfile.js	# gulp 配置文件
 |     |
-|     |---package.json  # npm 包配置
+|     |---package.json	# npm 包配置
 |     |
-|     |---README.md     # 入口文档
+|     |---README.md		# 入口文档
 |     |
-|     |---.gitigore     # git 忽略文件列表
+|     |---.gitigore		# git 忽略文件列表
 		......
 ```
