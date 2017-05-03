@@ -46,16 +46,16 @@ console.log "------env------",app.get "env"
 switch app.get "env"
   when "production"
     app.set "domain",".beautysite.cn"
-    app.use express.static(path.join(__dirname, 'public/dist'))
+    app.use express.static(path.join(__dirname, 'public'))
     redisconfig = require('./config/redis.json')
   when "dev"
     app.set "domain",".meiwan.me"
     redisconfig = require('./config/test/redis.json')
-    app.use express.static(path.join(__dirname, '../src/public/dev'))
+    app.use express.static(path.join(__dirname, '../src/public'))
   else
     app.set "domain",".meiwan.me"
     redisconfig = require('./config/test/redis.json')
-    app.use express.static(path.join(__dirname, 'public/dist'))
+    app.use express.static(path.join(__dirname, 'public'))
 app.use express.static(path.join(__dirname, 'asst'))
 app.use session(
   store:new RedisStore

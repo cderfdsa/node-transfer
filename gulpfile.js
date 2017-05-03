@@ -23,8 +23,8 @@ gulp.task("copyConfig",function(){
   return stream;
 });
 gulp.task("copyPublic",function(){
-  var stream = gulp.src("src/public/dist/**/*")
-  .pipe(gulp.dest('dist/public/dist'));
+  var stream = gulp.src("src/public/**/*")
+  .pipe(gulp.dest('dist/public'));
   return stream;
 });
 
@@ -35,13 +35,13 @@ gulp.task("copyAsst",function(){
 });
 
 gulp.task("copyIndex",function(){
-  var stream = gulp.src("src/public/src/index.html")
+  var stream = gulp.src("src/public/index.html")
   .pipe(rename("index.ejs"))
   .pipe(gulp.dest('dist/views'))
   return stream;
 });
 gulp.task("delIndex",function(){
-  var stream = gulp.src("dist/public/dist/index.html")
+  var stream = gulp.src("dist/public/index.html")
   .pipe(clean());
   return stream;
 });

@@ -69,14 +69,13 @@ restart.sh
 
 ```bash
 #! /bin/bash
+# 前端产出代码同步到 src/public
+ln -s /root/project/[feLibraryName]/dist/ /root/project/node-transfer/src/public
+
 export NODE_ENV=development
 cd /root/project/node-transfer/
 git pull
 gulp release
-mkdir -p /root/project/node-transfer/dist/public
-ln -s /root/project/[feLibraryName]/dist/ /root/project/node-transfer/dist/public/dist
-# 如果html也改变了（文件md5，hash，时间戳等）
-cp /root/project/[feLibraryName]/src/index.html /root/project/node-transfer/dist/views/index.ejs
 
 pm2 restart node-transfer
 ```
