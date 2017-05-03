@@ -65,6 +65,7 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 ```
 
 > 前端代码产出后，重启服务
+
 restart.sh
 
 ```bash
