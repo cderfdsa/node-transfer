@@ -25,8 +25,8 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 |	|---src			# 开发目录
 |	|	|
 |	|	|---config 配置文件
-|	|	|	|
-|	|	|	└── menu   #widget模板组件
+|	|	|    |
+|	|	|    └── menu   #widget模板组件
 |	|	|
 |	|	|---config 配置文件
 |	|
