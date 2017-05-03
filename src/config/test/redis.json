@@ -1,7 +1,0 @@
-{
-  "hostname": "192.168.101.6",
-  "host": "192.168.101.6",
-  "port": 6379,
-  "password": "meiwan16d",
-  "name":"my_redis"
-}

@@ -1,15 +1,14 @@
 _ = require "lodash"
 Promise = require "bluebird"
 request = require "request"
-config = require "./../config/proxy.json"
 
 switch process.env.NODE_ENV
 	when "production"
-		host = config.host
+		config = require "./../config/proxy.json"
 	when "dev"
-		host = config['dev-host']
+		config = require("./../config/proxy.json").dev
 	else
-		host = config['test-host']
+		config = require("./../config/proxy.json").test
 
 module.exports =
 class Proxy
@@ -47,7 +46,7 @@ class Proxy
 						req.query.token = req.cookies.user_login_token
 					agent = req.get('User-Agent')
 					options =
-						url: host + req.path
+						url: config.host + req.path
 						method: req.method
 						qs: req.query
 						gzip: true

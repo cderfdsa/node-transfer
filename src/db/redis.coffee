@@ -1,5 +1,5 @@
 ###*
-# Created by zl on 15-11-26.
+# Created by zl on 17-05-03.
 ###
 
 bluebird = require('bluebird')
@@ -8,10 +8,11 @@ bluebird.promisifyAll redis.RedisClient.prototype
 bluebird.promisifyAll redis.Multi.prototype
 redisconfig = undefined
 if process.env.NODE_ENV == 'production'
-  redisconfig = require('./../config/redis.json')
+	redisconfig = require('./../config/redis.json')
 else
-  redisconfig = require('./../config/test/redis.json')
+	redisconfig = require('./../config/redis.json').test
+
 client = redis.createClient(redisconfig.port, redisconfig.host,
-  auth_pass: redisconfig.password
-  prefix: 'mw:')
+	auth_pass: redisconfig.password
+	prefix: 'mw:')
 exports = module.exports = client
