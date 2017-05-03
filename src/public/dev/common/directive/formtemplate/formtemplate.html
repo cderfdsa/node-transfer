@@ -1,0 +1,40 @@
+<form class="formtemplate_box" >
+	<div class="formLine {{list.type}}" ng-repeat="list in formlist track by $index">
+		<!-- 文字 -->
+		<p ng-if="list.type=='text'" ng-bind-html="list.tpl">
+		</p>
+		<!-- 语音验证 -->
+		<p ng-if="list.type=='voice'">
+			{{list.text}}
+			<span ng-click="getCode(1)">{{list.btnText}}</span>
+		</p>
+		<!-- 旧手机 -->
+		<p ng-if="list.type=='old_mobile'">
+			<img ng-src="{{list.icon}}">
+			<input type="text" name="{{list.type}}" maxlength="11" placeholder="{{list.placeholder}}" ng-model="list.value" ng-keyup="canSubmit()" ng-focus="canSubmit()">
+			<img class="close" ng-src="{{list.icon_close}}" ng-click="clearEmpty($index)" ng-show="list.value">
+		</p>
+		<!-- 手机 -->
+		<p ng-if="list.type=='mobile'">
+			<img ng-src="{{list.icon}}">
+			<input type="text" name="{{list.type}}" maxlength="11" placeholder="{{list.placeholder}}" ng-model="list.value" ng-keyup="canSubmit()" ng-focus="canSubmit()">
+			<img class="close" ng-src="{{list.icon_close}}" ng-click="clearEmpty($index)" ng-show="list.value">
+		</p>
+		<!-- 短信验证码 -->
+		<p class="clearfix" ng-if="list.type=='smsCaptcha'">
+			<img ng-src="{{list.icon}}">
+			<input class="pull-left" type="text" name="{{list.type}}" maxlength="8" placeholder="{{list.placeholder}}" ng-model="list.value" ng-keyup="canSubmit()" ng-focus="canSubmit()">
+			<img class="close" ng-src="{{list.icon_close}}" ng-click="clearEmpty($index)" ng-show="list.value">
+			<button class="pull-right {{smsCaptchaStatus}}" type="button" ng-click="getCode(0)" ng-bind-html="smsCaptchaText"></button>
+		</p>
+		<!-- 密码 -->
+		<p ng-if="list.type=='password'">
+			<img ng-src="{{list.icon}}">
+			<input type="text" name="password" hidden>
+			<input type="{{showPwd ? 'text' : 'password'}}" name="{{list.type}}" maxlength="20" placeholder="{{list.placeholder}}" ng-model="list.value" ng-change="canSubmit()" ng-focus="canSubmit()">
+			<img ng-src="{{showPwd ? list.iconRightSee : list.iconRight}}" ng-click="seePwd()">
+		</p>
+		<!-- 提交按钮 -->
+		<button class="{{active}}" type="submit" ng-click="submit()" ng-if="list.type=='submit'">{{list.text}}</button>
+	</div>
+</form>

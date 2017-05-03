@@ -1,0 +1,45 @@
+<heade head-title="'添加评论'"></heade>
+
+<!-- content:有评论状态 -->
+<div class="content userCenterAddComment">
+	<section>
+		<!-- 评论 -->
+		<div class="list-block media-list" ng-repeat="order in data.order.OrderProducts">
+		  <!-- 列表容器 -->
+		  	<div class="item" >
+		        <div class="item-link item-content" >
+		        <!-- 图片容器 -->
+			        <div class="item-media">
+			          	<img src="http://img.beautysite.cn{{order.image}}!slist" class="productimg">
+			        </div>
+			        <!-- 内容容器 -->
+			        <div class="item-inner">
+			        	<a href="#/goods/detail/{{order.productId}}">
+				            <div class="item-title-row">
+					              <div class="item-title" >{{order.name}}</div>
+				            </div>
+			            </a>
+			            <!-- 爱心 -->
+			            <div class="item-text">
+			            	<img src="/static/img/userCenter/u{{order.stars>$index?'8':'10'}}.png" class="heart" ng-repeat="star in [0,1,2,3,4]" ng-click="changeStar($index, order.index)">
+			            </div>
+			        </div>
+		        </div>
+		        <!-- 输入框内容 -->  
+		       <div class="textBlock">
+		        	<textarea placeholder="剁手也值得~默默的好评!" ng-model="order.areaText" ng-keyup="textAreaFn($index)"></textarea>
+		         	<span>{{order.areaTextLength?order.areaTextLength:0}}/300</span>
+		        </div> 
+			</div>   
+	 	</div>
+	</section>
+
+	<!-- 按钮 -->
+	<section>
+		<div class="content-block">
+			<button class="button {{starsLimit?'actives':''}}" type="button" ng-click="submmit()">
+				发表评论
+			</button>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,53 @@
+/* Variables */
+.userCenter_message {
+  background: #f2f2f2;
+}
+.userCenter_message .item-content:nth-of-type(1) .icon {
+  background: url(/static/img/userCenter/icon_comment.png) no-repeat center center;
+  background-size: contain;
+}
+.userCenter_message .item-content:nth-of-type(2) .icon {
+  background: url(/static/img/userCenter/icon_wow.png) no-repeat center center;
+  background-size: contain;
+}
+.userCenter_message .item-content:nth-of-type(3) .icon {
+  background: url(/static/img/userCenter/icon_fans.png) no-repeat center center;
+  background-size: contain;
+}
+.userCenter_message .item-content:nth-of-type(4) .icon {
+  background: url(/static/img/userCenter/icon_notify.png) no-repeat center center;
+  background-size: contain;
+}
+.userCenter_message .list-block {
+  margin: 0;
+}
+.userCenter_message .list-block .item-inner {
+  display: block;
+  font-size: 0.7rem;
+  color: #555;
+  margin-left: .4rem;
+  margin-left: .1rem;
+}
+.userCenter_message .list-block .item-title {
+  display: inline-block;
+  vertical-align: middle;
+}
+.userCenter_message .list-block .icon {
+  vertical-align: middle;
+  width: 1.7rem;
+  height: 1.7rem;
+  position: relative;
+  margin-right: .3rem;
+}
+.userCenter_message .list-block .icon.new:after {
+  content: '';
+  width: .4rem;
+  height: .4rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  background: #f00;
+  border: 1px solid #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+}

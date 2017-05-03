@@ -1,0 +1,60 @@
+/* Variables */
+.community_postPicture {
+  background: #f2f2f2;
+  font-size: 0.7rem;
+}
+.community_postPicture .pic {
+  background: #fff;
+  color: #ccc;
+  margin-bottom: .5rem;
+  padding: .5rem;
+}
+.community_postPicture .pic textarea {
+  margin-bottom: 1rem;
+  width: 100%;
+  resize: none;
+  border: none;
+  height: 4rem;
+}
+.community_postPicture .pic .imgBox {
+  position: relative;
+}
+.community_postPicture .pic .imgBox img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border: 1px solid #e6e6e6;
+}
+.community_postPicture .pic .imgBox .uploadFileInput {
+  width: 4.5rem !important;
+  height: 4.5rem !important;
+}
+.community_postPicture .tags {
+  padding: .5rem;
+  background: #fff;
+  color: #333;
+}
+.community_postPicture .tags img {
+  width: .8rem;
+  margin-right: .35rem;
+  margin-bottom: -0.1rem;
+}
+.community_postPicture .tags .pull-right {
+  color: #999;
+}
+.community_postPicture .tags .pull-right .icon {
+  margin-left: .5rem;
+}
+.community_postPicture .tags .tagList {
+  color: #c24c69;
+}
+.community_postPicture .tags .tagList li {
+  border: 1px solid #e7bec8;
+  border-radius: .1rem;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  padding: 0 .7rem;
+  margin: .35rem .5rem .35rem 0;
+}
+.community_postPicture .tags .tagList li:last-of-type {
+  margin-right: 0;
+}

@@ -1,0 +1,84 @@
+.userCenter_collect {
+  padding: 0 .5rem;
+  font-size: .6rem;
+}
+
+.userCenter_collect li {
+  background: #fff;
+  margin: .5rem 0;
+}
+
+.userCenter_collect li p.date {
+  text-align: right;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 1.5rem;
+  padding: 0 .5rem;
+  margin: 0;
+}
+
+.userCenter_collect li .goodsBox a {
+  display: block;
+  color: #808080;
+  padding: .5rem;
+}
+
+.userCenter_collect li .goodsBox a img {
+  width: 4rem;
+  border: 1px solid #ddd;
+}
+
+.userCenter_collect li .goodsBox a div {
+  margin-left: 4.5rem;
+}
+
+.userCenter_collect li .goodsBox a div p {
+  margin: 0;
+}
+
+.userCenter_collect li .goodsBox a div p:nth-child(1) {
+  margin-bottom: .5rem;
+  color: #555;
+  font-size: .65rem;
+  max-height: 1.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.userCenter_collect li .goodsBox a div p span {
+  display: inline-block;
+  width: 48%;
+}
+
+.userCenter_collect li .goodsBox a div p span span {
+  color: #ff577f;
+  display: inline;
+}
+
+.userCenter_collect li .del {
+  padding: .5rem;
+  text-align: right;
+}
+
+.userCenter_collect li .del button {
+  border: 1px solid #b3b3b3;
+  color: #b3b3b3;
+  background: #fff;
+  width: 4rem;
+  line-height: 1rem;
+  border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+}
+
+.none {
+  text-align: center;
+  color: #808080;
+}
+
+.none img {
+  width: 26.67%;
+  display: block;
+  margin: .5rem auto;
+}

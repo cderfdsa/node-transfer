@@ -1,0 +1,51 @@
+<!-- 邀请闺蜜好友分享页 -->
+
+<div class="content userCenter_inviteBonus">
+    <div class="contentBox" ng-show="!showSuccess">
+    	<img class="photo" src="/static/img/userCenter/share_defaultPhoto.png" alt="">
+
+    	<form action="">
+    		<p>
+	            <input type="text" maxlength="11" ng-model="mobile"
+	            placeholder="请输入手机号">
+	        </p>
+	        <p class="clearfix">
+	            <input type="text" maxlength="6" ng-model="captcha"
+	            placeholder="请输入验证码">
+	            <button class="pull-right {{smsCaptchaStatus}}" type="button" ng-click="getCode(0)" ng-bind-html="smsCaptchaText"></button>
+	        </p>
+	        <p>
+	            收不到短信？<span ng-click="getCode(0)">尝试语音验证码</span>
+	        </p>
+	        <p><button type="button" ng-click="submit()"></button></p>
+	        <!-- <p>
+	        	<a href="javascript: void(0);" ng-click="downloadApp()">
+	        		<img src="/static/img/userCenter/doanloadText.png" alt="">
+	        	</a>
+	        </p> -->
+    	</form>
+
+    	<!-- <a class="dowanloadApp" href="javascript: void(0);" ng-click="downloadApp()">
+    		<img src="/static/img/userCenter/icon_download.png" alt="">
+    		下载美妆商城APP，了解更多
+    	</a> -->
+        <img class="qrCode" src="/static/img/userCenter/qr_inviteBonus.png">
+    </div>
+
+    <!-- success box -->
+    <div class="successBox" ng-show="showSuccess">
+    	<div class="red">
+    	    <img src="/static/img/userCenter/redParket_188.png" alt="">
+    	</div>
+    	<div class="clearfix">
+    		<img src="/static/img/userCenter/ambCenter/icon_buySec.png" alt="" class="pull-left">
+    		<div>
+    			<span>188元红包领取成功！</span>
+    			<span>已放入账号 {{mobile}}！</span>
+    		</div>
+    	</div>
+    	<!-- <a class="btn" href="javascript: void(0);" ng-click="downloadApp()"></a> -->
+    	<div class="see"><a href="#/userCenter/redPacket/0">查看红包》</a></div>
+    	<img src="/static/img/userCenter/qr.png" alt="" class="qr">
+    </div>
+</div>

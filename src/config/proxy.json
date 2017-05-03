@@ -1,0 +1,4 @@
+{
+  "host":"http://apiv3.localdomain:3000/mobile",
+  "/site/sysconf":"/mobile/system/config"
+}

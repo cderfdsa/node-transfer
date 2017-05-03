@@ -1,0 +1,55 @@
+header {
+  /* 圆形左箭头 */
+  /* 滚动渐显初始化效果 */
+}
+header .title {
+  color: #000000;
+  font-size: .85rem;
+  line-height: 2.2rem;
+}
+header .pull-left,
+header .pull-right {
+  color: #000000;
+  font-size: .75rem;
+}
+header .pull-left.icon,
+header .pull-right.icon {
+  font-size: .9rem;
+  padding: .65rem .1rem;
+}
+header .pull-right.icon {
+  font-size: .75rem;
+}
+header.bar {
+  background-color: transparent;
+}
+header.bar:after {
+  display: none;
+}
+header .bg {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+header.ng-hide ~ .content,
+header.scroll ~ .content {
+  top: 0;
+}
+header.circle_left .icon-left:before {
+  content: '';
+  position: absolute;
+  background: url(/static/img/userCenter/icon_circleLeft.png) no-repeat center top;
+  background-size: cover;
+  width: 1.1rem;
+  height: 1.1rem;
+  left: 0;
+  top: .65rem;
+}
+header .scroll.bg {
+  opacity: 0;
+}

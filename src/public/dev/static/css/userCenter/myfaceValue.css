@@ -1,0 +1,65 @@
+.page {
+  background: #faf7f0;
+  max-width: 750px;
+}
+.userCentermyfaceValue {
+  background: #f2f2f2;
+}
+.userCentermyfaceValue .count {
+  background: #ffffff;
+  font-size: 0.6rem;
+  color: #656565;
+  padding: 1.2rem 0.5rem;
+}
+.userCentermyfaceValue .count p {
+  margin: 0;
+}
+.userCentermyfaceValue .count .number h1 {
+  margin: 0;
+  color: #ff577f;
+  font-size: 2.2rem;
+  font-weight: normal;
+  display: inline-block;
+}
+.userCentermyfaceValue .count .number a {
+  color: #616161;
+  line-height: 3rem;
+  vertical-align: middle;
+}
+.userCentermyfaceValue .list-block {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #555555;
+}
+.userCentermyfaceValue .list-block ul li {
+  padding: 0;
+}
+.userCentermyfaceValue .list-block ul li .item-inner {
+  padding: 0.7rem 0.5rem;
+  margin: 0;
+}
+.userCentermyfaceValue .list-block ul li p {
+  margin: 0;
+}
+.userCentermyfaceValue .list-block ul li .time {
+  font-size: 0.5rem;
+  color: #cccccc;
+}
+.userCentermyfaceValue .list-block ul li .value {
+  color: #ff577f;
+}
+.load .nullValue {
+  text-align: center;
+  padding-top: 5rem ;
+  margin: 0 auto;
+}
+.load .nullValue img {
+  width: 40%;
+}
+.load .loadAll {
+  display: none;
+}
+.load .swipLoad {
+  display: none;
+}

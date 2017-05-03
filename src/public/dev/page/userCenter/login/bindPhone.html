@@ -1,0 +1,16 @@
+<heade class="userCenter_login_bindPhone_header" head-title="mobiles?'更换绑定':'绑定手机号码'" head-rightfn="saveUserInfo"></heade>
+
+<!-- 绑定手机号码 -->
+<div class="content userCenter_login_bindPhone">
+	<section class="bindPhone">
+		<p ng-if="mobiles" class="phone">已绑定手机号码:<span>{{mobileView}}</span></p>
+		<formtemplate
+			ng-formlists="staticData"
+			ng-url="'/account/bindMobile'"
+			ng-toastclass="'toast-login'"
+			ng-sucback="sucback"
+		>
+		</formtemplate>
+	</section>
+
+</div>

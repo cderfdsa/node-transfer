@@ -1,0 +1,41 @@
+<!-- 专题 -->
+<heade class="home_special_header" head-title="specialData.detail.title" head-leftfn="headLeftFn" head-rightfn="shareFn"></heade>
+
+<!-- content -->
+<div class="content home_special">
+    <!-- 首页大图 -->
+    <section class="goodsDesc" ng-bind-html="specialData.detail.desc"></section>
+
+    <!-- 推荐 -->
+    <section class="probably_more">
+        <h2 class="title_more" ng-if="specialData.products.length">
+            <span>
+                <img src="/static/img/home/icon_heart.png" alt="">
+                相关商品
+            </span>
+        </h2>
+
+        <ul class="goodsList clearfix" ng-if="specialData.products.length">
+            <li class="pull-left" ng-repeat="row in specialData.products">
+                <a href="{{!headerForm?domain+'/':''}}#/goods/detail/{{row._id}}">
+                    <div class="goodsBox">
+                        <div class="imgBox">
+                            <img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{row.images}}" alt="">
+                            <div class="noGood" ng-if="!row.inventoryCount"></div>
+                        </div>
+                        <h3>{{row.name}} {{row.introduction}}</h3>
+                        <p  class="clearfix">
+                            <span>￥{{row.price}}</span>
+                            <span class="original">￥{{row.marketPrice}}</span>
+                            <a class="pull-right" href="{{!headerForm?domain+'/':''}}#/goods/detail/{{row._id}}">马上抢</a>
+                        </p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <!-- 空态页 -->
+        <div class="probably_empty" ng-if="specialData.products!=undefined&&!specialData.products.length">亲，已经到底了呦，没有更多内容了呦~</div>
+    </section>
+
+</div>

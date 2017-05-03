@@ -1,0 +1,168 @@
+<!-- 首页 -->
+<heade
+    class="home_index_header"
+    head-title="'美妆商城'"
+    head-rightfn="headRightFn"
+    head-scroll="true"
+></heade>
+
+<!-- content -->
+<div class="content home_index">
+    <!-- banner slider -->
+    <div class="mainBox">
+        <section class="swiper-banner" ng-if="homeBanners.banner.length">
+            <ul class="banner_list clearfix swiper-wrapper">
+                <li class="swiper-slide" ng-repeat="banner in homeBanners.banner">
+                    <a href="{{banner.url}}">
+                        <img ng-src="http://img.beautysite.cn{{banner.image}}" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="swiper-pagination"><span></span></div>
+        </section>
+
+        <!-- 频道位 -->
+        <section class="clearfix channel" ng-style="{'background': homeBanners.channel[0].image?'url(http://img.beautysite.cn' + homeBanners.channel[0].image + ') no-repeat center center': '#fff', 'background-size': '100% 100%'}" ng-if="homeBanners.channel.length">
+            <span class="pull-left" ng-repeat="channel in homeBanners.channel" ng-if="$index" ng-click="channelJump(channel.url)">
+                <img ng-src="http://img.beautysite.cn{{channel.image}}">
+                <span>{{channel.title}}</span>
+            </span>
+        </section>
+
+        <!-- 广告区 -->
+        <section class="advertisement" ng-if="homeBanners.ad.length">
+            <a href="{{advertisement.url}}" ng-repeat="advertisement in homeBanners.ad">
+                <img ng-src="http://img.beautysite.cn{{advertisement.image}}">
+            </a>
+        </section>
+
+        <!-- 女神说热门 -->
+        <section class="hotCommunity">
+            <h2>
+                <img src="/static/img/home/icon_fire.png">女神说热门
+                <a href="#/community/list/0">
+                    我要变美<i class="icon icon-right"></i>
+                </a>
+            </h2>
+
+            <div class="swiper-hotCommunity">
+                <ul class="clearfix swiper-wrapper">
+                    <li class="swiper-slide" ng-repeat="excellent in excellentLists | limitTo: 4">
+                        <a href="#/community/postPictureDetail/{{excellent.cardDetail._id}}">
+                            <div class="imgBox">
+                                <img ng-src="http://img.beautysite.cn{{excellent.cardDetail.image[excellent.cardDetail.image.length-1]}}" alt="">
+                                <div class="label clearfix">
+                                    <span class="pull-right">
+                                         WOW值：<span>{{excellent.cardDetail.wowValue>10000?excellent.cardDetail.wowValue/10000+'万':excellent.cardDetail.wowValue}}</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="userBox">
+                                <img ng-src="{{excellent.memberInfo.headImg ? excellent.memberInfo.headImg + (excellent.memberInfo.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+                                <span>{{excellent.memberInfo.nickName}}</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 美妆特卖 -->
+        <section class="promotion" ng-if="promotion">
+            <h2>
+                <a class="clearfix" href="#/home/promotion/0">
+                    <span class="pull-right">更多秒杀<i class="icon icon-right"></i></span>
+                </a>
+            </h2>
+            <div class="promotionBox">
+                <a class="clearfix" href="#/home/promotion/0">
+                    <div class="pull-left">
+                        <p>距离秒杀结束还有</p>
+                        <p class="countDown">
+                            <span>{{promotion.hh}}</span>:<span>{{promotion.mm}}</span>:<span>{{promotion.ss}}</span>
+                        </p>
+                        <p>{{promotion.name}}</p>
+                        <p>
+                            <span>￥<span>{{promotion.price|number: 2}}</span></span>
+                            <span>￥{{promotion.marketPrice|number: 2}}</span>
+                        </p>
+                    </div>
+                    <img class="pull-right" ng-src="http://img.beautysite.cn{{promotion.images}}">
+                </a>
+            </div>
+        </section>
+
+        <!-- 专题 -->
+        <section class="special clearfix" ng-if="homeBanners.special.length">
+            <a href="{{homeBanners.special[0].url}}" class="pull-left">
+                <img ng-src="http://img.beautysite.cn{{homeBanners.special[0].image}}" alt="">
+            </a>
+            <div class="pull-left">
+                <a href="{{homeBanners.special[1].url}}">
+                    <img ng-src="http://img.beautysite.cn{{homeBanners.special[1].image}}" alt="">
+                </a>
+                <a href="{{homeBanners.special[2].url}}">
+                    <img ng-src="http://img.beautysite.cn{{homeBanners.special[2].image}}" alt="">
+                </a>
+            </div>
+        </section>
+
+        <!-- 商品专题 -->
+        <section class="goodSecial" ng-repeat="goodSecial in goodSpecials" ng-if="goodSpecials.length">
+            <div class="special_banner {{goodSecial.products.length&&'after'}}">
+                <a href="#/home/special/{{goodSecial._id}}">
+                    <img ng-src="http://img.beautysite.cn{{goodSecial.image}}" alt="">
+                </a>
+            </div>
+            <div class="goodsSlide swiper-special" ng-if="goodSecial.products.length">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide" ng-repeat="product in goodSecial.products | limitTo: 6">
+                        <a href="#/goods/detail/{{product._id}}">
+                            <div class="imgBox">
+                                <img ng-src="http://img.beautysite.cn{{product.images}}" alt="">
+                                <img class="nogood" src="/static/img/activity/nogood.png" alt="" ng-show="!product.inventoryCount">
+                            </div>
+                            <h2>{{product.name}} {{product.introduction}}</h2>
+                            <p><span>￥{{product.price}}</span><span>￥{{product.marketPrice}}</span></p>
+                        </a>
+                    </li>
+                    <li class="swiper-slide lookMore">
+                        <a href="#/home/special/{{special._id}}">
+                            <div class="imgBox">
+                            </div>
+                            <img src="static/img/home/lookMore.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- 爆款推荐 -->
+    <section class="recommendGoods" ng-if="recommendGoods.count">
+        <h2>
+            <img src="/static/img/home/thumb_up.png" alt="">
+            爆款推荐
+        </h2>
+
+        <ul class="goodsList clearfix">
+            <li class="pull-left" ng-repeat="recommendGood in recommendGoods.rows">
+                <a href="#/goods/detail/{{recommendGood._id}}">
+                    <div class="imgBox">
+                        <img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{recommendGood.images}}" alt="">
+                        <img class="nogood" src="/static/img/activity/nogood.png" alt="" ng-show="!recommendGood.inventoryCount">
+                        <span ng-if="recommendGood.sNew">今日<br>新品</span>
+                    </div>
+                    <h3>{{recommendGood.name}}&nbsp;{{recommendGood.introduction}}</h3>
+                    <p class="clearfix">
+                        <span class="price">￥<span>{{recommendGood.price}}</span></span>
+                        <span class="pull-right">{{recommendGood.buyCount}}人购买</span>
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+
+<!-- footer -->
+<foot></foot>

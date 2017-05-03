@@ -1,0 +1,35 @@
+<!-- 指定商品 -->
+<heade head-title="'指定商品'"></heade>
+
+<!-- content -->
+<div class="content goods_specify">
+    <div class="specify_content" ng-if="data.count">
+        <p class="tip">
+            <img src="/static/img/mark.png" alt="">
+            亲，一次分享只能选一个指定商品哟！
+        </p>
+
+        <ul class="goodsList clearfix">
+            <li class="pull-left" ng-repeat="row in data.rows" ng-click="checkFn($index)">
+                <div class="goodsBox">
+                    <div class="imgBox">
+                        <img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{row.product.images[0]}}" alt="">
+                        <div class="noGood" ng-if="row.product.inventory<=0"></div>
+                    </div>
+                    <h2>{{row.product.name}} {{row.product.introduction}}</h2>
+                    <p class="clearfix">
+                        ￥{{row.product.price}}
+                        <input type="radio" name="shareGoods" class="pull-right" value="{{row.product._id}}" ng-disabled="row.product.inventory<=0">
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 空态页 -->
+    <img class="specify_empty" src="/static/img/task/specify_empty.png" alt="" ng-if="data.count!=undefined&&!data.count">
+</div>
+
+<footer class="footer goods_specify">
+    <a class="icon pull-right" href="javascript:void(0);" ng-click="shareFn()">去分享</a>
+</footer>

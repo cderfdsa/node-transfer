@@ -1,0 +1,27 @@
+<!-- 收益明细 -->
+<heade class="userCenter_ambCenter_incomeDetail_header circle_left" head-title="type"></heade>
+<!-- 收益明细主页 -->
+<div class="content userCenter_ambCenter_incomeDetail">
+	<ul>
+		<li ng-repeat="item in data.rows">
+			<div>
+				<p>{{item.createdAt| date:"yyyy-MM-dd"}}</p>
+				<p>{{item.createdAt|date:"HH:mm:ss"}}</p>
+			</div>
+			<div>
+				<p>+{{item.value}} <button>{{['本人收益', '高级任务返利','代言费', '系统奖励', '提现', '消费', '其他', '关联收益', '邀请新用户', '邀请大使'][item.type]}}</button></p>
+				<p>{{item.remark}}</p>
+			</div>
+			<div>
+				<a href="#/userCenter/orderDetail/{{item.id}}?type=1&value={{item.value}}" ng-if="item.type==0||item.type==7&&item.ref!=null&&item.ref!=''"> 查看详情</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<!-- 收入明细空态 -->
+<div class="content userCenter_ambCenter_incomeDetail"  ng-if="data.rows!=undefined&&!data.rows.length" >
+	<div class="imgbox">
+		<img src="/static/img/userCenter/ambCenter/null.png">
+	</div>
+</div>

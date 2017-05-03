@@ -1,0 +1,419 @@
+/* 个人中心 */
+.userCenter_index {
+  color: #666;
+  font-size: .7rem;
+  background: #f2f2f2;
+}
+.userCenter_index .setting {
+  z-index: 10;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  width: 1.125rem;
+}
+.userCenter_index .setting img {
+  width: 100%;
+}
+.userCenter_index .news {
+  z-index: 10;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  width: 1.125rem;
+}
+.userCenter_index .news img {
+  width: 100%;
+}
+.userCenter_index .news i {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.8rem;
+  width: 1.3rem;
+  border-radius: .5rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  background: #FFFFFF;
+  color: #ff0000;
+  font-size: 0.6rem;
+  text-align: center;
+  font-style: normal;
+}
+.userCenter_index .top {
+  height: 9rem;
+  background: url(/static/img/userCenter/bg_top.png) no-repeat center top;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden;
+}
+.userCenter_index .top .photo {
+  padding: 1.5rem .3rem;
+  position: relative;
+  overflow: hidden;
+}
+.userCenter_index .top .photo .userInfo {
+  margin-left: 4.5rem;
+  margin-right: 2rem;
+  padding-top: .8rem;
+  color: #ffffff;
+}
+.userCenter_index .top .photo .userInfo div {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+.userCenter_index .top .photo .userInfo div span {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  padding-right: 1rem;
+}
+.userCenter_index .top .photo .userInfo div img {
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  margin-left: .8rem;
+  top: .1rem;
+  right: 0;
+}
+.userCenter_index .top .photo .userInfo .iconimg {
+  margin: 0;
+}
+.userCenter_index .top .photo .userInfo .iconimg img {
+  height: .9rem;
+  width: auto;
+}
+.userCenter_index .top .photo .partner {
+  width: 2.5rem;
+  height: auto;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+.userCenter_index .top .photo .imgphoto {
+  border: .2rem solid #ff7999;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.userCenter_index .top .photo #icon_right {
+  color: #fff;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+}
+.userCenter_index .top .photo .notSignIn {
+  margin-top: .6rem;
+}
+.userCenter_index .top .photo .notSignIn a {
+  display: inline-block;
+  font-size: .65rem;
+  color: #fff;
+}
+.userCenter_index .top .photo .notSignIn a:nth-of-type(1) {
+  margin-right: .75rem;
+}
+.userCenter_index .top .photo .notSignIn a:nth-of-type(2) {
+  margin-left: .75rem;
+}
+.userCenter_index .top .disc {
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: .3rem 0;
+}
+.userCenter_index .top .disc li {
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid #a3324d;
+}
+.userCenter_index .top .disc li span {
+  display: block;
+  font-size: .6rem;
+  color: #ffb7c8;
+}
+.userCenter_index .top .disc li span:first-of-type {
+  color: #fff;
+}
+.userCenter_index .top .disc li:last-of-type {
+  border-right: none;
+}
+.userCenter_index a {
+  color: #666;
+  display: block;
+}
+.userCenter_index ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.userCenter_index .info {
+  margin: 0.5rem 0;
+  color: #333333;
+  font-size: .7rem;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  /*红包*/
+}
+.userCenter_index .info li {
+  width: 100%;
+  background: #fff;
+  position: relative;
+}
+.userCenter_index .info li img {
+  display: block;
+  width: 1.5rem;
+  margin: auto;
+  padding: 0.4rem 0;
+}
+.userCenter_index .info li.fullInfo,
+.userCenter_index .info li.myComment {
+  margin-bottom: .7rem;
+}
+.userCenter_index .info .fullInfo {
+  background: #fffce2;
+}
+.userCenter_index .info .fullInfo:before,
+.userCenter_index .info .fullInfo:after {
+  background: #edde99;
+}
+.userCenter_index .info .fullInfo a {
+  color: #f90;
+  padding: .4rem;
+}
+.userCenter_index .info .fullInfo img {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  margin-right: .2rem;
+}
+.userCenter_index .info .fullInfo .icon-right {
+  color: #edde99;
+}
+.userCenter_index .info .task {
+  padding: 0.5rem 0.5rem;
+  border: none;
+  line-height: 1.1rem;
+  margin-bottom: .5rem;
+}
+.userCenter_index .info .task a {
+  padding: 0;
+  font-size: .5rem;
+  color: #ff577f;
+}
+.userCenter_index .info .order,
+.userCenter_index .info .experience {
+  padding: .5rem 0.5rem;
+  line-height: 1.1rem;
+}
+.userCenter_index .info .order a,
+.userCenter_index .info .experience a {
+  padding: 0;
+  font-size: .5rem;
+}
+.userCenter_index .info .my:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: .5rem;
+  background: #eeeeee;
+}
+.userCenter_index .info .trial:before {
+  content: "";
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: .5rem;
+  background: #eeeeee;
+}
+.userCenter_index .info .order:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  margin-top: .5rem;
+  background: #eeeeee;
+}
+.userCenter_index .info .orderDesc img {
+  width: auto;
+  height: 2rem;
+}
+.userCenter_index .info .orderDesc,
+.userCenter_index .info .trial,
+.userCenter_index .info .my {
+  text-align: center;
+  margin-bottom: .5rem;
+  font-size: .5rem;
+  color: #666666;
+}
+.userCenter_index .info .orderDesc a,
+.userCenter_index .info .trial a,
+.userCenter_index .info .my a {
+  display: inline-block;
+  width: 24%;
+  padding: .5rem 0;
+  position: relative;
+}
+.userCenter_index .info .orderDesc a span,
+.userCenter_index .info .trial a span,
+.userCenter_index .info .my a span {
+  color: #fff;
+  background: #ff0200;
+  font-size: .5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  min-width: 0.7rem;
+  max-height: 1rem;
+  padding: 0 0.2rem;
+  height: 0.7rem;
+  display: block;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+}
+.userCenter_index .info .orderDesc p,
+.userCenter_index .info .trial p,
+.userCenter_index .info .my p {
+  font-size: 0.75rem;
+  color: #666666;
+  margin: 0;
+}
+.userCenter_index .info .experienceDesc {
+  text-align: center;
+  margin-bottom: .5rem;
+  font-size: .5rem;
+  color: #666666;
+}
+.userCenter_index .info .experienceDesc a {
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #f2f2f2;
+  float: left;
+  width: 25%;
+  padding: .5rem 0;
+  position: relative;
+}
+.userCenter_index .info .experienceDesc .newIcon {
+  width: 1.25rem;
+  position: absolute;
+  top: .15rem;
+  right: 0;
+}
+.userCenter_index .info .icon-right {
+  color: #aaa;
+}
+.userCenter_index .info .redPacketBtn {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  right: .6rem;
+  top: 28%;
+}
+.userCenter_index .want {
+  width: 100%;
+  text-align: right;
+  position: fixed;
+  top: 18rem;
+  right: .5rem;
+  z-index: 999;
+}
+.userCenter_index .want img {
+  width: 40%;
+}
+/*红包弹层*/
+.redPacketModal {
+  background: url(/static/img/userCenter/bg-couponSucess.png) no-repeat center top;
+  background-size: contain;
+  color: #ff0;
+  font-size: .6rem;
+}
+.redPacketModal .modal-inner {
+  background: transparent;
+  padding: 0;
+  margin-bottom: 2.2rem;
+}
+.redPacketModal .modal-inner:after {
+  height: 0;
+}
+.redPacketModal .modal-title {
+  padding-top: 9rem;
+  font-size: 1rem;
+}
+.redPacketModal .modal-title span {
+  font-size: 2rem;
+}
+.redPacketModal .modal-button {
+  background: transparent;
+  color: #f1cc5e;
+  height: 1.4rem;
+  line-height: 1.2rem;
+  font-weight: bold;
+  border-radius: .8rem !important;
+  border: 2px solid #f1cc5e;
+  width: 7.5rem;
+}
+/* 完善资料 modal */
+.modal-fullInfo {
+  width: 90%;
+  margin-left: -7.5rem;
+  margin: 0 !important;
+  transform: translate3d(0, 0, 0) scale(1.185) translate(-42%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(1.185) translate(-42%, -50%);
+}
+.modal-fullInfo.modal-in {
+  transform: translate3d(0, 0, 0) scale(1) translate(-50%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(1) translate(-50%, -50%);
+}
+.modal-fullInfo.modal-out {
+  transform: translate3d(0, 0, 0) scale(0.815) translate(-61%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(0.815) translate(-61%, -50%);
+}
+.modal-fullInfo img {
+  width: 100%;
+}
+.modal-fullInfo .modal-inner {
+  background: transparent;
+  padding: 0;
+}
+.modal-fullInfo .modal-inner:after {
+  display: none;
+}
+.modal-fullInfo .modal-buttons {
+  margin-top: -2rem;
+}
+.modal-fullInfo .modal-button {
+  background: transparent;
+}
+.modal-fullInfo .modal-button:nth-of-type(1) {
+  right: 14%;
+  top: 8%;
+  position: absolute;
+  width: 10.4%;
+}
+.modal-fullInfo .modal-button:nth-of-type(2),
+.modal-fullInfo .modal-button:nth-of-type(3) {
+  width: 5.2rem;
+}
+.modal-fullInfo .modal-button:after {
+  display: none;
+}
+.userCenter_ambGuide {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 11;
+}
+.userCenter_ambGuide img {
+  width: 80%;
+  position: absolute;
+  top: 10rem;
+  right: 1rem;
+  top: 11.7rem;
+  right: .4rem;
+}

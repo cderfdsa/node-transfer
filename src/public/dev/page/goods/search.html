@@ -1,0 +1,27 @@
+<!-- 商品搜索 -->
+<!-- 搜索 -->
+<div class="bar bar-header-secondary goodsSearch">
+	<div class="searchbar searchbar-active">
+		<a class="searchbar-search" ng-click="searchFn()">搜索</a>
+		<div class="search-input">
+			<label class="icon icon-search" for="search"></label>
+			<input type="search" id='search' placeholder='{{placeholder}}' ng-model="inputTag">
+		</div>
+	</div>
+</div>
+
+<div class="content goodsSearch">
+	<!-- 搜索历史 -->
+	<ul class="history"  ng-show="history[0]">
+		<li>搜索历史</li>
+		<li ng-repeat="his in history" ng-click="searchFn(his)">{{his}}</li>
+		<li><button type="button" ng-click="clearHistory()">清空搜索历史</button></li>
+	</ul>
+
+	<!-- 热门标签 -->
+	<ul class="clearfix hotTags">
+		<li>大家都在搜</li>
+		<li class="pull-left" ng-repeat="tag in data" ng-click="searchFn(tag.name)">{{tag.name}}</li>
+	</ul>
+	
+</div>

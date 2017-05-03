@@ -1,0 +1,34 @@
+<heade class="circle_left" head-title="title"></heade>
+
+<div class="content userCenter_fans">
+	<ul ng-if="data.count">
+		<li ng-repeat="list in data.rows" class="clearfix">
+			<div class="pull-left leftBox">
+				<div class="userInfo clearfix">
+					<div class="headImg pull-left">
+						<a href="#/community/home/{{list.member.id}}">
+							<img class="lazy" src="/static/img/loading-200.jpg" lazySrc="{{list.member.headImg ? list.member.headImg + (list.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+						</a>
+					</div>
+					<div class="level">
+	                    <div class="user">
+	                        <div >
+	                            <span >{{list.member.nickName}}</span>
+	                            <img ng-src="http://img.beautysite.cn/icon/L{{list.member.level}}.png" alt="">
+	                            <img ng-if="list.member.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{list.member.seniorMember.level}}_mini.png" alt="">
+	                            <img ng-src="/static/img/community/icon_{{list.member.sex==1?'boy':'girl'}}.png">
+	                        </div>                 
+	                    </div>
+	                    <p><img src="/static/img/community/icon_location.png" alt="">{{list.member.schoolInfo.name||'火星大学'}}</p>
+	                </div>
+				</div>
+				<p class="date" ng-if="showDate">{{list.createdAt}}</p>
+			</div>
+			<button type="button" class="pull-right {{list.isFollowed && 'faned'}}" ng-click="fanFn($index)" ng-if="!showDate && (isSelf || !list.isSelf)">
+				{{list.isFollowed ? '已粉' : '+粉TA'}}
+			</button>
+		</li>
+	</ul>
+
+	<img class="none" ng-src="/static/img/userCenter/{{showDate?'none':'fans_none'}}.png" ng-if="data.count!=undefined&&!data.count" alt="">
+</div>

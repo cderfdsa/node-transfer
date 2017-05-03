@@ -1,0 +1,262 @@
+/**
+ * 公用css，包括css reset, base 层，common 层
+ */
+/* css reset */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+}
+/* base css */
+/* 行边框 解决视网膜屏下 2px bug */
+.border_top:before {
+  background: #dbdbdb;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+}
+.border_right {
+  position: relative;
+}
+.border_right:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #dbdbdb;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 1px;
+  transform: scaleX(0.5);
+  -webkit-transform: scaleX(0.5);
+}
+.border_bottom:after {
+  background: #dbdbdb;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+}
+.border_left {
+  position: relative;
+}
+.border_left:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #dbdbdb;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 1px;
+  transform: scaleX(0.5);
+  -webkit-transform: scaleX(0.5);
+}
+/* 加圆角 默认4px */
+.radius {
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+}
+/* position */
+/* 居中 */
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+/* 水平居中 */
+.row_center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+/* 竖直居中 */
+.col_center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+/* common css */
+body {
+  font: 0.6rem/1.5 "Microsoft Yahei", "微软雅黑", "Helvetica Neue", Helvetica, sans-serif;
+}
+body .page {
+  background: #faf7f0;
+  max-width: 750px;
+  margin: auto;
+}
+.completeNoviceTaskModal {
+  background: url(/common/mod/style/bg.png) no-repeat;
+  background-size: cover;
+}
+.completeNoviceTaskModal .modal-inner {
+  background: none;
+  font-size: .6rem;
+  color: #d4748e;
+  padding-bottom: 1.4rem;
+  text-align: left;
+}
+.completeNoviceTaskModal .modal-inner:after {
+  display: none;
+}
+.completeNoviceTaskModal .modal-title h2 {
+  font-size: .95rem;
+  color: #ff577f;
+  font-weight: bold;
+  margin-top: .2rem;
+}
+.completeNoviceTaskModal .modal-title h3 {
+  font-size: .6rem;
+  color: #ffaec3;
+  margin: .2rem 0 1.4rem;
+}
+.completeNoviceTaskModal .modal-text {
+  font-size: .65rem;
+  color: #d4748e;
+  font-weight: bold;
+  height: 1.25rem;
+  margin-bottom: 1.35rem;
+}
+.completeNoviceTaskModal .modal-text span span {
+  font-size: 1.25rem;
+  color: #ff577f;
+  font-weight: normal;
+}
+.completeNoviceTaskModal .modal-buttons {
+  display: block;
+  height: auto;
+}
+.completeNoviceTaskModal .modal-button {
+  background: none;
+  font-size: .8rem;
+}
+.completeNoviceTaskModal .modal-button:nth-child(1) {
+  position: absolute;
+  top: -0.7rem;
+  right: -50%;
+}
+.completeNoviceTaskModal .modal-button:nth-child(1) img {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+.completeNoviceTaskModal .modal-button:nth-child(2) {
+  border: 1px solid #ff577f;
+  color: #ff577f;
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  margin-bottom: .5rem;
+  width: 82%;
+  left: 9%;
+}
+.completeNoviceTaskModal .modal-button:nth-child(2):after {
+  display: none;
+}
+.completeNoviceTaskModal .modal-button:nth-child(3) {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  color: #fff;
+  background: #ff577f;
+  margin-bottom: 1.5rem;
+  width: 82%;
+  left: 9%;
+}
+.toast.completeCommonTaskModal {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0!important;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+}
+.toast.completeCommonTaskModal img {
+  width: 92%;
+}
+.toast.completeCommonTaskModal .title {
+  color: #fff;
+  font-size: .85rem;
+  margin: -3rem 0 0 0;
+}
+.toast.completeCommonTaskModal .clearfix {
+  color: #ff82a0;
+  font-size: .65rem;
+  margin-top: -1.4rem;
+}
+.toast.completeCommonTaskModal .clearfix span span {
+  font-size: 1.25rem;
+}

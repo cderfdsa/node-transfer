@@ -1,0 +1,312 @@
+.userCenter_ambCenter_specialBuy {
+  background: #f2f2f2;
+  margin-bottom: 2.8rem;
+}
+.userCenter_ambCenter_specialBuy .code {
+  font-size: 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+.userCenter_ambCenter_specialBuy .code .Price {
+  height: 4rem;
+  margin: 0 auto;
+  font-size: 0;
+  padding: .5rem;
+  position: relative;
+}
+.userCenter_ambCenter_specialBuy .code .Price div p {
+  margin: 0;
+}
+.userCenter_ambCenter_specialBuy .code .Price div p:first-of-type {
+  color: #999999;
+  font-size: .65rem;
+  text-decoration: line-through;
+}
+.userCenter_ambCenter_specialBuy .code .Price div p:last-of-type {
+  color: #ff577f;
+  font-size: .75rem;
+}
+.userCenter_ambCenter_specialBuy .code .Price div p:last-of-type span {
+  font-size: 1.5rem;
+}
+.userCenter_ambCenter_specialBuy .code .Price img {
+  height: 1.26rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.userCenter_ambCenter_specialBuy .code .Invitation {
+  color: #ff577f;
+  font-size: 1rem;
+  padding: .5rem;
+}
+.userCenter_ambCenter_specialBuy .code .Invitation p {
+  margin: 0;
+}
+.userCenter_ambCenter_specialBuy .code .Invitation p:first-of-type span {
+  color: #555555;
+  font-size: .65rem;
+}
+.userCenter_ambCenter_specialBuy .code .Invitation p:first-of-type input {
+  width: 8.5rem;
+  background: #f7f7f7;
+  border-radius: 1rem;
+  border: 1px solid #e6e6e6;
+  padding: .3rem .5rem;
+}
+.userCenter_ambCenter_specialBuy .code .Invitation p:first-of-type img {
+  width: .5rem;
+  height: .5rem;
+  vertical-align: middle;
+  margin: .3rem;
+}
+.userCenter_ambCenter_specialBuy .code .Invitation p:last-of-type {
+  margin-top: .6rem;
+  font-size: .6rem;
+  color: #999999;
+}
+.userCenter_ambCenter_specialBuy .code .Invitation p:last-of-type img {
+  width: .75rem;
+  height: .75rem;
+  vertical-align: middle;
+}
+.userCenter_ambCenter_specialBuy .userForm {
+  margin-top: .5rem;
+  font-size: 0;
+  overflow: hidden;
+}
+.userCenter_ambCenter_specialBuy .userForm img {
+  height: .2rem;
+  width: 100%;
+}
+.userCenter_ambCenter_specialBuy .userForm p {
+  font-size: .65rem;
+  color: #666666;
+  padding: 0 .5rem;
+}
+.userCenter_ambCenter_specialBuy .userForm ul {
+  list-style: none;
+  padding: 0 ;
+}
+.userCenter_ambCenter_specialBuy .userForm ul li {
+  background: #ffffff;
+  font-size: .65rem;
+  color: #666666;
+  position: relative;
+  padding: .75rem .5rem;
+}
+.userCenter_ambCenter_specialBuy .userForm ul li input {
+  margin-left: 26%;
+  width: 75%;
+  padding: .3rem .5rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  border: none;
+}
+.userCenter_ambCenter_specialBuy .userForm ul li:after {
+  content: "";
+  background: #e6e6e6;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: .5rem;
+  bottom: 0;
+}
+.userCenter_ambCenter_specialBuy .userForm ul li:last-of-type:after {
+  content: "";
+  display: none;
+}
+.userCenter_ambCenter_specialBuy .package {
+  margin-top: .5rem;
+  background: #ffffff;
+  overflow: hidden;
+}
+.userCenter_ambCenter_specialBuy .package .header {
+  padding: .9rem .5rem .7rem .5rem;
+}
+.userCenter_ambCenter_specialBuy .package .header p {
+  color: #666666;
+  font-size: .65rem;
+  margin: 0;
+}
+.userCenter_ambCenter_specialBuy .package .header p a {
+  color: #ff577f;
+  font-size: .6rem;
+  border-radius: .3rem;
+  border: 1px solid #ff577f;
+  padding: .2rem .3rem;
+}
+.userCenter_ambCenter_specialBuy .package .header p span {
+  font-size: .7rem;
+}
+.userCenter_ambCenter_specialBuy .package .header p:last-of-type {
+  margin-top: .9rem;
+}
+.userCenter_ambCenter_specialBuy .package ul {
+  display: table;
+}
+.userCenter_ambCenter_specialBuy .package ul li {
+  width: 50%;
+  float: left;
+  background: #ffffff;
+}
+.userCenter_ambCenter_specialBuy .package ul li .box {
+  padding: 0 .3rem;
+}
+.userCenter_ambCenter_specialBuy .package ul li .box img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.userCenter_ambCenter_specialBuy .package ul li .Radio {
+  padding: .3rem;
+  font-size: .65rem;
+  color: #555555;
+  padding-bottom: .5rem;
+}
+.userCenter_ambCenter_specialBuy .package ul li .Radio label {
+  margin-left: .3rem;
+}
+.userCenter_ambCenter_specialBuy .package ul li input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: bottom;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/goods/checkbox1.png) no-repeat center top;
+  background-size: cover;
+  border: none;
+}
+.userCenter_ambCenter_specialBuy .package ul li input[type='radio']:checked {
+  background-position: center bottom;
+}
+.userCenter_ambCenter_specialBuy .pay {
+  overflow: hidden;
+  margin-top: .5rem;
+}
+.userCenter_ambCenter_specialBuy .pay input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/goods/checkbox1.png) no-repeat center top;
+  background-size: cover;
+  margin-top: .5rem;
+  border: none;
+}
+.userCenter_ambCenter_specialBuy .pay input[type='radio']:checked {
+  background-position: center bottom;
+}
+.userCenter_ambCenter_specialBuy .pay p {
+  font-size: .7rem;
+  color: #555555;
+  margin: 0 .5rem .3rem .5rem;
+}
+.userCenter_ambCenter_specialBuy .pay p.title_type {
+  padding: .5rem;
+}
+.userCenter_ambCenter_specialBuy .pay ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #fff;
+}
+.userCenter_ambCenter_specialBuy .pay ul li {
+  display: block;
+  padding: .375rem;
+  margin: 0 .5rem;
+  background: #ffffff;
+  position: relative;
+}
+.userCenter_ambCenter_specialBuy .pay ul li:nth-child(1):after,
+.userCenter_ambCenter_specialBuy .pay ul li:nth-child(2):after {
+  content: '';
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background: #e6e6e6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleY(0.5);
+  -webkit-transform: scaleY(0.5);
+}
+.userCenter_ambCenter_specialBuy .pay ul li.cardInput {
+  background: url(/static/img/userCenter/ambCenter/cardLine.png) no-repeat center top;
+  background-size: contain;
+}
+.userCenter_ambCenter_specialBuy .pay ul li div {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+.userCenter_ambCenter_specialBuy .pay ul li div img {
+  width: 100%;
+  height: 100%;
+}
+.userCenter_ambCenter_specialBuy .pay ul li p {
+  font-size: .6rem;
+  color: #666666;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.userCenter_ambCenter_specialBuy .pay ul li p span {
+  font-size: .55rem;
+  color: #999;
+}
+.userCenter_ambCenter_specialBuy .pay ul li p input {
+  border: none;
+  width: 12rem;
+  font-size: .65rem;
+}
+.userCenter_ambCenter_specialBuy .pay ul li:first-of-type:after {
+  content: "";
+  background: #e6e6e6;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: .5rem;
+  bottom: 0;
+}
+.userCenter_ambCenter_specialBuy + .btn {
+  z-index: 10;
+  height: 2.7rem;
+  background: #ffffff;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.userCenter_ambCenter_specialBuy + .btn div {
+  float: left;
+  text-align: center;
+}
+.userCenter_ambCenter_specialBuy + .btn div:first-of-type {
+  width: 20%;
+  margin-top: .5rem;
+}
+.userCenter_ambCenter_specialBuy + .btn div:first-of-type p {
+  color: #999999;
+  font-size: .5rem;
+  margin: 0;
+}
+.userCenter_ambCenter_specialBuy + .btn div:first-of-type img {
+  width: 1rem;
+  height: 1rem;
+}
+.userCenter_ambCenter_specialBuy + .btn div:last-of-type {
+  width: 80%;
+  background: #ff577f;
+  font-size: 1rem;
+  color: #ffffff;
+  line-height: 2.7rem;
+}

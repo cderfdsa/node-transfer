@@ -1,0 +1,67 @@
+<div class="page">
+    <!-- head: start -->
+    <div class="header2">
+        <div class="title">求开通</div>
+        <a class="l_back" href="javascript:void(0);history.back();"></a>
+    </div>
+    <!-- head: end -->
+    <!-- 错误提示 -->
+    <p class="warn"><span>!</span>“{{schoolName}}”还不在服务区呦！</p>
+    <!-- 点赞求开通 -->
+    <section class="praise">
+        <h2>点赞求开通</h2>
+        <div class="box">
+            <div class="top cf">
+                <div class="left">
+                    <h3>立即点赞加速开通：</h3>
+                    <p class="progressBar"><i style="width:{{praiseNum}}%;"></i><span>{{praiseNum}}%</span></p>
+                </div>
+                <button class="right" id="clickPraise" ng-click="praiseFn(0.1)">
+                <i></i>赞
+                </button>
+            </div>
+            <div class="bottom">
+                <h3>开通成功后用户即享以下福利：</h3>
+                <ol class="cf">
+                    <li>1.免费体验全球潮妆品</li>
+                    <li>2.超多免费小样领取</li>
+                    <li>3.免费化妆 / 修眉服务</li>
+                    <li>4.专属校园大使v1服务</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 报名开通 -->
+    <section class="register">
+        <h2>我来报名开通</h2>
+        <div class="box">
+            <div class="top">
+                <h3>加入美妆商城即享六大福利：</h3>
+                <ol class="cf">
+                    <li>1.优厚薪资</li>
+                    <li>2.免费高价值培训</li>
+                    <li>3.精英荣誉 / 实习证书</li>
+                    <li>4.免费出国进修机会</li>
+                    <li>5.时尚晚宴 / 高阶人脉圈</li>
+                    <li>6.毕业推荐就业 / 创业支持</li>
+                </ol>
+            </div>
+            <div class="bottom">
+                <h3>美妆商城三大职位：</h3>
+                <ol class="cf">
+                    <li>1.校园经理 </li>
+                    <li>2.校园大使</li>
+                    <li>3.城市经理</li>
+                </ol>
+                <a href="http://wechat.beautysite.cn/recruit/recruit.php">立即报名开通</a>
+            </div>
+        </div>
+    </section>
+    <!-- toast -->
+    <div id="toast">
+        <img src="../img/applyOpen/icon_praise_success.png" alt="">
+        <h2>点赞成功！</h2>
+        <p>当进度条满，美妆就会来到你身边呦~</p>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+.getNew_success {
+  background: #a557fe;
+  padding: .5rem;
+}
+
+.getNew_success section {
+  background: url(/static/img/activity/getNew/gift.png) no-repeat center top;
+  background-size: 90% auto;
+}
+
+.getNew_success p {
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.getNew_success p:nth-child(1) {
+  margin-bottom: 41%;
+}
+
+.getNew_success p:nth-child(1) a {
+  color: #fff;
+  border: 1px solid #fff;
+  font-size: .65rem;
+  padding: .3rem .5rem;
+  border-radius: .75rem;
+  -webkit-border-radius: .75rem;
+}
+
+.getNew_success p:nth-child(2) {
+  margin-bottom: .5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.getNew_success p:nth-child(2) .icon {
+  width: 1rem;
+  margin-right: .2rem;
+  vertical-align: middle;
+  vertical-align-margin-top: -.2rem;
+}
+
+.getNew_success p:nth-child(3) {
+  margin-bottom: 13.33%;
+  font-size: .7rem;
+}
+
+.getNew_success p:nth-child(4) a {
+  background: url(/static/img/activity/getNew/button.png) no-repeat;
+  background-size: 100% 100%;
+  color: #b80034;
+  font-size: .8rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 77.33%;
+  padding: .6rem 0;
+}

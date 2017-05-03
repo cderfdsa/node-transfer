@@ -1,0 +1,76 @@
+.userCenter_balance {
+  background: #f2f2f2;
+  /* list none */
+}
+
+.userCenter_balance .withdraw {
+  padding: 1.1rem .5rem;
+  background: #fff;
+  margin-bottom: .5rem;
+}
+
+.userCenter_balance .withdraw p {
+  margin: 0;
+  color: #ff577f;
+}
+
+.userCenter_balance .withdraw p:nth-child(1) {
+  font-size: .65rem;
+}
+
+.userCenter_balance .withdraw p:nth-child(2) {
+  font-size: 1.6rem;
+  margin-bottom: .5rem;
+}
+
+.userCenter_balance .withdraw p:nth-child(2) span {
+  display: inline-block;
+  min-width: 2.4rem;
+}
+
+.userCenter_balance .withdraw p:nth-child(2) button {
+  font-size: .7rem;
+  border: 1px solid #ff577f;
+  width: 5rem;
+  height: 1.2rem;
+  line-height: 1.1rem;
+  background: transparent;
+  border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+  margin-top: .6rem;
+}
+
+.userCenter_balance .withdraw p:nth-child(3) {
+  font-size: .6rem;
+  color: #999;
+}
+
+.userCenter_balance .list-block {
+  font-size: .7rem;
+  margin: .5rem 0 0;
+  position: relative;
+}
+
+.userCenter_balance .list-block .item-title span {
+  display: block;
+  color: #555;
+}
+
+.userCenter_balance .list-block .item-title span:last-child {
+  color: #ccc;
+  font-size: .5rem;
+}
+
+.userCenter_balance .list-block .item-after.plus {
+  color: #ff577f;
+}
+
+.userCenter_balance .list-block .item-after.minus {
+  color: #999;
+}
+
+.userCenter_balance .none {
+  width: 30%;
+  display: block;
+  margin: 20% auto 0 auto;
+}

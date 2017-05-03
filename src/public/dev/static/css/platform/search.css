@@ -1,0 +1,199 @@
+.platform_search {
+  background: #fff;
+  font-size: .7rem;
+  color: #555;
+}
+
+.platform_search header {
+  background: #ff577f;
+  padding: .4rem .5rem;
+}
+
+.platform_search header img {
+  width: 52%;
+}
+
+.platform_search header button {
+  border: 1px solid #fff;
+  font-size: .6rem;
+  color: #fff;
+  padding: .1rem .5rem;
+  border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+  background: transparent;
+  margin-top: .2rem;
+}
+
+.platform_search header + h2 {
+  padding: .5rem;
+}
+
+.platform_search section {
+  padding: .5rem;
+}
+
+.platform_search section h2 {
+  font-size: .75rem;
+  color: #ff577f;
+  font-weight: bold;
+}
+
+.platform_search section h2:before {
+  content: '';
+  display: inline-block;
+  width: .15rem;
+  margin-right: .15rem;
+  background: #ff577f;
+  height: .65rem;
+}
+
+.platform_search section p {
+  margin: .5rem 0;
+}
+
+.platform_search section p.copyLink #copy {
+  white-space: normal;
+  height: 3.3rem;
+  resize: none;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: .5rem;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  overflow: hidden;
+  color: #ff577f;
+}
+
+.platform_search section p.copyLink span {
+  display: block;
+  text-align: center;
+  color: #555;
+}
+
+.platform_search section p button, .platform_search section p a {
+  display: inline-block;
+  width: 29.58%;
+  color: #fff;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+  border: none;
+  background: #ff577f;
+  margin-right: 2.8%;
+  text-align: center;
+}
+
+.platform_search section p .downloadBtn {
+  font-size: .6rem;
+}
+
+.platform_search section p input {
+  width: 66%;
+  height: 1.6rem;
+  line-height: 1.6rem;
+  border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+  border: 1px solid #ccc;
+  padding: 0 .75rem;
+}
+
+.platform_search section p span {
+  color: #999;
+}
+
+.platform_search section p.save {
+  color: #83b845;
+  margin: .15rem 0;
+  margin-left: 32.38%;
+}
+
+.platform_search section p.save img {
+  width: .75rem;
+  margin-right: .25rem;
+  vertical-align: middle;
+}
+
+.platform_search .formBox p {
+  position: relative;
+}
+
+.platform_search .formBox p input {
+  width: 36%;
+  margin-right: 2.8%;
+  padding: 0 .75rem;
+  font-size: .6rem;
+}
+
+.platform_search .formBox p.date:before, .platform_search .formBox p.date:after {
+  content: '';
+  position: absolute;
+  display: block;
+  border: .25rem solid #b7b7b7;
+  border-color: #b7b7b7 transparent transparent transparent;
+  top: 50%;
+  transform: translateY(-20%);
+  -webkit-transform: translateY(-20%);
+  left: 30%;
+}
+
+.platform_search .formBox p.date:after {
+  left: 70%;
+}
+
+.platform_search .formBox p:nth-of-type(2) input {
+  width: 53.8%;
+}
+
+.platform_search .table h2 {
+  color: #555;
+  font-weight: normal;
+  margin-bottom: .5rem;
+}
+
+.platform_search .table h2:before {
+  display: none;
+}
+
+.platform_search .table table {
+  width: 100%;
+  font-size: .65rem;
+  text-align: center;
+}
+
+.platform_search .table table thead {
+  color: #999;
+}
+
+.platform_search .table table thead th {
+  text-align: center;
+  height: 2.2rem;
+}
+
+.platform_search .table table thead th:nth-child(odd) {
+  background: #ebebeb;
+}
+
+.platform_search .table table thead th:nth-child(even) {
+  background: #f3f3f3;
+  border-right: 1px solid #f3f3f3;
+}
+
+.platform_search .table table thead th:nth-child(1) {
+  width: 17%;
+}
+
+.platform_search .table table thead th:nth-child(2) {
+  width: 22%;
+}
+
+.platform_search .table table tbody {
+  color: #666;
+  font-size: .55rem;
+}
+
+.platform_search .table table tbody td {
+  height: 2.2rem;
+  border: 1px solid #e5e5e5;
+  border-top: none;
+}

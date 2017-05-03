@@ -1,0 +1,82 @@
+.userCenter_ambCenter_invite {
+  background: #fff;
+}
+
+.userCenter_ambCenter_invite .content-box {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 29.33%;
+}
+
+.userCenter_ambCenter_invite .banner {
+  width: 100%;
+}
+
+.userCenter_ambCenter_invite p {
+  padding: .5rem;
+  margin: 0;
+  font-size: .65rem;
+  color: #555;
+  position: relative;
+}
+
+.userCenter_ambCenter_invite p:nth-child(2) {
+  text-align: right;
+  padding-top: 0;
+}
+
+.userCenter_ambCenter_invite p:nth-child(2) a {
+  font-size: .6rem;
+  color: #ff577f;
+}
+
+.userCenter_ambCenter_invite p:nth-child(2) img {
+  width: .25rem;
+}
+
+.userCenter_ambCenter_invite p span.tip {
+  margin: 0 2% 0 0;
+  background: url("/static/img/userCenter/ambCenter/bg_tip.png") no-repeat;
+  background-size: cover;
+  display: inline-block;
+  text-align: center;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: .75rem;
+  color: #fff;
+  width: 36%;
+}
+
+.userCenter_ambCenter_invite p span.col-50 {
+  margin: 0;
+  width: 62%;
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.userCenter_ambCenter_invite button {
+  width: 86%;
+  background: url("/static/img/userCenter/ambCenter/invite_btn.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 1rem 7% 0;
+  font-size: .9rem;
+  color: #fff;
+  font-weight: bold;
+  height: 2.8rem;
+  line-height: 2.2rem;
+  border: none;
+  padding-bottom: .6rem;
+}
+
+.userCenter_ambCenter_invite footer {
+  font-size: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.userCenter_ambCenter_invite footer img {
+  width: 100%;
+}

@@ -1,0 +1,48 @@
+<!-- 我的颜值 -->
+<!-- header: start -->
+<heade
+	class="circle_left"
+	head-title="'我的颜值'"
+	head-righttext="'颜值换礼'"
+	head-rightfn="headRightFn"
+ ></heade>
+<!-- header: end -->
+
+<!-- 我的颜值主页 -->
+<div class="content userCentermyfaceValue" ng-if="data.rows.length" >
+		<div class="count">
+			<p>当前颜值</p>
+			<div class="number">
+				<h1>{{face.faceValue}}</h1>
+				<a href="#/task/grow" class="pull-right">
+					怎么赚颜值？
+					<span class="icon icon-right"></span>
+				</a>
+			</div>
+
+			<p>累积颜值：{{face.faceValueTotal}}</p>
+		</div>
+		<!-- 列表 -->
+		<div class="list-block">
+			<ul>
+				<li class="item-content" ng-repeat="item in data.rows">
+					<div class="item-media"></div>
+					<div class="item-inner">
+						<div>
+							<p>{{item.remark}}</p>
+							<p class="time">{{item.updatedAt| date: 'yyyy-MM-dd HH:mm:ss'}}</p>
+						</div>
+						<div>
+							<p class="value">{{item.value}}</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+</div>
+<!-- 空态 -->
+<div  class="content userCentermyfaceValue load" ng-if="data.rows!==undefined&&!data.rows.length">
+	<div class="nullValue" >
+		<img src="/static/img/userCenter/faceValue.png">
+	</div>
+</div>

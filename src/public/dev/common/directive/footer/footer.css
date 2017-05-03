@@ -1,0 +1,238 @@
+.bar.bar-tab.footer {
+  background: #fff;
+}
+.bar.bar-tab.footer:before {
+  background: #ccc;
+}
+.bar.bar-tab.footer.active:before {
+  background: url(/common/directive/footer/bg_border.png) no-repeat center top;
+  background-size: 18.75rem 1.9rem;
+  height: 2rem;
+  top: -0.6rem;
+}
+.bar.bar-tab.footer .tab-item {
+  color: #999;
+  display: inline-block;
+  width: 20%;
+}
+.bar.bar-tab.footer .tab-item .icon {
+  width: 1.2rem;
+  height: 1.24rem;
+  background: url(/common/directive/footer/bg.png) no-repeat center top;
+  background-size: cover;
+}
+.bar.bar-tab.footer .tab-item:nth-of-type(2) .icon {
+  background-position: center -3rem;
+}
+.bar.bar-tab.footer .tab-item:nth-of-type(3) .icon {
+  background-position: center -6rem;
+}
+.bar.bar-tab.footer .tab-item:nth-of-type(4) .icon {
+  background-position: center -7.45rem;
+}
+.bar.bar-tab.footer .tab-item:nth-of-type(5) .icon {
+  background-position: center -10.5rem;
+}
+.bar.bar-tab.footer .tab-item.active {
+  color: #f5416c;
+}
+.bar.bar-tab.footer .tab-item.active:nth-of-type(1) .icon {
+  background-position: center -1.5rem;
+}
+.bar.bar-tab.footer .tab-item.active:nth-of-type(2) .icon {
+  background-position: center -4.5rem;
+}
+.bar.bar-tab.footer .tab-item.active:nth-of-type(3) .icon {
+  background: url(/common/directive/footer/bar_community.png) no-repeat center top;
+  background-size: contain;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -0.5rem;
+}
+.bar.bar-tab.footer .tab-item.active:nth-of-type(4) .icon {
+  background-position: center -8.95rem;
+}
+.bar.bar-tab.footer .tab-item.active:nth-of-type(5) .icon {
+  background-position: center -12rem;
+}
+@media only screen and (max-width: 375px) {
+  .bar.bar-tab .tab-item:nth-of-type(3) .icon {
+    background-position: left -5.2rem;
+  }
+}
+/* 社区菜单 modal */
+.modal-rotateMenu {
+  top: auto;
+  bottom: .75rem;
+  width: 9.5rem;
+  margin-left: -4.75rem;
+}
+.modal-rotateMenu .modal-inner {
+  display: none;
+}
+.modal-rotateMenu .modal-buttons {
+  display: block;
+  position: relative;
+  overflow: visible;
+  height: 8rem;
+}
+.modal-rotateMenu .modal-buttons.animate .modal-button:nth-of-type(1) {
+  transform: translateX(-50%) rotate(360deg);
+  -webkit-transform: translateX(-50%) rotate(360deg);
+}
+.modal-rotateMenu .modal-buttons.animate .modal-button:nth-of-type(2),
+.modal-rotateMenu .modal-buttons.animate .modal-button:nth-of-type(3) {
+  bottom: 4.2rem;
+  left: 0;
+  transform: scale(1) translate(0, 0);
+  -webkit-transform: scale(1) translate(0, 0);
+}
+.modal-rotateMenu .modal-buttons.animate .modal-button:nth-of-type(3) {
+  left: 5.7rem;
+}
+.modal-rotateMenu .modal-button {
+  background: transparent;
+  padding: 0;
+}
+.modal-rotateMenu .modal-button:active {
+  background: transparent !important;
+}
+.modal-rotateMenu .modal-button:after {
+  display: none;
+}
+.modal-rotateMenu .modal-button:nth-of-type(1) {
+  width: 2.1rem;
+  position: absolute;
+  bottom: .05rem;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  -webkit-transform: translateX(-50%) rotate(0deg);
+  transition: all .5s ease .2s;
+  z-index: 2;
+}
+.modal-rotateMenu .modal-button:nth-of-type(2),
+.modal-rotateMenu .modal-button:nth-of-type(3) {
+  width: 3.8rem;
+  height: 3.8rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: 50%;
+  transition: all .5s ease .2s;
+  -webkit-transition: all .5s ease .2s;
+  transform: scale(0.5) translate(-100%, 36%);
+  -webkit-transform: scale(0.5) translate(-100%, 36%);
+}
+.modal-rotateMenu .modal-button:nth-of-type(3) {
+  transition-delay: .5s;
+  -webkit-transition-delay: .5s;
+}
+.modal-rotateMenu .modal-button img {
+  width: 100%;
+}
+.modal-rotateMenu .modal-button .bUploadBtn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  opacity: 0;
+  width: 100%;
+}
+.modal-rotateMenu .modal-button .bUploadBtn.hide {
+  display: none;
+}
+/* 社区申请开通大使 modal */
+.modal-applyAmb {
+  width: 14.5rem;
+  margin-left: -7.25rem;
+  margin: 0 !important;
+  transform: scale(1.2) translate(-42%, -45%);
+  -webkit-transform: scale(1.2) translate(-42%, -45%);
+}
+.modal-applyAmb.modal-in {
+  transform: scale(1) translate(-50%, -50%);
+  -webkit-transform: scale(1) translate(-50%, -50%);
+}
+.modal-applyAmb.modal-out {
+  transform: scale(0.8) translate(-60%, -60%);
+  -webkit-transform: scale(0.8) translate(-60%, -60%);
+}
+.modal-applyAmb img {
+  width: 100%;
+}
+.modal-applyAmb .modal-inner {
+  background: transparent;
+  padding: 0;
+}
+.modal-applyAmb .modal-inner:after {
+  display: none;
+}
+.modal-applyAmb .modal-buttons {
+  margin-top: -2rem;
+}
+.modal-applyAmb .modal-button {
+  background: transparent;
+}
+.modal-applyAmb .modal-button:active {
+  background: transparent !important;
+}
+.modal-applyAmb .modal-button:nth-of-type(1) {
+  right: 1.8rem;
+  top: 3.1rem;
+  position: absolute;
+  width: 1.7rem;
+}
+.modal-applyAmb .modal-button:nth-of-type(2),
+.modal-applyAmb .modal-button:nth-of-type(3) {
+  width: 5.2rem;
+}
+.modal-applyAmb .modal-button:after {
+  display: none;
+}
+/*社区下载页modal*/
+.modal-appDownload {
+  width: 90%;
+  margin-left: -7.5rem;
+  margin: 0 !important;
+  transform: translate3d(0, 0, 0) scale(1.185) translate(-50%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(1.185) translate(-50%, -50%);
+}
+.modal-appDownload.modal-in {
+  transform: translate3d(0, 0, 0) scale(1) translate(-50%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(1) translate(-50%, -50%);
+}
+.modal-appDownload.modal-out {
+  transform: translate3d(0, 0, 0) scale(0.815) translate(-50%, -50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(0.815) translate(-50%, -50%);
+}
+.modal-appDownload img {
+  width: 100%;
+}
+.modal-appDownload .modal-inner {
+  background: transparent;
+  padding: 0;
+}
+.modal-appDownload .modal-inner:after {
+  display: none;
+}
+.modal-appDownload .modal-buttons {
+  margin-top: -2rem;
+}
+.modal-appDownload .modal-button {
+  background: transparent;
+}
+.modal-appDownload .modal-button:nth-of-type(1) {
+  right: 14%;
+  top: 8%;
+  position: absolute;
+  width: 10.4%;
+}
+.modal-appDownload .modal-button:nth-of-type(2),
+.modal-appDownload .modal-button:nth-of-type(3) {
+  width: 5.2rem;
+}
+.modal-appDownload .modal-button:after {
+  display: none;
+}

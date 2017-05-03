@@ -1,0 +1,85 @@
+.userCenter_ambCenter_explainDetail {
+  background: #ffffff;
+  font-size: .6rem;
+  color: #666666;
+}
+.userCenter_ambCenter_explainDetail .questions {
+  margin-top: .5rem;
+  padding: .5rem;
+}
+.userCenter_ambCenter_explainDetail .questions .Q img {
+  width: 8%;
+  vertical-align: middle;
+}
+.userCenter_ambCenter_explainDetail .questions .Q .text {
+  display: inline-block;
+  margin-left: .3rem;
+}
+.userCenter_ambCenter_explainDetail .questions .Q .text p {
+  margin: 0;
+}
+.userCenter_ambCenter_explainDetail .questions .A {
+  margin-top: .5rem;
+}
+.userCenter_ambCenter_explainDetail .questions .A img {
+  width: 8%;
+  vertical-align: top;
+}
+.userCenter_ambCenter_explainDetail .questions .A .text {
+  width: 80%;
+  display: inline-block;
+  margin-left: .3rem;
+}
+.userCenter_ambCenter_explainDetail .questions .A .text p {
+  margin: 0;
+  display: inline-block;
+}
+.userCenter_ambCenter_explainDetail .list {
+  margin-top: .8rem;
+}
+.userCenter_ambCenter_explainDetail .list ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 0 .5rem;
+  font-size: 0;
+}
+.userCenter_ambCenter_explainDetail .list ul li {
+  width: 49.5%;
+  height: 10rem;
+  float: left;
+  font-size: .6rem;
+  color: #666666;
+  text-align: center;
+  border-bottom: 1px solid #ffdfe5;
+  display: table;
+  padding: 0 .3rem;
+}
+.userCenter_ambCenter_explainDetail .list ul li div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.userCenter_ambCenter_explainDetail .list ul li:nth-of-type(1) {
+  background: #ff98b0;
+  height: 2rem;
+  border-radius: .5rem 0 0 0;
+  color: #ffffff;
+  font-size: .75rem;
+}
+.userCenter_ambCenter_explainDetail .list ul li:nth-of-type(2) {
+  background: #ff98b0;
+  height: 2rem;
+  border-radius: 0 .5rem 0 0;
+  color: #ffffff;
+  font-size: .75rem;
+}
+.userCenter_ambCenter_explainDetail .list ul li:nth-child(odd) {
+  border-left: 1px solid #ffdfe5;
+}
+.userCenter_ambCenter_explainDetail .list ul li:nth-child(even) {
+  border-left: 1px solid #ffdfe5;
+  border-right: 1px solid #ffdfe5;
+}
+.userCenter_ambCenter_explainDetail .list p {
+  margin: .5rem ;
+}

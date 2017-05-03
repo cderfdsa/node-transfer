@@ -1,0 +1,43 @@
+<!-- wow列表 -->
+
+<heade class="community_wow_header" head-title="'WOW列表'"></heade>
+
+<div class="content community_wow">
+	<ul>
+		<li class="clearfix" ng-repeat="row in data.rows">
+			<div class="list">
+				<div class="pull-left">
+					<a href="#/community/home/{{row.memberId}}">
+						<img ng-src="{{row.memberInfo.headImg ? row.memberInfo.headImg + (row.memberInfo.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+		        		<!-- <img src="/static/img/userCenter/Level_{{row.memberInfo.type?'s':'v'}}{{row.memberInfo.level}}.png" alt=""> -->
+	        		</a>
+				</div>
+				 <div class="level rightInfo" >
+                    <div class="user">
+                        <div >
+                            <span>{{row.memberInfo.nickName}}</span>
+                            <img ng-src="http://img.beautysite.cn/icon/L{{row.memberInfo.level}}.png" alt="">
+                        	<img ng-if="row.memberInfo.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{row.memberInfo.seniorMember.level}}_mini.png" alt="">
+                            <img ng-src="/static/img/community/icon_{{row.memberInfo.sex==1?'boy':'girl'}}.png">
+                        </div>                 
+                    </div>
+                    <p>
+                    	<img src="/static/img/community/icon_location.png" alt="">{{row.memberInfo.schoolInfo.name||'火星大学'}}
+                    	<span class="pull-right">{{row.createdAt}}</span>
+                    </p>
+                    <p>“{{row.content}}”，<span>（<img src="/static/img/community/wow_value.png" alt="">+{{row.wow}}）</span></p>
+                </div>
+				<!-- <div class="rightInfo">
+					<p>{{row.memberInfo.nickName}}</p>
+	        		<p class="clearfix"><img src="/static/img/community/icon_location.png" alt="">{{row.memberInfo.schoolInfo.name || '火星大学'}}
+	        		<span class="pull-right">{{row.createdAt}}</span></p>
+	        		<p>“{{row.content}}”，<span>（<img src="/static/img/community/wow_value.png" alt="">+{{row.wow}}）</span></p>
+				</div> -->
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="community_btn" ng-show="hideNav" >
+		<img src="static/img/community/nav_content.png">
+		<img src="static/img/community/nav_wow.png" class="pull-right" ng-click="initWow()">
+</div>

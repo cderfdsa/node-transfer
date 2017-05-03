@@ -1,0 +1,119 @@
+<!-- 订单详情 -->
+<heade
+	head-title="'订单详情'"
+	head-leftfn="headLeftFn"
+></heade>
+
+<div class="content order_detail">
+	<!-- 快递信息 -->
+	<section class="express" ng-if="order.status>0&&order.status<=6">
+		<div class="msg">
+			<div>
+				<span class="{{logs[3]?'amb':logs[6]?'pay':''}}"></span>
+			</div>
+			<div>
+				<h1>{{logs[3]?"订单已出库":logs[6]?"订单已完成":"订单已付款"}}</h1>
+				<p>{{logs[3]?"校园大使将亲自送达您的寝室":logs[6]?"感谢您光顾美妆商城":"恭喜您付款成功"}}</p>
+			</div>
+		</div>
+		<div class="msgDetail" ng-if="order.status>0&&order.status<6">
+			<div>
+				<p>付款成功</p>
+				<p><img src="static/img/order/blue.png"></p>
+				<p>{{order.payTime|date:"yyyy-MM-dd"}}</p>
+				<p>{{order.payTime|date:"HH:mm:ss"}}</p>
+			</div>
+			<div >
+				<p class="{{logs[3]?'':'gray'}}">{{logs[3]?"已出库":"待出库"}}</p>
+				<p><img  ng-src="{{logs[3]?'static/img/order/blue.png':'static/img/order/gray.png'}}"></p>
+				<p>{{logs[3][0].createdAt|date:"yyyy-MM-dd"}}</p>
+				<p>{{logs[3][0].createdAt|date:"HH:mm:ss"}}</p>
+			</div>
+			<div >
+				<p class="gray">待送达</p>
+				<p><img src="static/img/order/gray.png"></p>
+				<p></p>
+				<p></p>
+			</div>
+		</div>
+		<div class="msgDetail" ng-if="order.status==6">
+			<div>
+				<p>付款成功</p>
+				<p><img src="static/img/order/blue.png"></p>
+				<p>{{order.payTime|date:"yyyy-MM-dd"}}</p>
+				<p>{{order.payTime|date:"HH:mm:ss"}}</p>
+			</div>
+			<div >
+				<p class="{{logs[3]?'':'gray'}}">{{logs[6]?"已送达":"未送达"}}</p>
+				<p><img ng-src="{{logs[6]?'static/img/order/blue.png':'static/img/order/gray.png'}}"></p>
+				<p>{{logs[6][0].createdAt|date:"yyyy-MM-dd"}}</p>
+				<p>{{logs[6][0].createdAt|date:"HH:mm:ss"}}</p>
+			</div>
+		</div>
+	</section>
+	<!-- 订单信息 -->
+	<section class="orderinfo">
+		<div>
+			<div class="order_msg" ng-repeat="list in order.OrderProducts" ng-click="toOrderDetail(list)">
+				<div class="imgBox">
+					<img ng-src="http://img.beautysite.cn{{list.image}}!/fw/300" alt="">
+				</div>
+				<div class="order_text clearfix">
+					<h2>
+						<span ng-if="list.type">
+							{{['', '兑换', '赠品'][list.type]}}
+						</span>
+						{{list.name}}
+					</h2>
+					<p>原价：
+						<span class="delete">{{list.marketPrice}}</span>
+					</p>
+					<p>规格：{{list.standardName}}</p>
+					<p> 现价：<span class="pink">￥{{list.price}}</span></p>
+					<p>数量：{{list.qty}}</p>
+				</div>
+			</div>
+			<div class="order_total">
+				<p>
+					共<span>{{order.totalQty}}</span>件
+				</p>
+				<p class="pull-right">
+					合计:<span>￥{{order.currPrice + order.postage}}元</span>
+				</p>
+			</div>
+		</div>
+		<div>
+			<div class="time" ng-if="order.status==0">
+				<p>
+					支付剩余:
+					<span ng-if="time>0">{{minute}}:{{time}}</span>
+					<span ng-if="time<0">已关闭</span>
+				</p>
+				<a href="#/order/pay/{{order.orderId}}" class="pull-right">
+					去支付
+				</a>
+				<a ng-click="cancelOrder()" class="pull-right">
+					取消订单
+				</a>
+			</div>
+			<div class="code" ng-if="order.status>0&&order.status<6&&order.addressType==0">
+				<p>凭证劵：{{order.code}} <span>（未拿到货之前千万不要给别人哦！）</span></p>
+				<p ng-click="seeCode()" id="seeCode">查看二维码</p>
+			</div>
+			<h2>收货人信息</h2>
+			<p>收件人：{{order.linkman}}</p>
+			<p>联系电话：{{order.mobile}}</p>
+			<p>收货地址：{{order.address}}</p>
+			<h2>订单信息</h2>
+			<p>订单号：{{order.orderId}}</p>
+			<p>下单时间：{{order.payTime|date:"yyyy-MM-dd HH:MM:ss"}}</p>
+			<p>订单状态：{{order.orderStatus}}</p>
+			<p ng-if="order.remark&&order.addressType==0">订单备注：{{order.remark}}</p>
+		</div>
+	</section>
+
+	<!-- 发红包 -->
+	<section class="redbag" ng-if="order.status>0&&order.status<6" ng-click="wxShare()">
+		<img src="static/img/userCenter/clickMe.png">
+	</section>
+</div>

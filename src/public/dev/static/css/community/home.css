@@ -1,0 +1,220 @@
+/* Variables */
+@font-face {
+  font-family: GARAIT;
+  src: url('/static/font/GARAIT.ttf');
+}
+.userCenter_home_header .icon.pull-right {
+  content: '';
+  position: absolute;
+  background: url(/static/img/community/btn_fenta.png) no-repeat center top;
+  background-size: contain;
+  width: 4rem;
+  height: 1.1rem;
+  right: .5rem;
+  top: .5rem;
+  display: none;
+}
+.userCenter_home_header .icon.pull-right.follow {
+  background: url(/static/img/community/btn_yifen.png) no-repeat center top;
+  background-size: contain;
+}
+.userCenter_home_header ~ .community_home {
+  top: 0;
+}
+.userCenter_home_header h1.title {
+  opacity: 0;
+}
+.community_home {
+  background: #f2f2f2;
+  font-size: 0.6rem;
+  /* 页面头部 */
+  /* 帖子列表 */
+}
+.community_home .homeHeader {
+  text-align: center;
+  color: #fff;
+  height: 11rem;
+  position: relative;
+  padding-top: .9rem;
+  font-size: .5rem;
+  background: #666;
+}
+.community_home .homeHeader .homeHeaderBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.community_home .homeHeader .homeHeaderBg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  width: 100%;
+  filter: blur(6px);
+  -webkit-filter: blur(6px);
+}
+.community_home .homeHeader .homeHeaderBg:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(120, 120, 120, 0.6);
+}
+.community_home .homeHeader .photo {
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+  position: relative;
+  margin-bottom: .4rem;
+  z-index: 1;
+}
+.community_home .homeHeader .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.community_home .homeHeader p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+.community_home .homeHeader p:nth-of-type(1) {
+  margin-bottom: 0.2rem;
+}
+.community_home .homeHeader .level {
+  colol: #ffffff;
+  position: relative;
+}
+.community_home .homeHeader .level .userInfo {
+  margin: 0 2rem;
+  color: #ffffff;
+}
+.community_home .homeHeader .level .userInfo div {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+.community_home .homeHeader .level .userInfo div span {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  padding-right: 3.3rem;
+}
+.community_home .homeHeader .level .userInfo div img {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+.community_home .homeHeader .level .userInfo div img:first-of-type {
+  right: 2.3rem;
+  top: 0;
+}
+.community_home .homeHeader .level .userInfo div img:nth-of-type(2) {
+  right: 1.1rem;
+  top: 0;
+}
+.community_home .homeHeader .level .userInfo div img:nth-of-type(3) {
+  width: .8rem;
+  height: .8rem;
+  right: 0;
+  top: .1rem;
+}
+.community_home .homeHeader .numBox {
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.community_home .homeHeader .numBox .pull-left {
+  width: 33.33%;
+  color: #fff;
+}
+.community_home .homeHeader .numBox .pull-left span {
+  font-size: 0.7rem;
+}
+.community_home .poList {
+  background: #fff;
+  padding: 0 0 .9rem .85rem;
+  overflow: hidden;
+}
+.community_home .poList li {
+  padding: .9rem .8rem 0;
+  border-left: 1px solid #fecbd7;
+}
+.community_home .poList p {
+  margin: 0;
+}
+.community_home .poList p:nth-of-type(1) {
+  color: #999;
+  padding-bottom: .5rem;
+  font-style: italic;
+  position: relative;
+}
+.community_home .poList p:nth-of-type(1):before {
+  content: '';
+  display: block;
+  width: .7rem;
+  height: .7rem;
+  background: url(/static/img/community/pink_spot.png) no-repeat left top;
+  background-size: contain;
+  position: absolute;
+  left: -1.16rem;
+  top: .05rem;
+}
+.community_home .poList p:nth-of-type(1):after {
+  content: '';
+  display: block;
+  width: 70%;
+  height: 1px;
+  background: #fecbd7;
+  position: absolute;
+  left: 7rem;
+  top: .42rem;
+}
+.community_home .poList p:nth-of-type(2) {
+  color: #555;
+  padding: .5rem 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.community_home .poList p:nth-of-type(3) {
+  color: #999;
+  font-style: italic;
+  font-size: .5rem;
+}
+.community_home .poList p:nth-of-type(3) span {
+  color: #ff577f;
+  font-family: GARAIT;
+  font-size: .7rem;
+}
+.community_home .poList p:nth-of-type(3) span span {
+  font-family: 'Microsoft YaHei';
+  font-size: .5rem;
+}
+.community_home .poList .imgBox {
+  position: relative;
+}
+.community_home .poList .imgBox img {
+  width: 100%;
+}
+.community_home .poList .imgBox.po img {
+  width: 49.4%;
+}
+.community_home .poList .imgBox.po img:nth-last-of-type(2n) {
+  float: right;
+}
+.community_home .none {
+  width: 47%;
+  margin: auto;
+  margin-top: 3rem;
+  display: block;
+}

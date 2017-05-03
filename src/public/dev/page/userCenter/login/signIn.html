@@ -1,0 +1,39 @@
+<!-- 注册 -->
+<heade class="userCenter_login_header circle_left" head-title="['注册', '快捷登录', '密码登录'][type]" head-leftfn="headLeftfn"></heade>
+
+<div class="content userCenter_login">
+	<formtemplate
+		ng-formlists="staticData"
+		ng-url="['/account/mobileLogin', '/account/mobileLogin', '/account/passwdLogin'][type]"
+		ng-toastclass="'toast-login'"
+		ng-sucback="successBack"
+		ng-suctip="suctip"
+	>
+	</formtemplate>
+
+	<section class="sign">
+		<div class="clearfix">
+			<a class="pull-left" href="#/userCenter/login/signIn/0" ng-if="type != 0">注册</a>
+			<a class="pull-right" href="#/userCenter/login/signIn/2" ng-if="type == 1">密码登录</a>
+			<a class="pull-right" href="#/userCenter/login/password/1" ng-if="type == 2">忘记密码？</a>
+		</div>
+		<!-- <div class="loginheader">
+			<p>使用社交账号登录</p>
+		</div>
+		<ul class="clearfix">
+ -->			<!-- <li ng-click="thirdLogin('qq')" ng-if="!isWeixin">
+				<span id="wB_LoginBtn"></span>
+				<p>QQ</p>
+			</li> -->
+		<!-- 	<li ng-click="thirdLogin('weibo')" ng-if="!isWeixin">
+				<span id="wb_connect_btn"></span>
+				<P>新浪微博</P>
+			</li>
+			<li ng-click="thirdLogin('weixin')" ng-if="isWeixin">
+				<span id="wc_LoginBtn"></span>
+				<p>微信</p>
+			</li>
+		</ul> -->
+	</section>
+
+</div>

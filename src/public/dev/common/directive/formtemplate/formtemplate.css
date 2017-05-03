@@ -1,0 +1,146 @@
+/* Variables */
+.formtemplate_box {
+  padding: 0 1.4rem;
+  font-size: 0.7rem;
+}
+.formtemplate_box .formLine {
+  margin: .8rem 0;
+  position: relative;
+}
+.formtemplate_box .formLine p {
+  margin: 0;
+}
+.formtemplate_box .formLine input,
+.formtemplate_box .formLine button {
+  width: 100%;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  border: 0;
+}
+.formtemplate_box .formLine input {
+  padding: 0 14%;
+  background: transparent;
+  border: 1px solid #d6d6d6;
+  color: #fff;
+}
+.formtemplate_box .formLine img {
+  width: .65rem;
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.formtemplate_box .formLine img.close {
+  left: auto;
+  right: 7%;
+  width: .8rem;
+}
+.formtemplate_box .formLine.voice {
+  font-size: .6rem;
+  color: #bdbdbd;
+  text-align: right;
+}
+.formtemplate_box .formLine.voice span {
+  color: #dbdbdb;
+}
+.formtemplate_box .formLine.smsCaptcha input {
+  width: 57.81%;
+}
+.formtemplate_box .formLine.smsCaptcha button {
+  width: 39.06%;
+  padding: 0;
+  border: 2px solid #ff577f;
+  color: #ff577f;
+  background: transparent;
+}
+.formtemplate_box .formLine.smsCaptcha button.disabled {
+  border-color: #ccc;
+  color: #ccc;
+  line-height: 1.2;
+  font-size: .5rem;
+}
+.formtemplate_box .formLine.smsCaptcha img {
+  width: 6%;
+}
+.formtemplate_box .formLine.smsCaptcha img.close {
+  right: 49%;
+}
+.formtemplate_box .formLine.password img {
+  width: 7%;
+}
+.formtemplate_box .formLine.password img:last-of-type {
+  left: auto;
+  right: 5.31%;
+}
+.formtemplate_box .formLine.submit {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #fff;
+}
+.formtemplate_box .formLine.submit button {
+  background: #ccc;
+}
+.formtemplate_box .formLine.submit button.active {
+  background: #ff577f;
+}
+.toast-formtemplate {
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  min-width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+/*弹窗自定义样式*/
+.formTplImgModal .popup_container .input_text {
+  width: 50%;
+  border: 1px solid #cccccc;
+  border-radius: 0.2rem;
+  padding: 0 0.5rem;
+}
+.formTplImgModal .popup_container .img_popup {
+  margin-left: 0.3rem;
+  width: 20%;
+}
+.formTplImgModal .popup_container input:focus {
+  border: 1px solid #ff4d7d;
+}
+.formTplImgModal .popup_container a {
+  width: 30%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+.formTplImgModal .modal-inner {
+  background-color: #ffffff;
+}
+.formTplImgModal .modal-inner:after {
+  content: '';
+  background-color: #ffffff;
+}
+.formTplImgModal .modal-buttons {
+  background: #ffffff;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.formTplImgModal .modal-button {
+  width: 50%;
+  font-size: 0.7rem;
+  color: #ff4d7d;
+  border: 1px solid #ff4d7d;
+  background: #ffffff;
+  height: auto;
+}
+.formTplImgModal .modal-button:first-child:last-child {
+  border-radius: 2rem 2rem 2rem 2rem;
+  height: 1.4rem;
+  width: 40%;
+  line-height: 1.4rem;
+  padding: 0;
+  margin-top: .5rem;
+}
+.formTplImgModal .modal-button:after {
+  content: "";
+  background-color: #ffffff;
+}

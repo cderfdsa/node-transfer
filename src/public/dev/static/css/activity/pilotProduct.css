@@ -1,0 +1,164 @@
+.page {
+  max-width: 750px;
+  background: #f9f7ef;
+}
+.activityPilotProduct {
+  /*header*/
+  /*商品列表*/
+  /*footer*/
+}
+.activityPilotProduct header {
+  text-align: center;
+  background-color: #f1386e;
+  font-size: .65rem;
+  color: #fff;
+  font-weight: bold;
+  padding: .35rem .25rem;
+}
+.activityPilotProduct header img {
+  width: 3.6rem;
+  margin-top: .3rem;
+}
+.activityPilotProduct .img {
+  position: relative;
+}
+.activityPilotProduct .img .bg {
+  width: 100%;
+}
+.activityPilotProduct .img .title {
+  position: absolute;
+  top: 0;
+  padding-top: 12%;
+  width: 42.8%;
+  left: 28.6%;
+  animation-delay: .5s;
+}
+.activityPilotProduct .img .title_detail {
+  position: absolute;
+  top: 0;
+  padding-top: 26%;
+  width: 78.2%;
+  left: 10.6%;
+  animation-delay: 1s;
+}
+.activityPilotProduct .img input[type="checkbox"] {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.activityPilotProduct .img input[type="checkbox"]:nth-of-type(1) {
+  bottom: 0;
+  margin-bottom: 72.5%;
+  right: 8%;
+}
+.activityPilotProduct .img input[type="checkbox"]:nth-of-type(2) {
+  bottom: 0;
+  left: 34%;
+  margin-bottom: 18.4%;
+}
+.activityPilotProduct input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/activity/checkbox.png) no-repeat center bottom;
+  background-size: cover;
+  border: none;
+}
+.activityPilotProduct input[type="checkbox"]:checked {
+  background-position: center top;
+}
+.activityPilotProduct .list {
+  padding-left: .5rem;
+  margin-bottom: 2.75rem;
+}
+.activityPilotProduct .list ul {
+  margin: 0;
+  padding: 0;
+}
+.activityPilotProduct .list li {
+  width: 50%;
+}
+.activityPilotProduct .list li div {
+  margin-right: .5rem;
+  margin-bottom: .5rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.activityPilotProduct .list li img {
+  width: 100%;
+  min-height: 8.8rem;
+}
+.activityPilotProduct .list li h3 {
+  font-weight: normal;
+  margin: .25rem;
+  color: #888;
+  font-size: .7rem;
+  height: 2.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.activityPilotProduct .list li p {
+  margin: .25rem;
+  font-size: .6rem;
+}
+.activityPilotProduct .list li p span:first-of-type {
+  color: #f69;
+  margin-right: 1rem;
+}
+.activityPilotProduct .list li p span:nth-of-type(2) {
+  color: #b3b3b3;
+}
+.activityPilotProduct .list li input[type="checkbox"] {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+}
+.activityPilotProduct .list .nogood {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.activityPilotProduct .footer {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: .65rem;
+  max-width: 750px;
+}
+.activityPilotProduct .footer.slideInUp {
+  display: block;
+}
+.activityPilotProduct .footer div:first-of-type {
+  background: #fff;
+  width: 70%;
+  border-top: 1px solid #dbdbdb;
+}
+.activityPilotProduct .footer div:first-of-type span:nth-of-type(1) {
+  padding-left: .85rem;
+  color: #333;
+}
+.activityPilotProduct .footer div:first-of-type span:nth-of-type(2) {
+  color: #f69;
+  font-size: .7rem;
+}
+.activityPilotProduct .footer div:first-of-type span:nth-of-type(3) {
+  color: #999;
+}
+.activityPilotProduct .footer div:last-of-type {
+  background: #f69;
+  color: #fff;
+  text-align: center;
+  width: 30%;
+  border-top: 1px solid #f69;
+}

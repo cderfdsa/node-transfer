@@ -1,0 +1,30 @@
+<!-- 业绩明细 -->
+<heade
+	class="userCenter_ambCenter_achievementDetail_header circle_left"
+	head-title="type"
+></heade>
+<!-- 业绩明细主页 -->
+<div class="content userCenter_ambCenter_achievementDetail">
+	<ul>
+		<li ng-repeat="item in data.rows">
+			<div>
+				<p>{{item.createdAt| date:"yyyy-MM-dd"}}</p>
+				<p>{{item.createdAt|date:"HH:mm:ss"}}</p>
+			</div>
+			<div>
+				<p>{{item.value}} <button>{{[0, 1, 2].indexOf(item.type) > -1 ? ['本人业绩', '邀请大使', '关联业绩'][item.type] : '其他'}}</button></p>
+				<p>{{item.remark}}</p>
+			</div>
+			<div >
+				<a href="#/userCenter/orderDetail/{{item.id}}?type=2&value={{item.value}}" ng-if="item.ref!=null&&item.ref!=''"> 查看详情</a>
+			</div>
+		</li>
+	</ul>
+</div>
+
+<!-- 业绩明细空态 -->
+<div class="content userCenter_ambCenter_achievementDetail" ng-if="data.rows!=undefined&&!data.rows.length">
+	<div class="imgbox">
+		<img src="/static/img/userCenter/ambCenter/null.png">
+	</div>
+</div>

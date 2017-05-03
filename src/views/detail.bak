@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0069)http://wap.meiwan.me/?from=app#/goods/detail/56cca03e6dc6da234a2ee691 -->
+<html ng-controller="mainCtrl" class="ng-scope ng-app pixel-ratio-2 retina"><!-- <html manifest="manifest.php" ng-controller="mainCtrl"> --><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="wap-font-scale" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+
+    <title ng-bind="init.headinfo.title" class="ng-binding">美玩易试</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="http://wap.beautysite.cn/static/img/favicon.ico">
+    <!-- iOS 7 iPad (retina) -->
+    <!-- <link href="/img/icon/icon-152.png" sizes="152x152" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPad (retina) -->
+    <!-- <link href="/img/icon/icon-144.png" sizes="144x144" rel="apple-touch-icon"> -->
+    <!-- iOS 7 iPhone (retina) -->
+    <!-- <link href="/img/icon/icon-120.png" sizes="120x120" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPhone (retina) -->
+    <!-- <link href="/img/icon/icon-114.png" sizes="114x114" rel="apple-touch-icon"> -->
+    <!-- iOS 7 iPad -->
+    <!-- <link href="/img/icon/icon-76.png" sizes="76x76" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPad -->
+    <!-- <link href="/img/icon/icon-72.png" sizes="72x72" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPhone -->
+    <link rel="apple-touch-icon" href="http://wap.beautysite.cn/img/favicon.ico" sizes="57x57">
+
+    <style>
+        .ng-cloak{visibility: hidden;}
+        .views{width: 100%; height: 100%; position: relative; z-index: 10; opacity: 0; overflow: hidden;
+            -webkit-transition-property: -webkit-transform, opacity;
+            -moz-transition-property: -moz-transform, opacity;
+            -ms-transition-property: -ms-transform, opacity;
+            -o-transition-property: -o-transform, opacity;
+            transition-property: transform, opacity;
+        }
+        .views-in{
+            opacity: 1;
+            -webkit-transition-duration: 1500ms;
+            -o-transition-duration: 1500ms;
+            transition-duration: 1500ms;
+        }
+        /*AJax loading*/
+        .loading {display: none; position: absolute;left: 50%;top: 50%;padding: 8px;margin-left: -25px;margin-top: -25px;background: rgba(0,0,0,.8);z-index: 11000;border-radius: 5px;}
+        .loading .span {display: block;width: 34px;height: 34px;-webkit-transform-origin: 50%;transform-origin: 50%;-webkit-animation: preloader-spins 1s steps(12,end)infinite;animation: preloader-spins 1s steps(12,end)infinite;}
+        .loading .span:after {display: block;content: "";width: 100%;height: 100%;background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position: 50%;background-size: 100%;background-repeat: no-repeat;}
+        @-webkit-keyframes preloader-spins {100% {-webkit-transform: rotate(360deg)}}
+        @-moz-keyframes preloader-spins {100% {-moz-transform: rotate(360deg)}}
+        @-ms-keyframes preloader-spins {100% {-ms-transform: rotate(360deg)}}
+        @-o-keyframes preloader-spins {100% {-o-transform: rotate(360deg)}}
+        @keyframes preloader-spins {100% {transform: rotate(360deg)}}
+        .loading.ng-cloak{display: block; visibility:visible;}
+    </style>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="common/service/initService" src="/detail/initService.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="static/controller/goods/detailCtrl" src="/detail/detailCtrl.js"></script>
+
+<link type="text/css" rel="stylesheet" href="/detail/sm.min.css">
+<link type="text/css" rel="stylesheet" href="/detail/sm-extend.min.css">
+<link type="text/css" rel="stylesheet" href="/detail/animate.min.css">
+<link type="text/css" rel="stylesheet" href="/detail/detail.css">
+<link type="text/css" rel="stylesheet" href="/detail/lazyLoad.css">
+<link href="//cdn.bootcss.com/Swiper/3.3.1/css/swiper.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="loading" style="display: none;"><span class="span"></span></div>
+    <div class="views views-in">
+        <!-- uiView:  --><div class="page ng-scope" ui-view=""><!-- content: start -->
+<div class="content goodsDetail ng-scope">
+	<!-- banner: start -->
+	<section class="banner clearfix">
+		<!-- ngIf: headerForm -->
+	    <!-- ngIf: headerForm -->
+	    <!-- <span class="time pull-right">[icon]&nbsp;剩余时间&nbsp;9天&nbsp;10:17:48</span> -->
+
+	    <section class="swiper-banner">
+            <ul class="banner_list clearfix swiper-wrapper">
+                <%product.images.forEach(function(i){%>
+                <!-- ngRepeat: image in data.data.images -->
+                <li class="swiper-slide ng-scope" ng-repeat="image in data.data.images">
+                    <img class="lazy loading_fadeIn" data-original="http://img.beautysite.cn/<%=i%>!/fw/414" src="/detail/loading-200.jpg" alt="">
+                </li><!-- end ngRepeat: image in data.data.images -->
+                <%});%>
+            </ul>
+        </section>
+	</section>
+	<!-- banner: end -->
+
+	<!-- 商品head头信息：start -->
+	<section class="goods_head">
+		<div class="clearfix">
+			<h2 class="pull-left ng-binding">【<%=product.introduction%>】<%=product.name%></h2>
+			<!-- ngIf: headerForm -->
+		</div>
+		<p class="money ng-binding"><span class="ng-binding">￥<%= product.event?product.event.price:product.price%></span>原价￥<%=product.marketPrice%>（<%=product.discount%>折）</p>
+		<p class="buied ng-binding"><%=product.virtualBuyCount%>人已购买</p>
+		<!-- <p class="full_gift"><span>促</span>满80元送美丽加芬BB霜 &amp; 满288元再送美丽加芬HA锁水保湿礼盒</p> -->
+	</section>
+	<!-- 商品head头信息：end -->
+
+	<!-- ensure: start -->
+	<nav class="bar-tab goods_ensure">
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/detail/z1.png" alt="">
+			正品保证
+		</a>
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/detail/z2.png" alt="">
+			送达寝室
+		</a>
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/detail/z3.png" alt="">
+			免费试用
+		</a>
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/detail/z4.png" alt="">
+			无忧退货
+		</a>
+	</nav>
+	<!-- ensure: end -->
+
+	<!-- comment: start -->
+	<section class="comment">
+		<ul>
+			<!-- ngIf: comment.count --><li class="comment_title clearfix ng-binding ng-scope" ng-if="comment.count">
+				商品评论（<%=stat.totalComment%>）
+				<a href="http://wap.beautysite.cn/?from=app#/goods/comment/<%=product._id%>" class="pull-right">
+					评分：<span class="red ng-binding"><%=stat.score?stat.score:0%></span> <i class="icon icon-right"></i>
+				</a>
+			</li><!-- end ngIf: comment.count -->
+      <%comments.rows.forEach(function(comment){ %>
+      <!-- ngRepeat: commentList in comment.rows | limitTo: 3 --><!-- ngIf: comment.count -->
+      <li class="common_list ng-scope" ng-if="comment.count" ng-repeat="commentList in comment.rows | limitTo: 3">
+				<p class="clearfix">
+					<span class="pull-left">
+            <%for(var i=0;i<comment.stars;i++){%>
+              <i class="ing"></i>
+            <%}%>
+            <%for(var i=0;i<5-comment.stars;i++){%>
+              <i class=""></i>
+            <%}%>
+					</span>
+					<span class="pull-right ng-binding"><%=comment.nickName%></span>
+				</p>
+				<p class="clearfix">
+					<span class="textComment ng-binding"><%=comment.textComment%></span>
+					<span class="showAllComment  ng-hide" ng-click="showCommentFn($index)" ng-show="commentList.showCommentBtn">收起</span>
+				</p>
+			</li><!-- end ngIf: comment.count --><!-- end ngRepeat: commentList in comment.rows | limitTo: 3 --><!-- ngIf: comment.count -->
+      <% })%>
+			<!-- ngIf: totalComment.totalComment>3 -->
+      <%if (stat.totalComment > 3){%>
+        <li class="toAllBtn text-center ng-scope" ng-if="totalComment.totalComment&gt;3"><a href="http://wap.beautysite.cn/?from=app#/goods/comment/<%=product._id%>">查看全部评论</a></li><!-- end ngIf: totalComment.totalComment>3 -->
+      <%}%>
+			<!-- ngIf: !comment.count -->
+		</ul>
+	</section>
+	<!-- comment: end -->
+
+	<!-- detail: start -->
+	<section class="goods_detail">
+    <%-product.desc%>
+  </section>
+	<!-- detail: end -->
+
+</div>
+<!-- content: end -->
+
+<!-- footer: start -->
+<!-- ngIf: headerForm -->
+<!-- footer: end -->
+</div>
+    </div>
+    <script src="//cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+    <script src="//cdn.bootcss.com/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script>
+      $(function(){
+        $(".swiper-banner").swiper({
+          autoplay: 4000,  // delay between transitions
+          autoplayDisableOnInteraction: false,  // Set to false and autoplay will not be disabled after user interactions
+        });
+        $("img.lazy").lazyload();
+      });
+    </script>
+</body></html>

@@ -1,0 +1,117 @@
+/* Variables */
+/* content */
+.community_wow {
+  background: #f2f2f2;
+  font-size: 0.7rem;
+}
+.community_wow ul {
+  border-bottom: 1px solid #e6e6e6;
+}
+.community_wow li {
+  background: #fff;
+  padding-left: 0.5rem;
+}
+.community_wow li:last-of-type .list {
+  border-bottom: none;
+}
+.community_wow li div.pull-left {
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-right: .5rem;
+  position: relative;
+}
+.community_wow li div.pull-left img:first-of-type {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.community_wow li div.rightInfo {
+  margin-left: 2.7rem;
+}
+.community_wow .list {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.community_wow .list .level .user {
+  margin-right: 3.2rem;
+  color: #333;
+}
+.community_wow .list .level .user div {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+.community_wow .list .level .user div span {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+.community_wow .list .level .user div img {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+.community_wow .list .level .user div img:first-of-type {
+  right: -1.2rem;
+  top: 0;
+}
+.community_wow .list .level .user div img:nth-of-type(2) {
+  right: -2.3rem !important;
+  top: 0;
+}
+.community_wow .list .level .user div img:last-of-type {
+  width: .8rem;
+  height: .8rem;
+  right: -3.2rem;
+  top: .1rem;
+}
+.community_wow .list .level p {
+  color: #999;
+  font-size: .5rem;
+}
+.community_wow .list .level p:nth-of-type(2) {
+  font-size: .7rem;
+  color: #333;
+  margin-top: .2rem;
+}
+.community_wow .list .level p:nth-of-type(2) span {
+  color: #ff577f;
+}
+.community_wow .list .level p:nth-of-type(2) span img {
+  width: 2.2rem;
+  margin-right: .2rem;
+}
+.community_wow .list .level p:nth-of-type(1) {
+  margin: 0;
+  color: #999;
+  line-height: .8rem;
+}
+.community_wow .list .level p:nth-of-type(1) span {
+  color: #999;
+}
+.community_wow .list .level p:nth-of-type(1) img {
+  width: .5rem;
+  margin-right: .1rem;
+  margin-bottom: -0.1rem;
+}
+/* 浮动按钮 */
+.community_btn {
+  padding: 0.5rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  background: rgba(76, 76, 76, 0.8);
+}
+.community_btn img:first-of-type {
+  width: 40%;
+  vertical-align: bottom;
+}
+.community_btn img:last-of-type {
+  width: 35%;
+  vertical-align: middle;
+}

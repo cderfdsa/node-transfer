@@ -1,0 +1,34 @@
+<!-- 种草单 -->
+<heade head-title="'种草单'" class="circle_left"></heade>
+
+<div class="content userCenter_collect">
+    <!-- list -->
+    <div ng-if="favoriteLists.rows.length">
+        <ul>
+            <li ng-repeat="list in favoriteLists.rows">
+                <p class="date">{{list.createdAt| date:"yyyy-MM-dd HH:mm:ss"}}</p>
+                <div class="goodsBox clearfix">
+                    <a href="#/goods/detail/{{list._id}}">
+                        <img class="lazy pull-left" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{list.images}}">
+                        <div>
+                            <p class="name">{{list.name}}</p>
+                            <p>
+                                <span>市场价：{{list.marketPrice}}</span>
+                                <span>折扣：{{list.discount}}折</span>
+                                <span>美妆价：<span>￥{{list.price}}</span></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="del">
+                    <button type="button" ng-click="delete($index)">删除</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- list none -->
+    <div class="none center" ng-if="favoriteLists!=undefined&&!favoriteLists.rows.length">
+        <img src="/static/img/userCenter/null.png">暂无记录
+    </div>
+</div>

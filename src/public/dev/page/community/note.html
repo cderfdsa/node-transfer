@@ -1,0 +1,100 @@
+<!--代言笔记  -->
+<heade class="community_note_header" head-lefttext="'取消'" head-title="'代言笔记'" head-righttext="'发布'" head-leftfn="headLeftFn" head-rightfn="headRightFn"></heade>
+
+<div class="content community_note">
+	<!-- tab -->
+	<tab tab-texts="['双图对比封面','单张大封面']" tab-active="tabActive" tab-callback="tabMenuFn"></tab>
+	<!-- 对比图 -->
+	 <section class="double" ng-show="!tabActive">
+		<p>使用前后对比封面，能增加200%吸睛力哦~</p>
+		<div class="doubleContent">
+			<div class="doubleBox">
+				<div class="imgBox upload" data-imgindex="0">
+			 		<img src="/static/img/community/before.png" ng-show="!community_viewImgUrl[0]">
+			 		<img src="http://img.beautysite.cn{{community_viewImgUrl[0]}}!/fw/300" ng-click="actionsPic(0)" ng-show="community_viewImgUrl[0]">
+					<img src="/static/img/community/add.png" class="add" ng-show="!community_viewImgUrl[0]" data-imgindex="0">
+				 </div>
+				<div class="text">
+					<h2>Before</h2>
+				</div>
+			</div>
+			<div class="vs">
+				<img src="/static/img/community/vs.png" >
+			</div>
+			<div class="doubleBox">
+				<div class="imgBox upload" data-imgindex="1">
+			 		<img src="/static/img/community/after.png" ng-show="!community_viewImgUrl[1]">
+			 		<img src="http://img.beautysite.cn{{community_viewImgUrl[1]}}!/fw/300" ng-click="actionsPic(1)" ng-show="community_viewImgUrl[1]">
+					<img src="/static/img/community/add.png" class="add" ng-show="!community_viewImgUrl[1]" data-imgindex="1">
+				 </div>
+				<div class="text">
+					<h2>After</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="single" ng-show="tabActive">
+		<div class="singleBox upload" data-imgindex="2">
+			<img src="/static/img/community/single.png" ng-show="!community_viewImgUrl[2]">
+			<img src="http://img.beautysite.cn{{community_viewImgUrl[2]}}!/fw/600" ng-click="actionsPic(2)" ng-show="community_viewImgUrl[2]">
+			<img src="/static/img/community/single_add.png" class="singleAdd" ng-show="!community_viewImgUrl[2]">
+		</div>
+	</section>
+
+	<!-- 添加标签 -->
+	<section class="tags">
+		<div class="tagsContent">
+			<div class="clearfix">
+				<img src="/static/img/community/icon_tag.png" alt="">标签
+				<span class="pull-right" ng-click="toAddTags()">添加标签<i class="icon icon-right"></i></span>
+			</div>
+			<ul class="tagList clearfix" ng-if="community_addTags.length">
+				<li class="pull-left" ng-repeat="tag in community_addTags | limitTo: 5">#{{tag}}#</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- 编辑区域 -->
+	<section class="editContent">
+		<div class="editItem" ng-repeat="item in community_editContent">
+			<div class="areaBox" ng-if="!item.type">
+				<i class="icon close" ng-click="editContentFn($index)"></i>
+				<textarea  data-ng-init="loadTextarea()" placeholder="等你说点什么~" ng-model="item.data" ng-change="limitTextLength($index)" ng-focus="focusTextarea($event)"></textarea>
+			</div>
+
+			<div class="imgBox" ng-if="item.type == 1">
+				<i class="icon close" ng-click="editContentFn($index)"></i>
+				<img ng-src="http://img.beautysite.cn{{item.data}}!/fw/600" alt="">
+			</div>
+
+			<div class="goods clearfix" ng-if="item.type == 2">
+				<i class="icon close" ng-click="editContentFn($index)"></i>
+				<div class="goodsImg pull-left">
+					<img ng-src="http://img.beautysite.cn{{item.data.images}}" alt="">
+				</div>
+				<div class="goodsText ">
+					<h1>【{{item.data.introduction}}】{{item.data.name}}</h1>
+					<p>
+						￥{{item.data.price}}
+						<span>￥{{item.data.marketPrice}}</span>
+						<!-- <span> {{item.data.discount}}折</span> -->
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<textarea name="text" placeholder="等你说点什么~"  ng-model="textareas" ng-change="limitTextLength()" ng-click="focusTextarea($event)"></textarea>
+	</section>
+
+</div>
+
+<nav class="bar bar-tab community_note_footer {{hideFooterClass}}">
+   <div class="upload" data-imgindex="3">
+   		<img src="/static/img/community/add_pic.png" alt="">
+   </div>
+    <div>
+   		<img src="/static/img/community/add_goods.png" alt="" ng-click="tobeautyGoods()">
+   </div>
+</nav>
+

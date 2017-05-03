@@ -1,0 +1,54 @@
+<heade class="userCenter_home_header circle_left" head-title="userCommunityInfo.member.nickName" head-rightfn="headRightFn" head-scroll="true"></heade>
+
+<!-- 女神说个人主页 -->
+<div class="content community_home">
+    <section class="homeHeader">
+        <div class="homeHeaderBg">
+            <img src="{{userCommunityInfo.member.headImg ? userCommunityInfo.member.headImg + (userCommunityInfo.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/750' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+        </div>
+        <div class="photo">
+            <img src="{{userCommunityInfo.member.headImg ? userCommunityInfo.member.headImg + (userCommunityInfo.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+        </div>
+         <div class="level">
+            <div class="userInfo">
+                <div>
+                    <span>{{userCommunityInfo.member.nickName}}</span>
+                    <img ng-if="userCommunityInfo.member.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{userCommunityInfo.member.seniorMember.level}}_mini.png" alt="">
+                    <img src="http://img.beautysite.cn/icon/L{{userCommunityInfo.member.level}}.png" alt="">
+                    <img src="/static/img/community/icon_{{userCommunityInfo.member.sex==1?'boy':'girl'}}.png">
+                </div>
+            </div>
+            <p><i class="icon"></i>{{userCommunityInfo.member.schoolInfo.name || '火星大学'}}</p>
+            <p>{{userCommunityInfo.member.signature}}</p>
+        </div>
+        <div class="clearfix numBox">
+            <a href="#/userCenter/fans/{{userCommunityInfo.isSelf}}/{{userCommunityInfo.member.id}}" class="pull-left">粉丝<br><span>{{userCommunityInfo.fansCount}}</span></a>
+            <a href="#/userCenter/follow/{{userCommunityInfo.isSelf}}/{{userCommunityInfo.member.id}}" class="pull-left">关注<br><span>{{userCommunityInfo.followCount}}</span></a>
+            <span class="pull-left">WOW<br><span>{{userCommunityInfo.wowValue}}</span></span>
+        </div>
+    </section>
+
+    <!-- 帖子列表 -->
+    <ul class="poList" ng-if="data.count">
+        <li ng-repeat="list in data.rows" ng-if="!list.isDelete">
+            <p>{{list.type ? '笔记于': 'PO图于'}}：{{list.createdAt}}</p>
+            <div class="imgBox clearfix {{list.image.length>=2&&'po'}}">
+                <a href="#/community/postPictureDetail/{{list._id}}">
+                    <img class="pull-left lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{img}}!/fw/{{list.image.length>=2?300:600}}" alt="" ng-repeat="img in list.image">
+                </a>
+            </div>
+            <p ng-repeat="content in list.content| filter: {type: 0}| limitTo: 1">{{content.data}}</p>
+            <p>
+                （已被围观
+                <span>{{list.browseNums>10000?list.browseNums/10000:(list.browseNums||0)}}
+                    <span ng-if="list.browseNums>10000">万</span>
+                </span>次，获得
+                <span>{{list.wowValue||0}}
+                    <span ng-if="list.wowValue>10000">万</span>
+                </span>WOW值）
+            </p>
+        </li>
+    </ul>
+
+    <img class="none" ng-src="/static/img/community/{{userCommunityInfo.isSelf?'post_none':'home_none'}}.png" ng-if="data.count!=undefined&&!data.count" alt="">
+</div>

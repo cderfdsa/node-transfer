@@ -1,0 +1,190 @@
+.order_myOrder {
+  background: #f2f2f2;
+  padding: 0 .5rem;
+}
+.order_myOrder .tab_box .tab {
+  font-size: 0.6rem;
+  padding: 0 0.2rem;
+  margin: 0;
+  font-weight: normal;
+}
+.order_myOrder .tab_box .tab .active {
+  font-weight: normal;
+  z-index: 0;
+}
+.order_myOrder .tab_box .tab:after {
+  content: "";
+  display: none;
+}
+.order_myOrder .tabContent {
+  margin-top: .3rem;
+}
+.order_myOrder .tabContent ul li {
+  background: #ffffff;
+  font-size: 0.65rem;
+  color: #b3b3b3;
+  padding: 0 .5rem;
+  margin-bottom: 0.3rem;
+}
+.order_myOrder .tabContent ul li p {
+  margin: 0;
+  padding: .3rem 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.order_myOrder .tabContent ul li p:last-of-type {
+  border: none;
+  padding: .3rem 0;
+}
+.order_myOrder .tabContent ul li .pink {
+  color: #ff577f;
+}
+.order_myOrder .tabContent ul li .order_content {
+  padding: 1rem 0;
+  border-bottom: 1px dashed #e6e6e6;
+}
+.order_myOrder .tabContent ul li .order_content .imgbox {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+.order_myOrder .tabContent ul li .order_content .imgbox img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.order_myOrder .tabContent ul li .order_content .order_text {
+  width: 75%;
+  margin-left: 0.3rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.order_myOrder .tabContent ul li .order_content .order_text h2 {
+  margin: 0;
+  color: #888888;
+  font-size: 0.7rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.order_myOrder .tabContent ul li .order_content .order_text h2 span {
+  color: #ff577f;
+  border: 1px solid #ff577f;
+  border-radius: .1rem;
+  -webkit-border-radius: .1rem;
+  padding: 0 .1rem;
+  font-size: .5rem;
+  display: inline-block;
+  margin-top: -0.2rem;
+  vertical-align: middle;
+}
+.order_myOrder .tabContent ul li .order_content .order_text p {
+  display: inline-block;
+  border: none;
+  float: left;
+  width: 40%;
+  font-size: 0.6rem;
+  margin: 0;
+  padding: 0;
+}
+.order_myOrder .tabContent ul li .order_content .order_text p:nth-of-type(2n) {
+  width: 60%;
+}
+.order_myOrder .tabContent ul li .order_content .order_text p .delete {
+  text-decoration: line-through;
+}
+.order_myOrder .tabContent ul li .order_total {
+  font-size: 0.65rem;
+}
+.order_myOrder .tabContent ul li .order_total p {
+  display: inline-block;
+  border: none;
+  margin: 0;
+}
+.order_myOrder .tabContent ul li .order_total p span {
+  color: #ff577f;
+}
+.order_myOrder .tabContent ul li .seeDetail {
+  font-size: 0.6rem;
+  padding: 0.5rem 0;
+}
+.order_myOrder .tabContent ul li .seeDetail b {
+  color: #ff577f;
+}
+.order_myOrder .tabContent ul li .seeDetail .btn {
+  color: #ffffff;
+  background: #ff577f;
+  padding: .1rem .5rem;
+  border: 1px solid #b3b3b3;
+  border-radius: .5rem;
+}
+.order_myOrder .tabContent ul li .seeDetail .a {
+  color: #b3b3b3;
+}
+.order_myOrder .tabContent ul li .seeDetail span {
+  color: #cccccc;
+}
+.order_myOrder .tabContent ul li .seeDetail .pay a {
+  color: #b3b3b3;
+  background: transparent;
+  width: 2rem;
+  border: 1px solid #b3b3b3;
+  border-radius: .5rem;
+  padding: .1rem .5rem;
+}
+.order_myOrder .tabContent ul li .seeDetail .pay a:last-of-type {
+  background: #ff577f;
+  padding: .1rem .9rem;
+  color: #ffffff;
+  margin-left: 0.3rem;
+}
+.order_myOrder .null {
+  margin: 0 auto;
+  margin-top: 2rem;
+  text-align: center;
+}
+.order_myOrder .null p {
+  font-size: 0.4rem;
+  color: #999999;
+}
+.order_myOrder .null img {
+  width: 20%;
+}
+.order_myOrder .tab_box .tab.active {
+  z-index: 0;
+}
+/* 弹窗 */
+.cancelOrderModal .modal-inner {
+  background: #ffffff;
+  position: static;
+  padding: .8rem 0;
+}
+.cancelOrderModal .modal-inner .modal-title {
+  color: #4A4747;
+}
+.cancelOrderModal .modal-buttons {
+  background: #ffffff;
+  height: auto;
+  border-radius: 0 0 .5rem .5rem;
+  padding: .3rem 0;
+}
+.cancelOrderModal .modal-buttons .modal-button {
+  font-size: 0.6rem;
+  height: auto;
+  line-height: 1.5rem;
+  width: auto;
+  background: #ffffff;
+  color: #ff577f;
+  border: 1px solid #ff577f;
+  border-radius: 1rem;
+  padding: 0 .8rem;
+  margin: 0.5rem 0;
+}
+.cancelOrderModal .modal-buttons .modal-button:last-of-type {
+  margin-left: 0.8rem;
+  background: #ff577f;
+  color: #ffffff;
+}

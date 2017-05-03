@@ -1,0 +1,331 @@
+.page {
+  background: #faf7f0;
+  max-width: 750px;
+}
+/*页面整个内容区域*/
+.activityRedBag {
+  /*海报区域*/
+  /*号码表单*/
+  /*规则*/
+  /*看手气列表*/
+  /*代金券页面*/
+  /*已领过*/
+}
+.activityRedBag .poster {
+  font-size: 0;
+}
+.activityRedBag .poster .bg {
+  width: 100%;
+}
+.activityRedBag .list {
+  padding: 1rem ;
+  background: #ffe8e8;
+}
+.activityRedBag .list .form {
+  margin-bottom: 0.5rem;
+  position: relative;
+  width: 100%;
+}
+.activityRedBag .list .row {
+  margin-left: 0;
+  width: 100%;
+}
+.activityRedBag .list input {
+  width: 100%;
+  border: 1px solid #666666;
+  border-radius: 5rem;
+  padding: 0.5rem 0.5rem;
+  margin: 0;
+}
+.activityRedBag .list .inp {
+  width: 60%;
+}
+.activityRedBag .list button {
+  width: 35%;
+  background: #ffffff;
+  color: #ff4d7d;
+  border: 1px solid #ff4d7d;
+  border-radius: 6rem;
+  float: right;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+}
+.activityRedBag .list .default {
+  width: 35%;
+  background: #ffffff;
+  color: #666666;
+  border: 1px solid #666666;
+  border-radius: 6rem;
+  float: right;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+}
+.activityRedBag .list .btn {
+  width: 100%;
+}
+.activityRedBag .list p {
+  margin: 0;
+  width: 100%;
+  line-height: 2.2rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.activityRedBag .list .textCode {
+  padding: 1rem 0;
+}
+.activityRedBag .list .textCode p {
+  font-size: 0.7rem;
+  color: #cccccc;
+}
+.activityRedBag .list .textCode p span {
+  color: #ff4d7d;
+}
+.activityRedBag .regulation {
+  padding: 0.5rem 1.2rem;
+  background: #ffffff;
+  color: #4d3838;
+  font-size: 0.6rem;
+}
+.activityRedBag .regulation .nav img {
+  width: 16.375rem;
+}
+.activityRedBag .regulation ul {
+  list-style: none;
+  padding: 0;
+}
+.activityRedBag .regulation ul li {
+  margin-top: 0.5rem;
+}
+.activityRedBag .regulation ul li .listBtn {
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #fb8bb1;
+  border-radius: 5rem;
+  color: #ffffff;
+  font-size: 0.5rem;
+  text-align: center;
+}
+.activityRedBag .regulation ul li .listBtn .col-80 {
+  width: 85%;
+}
+.activityRedBag .regulations {
+  background: #ffffff;
+  color: #4d3838;
+  font-size: 0.6rem;
+}
+.activityRedBag .regulations .nav img {
+  width: 100%;
+  padding: 0.5rem 1.2rem;
+}
+.activityRedBag .regulations ul {
+  list-style: none;
+  padding: 0 0.5rem;
+  margin: 0;
+}
+.activityRedBag .regulations ul li {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d9d9d9;
+}
+.activityRedBag .regulations ul li img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+.activityRedBag .regulations ul li .item {
+  margin-left: 2rem;
+  font-size: 0.6rem;
+  color: #cccccc;
+}
+.activityRedBag .regulations ul li .item .name {
+  font-size: 0.7rem;
+  color: #333333;
+  margin: 0;
+}
+.activityRedBag .regulations ul li .item p {
+  margin: 0;
+  color: #d9d9d9;
+}
+.activityRedBag .regulations ul li .item span:first-of-type {
+  margin-top: .2rem;
+  display: inline-block;
+}
+.activityRedBag .regulations ul li .item span:last-of-type {
+  float: right;
+  color: #ff4d7d;
+}
+.activityRedBag .regulations ul li .item span:last-of-type b {
+  font-size: 0.8rem;
+}
+.activityRedBag .success1 .lists {
+  background: #ffe8e8;
+  padding: 0.5rem;
+}
+.activityRedBag .success1 .lists .bg {
+  background-image: url(/static/img/activity/bg_3.png);
+  background-size: 100% 100%;
+  height: 9rem;
+  background-repeat: no-repeat;
+  font-size: 0.7rem;
+  color: #333333;
+}
+.activityRedBag .success1 .lists .bg .text {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+.activityRedBag .success1 .lists .bg .text button {
+  width: 50%;
+  background: #ff91a6;
+  border: none;
+  color: #ffffff;
+  padding: 0 0.5rem;
+  border-radius: 5rem;
+  font-size: 0.9rem;
+}
+.activityRedBag .success1 .lists .bg .text p {
+  font-size: 0.7rem;
+  color: #ff4d7d;
+  margin: 0;
+}
+.activityRedBag .success1 .lists .bg .text p span {
+  font-size: 2.5rem;
+}
+.activityRedBag .success1 .lists .bg .text .mobile {
+  margin: 0;
+  margin-top: 1rem;
+  color: #333333;
+}
+.activityRedBag .success1 .buttons {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+.activityRedBag .success1 .buttons img {
+  width: 85%;
+  padding: 1rem 0;
+}
+.activityRedBag .success2 .lists {
+  background: #ffffff;
+  padding: 0.5rem;
+}
+.activityRedBag .success2 .lists .bg {
+  background-image: url(/static/img/activity/bg_3.png);
+  background-size: 100% 100%;
+  height: 9rem;
+  background-repeat: no-repeat;
+  font-size: 0.7rem;
+  color: #333333;
+}
+.activityRedBag .success2 .lists .bg .submit {
+  top: 20%;
+  font-size: 0.7rem;
+  color: #666666;
+  text-align: center;
+}
+.activityRedBag .success2 .lists .bg .submit > div {
+  padding: 15% 10%;
+}
+.activityRedBag .success2 .lists .bg .submit > div img {
+  width: 15%;
+  vertical-align: middle;
+}
+.activityRedBag .success2 .lists .bg .submit span {
+  padding: 0 0.4rem;
+}
+.activityRedBag .success2 .lists .bg .submit .number {
+  margin: 0;
+  margin-top: -0.8rem;
+}
+.activityRedBag .success2 .buttons {
+  background: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+.activityRedBag .success2 .buttons img {
+  width: 85%;
+  padding: 1rem 0;
+}
+/*弹窗自定义样式*/
+.redBagModal .popup_container .customize_popup input {
+  width: 50%;
+  border: 1px solid #cccccc;
+  border-radius: 0.2rem;
+  padding: 0 0.5rem;
+}
+.redBagModal .popup_container .customize_popup input:focus {
+  border: 1px solid #ff4d7d;
+}
+.redBagModal .popup_container .customize_popup img {
+  margin-left: 0.3rem;
+  width: 20%;
+}
+.redBagModal .popup_container .customize_popup a {
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+.redBagModal .modal-inner {
+  background-color: #ffffff;
+}
+.redBagModal .modal-inner:after {
+  content: '';
+  background-color: #ffffff;
+}
+.redBagModal .modal-buttons {
+  background: #ffffff;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.redBagModal .modal-button {
+  width: 50%;
+  font-size: 0.7rem;
+  color: #ff4d7d;
+  border: 1px solid #ff4d7d;
+  background: #ffffff;
+  height: auto;
+}
+.redBagModal .modal-button:first-child:last-child {
+  border-radius: 2rem 2rem 2rem 2rem;
+  height: 1.4rem;
+  width: 40%;
+  line-height: 1.4rem;
+  padding: 0;
+}
+.redBagModal .modal-button:after {
+  content: "";
+  background-color: #ffffff;
+}
+/*错误提示*/
+.toast_success {
+  text-align: center;
+  font-size: 0.7rem;
+  padding: 0.5rem 0.5rem;
+  width: 13.5rem;
+  height: 6rem;
+  -webkit-border-radius: 0.2rem;
+  background: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+.toast_success p {
+  margin: 0;
+  padding: 0;
+}
+.toast_success img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: auto;
+  margin: 0.3rem auto;
+}
+/* popup: 微信二维码 */
+.popup_wxCode {
+  height: auto;
+  top: auto;
+  bottom: 0;
+  font-size: 0;
+}
+.popup_wxCode img {
+  width: 100%;
+}

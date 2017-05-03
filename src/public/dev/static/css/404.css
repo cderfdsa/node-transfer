@@ -1,0 +1,28 @@
+.noPage_header .pull-left {
+  display: none;
+}
+.noPage {
+  color: #858585;
+  text-align: center;
+  /*content*/
+}
+.noPage img {
+  padding-top: 2rem;
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+.noPage p {
+  margin: .8rem 0;
+}
+.noPage a {
+  width: 4.7rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border: #ff8cb3 solid 1px;
+  text-align: center;
+  color: #ff8cb3;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+}

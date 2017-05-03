@@ -1,0 +1,175 @@
+@charset "UTF-8";
+.userCenter_ambCenter_special_header a.icon {
+  width: 1rem;
+  height: .9rem;
+  background: url(/static/img/goods/icon_share.png) no-repeat;
+  background-size: contain;
+  margin-top: .5rem;
+}
+
+.userCenter_ambCenter_special {
+  /* bind mobile popup */
+}
+
+.userCenter_ambCenter_special .popup-bindMobile {
+  background: #fff;
+  font-size: .7rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p {
+  padding: 0 7.2%;
+  margin-bottom: .7rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p input, .userCenter_ambCenter_special .popup-bindMobile p button {
+  width: 100%;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  border: 1px solid #999;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  padding: 0 .9rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p input.captchaBtn, .userCenter_ambCenter_special .popup-bindMobile p button.captchaBtn {
+  padding: 0;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(1) {
+  text-align: right;
+  margin: .5rem;
+  padding: 0 .5rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(1) img {
+  width: 1rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(2) {
+  font-size: .6rem;
+  color: #666;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(2) img {
+  width: .8rem;
+  vertical-align: middle;
+  margin-top: -.2rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(4) input {
+  width: 60%;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(4) button {
+  width: 37%;
+  color: #ff577f;
+  border-color: #ff577f;
+  background: transparent;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(4) button.disabled {
+  border-color: #ccc;
+  line-height: 1.2;
+  color: #ccc;
+  font-size: .5rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(5) {
+  color: #999;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(5) span {
+  color: #ff577f;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(6) {
+  color: #fff;
+  margin-top: 1.25rem;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(6) button {
+  background: #ccc;
+  border: none;
+  font-size: .9rem;
+  font-weight: bold;
+}
+
+.userCenter_ambCenter_special .popup-bindMobile p:nth-child(6) button.active {
+  background: #ff577f;
+}
+
+/* footer */
+.userCenter_ambCenter_special_footer {
+  background: #ff577f;
+  height: 3.2rem;
+}
+
+.userCenter_ambCenter_special_footer a.external {
+  height: 3.2rem;
+}
+
+.userCenter_ambCenter_special_footer a.external img {
+  width: 2.5rem;
+  margin-top: .3rem;
+}
+
+.userCenter_ambCenter_special_footer span {
+  height: 3.2rem;
+}
+
+.userCenter_ambCenter_special_footer span img {
+  width: 13rem;
+  margin-top: .3rem;
+}
+
+.popup-overlay.bindMobileMask {
+  z-index: 9;
+}
+
+/*弹窗自定义样式*/
+.imgCaptchaModal {
+  background: #fff;
+}
+
+.imgCaptchaModal .modal-inner, .imgCaptchaModal .modal-button {
+  background: #fff;
+}
+
+.imgCaptchaModal .modal-inner:after, .imgCaptchaModal .modal-button:after {
+  display: none;
+}
+
+.imgCaptchaModal .modal-button:first-child:last-child {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border: 1px solid #ff4d7d;
+  color: #ff4d7d;
+  font-size: 0.7rem;
+  padding: 0;
+  width: 40%;
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.imgCaptchaModal .modal-text input {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  padding: 0 .5rem;
+}
+
+.imgCaptchaModal .modal-text input:focus {
+  border: 1px solid #ff4d7d;
+}
+
+.imgCaptchaModal .modal-text img {
+  margin-left: 0.3rem;
+  width: 20%;
+}
+
+.imgCaptchaModal .modal-text a {
+  width: 30%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}

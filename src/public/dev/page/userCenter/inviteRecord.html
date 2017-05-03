@@ -1,0 +1,28 @@
+<!-- 邀请记录 -->
+<heade head-title="'邀请记录'"></heade>
+
+<div class="content userCenter_inviteRecord">
+    <div ng-if="lists.length">
+        <p class="total">累计邀请返利：<span>{{totalCount}}</span>元</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>用户昵称</th>
+                    <th>注册时间</th>
+                    <th>购买时间</th>
+                </tr>
+            </thead>
+            <tbody ng-repeat="list in lists">
+                <tr>
+                    <td>{{list.nickName}}</td>
+                    <td>{{list.createdAt| date:"yyyy-MM-dd HH:mm:ss"}}</td>
+                    <td>{{list.buyDate| date:"yyyy-MM-dd HH:mm:ss"}}</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="none center" ng-if="lists!=undefined&&!lists.length">
+        <img src="/static/img/userCenter/null.png">暂无记录
+    </div>
+</div>

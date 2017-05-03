@@ -1,0 +1,154 @@
+/* Variables */
+/* header */
+header.userCente_redPacket_header .pull-left {
+  height: 1rem;
+  width: 1.2rem;
+  margin-top: .6rem;
+  background: url(/static/img/goods/icon_1.png) no-repeat center bottom;
+  background-size: cover;
+}
+header.userCente_redPacket_header .pull-left:before {
+  content: '';
+}
+/* content */
+.userCente_redPacket {
+  background: #f2f2f2;
+}
+.userCente_redPacket p {
+  margin: 0;
+}
+.userCente_redPacket .explain {
+  font-size: .55rem;
+  text-align: right;
+  line-height: 1.25rem;
+}
+.userCente_redPacket .explain a {
+  color: #ff8da8;
+}
+.userCente_redPacket .explain a i {
+  display: inline-block;
+  background: url(/static/img/userCenter/icon_question.png) no-repeat;
+  background-size: contain;
+  width: .6rem;
+  height: .6rem;
+  vertical-align: middle;
+  margin-right: .1rem;
+  margin-top: -0.1rem;
+}
+.userCente_redPacket section {
+  padding: 0 .5rem;
+}
+.userCente_redPacket section li {
+  margin-bottom: .5rem;
+  background: url(/static/img/userCenter/bg_packet.png) no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.userCente_redPacket section li.overdue {
+  background: url(/static/img/userCenter/bg_unpacket.png) no-repeat;
+  background-size: 100% 100%;
+}
+.userCente_redPacket section li.overdue .no p:nth-child(1) {
+  color: #ccc;
+}
+.userCente_redPacket section .no {
+  width: 36.436%;
+  padding-left: 3%;
+}
+.userCente_redPacket section .no p:nth-child(1) {
+  background: #fff;
+  color: #ff7898;
+  font-size: .65rem;
+  line-height: 1.1rem;
+  padding: 0 .3rem;
+  border-radius: .55rem;
+  -webkit-border-radius: .55rem;
+  margin: .4rem 0 8%;
+  display: inline-block;
+}
+.userCente_redPacket section .no p:nth-child(2) {
+  color: #fff;
+  font-size: .6rem;
+}
+.userCente_redPacket section .no p:nth-child(2) span {
+  font-size: 1.7rem;
+}
+.userCente_redPacket section .no p:nth-child(2) span:nth-child(2) {
+  font-size: 1rem;
+}
+.userCente_redPacket section .box {
+  margin-left: 37.845%;
+  padding: .6rem .4rem;
+}
+.userCente_redPacket section .box h3 {
+  font-size: 0.6rem;
+  color: #555;
+  height: 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  margin-bottom: 4%;
+}
+.userCente_redPacket section .box p {
+  color: #999;
+  font-size: .5rem;
+  margin-bottom: .1rem;
+}
+.userCente_redPacket section .box img {
+  width: 2.7rem;
+  margin-top: -0.6rem;
+  margin-right: -0.4rem;
+}
+.userCente_redPacket .none {
+  width: 40%;
+  margin: 20% 30%;
+}
+/* 兑换弹窗 */
+.modal-exchange .modal-inner,
+.modal-exchange .modal-button {
+  background: transparent;
+}
+.modal-exchange .modal-button {
+  position: absolute;
+  top: 0;
+}
+.modal-exchange .modal-button img {
+  width: 1.7rem;
+}
+.modal-exchange .modal-text img {
+  width: 9rem;
+  height: 8rem;
+  margin-bottom: 1rem;
+}
+.modal-exchange .modal-text input,
+.modal-exchange .modal-text button {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  width: 100%;
+  padding: 0 .9rem;
+  font-size: .65rem;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  border: none;
+  margin-bottom: .65rem;
+  color: #555;
+}
+.modal-exchange .modal-text button {
+  background: #ccc;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #fff;
+}
+.modal-exchange .modal-text button.active {
+  background: #ff587f;
+}
+.total-exchange {
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+  top: 30%;
+}

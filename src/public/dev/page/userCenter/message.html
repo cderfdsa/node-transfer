@@ -1,0 +1,14 @@
+<heade class="circle_left" head-title="'我的消息'"></heade>
+
+<div class="content userCenter_message">
+	<div class="list-block">
+		<ul>
+			<li class="item-content item-link" ng-repeat="list in data">
+				<a href="{{list.link}}" class="item-inner">
+					<i class="icon {{list.count && 'new'}}"></i>
+					<div class="item-title">{{list.title}}</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

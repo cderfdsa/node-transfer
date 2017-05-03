@@ -1,0 +1,149 @@
+.userCenter_ambCenter_buySuccess_header .icon-left:before {
+  display: none;
+}
+
+.userCenter_ambCenter_buySuccess_header .icon.pull-right {
+  content: '';
+  position: absolute;
+  background: url(/static/img/userCenter/home.png) no-repeat center top;
+  background-size: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+  right: .5rem;
+  top: .5rem;
+}
+
+.userCenter_ambCenter_buySuccess_header .icon.pull-right.news:after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #f00;
+  width: .3rem;
+  height: .3rem;
+  right: -.1rem;
+  top: -.1rem;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+
+.userCenter_ambCenter_buySuccess {
+  background: #fff;
+}
+
+.userCenter_ambCenter_buySuccess .banner {
+  padding-bottom: 58.4%;
+  height: 0;
+  background: url("/static/img/userCenter/ambCenter/buySuc1.png") no-repeat;
+  background-size: cover;
+}
+
+.userCenter_ambCenter_buySuccess .banner p {
+  text-align: center !important;
+  margin: 0;
+  padding: 0;
+  font-size: .7rem;
+  color: #555;
+  width: 77.33%;
+  margin: 0 auto;
+}
+
+.userCenter_ambCenter_buySuccess .banner p:nth-child(1) {
+  padding-top: 1.5rem;
+  padding-bottom: .75rem;
+}
+
+.userCenter_ambCenter_buySuccess .banner p img {
+  width: 1.6rem;
+  vertical-align: middle;
+}
+
+.userCenter_ambCenter_buySuccess .banner p:nth-child(2) {
+  line-height: 1;
+  font-size: .75rem;
+  color: #ff577f;
+  font-weight: bold;
+}
+
+.userCenter_ambCenter_buySuccess .banner p:nth-child(3) {
+  padding-top: 4%;
+}
+
+.userCenter_ambCenter_buySuccess .banner p:nth-child(3), .userCenter_ambCenter_buySuccess .banner p:nth-child(4) {
+  color: #9c344d;
+  font-size: .6rem;
+  margin: 0 auto;
+}
+
+.userCenter_ambCenter_buySuccess .banner p span {
+  color: #ff577f;
+  font-size: 1.4rem;
+}
+
+.userCenter_ambCenter_buySuccess .banner2 {
+  width: 82.4%;
+  display: block;
+  margin: auto;
+  margin-bottom: .5rem;
+}
+
+.userCenter_ambCenter_buySuccess p {
+  padding: .5rem;
+  margin: 0;
+  font-size: .65rem;
+  color: #555;
+  position: relative;
+}
+
+.userCenter_ambCenter_buySuccess p:last-child {
+  text-align: right;
+  padding-top: 0;
+  margin-top: .8rem;
+}
+
+.userCenter_ambCenter_buySuccess p:last-child a {
+  font-size: .6rem;
+  color: #ff577f;
+}
+
+.userCenter_ambCenter_buySuccess p:last-child img {
+  width: .25rem;
+  margin-right: 7%;
+}
+
+.userCenter_ambCenter_buySuccess p span.tip {
+  margin: 0 2% 0 0;
+  background: url("/static/img/userCenter/ambCenter/bg_tip.png") no-repeat;
+  background-size: cover;
+  display: inline-block;
+  text-align: center;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: .75rem;
+  color: #fff;
+  width: 36%;
+}
+
+.userCenter_ambCenter_buySuccess p span.col-50 {
+  margin: 0;
+  width: 62%;
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.userCenter_ambCenter_buySuccess button {
+  width: 86%;
+  background: url("/static/img/userCenter/ambCenter/invite_btn.png") no-repeat;
+  background-size: 100% 100%;
+  margin: 1rem 7% 0;
+  font-size: .9rem;
+  color: #fff;
+  font-weight: bold;
+  height: 2.8rem;
+  line-height: 2.2rem;
+  border: none;
+  padding-bottom: .6rem;
+}

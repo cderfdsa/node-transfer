@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @charset "UTF-8";
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+    </style>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="wap-font-scale" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <meta name="full-screen" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="360-fullscreen" content="true">
+
+    <title ng-bind="init.headinfo.title" class="ng-binding">专题-美玩易试</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="http://wap.beautysite.cn/static/img/favicon.ico">
+    <!-- iOS 7 iPad (retina) -->
+    <!-- <link href="./img/icon/icon-152.png" sizes="152x152" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPad (retina) -->
+    <!-- <link href="./img/icon/icon-144.png" sizes="144x144" rel="apple-touch-icon"> -->
+    <!-- iOS 7 iPhone (retina) -->
+    <!-- <link href="./img/icon/icon-120.png" sizes="120x120" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPhone (retina) -->
+    <!-- <link href="./img/icon/icon-114.png" sizes="114x114" rel="apple-touch-icon"> -->
+    <!-- iOS 7 iPad -->
+    <!-- <link href="./img/icon/icon-76.png" sizes="76x76" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPad -->
+    <!-- <link href="./img/icon/icon-72.png" sizes="72x72" rel="apple-touch-icon"> -->
+    <!-- iOS 6 iPhone -->
+    <link rel="apple-touch-icon" href="http://wap.beautysite.cn/img/favicon.ico" sizes="57x57">
+
+    <style>
+        .ng-cloak {
+            visibility: hidden;
+        }
+
+        .views {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 10;
+            opacity: 0;
+            overflow: hidden;
+            -webkit-transition-property: -webkit-transform, opacity;
+            -moz-transition-property: -moz-transform, opacity;
+            -ms-transition-property: -ms-transform, opacity;
+            -o-transition-property: -o-transform, opacity;
+            transition-property: transform, opacity;
+        }
+
+        .views-in {
+            opacity: 1;
+            -webkit-transition-duration: 1500ms;
+            -o-transition-duration: 1500ms;
+            transition-duration: 1500ms;
+        }
+        /*AJax loading*/
+
+        .loading {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            padding: 8px;
+            margin-left: -25px;
+            margin-top: -25px;
+            background: rgba(0, 0, 0, .8);
+            z-index: 11000;
+            border-radius: 5px;
+        }
+
+        .loading .span {
+            display: block;
+            width: 34px;
+            height: 34px;
+            -webkit-transform-origin: 50%;
+            transform-origin: 50%;
+            -webkit-animation: preloader-spins 1s steps(12, end)infinite;
+            animation: preloader-spins 1s steps(12, end)infinite;
+        }
+
+        .loading .span:after {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+            background-position: 50%;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        @-webkit-keyframes preloader-spins {
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes preloader-spins {
+            100% {
+                -moz-transform: rotate(360deg)
+            }
+        }
+
+        @-ms-keyframes preloader-spins {
+            100% {
+                -ms-transform: rotate(360deg)
+            }
+        }
+
+        @-o-keyframes preloader-spins {
+            100% {
+                -o-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes preloader-spins {
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .loading.ng-cloak {
+            display: block;
+            visibility: visible;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="/special/style.css">
+    <link type="text/css" rel="stylesheet" href="/special/sm.min.css">
+    <link type="text/css" rel="stylesheet" href="/special/special.css">
+    <link type="text/css" rel="stylesheet" href="/special/share.css">
+    <link type="text/css" rel="stylesheet" href="/special/header.css">
+    <link type="text/css" rel="stylesheet" href="/special/pager.css">
+</head>
+
+<body>
+    <div class="views views-in">
+        <!-- uiView:  -->
+        <div class="page ng-scope" ui-view="">
+            <header class="home_special bar bar-nav ng-scope ng-isolate-scope ng-hide" ng-show="headerForm" head-title="specialData.detail.title" head-leftfn="headLeftFn" head-rightfn="shareFn">
+                <div class="bg "></div><span class="icon icon-left pull-left" ng-click="leftfnn()"></span>
+                <a class="icon pull-right ng-binding" href="javascript:void(0);" ng-click="rightfn()"></a>
+                <h1 class="title ng-binding">明洞拔尖儿</h1></header>
+            <div class="content home_special ng-scope">
+                <section class="goodsDesc ng-binding" ng-bind-html="specialData.detail.desc">
+                    <%-special.detail.desc%>
+                </section>
+                <section class="probably_more">
+                    <!-- ngIf: specialData.products.length -->
+                    <h2 class="title_more ng-scope" ng-if="specialData.products.length"><span><img src="/special/icon_heart.png" alt=""> 相关商品 </span></h2>
+                    <!-- end ngIf: specialData.products.length -->
+                    <!-- ngIf: specialData.products.length -->
+                    <ul class="goodsList clearfix ng-scope" ng-if="specialData.products.length">
+                        <%special.products.forEach(function(p){ %>
+                        <li class="pull-left ng-scope" ng-repeat="row in specialData.products">
+                            <a href="http://wechat.beautysite.cn/#/goods/detail/<%=p._id%>"></a>
+                            <div class="goodsBox">
+                                <a href="http://wechat.beautysite.cn/#/goods/detail/<%=p._id%>">
+                                    <div class="imgBox">
+                                      <img class="lazy loading_fadeIn" src="http://img.beautysite.cn<%=p.images%>" alt="">
+                                        <!-- ngIf: !row.inventoryCount -->
+                                    </div>
+                                    <h3 class="ng-binding"><%=p.introduction%> <%=p.name%></h3></a>
+                                <p class="clearfix">
+                                  <a href="http://wechat.beautysite.cn/#/goods/detail/<%=p._id%>">
+                                    <span class="ng-binding">￥<%= p.event?p.event.price:p.price%></span>
+                                    <span class="original ng-binding">￥<%=p.marketPrice%></span>
+                                  </a>
+                                  <a class="pull-right" href="http://wechat.beautysite.cn/#/goods/detail/<%=p._id%>">马上抢</a></p>
+                            </div>
+                        </li>
+                        <% })%>
+                    </ul>
+                    <!-- end ngIf: specialData.products.length -->
+                    <!-- ngIf: specialData.products!=undefined&&!specialData.products.length -->
+                </section>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

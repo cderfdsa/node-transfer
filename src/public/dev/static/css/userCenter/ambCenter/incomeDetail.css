@@ -1,0 +1,83 @@
+.userCenter_ambCenter_incomeDetail {
+  margin-top: .5rem;
+  background: #f2f2f2;
+}
+.userCenter_ambCenter_incomeDetail ul {
+  margin: 0 ;
+  padding: 0 ;
+  list-style: none;
+  background: #ffffff;
+  font-size: 0;
+}
+.userCenter_ambCenter_incomeDetail ul li {
+  font-size: .7rem;
+  color: #cccccc;
+  display: inline-block;
+  width: 100%;
+  padding: 0 .5rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+.userCenter_ambCenter_incomeDetail ul li div {
+  float: left;
+}
+.userCenter_ambCenter_incomeDetail ul li div:first-of-type {
+  width: 30%;
+}
+.userCenter_ambCenter_incomeDetail ul li div:first-of-type p {
+  margin: 0;
+}
+.userCenter_ambCenter_incomeDetail ul li div:first-of-type p:first-of-type {
+  padding: .7rem 0 0 0;
+}
+.userCenter_ambCenter_incomeDetail ul li div:first-of-type p:last-of-type {
+  margin-top: .65rem;
+  padding: 0 0 .7rem 0;
+}
+.userCenter_ambCenter_incomeDetail ul li div:nth-of-type(2) {
+  text-align: left;
+  width: 45%;
+}
+.userCenter_ambCenter_incomeDetail ul li div:nth-of-type(2) p {
+  margin: 0;
+}
+.userCenter_ambCenter_incomeDetail ul li div:nth-of-type(2) p:first-of-type {
+  color: #ff577f;
+  font-size: .8rem;
+  padding: .7rem 0 0 0;
+}
+.userCenter_ambCenter_incomeDetail ul li div:nth-of-type(2) p:first-of-type button {
+  margin-left: .3rem;
+  border: none;
+  background: #ffffff;
+  font-size: .5rem;
+  border: 1px solid #ff577f;
+  border-radius: .3rem;
+  padding: 0 .2rem;
+}
+.userCenter_ambCenter_incomeDetail ul li div:nth-of-type(2) p:last-of-type {
+  padding: 0 0 .7rem 0;
+  font-size: .6rem;
+  color: #666666;
+  margin-top: .4rem;
+}
+.userCenter_ambCenter_incomeDetail ul li div:last-of-type {
+  text-align: center;
+  padding: .7rem 0;
+  width: 25%;
+}
+.userCenter_ambCenter_incomeDetail ul li div:last-of-type a {
+  color: #ff577f;
+  font-size: .6rem;
+  padding: .4rem .45rem;
+  border: 1px solid #ff577f;
+  border-radius: 1rem;
+  display: block;
+}
+.userCenter_ambCenter_incomeDetail .imgbox {
+  margin: 0 auto;
+  margin-top: 5rem;
+  text-align: center;
+}
+.userCenter_ambCenter_incomeDetail .imgbox img {
+  width: 35%;
+}

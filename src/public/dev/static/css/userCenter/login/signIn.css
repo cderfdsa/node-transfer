@@ -1,0 +1,97 @@
+/* Variables */
+header.userCenter_login_header .bg {
+  opacity: 0;
+}
+.userCenter_login {
+  background: url(/static/img/userCenter/bg_login.png) no-repeat center top;
+  background-size: cover;
+}
+.userCenter_login.content {
+  top: 0;
+  padding-top: 2.2rem;
+}
+.userCenter_login .sign {
+  padding: 0 1.4rem;
+  font-size: 0.7rem;
+  color: #dbdbdb;
+}
+.userCenter_login .sign div.clearfix {
+  height: .5rem;
+}
+.userCenter_login .sign div.clearfix a {
+  color: #fff;
+}
+.userCenter_login .sign .loginheader {
+  position: relative;
+  font-size: 0.7rem;
+  color: #777777;
+}
+.userCenter_login .sign .loginheader p {
+  margin-top: 0.85rem;
+  text-align: center;
+}
+.userCenter_login .sign .loginheader p:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 28%;
+  height: 1px;
+  background: #777777;
+}
+.userCenter_login .sign .loginheader p:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 28%;
+  height: 1px;
+  background: #777777;
+}
+.userCenter_login .sign ul {
+  font-size: 0;
+  text-align: center;
+}
+.userCenter_login .sign ul li {
+  width: 50%;
+  display: inline-block;
+  font-size: 0.7rem;
+  margin: auto;
+}
+.userCenter_login .sign ul li span {
+  display: inline-block;
+  width: 50%;
+  padding-bottom: 50%;
+  background: url(/static/img/userCenter/icon_qq.png) no-repeat center center;
+  background-size: contain;
+  position: relative;
+}
+.userCenter_login .sign ul li span a,
+.userCenter_login .sign ul li span .WB_loginButton,
+.userCenter_login .sign ul li span .WB_widgets {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.userCenter_login .sign ul li span#wb_connect_btn {
+  background: url(/static/img/userCenter/icon_blog.png) no-repeat center center;
+  background-size: contain;
+}
+.userCenter_login .sign ul li span#wc_LoginBtn {
+  background: url(/static/img/userCenter/login/weChat.png) no-repeat center center;
+  background-size: contain;
+}
+.userCenter_login .sign ul li p {
+  margin-top: 0.3rem;
+}
+.toast-login {
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  min-width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+  background: rgba(210, 90, 120, 0.7);
+}

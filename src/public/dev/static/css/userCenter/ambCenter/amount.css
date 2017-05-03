@@ -1,0 +1,208 @@
+.userCenter_ambCenter_amount_header.bar, .userCenter_ambCenter_amount_header .bg {
+  background: #ff577f;
+}
+
+.userCenter_ambCenter_amount_header ~ .tab {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  width: 44%;
+  left: 33%;
+  font-size: .7rem;
+  border: 2px solid #fff;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  height: 1.2rem;
+  line-height: 1.1rem;
+  margin-top: .5rem;
+  text-align: center;
+}
+
+.userCenter_ambCenter_amount_header ~ .tab a {
+  margin: 0;
+  width: 50%;
+  color: #fff;
+}
+
+.userCenter_ambCenter_amount_header ~ .tab a.active {
+  color: #ff577f;
+  background: #fff;
+}
+
+.userCenter_ambCenter_amount {
+  background: #f2f2f2;
+}
+
+.userCenter_ambCenter_amount .banner {
+  background: #ff577f;
+  text-align: center;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+
+.userCenter_ambCenter_amount .totalAmount {
+  height: 6rem;
+  overflow: hidden;
+}
+
+.userCenter_ambCenter_amount .totalAmount h3 {
+  font-size: .7rem;
+  margin-top: 1rem;
+}
+
+.userCenter_ambCenter_amount .totalAmount p {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.userCenter_ambCenter_amount .amount {
+  background: #f54c74;
+  padding: .4rem 0;
+}
+
+.userCenter_ambCenter_amount .amount .col-50 {
+  margin: 0;
+  width: 50%;
+}
+
+.userCenter_ambCenter_amount .amount .col-50 span {
+  display: block;
+}
+
+.userCenter_ambCenter_amount .amount .col-50 span:nth-child(1) {
+  font-size: .55rem;
+  color: #ffbdcd;
+}
+
+.userCenter_ambCenter_amount .amount .col-50 span:nth-child(2) {
+  font-size: .9rem;
+}
+
+.userCenter_ambCenter_amount .detailAmount {
+  background: #fff;
+  color: #333;
+  font-size: .8rem;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.userCenter_ambCenter_amount .detailAmount .col-33 {
+  padding: .4rem 0;
+  border: 1px solid #e6e6e6;
+  border-width: 0 1px 1px 0;
+  margin: 0;
+  width: 33.33%;
+}
+
+.userCenter_ambCenter_amount .detailAmount .col-33:nth-child(3n) {
+  border-right-width: 0;
+}
+
+.userCenter_ambCenter_amount .detailAmount span {
+  display: block;
+}
+
+.userCenter_ambCenter_amount .detailAmount span:nth-child(2) {
+  color: #999;
+  font-size: .6rem;
+}
+
+.userCenter_ambCenter_amount .analyse {
+  background: #fff;
+  text-align: center;
+}
+
+.userCenter_ambCenter_amount .analyse .line {
+  padding: .5rem;
+}
+
+.userCenter_ambCenter_amount .analyse .line img {
+  width: 100%;
+}
+
+.userCenter_ambCenter_amount .analyse .pie {
+  margin: 0 auto .6rem;
+  width: 10rem;
+  height: 10rem;
+  position: relative;
+}
+
+.userCenter_ambCenter_amount .analyse .pie .incomeNo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.userCenter_ambCenter_amount .analyse .pie span {
+  display: block;
+  font-size: .5rem;
+  color: #666;
+}
+
+.userCenter_ambCenter_amount .analyse .pie span:last-of-type {
+  color: #f69;
+  font-size: 1rem;
+}
+
+.userCenter_ambCenter_amount .analyse canvas {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.userCenter_ambCenter_amount .analyse .desc {
+  color: #666;
+  font-size: .6rem;
+}
+
+.userCenter_ambCenter_amount .analyse .desc i {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  background: #ff94b9;
+  margin: auto;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33 {
+  padding-bottom: .75rem;
+  text-align: left;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33:nth-child(3n+1) {
+  margin-left: 8%;
+  width: 25.3333332%;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33:nth-of-type(2) i {
+  background: #7cccf6;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33:nth-of-type(3) i {
+  background: #94df90;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33.indirect i {
+  background: #b8a5f7;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33:nth-of-type(5) i {
+  background: #67decc;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33:nth-of-type(6) i {
+  background: #ffc24b;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .col-33 span:nth-child(3) {
+  display: block;
+  margin-left: .7rem;
+}
+
+.userCenter_ambCenter_amount .analyse .desc .noMoneyTip {
+  color: #ccc;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}

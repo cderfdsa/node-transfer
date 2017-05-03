@@ -1,0 +1,280 @@
+/* 代言笔记 */
+/* Variables */
+.community_note {
+  background: #fff;
+  font-size: 0.65rem;
+  padding-bottom: 2.5rem;
+}
+.community_note .double {
+  background: #fff;
+  padding: 0.5rem .5rem 1.1rem .5rem;
+  text-align: center;
+}
+.community_note .double p {
+  margin: 0;
+  font-size: 0.6rem;
+  color: #999;
+}
+.community_note .double .doubleContent div {
+  vertical-align: middle;
+}
+.community_note .double .doubleContent .doubleBox {
+  width: 40%;
+  margin: 0.5rem 0;
+  display: inline-block;
+  position: relative;
+}
+.community_note .double .doubleContent .doubleBox .imgBox {
+  width: 100%;
+  min-height: 3rem;
+  position: relative;
+}
+.community_note .double .doubleContent .doubleBox .imgBox img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.community_note .double .doubleContent .doubleBox .imgBox .add {
+  width: 1.5rem;
+  position: absolute;
+  bottom: .75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.community_note .double .doubleContent .doubleBox .text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  bottom: -1.2rem;
+}
+.community_note .double .doubleContent .doubleBox .text h2 {
+  color: #666;
+  position: relative;
+}
+.community_note .double .doubleContent .doubleBox h2:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  background: #acacac;
+  width: 30%;
+  height: 1px;
+}
+.community_note .double .doubleContent .doubleBox h2:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  background: #acacac;
+  width: 30%;
+  height: 1px;
+}
+.community_note .double .doubleContent .vs {
+  vertical-align: middle;
+  width: 16%;
+  padding: 0 0.3rem;
+  display: inline-block;
+  text-align: center;
+}
+.community_note .double .doubleContent .vs img {
+  width: 100%;
+}
+.community_note .single {
+  background: #ffffff;
+  padding: 0.5rem;
+  text-align: center;
+}
+.community_note .single .singleBox {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+.community_note .single .singleBox img {
+  width: 100%;
+}
+.community_note .single .singleBox .singleAdd {
+  width: 15%;
+  position: absolute;
+  bottom: 0.75rem;
+  left: 42.5%;
+}
+.community_note .tags {
+  overflow: hidden;
+  background: #f2f2f2;
+}
+.community_note .tags .tagsContent {
+  margin: 0.5rem 0;
+  padding: .5rem;
+  color: #333;
+  background: #fff;
+}
+.community_note .tags img {
+  width: .8rem;
+  margin-right: .35rem;
+  margin-bottom: -0.1rem;
+}
+.community_note .tags .pull-right {
+  color: #999;
+}
+.community_note .tags .pull-right .icon {
+  margin-left: .5rem;
+}
+.community_note .tags .tagList {
+  color: #c24c69;
+}
+.community_note .tags .tagList li {
+  border: 1px solid #e7bec8;
+  border-radius: .1rem;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  padding: 0 .7rem;
+  margin: .35rem .5rem .35rem 0;
+}
+.community_note .tags .tagList li:last-of-type {
+  margin-right: 0;
+}
+.community_note .editContent {
+  background: #fff;
+  color: #ccc;
+  padding: .5rem;
+}
+.community_note .editContent .areaBox {
+  position: relative;
+}
+.community_note .editContent textarea {
+  margin-bottom: .5rem;
+  width: 100%;
+  resize: none;
+  border: none;
+  color: #555;
+  overflow: hidden;
+  height: 1rem;
+}
+.community_note .editContent .imgBox {
+  width: 100%;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.community_note .editContent .imgBox img {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+}
+.community_note .editContent .goods {
+  width: 100%;
+  height: 4.2rem;
+  border: 1px solid #d7d7d7;
+  border-radius: .3rem;
+  vertical-align: top;
+  margin-bottom: .5rem;
+  position: relative;
+}
+.community_note .editContent .goods .goodsImg {
+  width: 4.2rem;
+  height: 4.2rem;
+  padding: 0.3rem;
+  overflow: hidden;
+}
+.community_note .editContent .goods .goodsImg img {
+  height: 100%;
+}
+.community_note .editContent .goods .goodsText h1 {
+  font-size: 0.7rem;
+  color: #666666;
+  margin: 0.3rem 0;
+  max-height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.community_note .editContent .goods .goodsText p {
+  font-size: 0.6rem;
+  color: #ff577f;
+}
+.community_note .editContent .goods .goodsText span {
+  font-size: 0.65rem;
+  color: #bababa;
+  margin-left: 1rem;
+  text-decoration: line-through;
+}
+.community_note .editContent .goods .goodsText span:nth-of-type(2) {
+  margin-left: 1.5rem;
+  font-size: 0.5rem;
+  border: 1px solid #ff577f;
+  border-radius: .5rem;
+  color: #ff577f;
+  padding: 0.1rem 0.2rem;
+}
+.community_note .editContent .icon.close {
+  position: absolute;
+  right: -0.3rem;
+  top: -0.5rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  background: url(/static/img/community/icon_close.png) no-repeat;
+  background-size: contain;
+}
+.community_note_footer {
+  background: #fff;
+  padding: 0.15rem 0;
+  font-size: 0;
+  transition: bottom 1s;
+  -webkit-transition: bottom 1s;
+}
+.community_note_footer div {
+  width: 50%;
+  display: inline-block;
+}
+.community_note_footer div:first-of-type {
+  padding-left: 0.5rem;
+  padding-right: 0.25rem;
+}
+.community_note_footer div:last-of-type {
+  padding-left: 0.25rem;
+  padding-right: 0.5rem;
+}
+.community_note_footer div img {
+  width: 100%;
+  height: 2.2rem;
+}
+.community_note_footer.hide {
+  bottom: -2.5rem;
+}
+.community_note_footer.show {
+  bottom: 0;
+}
+/* 引导页 modal */
+.modal-nodeGuide {
+  width: 100%;
+  margin: 0;
+  left: 0;
+  top: auto;
+  bottom: 0;
+}
+.modal-nodeGuide .modal-inner {
+  padding: 0;
+  background: transparent;
+  position: relative;
+}
+.modal-nodeGuide .modal-inner img {
+  width: 100%;
+  height: 2.35rem;
+  width: 50%;
+  padding: 0 .45rem .15rem .25rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  box-sizing: border-box;
+}
+.modal-nodeGuide .modal-inner .modal-text img {
+  width: 90%;
+  height: auto;
+  bottom: 3rem;
+  right: 5%;
+  padding: 0;
+}
+.modal-nodeGuide ~ .modal-overlay {
+  background: rgba(0, 0, 0, 0.8);
+}

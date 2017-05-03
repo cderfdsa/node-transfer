@@ -1,0 +1,36 @@
+.userCenter_inviteRecord {
+  padding: 0 .5rem;
+  font-size: .6rem;
+}
+
+.userCenter_inviteRecord .total {
+  color: #555;
+}
+
+.userCenter_inviteRecord .total span {
+  color: #fc6899;
+}
+
+.userCenter_inviteRecord table {
+  color: #999;
+  text-align: center;
+  background: #fff;
+  width: 100%;
+}
+
+.userCenter_inviteRecord table th, .userCenter_inviteRecord table td {
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  height: 2rem;
+}
+
+.none {
+  text-align: center;
+  color: #808080;
+}
+
+.none img {
+  width: 26.67%;
+  display: block;
+  margin: .5rem auto;
+}

@@ -1,0 +1,125 @@
+/* Variables */
+.community_beautyGoods {
+  background: #f2f2f2;
+  font-size: 0.65rem;
+  color: #666;
+}
+.community_beautyGoods .searchbar {
+  margin: 0 0.8rem;
+  position: relative;
+}
+.community_beautyGoods .searchbar input {
+  border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+}
+.community_beautyGoods .searchbar .search-input input {
+  border: none;
+}
+.community_beautyGoods .searchbar .search_tags {
+  height: 1.4rem;
+  padding: 0 .5rem 0 1.4rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.community_beautyGoods .searchbar .search_tags li {
+  padding: 0 .3rem;
+  width: auto;
+  height: 1.2rem;
+  line-height: 1.1rem;
+  color: #fff;
+  border-radius: .55rem;
+  -webkit-border-radius: .55rem;
+  margin: .1rem;
+  background: #ff7ab0;
+  padding-right: 1rem;
+  position: relative;
+}
+.community_beautyGoods .searchbar .search_tags li i {
+  background: url(/static/img/goods/icon_sclose.png) no-repeat center;
+  width: .4rem;
+  height: .4rem;
+  display: inline-block;
+  background-size: contain;
+  position: absolute;
+  right: .4rem;
+  top: .4rem;
+}
+.community_beautyGoods .searchbar .search_tags li.clearTags {
+  background: url(/static/img/goods/icon_close.png) no-repeat center;
+  background-color: #ffcbde;
+  position: absolute;
+  font-size: .8rem;
+  padding: .4rem;
+  right: .1rem;
+  top: .2rem;
+  width: .6rem;
+  height: .6rem;
+  background-size: contain;
+}
+.community_beautyGoods .goods li {
+  background: #fff;
+  padding: 0 0.5rem 0 0.5rem;
+  margin-bottom: 0.3rem;
+  position: relative;
+}
+.community_beautyGoods .goods li .box {
+  overflow: hidden;
+}
+.community_beautyGoods .goods li .box .imgbox {
+  width: 30%;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 30%;
+}
+.community_beautyGoods .goods li .box .imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.community_beautyGoods .goods li .box .goodsText {
+  width: 65%;
+  margin-left: 0.45rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.community_beautyGoods .goods li .box .goodsText h2 {
+  margin: 0.65rem 0;
+  height: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.community_beautyGoods .goods li .box .goodsText p {
+  font-size: 0.75rem;
+  color: #ff577f;
+  margin: 0;
+  position: absolute;
+  bottom: .8rem;
+}
+.community_beautyGoods .goods li .box .goodsText p span {
+  margin-left: 1rem;
+  font-size: 0.65rem;
+  color: #bababa;
+  text-decoration: line-through;
+}
+.community_beautyGoods .goods li .box .goodsText p a {
+  font-size: 0.55rem;
+  color: #ff577f;
+  padding: 0.2rem 0.3rem;
+  border: 1px solid #ff577f;
+  border-radius: 0.5rem;
+  margin-left: 1rem;
+}
+.community_beautyGoods .searchNone {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}

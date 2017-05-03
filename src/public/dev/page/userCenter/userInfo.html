@@ -1,0 +1,135 @@
+<heade head-title="'个人信息'" head-righttext="'完成'" head-rightfn="saveUserInfo"></heade>
+
+<!-- 个人信息主页 -->
+<div class="content userCenter_userInfo">
+	<div class="list-block">
+		<ul class="message">
+			<li class="headImg">
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">头像</div>
+						<div class="imgBox">
+							<img src="{{userInfo.user.headImg ? userInfo.user.headImg + (userInfo.user.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">昵称</div>
+						<div ng-click="popup('modal-in', 0)">
+							{{userInfo.user.nickName || '未填写'}}
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+				  <div class="item-inner">
+					<div class="item-title label">生日</div>
+					<div class="item-input birthdayInput">
+						<input type="text"  ng-model="userInfo.user.birthday" class="inp" data-toggle='date' id="my-input">
+					</div>
+				  </div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+				  <div class="item-inner">
+					<div class="item-title label">性别</div>
+					<div class="item-input sex" ng-click="toSex()">
+						{{userInfo.user.sex==1?'男':'女'}}
+					</div>
+				  </div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">学校</div>
+						<div class="item-input">
+							<input class="inp" id="selectSchool" type="text" ng-model="userInfo.user.schoolInfo.name">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">入学年份</div>
+						<div class="item-input">
+							<select ng-model="userInfo.user.schoolYear" ng-options="item for item in startYear">
+								<option value="">请选择入学年份</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+				  <div class="item-inner">
+					<div class="item-title">美丽宣言</div>
+					<div class="right" ng-click="popup('modal-in', 1)">
+						{{userInfo.user.signature || "要变美，要发光，耶~"}}
+					</div>
+				  </div>
+				</div>
+			</li>
+			<li ng-click="skipPhone()">
+				<div class="item-content">
+				  <div class="item-inner">
+					<div class="item-title">手机号码</div>
+					<div class="right pink" >
+						{{userInfo.user.mobile || "去绑定"}}
+						<span class="icon icon-right" ></span>
+					</div>
+				  </div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+				  <div class="item-inner">
+					<div class="item-title">收货地址</div>
+					<div class="right change" ng-click="skipAddress()">去设置<span class="icon icon-right"></span></div>
+				  </div>
+				</div>
+			</li>
+		</ul>
+
+		<p class="barcodeTitle" ng-show="barcode">点击扫一扫或者手动输入服务大使手机号即可绑定</p>
+		<ul class="barcode" ng-show="barcode">
+			<li>
+				<div class="clearfix">
+					<span>扫码</span><span>服务大使</span>
+					<a class="input" href="tel:{{userInfo.ambassador.mobile}}" ng-click="callphone()">{{userInfo.ambassador.nickName}}</a>
+					<span class="pull-right" ng-click="sweep()">扫一扫</span>
+				</div>
+			</li>
+			<li>
+				<div class="clearfix">
+					<span>手动</span><span>大使手机号</span>
+					<input type="text" ng-model="bindMobile" maxlength="11"  placeholder="{{userInfo.ambassador.mobile}}">
+					<span class="pull-right" ng-click="binding()">绑定</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<!-- popup -->
+<div class="customPopup {{modalClass}}">
+	<header class="bar bar-nav">
+		<div class="bg "></div>
+		<span class="icon icon-left pull-left" ng-click="popup('modal-out')"></span>
+		<h1 class="title">{{popupObj[type].title}}</h1>
+	</header>
+    <div class="content">
+        <div class="inputBox">
+            <label ng-if="type==0">{{popupObj[type].label}}</label>
+            <input type="text" maxlength="16" placeholder="16个字符以内" ng-model="inputModel">
+            <span class="clear" ng-if="inputModel" ng-click="clear()"></span>
+        </div>
+        <button type="button" class="{{!inputModel.length && 'default'}}" ng-click="popupSubmit()">确定</button>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+<!-- header: start -->
+<header class="bar bar-nav goods_index_header">
+	<a class="icon pull-left" href="#/goods/select"></a>
+	<a class="icon pull-right" href="#/order/cart" limitlogin="#/order/cart"><span>{{count}}</span></a>
+	<h1 class="title" ng-if="!isShowTags.length">{{title}}</h1>
+	<!-- 标签list -->
+	<ul class="search_tags clearfix" ng-if="isShowTags.length" ng-click="clickTag($event)">
+		<li class="pull-left" ng-repeat="tag in isShowTags">{{tag}}<i ng-click="researchTag(tag)"></i></li>
+		<li class="clearTags pull-right" ng-click="researchTag()"></li>
+	</ul>
+</header>
+<!-- header: end -->
+
+<!-- content: start -->
+<div class="content goods_index infinite-scroll infinite-scroll-bottom" data-distance="10" >
+	<!-- banner -->
+	<section class="swiper-banner" ng-if="banners.length">
+        <ul class="clearfix swiper-wrapper">
+            <li class="swiper-slide" ng-repeat="banner in banners | limitTo: 5">
+                <a href="{{banner.url}}">
+                    <img ng-src="http://img.beautysite.cn{{banner.image}}!/fw/600" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="swiper-pagination"><span></span></div>
+    </section>
+
+	<ul class="clearfix goodsList">
+		<li class="pull-left" ng-repeat="row in data">
+			<a href="#/goods/detail/{{row._id}}">
+				<div>
+					<img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{row.images}}" alt="">
+					<div class="noGood" ng-if="!row.inventoryCount"></div>
+					<span ng-if="row.onPromotion">限时<br>特卖</span>
+				</div>
+				<h2>【{{row.introduction}}】{{row.name}}</h2>
+				<p class="clearfix"><span>￥</span>{{row.price}}<span class="pull-right">已售{{row.buyCount}}</span></p>
+			</a>
+		</li>
+	</ul>
+	<!-- 搜索为空 -->
+	<div class="searchNone" ng-show="searchNone"></div>
+</div>
+<!-- content: end -->
+
+<!-- footer -->
+<foot></foot>

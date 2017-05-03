@@ -1,0 +1,118 @@
+<!--领取指定的商品红包主页 -->
+<div class="content activitygoodsRedPacket" >
+<!-- 恭喜与表单区域 -->
+	<section  class="poster" ng-show="part == 0">
+		<div class="posterimg">
+			<img src="/static/img/activity/bg_2.png" class="bg">
+			<div class="text">
+				<div>
+					恭喜您！您已获得{{dataproduct.couponPrice}}元的{{dataproduct.product.name}}+<a>专属红包的资格</a>
+				</div>
+			</div>
+			<div class="posternumber">
+					<p>￥<span>{{dataproduct.couponPrice}}</span></p>
+			</div>
+		</div>
+
+		<div class="list">
+			<div class="form" novalidate>
+				<input type="tel" maxlength="11" placeholder="请输入手机号码" ng-model="userNumber" required>
+			</div>
+			<div  class="form row">
+				<input  type="tel" placeholder="请输入验证码"  class="inp col-80"  maxlength="6" ng-model="userCode">
+				<button class=" {{buttonStatus}}" ng-click="getCode(0)" ng-disabled="buttonStatus == 'disabled'">{{buttonText}}</button>
+			</div>
+			<div class="form textCode">
+				<p>短信收不到？<span ng-click="getCode(1)">尝试语音验证码</span></p>
+			</div>
+			<div  class="form" ng-click="submit()">
+				<img src="/static/img/activity/btn.png" class="btn">
+				<p><b>立即领取</b></p>
+			</div>
+		</div>
+	</section>
+
+<!-- 领取成功过后页面 -->
+	<section class="receive"  ng-show="part == 1">
+		<div class="posterimg">
+			<img src="/static/img/activity/bg_pink.png" class="bg">
+			<div class="submit" >
+				<div class="row">
+					<img src="/static/img/activity/check.png" class="check">
+					<div class="text ">
+						<p><b>恭喜您，价值{{dataproduct.couponPrice}}元的{{dataproduct.product.name}}专属红包领取成功！</b></p></p>
+						<p>已放入账号：{{datauser.user.mobile?datauser.user.mobile:userNumber}}</p>
+					</div>
+
+				</div>
+				<div class="number">
+					<p>￥<span>{{dataproduct.couponPrice}}</span></p>
+				</div>
+				<img src="/static/img/activity/btn_2.png" class="btn" ng-click="toPublicNo()" >
+			</div>
+		</div>
+	</section>
+
+	<!-- 过期不能领取 -->
+	<section class="getdefeat" ng-show="part == 2">
+		<div class="posterimg">
+			<img src="/static/img/activity/bg_4_1.png" class="bg">
+			<div class="submit" >
+				<div class="row">
+					<img src="/static/img/activity/toast_gray.png" class="check">
+					<div class="text">
+						<p>非常抱歉，该商品指定红包已过期，已不能领取。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 已领，可用 -->
+	<section class="getdefeat2" ng-show="part == 3">
+		<div class="posterimg">
+			<img src="/static/img/activity/bg_4.png" class="bg">
+			<div class="submit" >
+				<div class="row">
+					<img src="/static/img/activity/toast_gray.png" class="check">
+					<div class="text">
+						<p>{{err}}</p>
+					</div>
+				</div>
+				<img src="/static/img/activity/btn_2.png" class="btn" ng-click="toPublicNo()" >
+			</div>
+		</div>
+	</section>
+	<!-- 活动规则 -->
+	<section class="regulation">
+		<div class="nav">
+			<img src="/static/img/activity/nav_3.png" >
+		</div>
+		<ul>
+			<li class="row">
+				<div class="listBtn col-20">1</div>
+				<div class="col-80">红包有效期{{date}}天</div>
+			</li>
+			<li class="row">
+				<div class="listBtn col-20">2</div>
+				<div class="col-80">红包发放至美妆商城账户，登录后即可使用；</div>
+			</li>
+			<li class="row">
+				<div class="listBtn col-20" >3</div>
+				<div class="col-80">红包仅在线支付时使用，每张订单仅限使用一张红包，红包不找零；</div>
+			</li>
+			<li class="row">
+				<div class="listBtn col-20">4</div>
+				<div class="col-80">
+					该红包只用于指定的商品；
+				</div>
+			</li>
+			<li class="row">
+				<div class="listBtn col-20">5</div>
+				<div class="col-80">美妆商城保留法律范围内允许对活动的解释权。</div>
+			</li>
+		</ul>
+	</section>
+
+</div>

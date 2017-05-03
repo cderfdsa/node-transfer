@@ -1,0 +1,21 @@
+<!-- PO图 -->
+<heade class="community_postPicture_header" head-lefttext="'取消'" head-righttext="'发布'" head-leftfn="headLeftFn" head-rightfn="headRightFn"></heade>
+
+<div class="content community_postPicture">
+	<section class="pic">
+		<textarea name="text" placeholder="等你说点什么…"  ng-model="textareas" ng-change="limitTextLength()"></textarea>
+		<div class="imgBox">
+			<img ng-show="viewImgUrl" src="{{viewImgUrl?'http://img.beautysite.cn'+viewImgUrl:''}}" alt="">
+		</div>
+	</section>
+
+	<section class="tags">
+		<div class="clearfix">
+			<img src="/static/img/community/icon_tag.png" alt="">标签
+			<span class="pull-right" ng-click="toAddTags()">添加标签<i class="icon icon-right"></i></span>
+		</div>
+		<ul class="tagList clearfix" ng-if="community_addTags.length">
+			<li class="pull-left" ng-repeat="tag in community_addTags | limitTo: 5">#{{tag}}#</li>
+		</ul>
+	</section>
+</div>

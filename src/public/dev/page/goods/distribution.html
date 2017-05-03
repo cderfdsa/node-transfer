@@ -1,0 +1,108 @@
+<!-- 分销商品列表 -->
+<heade
+	class="goods_distribution_header {{tags.length || 'search'}}"
+	head-title="'分享赚钱'"
+	head-rightfn="headRightFn"
+></heade>
+
+<!-- 搜索 -->
+<div class="searchbar" ng-if="tags.length">
+    <div class="search-input">
+        <label class="icon icon-search" for="search"></label>
+        <input type="search" id='search' placeholder="{{tags.length ? '' : '输入商品名、分类或功效'}}" readonly>
+        <ul class="search_tags clearfix" ng-click="clickTag($event)">
+            <li class="pull-left" ng-repeat="tag in tags">{{tag}}<i ng-click="researchTag(tag)"></i></li>
+            <li class="clearTags pull-right" ng-show="tags.length" ng-click="researchTag()"></li>
+        </ul>
+    </div>
+</div>
+
+<!-- content: start -->
+<div class="content goods_distribution">
+    <!-- 商品专题 -->
+    <section class="goodSecial" ng-repeat="goodSecial in goodSpecials" ng-if="goodSpecials.length && !tags.length">
+        <div class="special_banner {{goodSecial.products.length&&'after'}}">
+            <a href="#/home/special/{{goodSecial._id}}">
+                <img ng-src="http://img.beautysite.cn{{goodSecial.image}}" alt="">
+            </a>
+        </div>
+        <div class="goodsSlide swiper-special" ng-if="goodSecial.products.length">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide" ng-repeat="product in goodSecial.products | limitTo: 6">
+                    <a href="#/goods/detail/{{product._id}}">
+                        <div class="imgBox">
+                            <img ng-src="http://img.beautysite.cn{{product.images}}" alt="">
+                            <img class="nogood" src="/static/img/activity/nogood.png" alt="" ng-show="!product.inventoryCount">
+                        </div>
+                        <h2>{{product.name}} {{product.introduction}}</h2>
+                        <p class="clearfix" ng-if="!product.eventId">
+                            <span class="pull-left">返</span>
+                            <span class="pull-left">￥{{product.rebatePrice}}</span>
+                        </p>
+                        <p>￥<span>{{product.price}}</span></p>
+                    </a>
+                </li>
+                <li class="swiper-slide lookMore">
+                    <a href="#/home/special/{{goodSecial._id}}">
+                        <div class="imgBox">
+                        </div>
+                        <img src="static/img/home/lookMore.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 广告位 -->
+    <section class="swiper-banner" ng-if="banners.length && !tags.length">
+        <ul class="clearfix swiper-wrapper">
+            <li class="swiper-slide" ng-repeat="banner in banners | limitTo: 5">
+                <a href="{{banner.url}}">
+                    <img ng-src="http://img.beautysite.cn{{banner.image}}!/fw/600" alt="">
+                </a>
+            </li>
+        </ul>
+        <div class="swiper-pagination"><span></span></div>
+    </section>
+
+    <!-- 排行 -->
+    <section>
+        <!-- tab -->
+        <tab
+            tab-texts="['热卖排行', '返利排行']"
+            tab-active="0"
+            tab-callback="tabMenuFn"
+            ng-if="!tags.length"
+        ></tab>
+        <div class="select" ng-if="tabActive == 1 && !tags.length">
+            <img src="/static/img/goods/icon_select.png" alt="">
+            <span class="{{sort == 2 && 'active'}}" ng-click="filterGoods(2)">返比由高到低</span>
+            <span class="{{sort == 3 && 'active'}}" ng-click="filterGoods(3)">返利由高到低</span>
+        </div>
+        <ul class="goodsList">
+            <li ng-repeat="good in data.rows">
+                <a class="clearfix" href="#/goods/detail/{{good._id}}">
+                    <div class="imgBox pull-left">
+                        <img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{good.images}}" alt="">
+                        <img class="nogood" src="/static/img/activity/nogood.png" alt="" ng-show="!good.inventoryCount">
+                        <span ng-if="good.sNew">今日<br>新品</span>
+                    </div>
+                    <h3>{{good.name}}&nbsp;{{good.introduction}}</h3>
+                    <p class="rebate" ng-if="!good.eventId && good.rebateRatio">
+                        <span>返</span>
+                        <span>{{(good.rebateRatio || 0)*100| number: 0}}<span>%</span></span>
+                        <span><span>￥</span>{{(good.rebatePrice || 0)| number: 2}}</span>
+                    </p>
+                    <p class="price">
+                        <span>￥</span>{{good.price}}
+                    </p>
+                    <p class="buyCount">热卖{{good.buyCount}}件</p>
+                </a>
+                <button type="button" ng-click="share($index)">分享</button>
+            </li>
+            <li class="searchNone" ng-if="tags.length && !data.rows.length">
+                <img src="/static/img/goods/searchNone.png">
+            </li>
+        </ul>
+    </section>
+</div>

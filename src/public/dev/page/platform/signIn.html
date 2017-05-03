@@ -1,0 +1,17 @@
+<div class="content platform_signIn">
+	<div class="banner">
+		<img src="/static/img/platform/banner.png" alt="">
+	</div>
+
+	<form>
+		<input type="text" name="account" ng-model="account" placeholder="请输入平台账号登录" ng-focus="focus($event)" ng-blur="blur($event)" ng-change="change(0)">
+		<input type="password" name="password" ng-model="password" placeholder="请输入密码" ng-focus="focus($event)" ng-blur="blur($event)" ng-change="change(0)">
+		<input type="submit" ng-click="submit(0)">
+	</form>
+
+	<form>
+		<img src="/static/img/platform/or.png">
+		<input type="text" name="inviteCode" ng-model="inviteCode" placeholder="请输入个人邀请码登录" ng-focus="focus($event)" ng-blur="blur($event)" ng-change="change(1)">
+		<input type="submit" ng-click="submit(1)">
+	</form>
+</div>

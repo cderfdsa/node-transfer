@@ -1,0 +1,24 @@
+<!-- 添加标签 -->
+<heade class="community_addTags_header" head-title="'添加标签'" head-righttext="'完成'" head-leftfn="headLeftFn" head-rightfn="headRightFn"></heade>
+
+<div class="content community_addTags">
+	<section class="addTags">
+       <div class="clearfix add">
+           <input type="text" ng-model="tag" placeholder="有标签才任性，可以添加5个哦~" ng-change="limitLength()">
+           <button class="pull-right {{addBtnClass()}}" type="button" ng-click="addTagsFn(tag, 0)">添加</button>
+       </div>
+       <div class="added" ng-show="addTags.length">
+           <h3>已添加：</h3>
+           <ul class="clearfix">
+               <li class="pull-left"  ng-repeat="addTag in addTags" ng-click="deleteTag($index)">#{{addTag}}#</li>
+           </ul>
+       </div>
+    </section>
+
+    <section class="hotTags">
+        <h3>热门标签：</h3>
+        <ul class="clearfix">
+            <li class="pull-left" ng-repeat="hotTag in hotTags" ng-click="addTagsFn(hotTag.name, 1)">#{{hotTag.name}}#</li>
+        </ul>
+    </section>
+</div>

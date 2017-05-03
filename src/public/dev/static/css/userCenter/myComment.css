@@ -1,0 +1,110 @@
+.page {
+  background: #faf7f0;
+}
+.userCenterMyComment {
+  /*没有评论*/
+}
+.userCenterMyComment .loadAll {
+  text-align: center;
+  color: #999;
+  line-height: 2rem;
+  font-size: .6rem;
+}
+.userCenterMyComment .producthead {
+  background-color: #ffffff;
+  height: 3.7rem;
+  text-align: center;
+  margin-top: 0.7rem ;
+}
+.userCenterMyComment .producthead .imghead {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  vertical-align: middle;
+}
+.userCenterMyComment .producthead .imgicon {
+  width: 0.8rem;
+  height: 0.8rem;
+  margin: auto 0;
+  vertical-align: middle;
+}
+.userCenterMyComment .producthead span {
+  font-size: 0.6rem;
+  color: #666666;
+}
+.userCenterMyComment .producthead p {
+  font-size: 0.7rem;
+  color: #666666;
+  margin: 0;
+}
+.userCenterMyComment .producthead .custome {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.userCenterMyComment .list-block {
+  border-top: 1px solid #dbdbdb;
+  margin: 0;
+}
+.userCenterMyComment .item {
+  background: #fefdfb;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0.8rem 0;
+}
+.userCenterMyComment .item .item-inner:after {
+  width: 0;
+}
+.userCenterMyComment .item .item-inner {
+  background-image: none;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding: .2rem 0;
+}
+.userCenterMyComment .item a {
+  margin: 0 0.5rem;
+  padding: 0;
+}
+.userCenterMyComment .item .text {
+  margin: 0 0.5rem;
+  font-size: 0.7rem;
+  color: #333333;
+}
+.userCenterMyComment .item .productimg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.userCenterMyComment .item .heart {
+  width: 0.5rem;
+  height: 0.45rem;
+  margin-right: .25rem;
+}
+.userCenterMyComment .item .item-title {
+  font-size: 0.6rem;
+  color: #999999;
+}
+.userCenterMyComment .item .item-after {
+  font-size: 0.6rem;
+  color: #cccccc;
+}
+.userCenterMyComment .item .item-text {
+  height: auto;
+}
+.userCenterMyComment .item .item-media {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.userCenterMyComment .list-block .item-link.active-state,
+.userCenterMyComment html:not(.watch-active-state) .list-block .item-link:active {
+  background-color: #fefdfb;
+}
+.userCenterMyComment .commentNone {
+  text-align: center;
+  font-size: .8rem;
+  color: #999;
+  margin-top: 40%;
+}
+.userCenterMyComment .commentNone img {
+  width: 4rem;
+  display: block;
+  margin: 0 auto .4rem;
+}

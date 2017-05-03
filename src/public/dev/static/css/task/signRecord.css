@@ -1,0 +1,71 @@
+/*页面背景*/
+.page {
+  background-color: #f9f7ef;
+}
+/*页面内容区块*/
+.taskSignRecord section {
+  background-color: #ffffff;
+  margin-top: 0.7rem;
+  /*记录时间样式*/
+  /*数据整体样式*/
+}
+.taskSignRecord section .yearDate {
+  font-size: 0.6rem;
+  color: #333333;
+  background-color: #fefdfc;
+  margin: 0;
+  padding: 0.4rem;
+}
+.taskSignRecord section ul {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  /*每条数据的样式*/
+}
+.taskSignRecord section ul .row {
+  margin-left: auto;
+  margin: 0 0 0 0.4rem;
+}
+.taskSignRecord section ul li {
+  list-style: none;
+  border-bottom: 1px solid #dbdbdb;
+}
+.taskSignRecord section ul li .col-20 {
+  height: 2.5rem;
+  margin: 0.35rem 0;
+}
+.taskSignRecord section ul li .col-20 p {
+  margin: 0;
+}
+.taskSignRecord section ul li .col-20 .dayText {
+  font-size: 0.8rem;
+  color: #cccccc;
+}
+.taskSignRecord section ul li .col-20 .timeText {
+  font-size: 0.6rem;
+  color: #cccccc;
+}
+.taskSignRecord section ul li .text {
+  font-size: 0.7rem;
+  color: #ff95b9;
+  line-height: 3.2rem;
+}
+.taskSignRecord section ul li:nth-last-child(1) {
+  border-bottom: none;
+}
+.taskSignRecord .imgbox {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  text-align: center;
+}
+.taskSignRecord .imgbox img {
+  width: 4rem;
+}
+.taskSignRecord .imgbox p {
+  font-size: 0.75rem;
+  color: #999999;
+}

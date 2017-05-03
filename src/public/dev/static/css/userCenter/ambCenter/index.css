@@ -1,0 +1,293 @@
+.userCenter_ambCenter_header .icon.pull-right {
+  content: '';
+  position: absolute;
+  background: url(/static/img/community/btn_fenta.png) no-repeat center top;
+  background-size: contain;
+  width: 4rem;
+  height: 1.1rem;
+  right: .5rem;
+  top: .5rem;
+  display: none;
+}
+.userCenter_ambCenter_header .icon.pull-right.follow {
+  background: url(/static/img/community/btn_yifen.png) no-repeat center top;
+  background-size: contain;
+}
+.userCenter_ambCenter_header ~ .userCenter_ambCenter {
+  top: 0;
+}
+.userCenter_ambCenter_header h1.title {
+  opacity: 0;
+}
+.userCenter_ambCenter {
+  background: #f2f2f2;
+  margin: 0;
+  font-size: .7rem;
+}
+.userCenter_ambCenter .homeHeader {
+  background: #ffffff;
+  text-align: center;
+  color: #fff;
+  height: 11.6rem;
+  padding-top: .9rem;
+  font-size: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+.userCenter_ambCenter .homeHeader .homeHeaderBg {
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.userCenter_ambCenter .homeHeader .homeHeaderBg img {
+  height: 100%;
+  width: 100%;
+}
+.userCenter_ambCenter .homeHeader .photo {
+  width: 3.35rem;
+  height: 4rem;
+  margin: auto;
+  margin-bottom: .4rem;
+  z-index: 1;
+  position: relative;
+}
+.userCenter_ambCenter .homeHeader .photo img {
+  width: 100%;
+  height: 100%;
+}
+.userCenter_ambCenter .homeHeader .photo img:first-of-type {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.userCenter_ambCenter .homeHeader .photo img:last-of-type {
+  position: absolute;
+  bottom: .2rem;
+  left: .2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.userCenter_ambCenter .homeHeader .explain {
+  position: absolute;
+  top: 3.675rem;
+  right: -0.5rem;
+  z-index: 2;
+}
+.userCenter_ambCenter .homeHeader .explain a {
+  color: #ffffff;
+  font-size: .55rem;
+  padding: .3rem 1rem;
+  border: 1px solid #ffffff;
+  border-radius: 1rem 0 0 1rem;
+}
+.userCenter_ambCenter .homeHeader .explain a span {
+  margin: 0 .3rem;
+}
+.userCenter_ambCenter .homeHeader .level {
+  colol: #ffffff;
+  position: relative;
+}
+.userCenter_ambCenter .homeHeader .level p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  font-size: .7rem;
+}
+.userCenter_ambCenter .homeHeader .level img {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 3.75rem;
+}
+.userCenter_ambCenter .homeHeader .disc {
+  background: #ffffff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+}
+.userCenter_ambCenter .homeHeader .disc ul {
+  padding: 0;
+  margin: 0;
+}
+.userCenter_ambCenter .homeHeader .disc ul li {
+  margin: .7rem 0;
+  list-style: none;
+  width: 33.3%;
+  text-align: center;
+  border-right: 1px solid #e6e6e6;
+}
+.userCenter_ambCenter .homeHeader .disc ul li span {
+  display: block;
+  font-size: .5rem;
+  color: #999999;
+}
+.userCenter_ambCenter .homeHeader .disc ul li span:last-of-type {
+  margin-top: .4rem;
+  font-size: .8rem;
+  color: #ff577f;
+}
+.userCenter_ambCenter .homeHeader .disc ul li:last-of-type {
+  border-right: none;
+}
+.userCenter_ambCenter .banner {
+  height: 4rem;
+  width: 100%;
+  margin-top: .3rem;
+}
+.userCenter_ambCenter .banner img {
+  width: 100%;
+  height: 100%;
+}
+.userCenter_ambCenter .swiper-banner {
+  position: relative;
+  height: 3rem;
+  overflow: hidden;
+  margin-top: .3rem;
+}
+.userCenter_ambCenter .swiper-banner ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+.userCenter_ambCenter .swiper-banner img {
+  width: 100%;
+}
+.userCenter_ambCenter .swiper-banner .swiper-pagination {
+  bottom: 0;
+}
+.userCenter_ambCenter .swiper-banner .swiper-pagination-bullet {
+  width: 0.2rem;
+  height: 0.2rem;
+  opacity: 1;
+  background: rgba(255, 144, 170, 0.6);
+}
+.userCenter_ambCenter .swiper-banner .swiper-pagination-bullet-active {
+  border-radius: .1rem;
+  -webkit-border-radius: .1rem;
+  background: rgba(255, 144, 170, 0.9);
+}
+.userCenter_ambCenter .linkList ul {
+  margin: 0;
+  padding: 0;
+  margin-top: .3rem;
+  background: #fff;
+  list-style: none;
+  font-size: 0;
+}
+.userCenter_ambCenter .linkList ul li {
+  background: #ffffff;
+  width: 33.3%;
+  height: 4.5rem;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: .5rem;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+.userCenter_ambCenter .linkList ul li a {
+  text-align: center;
+  color: #5f5f5f;
+  display: block;
+}
+.userCenter_ambCenter .linkList ul li a img {
+  display: block;
+  margin: auto;
+  width: 2rem;
+  padding: .5rem 0;
+}
+.userCenter_ambCenter .linkList ul li a p {
+  padding: 0 0 .5rem 0;
+  margin: 0;
+}
+.userCenter_ambCenter .linkList ul li a span {
+  color: #fff;
+  background: #ff0200;
+  font-size: .5rem;
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  min-width: 0.7rem;
+  padding: 0 .2rem;
+  height: 0.7rem;
+  display: block;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+}
+.userCenter_ambCenter_ambGuide {
+  width: 100%;
+  min-height: 100%;
+  background: rgba(4, 4, 4, 0.6);
+  z-index: 10;
+  position: fixed;
+}
+.userCenter_ambCenter_ambGuide .level img:first-of-type {
+  width: 100%;
+  position: absolute;
+  top: 3.4rem;
+  right: 0;
+}
+.userCenter_ambCenter_ambGuide .banner {
+  position: absolute;
+  top: 11.6rem;
+}
+.userCenter_ambCenter_ambGuide .banner img {
+  width: 100%;
+}
+.userCenter_ambCenter_ambGuide .invite {
+  position: absolute;
+  top: 15.5rem;
+}
+.userCenter_ambCenter_ambGuide .invite img {
+  width: 100%;
+}
+.userCenter_ambCenter_ambGuide .inviteBonus {
+  position: absolute;
+  top: 17.6rem;
+}
+.userCenter_ambCenter_ambGuide .inviteBonus img {
+  width: 100%;
+}
+/*popup*/
+.popup-qrCode {
+  height: auto;
+  top: auto;
+  bottom: 0;
+  text-align: center;
+}
+.popup-qrCode p:first-of-type {
+  font-size: .7rem;
+  color: #808080;
+  margin-top: 0;
+}
+.popup-qrCode p:last-of-type {
+  width: 90%;
+  line-height: 1.8rem;
+  text-align: center;
+  font-size: 1rem;
+  background: #b2b2b2;
+  border-radius: .2rem;
+  margin: 0 auto;
+  margin-bottom: .8rem;
+}
+.popup-qrCode p:last-of-type a {
+  color: #fff;
+  display: block;
+}
+.popup-qrCode img {
+  width: 70%;
+  display: block;
+  margin: auto;
+  padding-top: 1rem;
+}

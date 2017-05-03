@@ -1,0 +1,45 @@
+<div class="page selectSchool">
+	<div class="header2 s_fixheader">
+		<div class="title">选择学校</div>
+		<a class="l_back" href="javascript:void(0);history.back();"></a>
+	</div>
+	<div class="s_search s_fixsearch">
+		<div class="s_searchDiv">
+			<i class="icon-search"></i>
+			<input type="text" id="s_search" class="s_color999" placeholder="请输入学校" ng-model="searchName" ng-change="searchFn()" />
+			<i class="icon-remove-sign" id="s_rm" ng-click="searchClose()"></i>
+		</div>
+		<span class="s_cancelSearch" ng-click="searchClose()">取消</span>
+	</div>
+	<div class="s_min">
+		<!-- 学校列表 -->
+		<div class="s_city">
+			<div class="s_Citytype">
+				<div class="s_vd" ng-repeat="college in data">
+					<!-- <a href="#/{{college.status==0?'applyOpen':'index'}}/{{college.id}}"> -->
+					<a href="http://wechat.beautysite.cn/site/{{college.status==0?'UnopenSchool':'SelectSchool'}}/id/{{college.id}}">
+						{{college.name}}
+						<i class="{{college.status==0?'s_ljkt':'s_dwBtn'}}">{{college.status==0?'求开通':'营业中'}}</i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- 搜索列表 -->
+		<div class="s_searchCon">
+			<div class="s_cf s_Citytype">
+				<div class="s_vd" ng-repeat="college in data | filter: {name: searchName}">
+					<!-- <a href="#/{{college.status==0?'applyOpen':'index'}}/{{college.id}}"> -->
+					<a href="http://wechat.beautysite.cn/site/{{college.status==0?'UnopenSchool':'SelectSchool'}}/id/{{college.id}}">
+						{{college.name}}
+						<i class="{{college.status==0?'s_ljkt':'s_dwBtn'}}">{{college.status==0?'求开通':'已开通'}}</i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 底部 -->
+	<div class="s_bottomFix">
+		<a class="s_btnxa" href="http://wechat.beautysite.cn/recruit/recommend.php">邀请好友<span>（奖100元）</span></a>
+		<a class="s_btnxa s_act" href="http://eqxiu.com/s/5JYzJ7sP">申请校园经理/大使</a>
+	</div>
+</div>

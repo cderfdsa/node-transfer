@@ -1,0 +1,34 @@
+<!-- 我的大使 -->
+<heade class="userCenter_ambCenter_myAmb_header circle_left" head-title="'我的大使'" head-righttext="'邀请大使'" head-rightfn="headRightFn"></heade>
+<!-- 我的大使主页 -->
+<div class="content userCenter_ambCenter_myAmb">
+	<p>我的大使:<span>{{data.count}}</span>个,贡献收益：<span>{{data.totalIncome}}</span>元</p>
+	<ul>
+		<li ng-repeat="item in data.rows">
+			<div class="user clearfix">
+				<div ng-click="toHome(item)">
+					<img ng-src="{{item.member.headImg ? item.member.headImg + (item.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}">
+				</div>
+				<div>
+					<p>{{item.member.nickName}}
+						<img ng-src="http://img.beautysite.cn/icon/S{{item.member.seniorMember.level}}_mini.png" alt="">
+					</p>
+					<p>贡献收益：￥{{item.profit}}</p>
+				</div>
+			</div>
+			<div class="usertime">
+				<div>
+					<p>加入时间:</p>
+					<p>{{item.createdAt| date:"yyyy-MM-dd HH:mm:ss"}}</p>
+				</div>
+				<div>
+					<p>最后登录时间：</p>
+					<p>{{item.lastLogin}}</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="imgbox" ng-if="data.rows!=undefined&&!data.rows.length">
+		<img src="/static/img/userCenter/ambCenter/null.png">
+	</div>
+</div>

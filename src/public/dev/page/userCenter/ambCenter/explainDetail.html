@@ -1,0 +1,200 @@
+<!-- 规则说明详情 -->
+<heade class="circle_left" head-title="'玩转校园大使'"></heade>
+
+<div class="content userCenter_ambCenter_explainDetail">
+	<section class="questions">
+		<div class="Q">
+			<img src="static/img/userCenter/ambCenter/explain_Q.png" alt="">
+			<div class="text" ng-if="type==0"><p>业绩和提成怎么算？</p></div>
+			<div class="text" ng-if="type==1"><p >校园大使怎么升级？</p></div>
+			<div class="text" ng-if="type==2"><p>校园大使升级有什么好处？</p></div>
+			<div class="text" ng-if="type==3"><p>邀请大使有什么好处？</p></div>
+			<div class="text" ng-if="type==4"><p>邀请好友有什么好处？</p></div>
+			<div class="text" ng-if="type==5"><p>绑定用户的方式、规则与好处？</p></div>
+		</div>
+		<div class="A">
+			<img src="static/img/userCenter/ambCenter/explain_A.png" alt="">
+			<div ng-if="type==0" class="text ">
+				<p>总业绩 = 本人业绩 + 邀请大使业绩 + 关联业绩</p>
+				<p>总收益 = 本人收益 + 邀请大使收益 + 关联收益 + 高级任务收益 + 代言费 + 邀请好友收益</p>
+			</div>
+			<div ng-if="type==1" class="text">
+				<p>校园大使权益有效期2年，升级根据你的业绩而定。</p><br>
+				<p>
+					注：超越规则：下属大使级别高于大使本人后，保护期为45天，若45天后级别依旧低于下级大使，则绑定关系取消（同级不受影响）；
+					已邀请成功的下属大使，除非超越，否则绑定关系将一直持续，无特殊原因不解绑。
+				</p>
+			</div>
+			<div class="text" ng-if="type==2">
+				<p>
+					升级后可享受更多的特权，不仅购物可以享受额外VIP折扣，
+					提成收益的比例更高，还可获得更多现金奖励、美妆独家福利等。
+					具体见等级说明.
+				</p><br>
+			</div>
+			<div class="text" ng-if="type==3">
+				<p>
+					每成功邀请一位用户成为“你的大使”，可以获得一次性邀请奖励50-100元（被邀请人选择350元现金抵用券，返收益50元；选择美妆礼包，返收益100元），并且今后该大使的所有业绩你都可以获得收益提成。邀请大使无上限数量限制，邀请越多，收益越高。
+				</p><br>
+			</div>
+			<div class="text" ng-if="type==4">
+				<p>邀请好友成功可获得100颜值奖励，并且TA在美妆完成首单购买后，你可获得10元现金奖励。
+				</p><br>
+			</div>
+			<div class="text" ng-if="type==5">
+				<p>规则：新版规则里，不同等级的校园大使可绑定的用户人数不一样。等级越高，可绑定的用户名额越多。
+				</p><br>
+				<p>方式：用户在【个人中心 → 个人信息】页面输入你的手机号，即算与你绑定成功；
+				</p><br>
+				<p>好处：绑定用户成功后，今后该用户购买的所有订单你都享有高额直接业绩提成。
+				</p><br>
+			</div>
+		</div>
+	</section>
+	<section class="list">
+		<ul ng-if="type==0">
+			<li>
+				<div >业绩</div>
+			</li>
+			<li>
+				<div>收益</div>
+			</li>
+			<li>
+				<div>邀请大使业绩 = 298元/人</div>
+			</li>
+			<li>
+				<div>邀请大使收益=每邀请一位用户成为大使，返收益50-100元（被邀请人选择合伙人红包，返收益50元；选择美妆礼包，返收益100元）</div>
+			</li>
+			<li>
+				<div style="text-align: left">本人业绩：<br>
+					(1)绑定用户购物的实付金额<br>
+					(2)未绑定用户通过你分享的美妆链接产生购买商品的金额
+				</div>
+			</li>
+			<li>
+				<div style="text-align: left">本人收益：<br>
+					(1)绑定用户购买全部商品的返利
+					(2)未绑定用户通过你分享的美妆链接购买商品的返利
+				</div>
+			</li>
+			<li>
+				<div>关联业绩 = 你的大使的所有业绩 *35%</div>
+			</li>
+			<li>
+				<div>关联收益 = 绑定大使的销售收益*10%</div>
+			</li>
+			<li>
+				<div>/</div>
+			</li>
+			<li>
+				<div>邀请新用户收益 = 邀请新用户，且用户完成首单，获得收益10元</div>
+			</li>
+			<li>
+				<div>/</div>
+			</li>
+			<li>
+				<div>高级任务收益 = 完成指定的高级任务，获得收益（详情见成长中心）</div>
+			</li>
+			<li>
+				<div>/</div>
+			</li>
+			<li>
+				<div>代言费 = 在社区发表代言笔记并产生购买，会获得随机惊喜代言费收益。</div>
+			</li>
+		</ul>
+		<p ng-if="type==0">
+			注：普通用户通过你分享的美妆APP内的链接购买商品，这笔订单会计入你的本人业绩内，获得收益提成。链接在你分享出去3天内都有效，用户只要在打开链接后7天内购买，都算有效。如果同一个用户访问了多位大使分享的链接，美妆会以最后一次访问为计算标准。
+		</p>
+		<ul ng-if="type==1">
+			<li>
+				<div >等级</div>
+			</li>
+			<li>
+				<div>业绩要求</div>
+			</li>
+			<li>
+				<div>S1 预备大使</div>
+			</li>
+			<li>
+				<div>购买298礼包，升级成大使</div>
+			</li>
+			<li>
+				<div>S2 新人大使</div>
+			</li>
+			<li>
+				<div>完成累积业绩800元</div>
+			</li>
+			<li>
+				<div>S3 潜力大使</div>
+			</li>
+			<li>
+				<div>再完成业绩2500元</div>
+			</li>
+			<li>
+				<div>S4 人气大使</div>
+			</li>
+			<li>
+				<div>再完成业绩5000元</div>
+			</li>
+			<li>
+				<div>S5 优秀大使</div>
+			</li>
+			<li>
+				<div>再完成业绩8000元</div>
+			</li>
+			<li>
+				<div>S6 明星大使</div>
+			</li>
+			<li>
+				<div>再完成业绩15000元</div>
+			</li>
+		</ul>
+
+		<ul ng-if="type==5">
+			<li>
+				<div >等级</div>
+			</li>
+			<li>
+				<div>绑定用户名额</div>
+			</li>
+			<li>
+				<div>S1 预备大使</div>
+			</li>
+			<li>
+				<div>10名绑定闺蜜用户名额</div>
+			</li>
+			<li>
+				<div>S2 新人大使</div>
+			</li>
+			<li>
+				<div>20名绑定闺蜜用户名额</div>
+			</li>
+			<li>
+				<div>S3 潜力大使</div>
+			</li>
+			<li>
+				<div>30名绑定闺蜜用户名额</div>
+			</li>
+			<li>
+				<div>S4 人气大使</div>
+			</li>
+			<li>
+				<div>40名绑定闺蜜用户名额</div>
+			</li>
+			<li>
+				<div>S5 优秀大使</div>
+			</li>
+			<li>
+				<div>60名绑定闺蜜用户名额</div>
+			</li>
+			<li>
+				<div>S6 明星大使</div>
+			</li>
+			<li>
+				<div>80名绑定闺蜜用户名额</div>
+			</li>
+		</ul>
+
+
+	</section>
+</div>

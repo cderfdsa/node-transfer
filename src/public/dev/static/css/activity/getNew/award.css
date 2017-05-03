@@ -1,0 +1,305 @@
+.award {
+  background: #a557fe;
+  padding-bottom: 3.2rem;
+}
+.award .title_text {
+  margin-left: .5rem;
+  margin-top: .5rem;
+  width: 15%;
+}
+.award .total {
+  color: #ffffff;
+}
+.award .total h1 {
+  font-size: .8rem;
+  text-align: center;
+  margin: 0;
+}
+.award .total h1 span {
+  font-size: 1.25rem;
+  color: #ffde00;
+  font-style: italic;
+  margin: 0 .3rem;
+}
+.award .total .progressBar {
+  margin: 0 auto;
+  width: 80%;
+  height: .75rem;
+  border: 2px solid #ffffff;
+  border-radius: 1rem;
+  z-index: 9999;
+  overflow: hidden;
+  margin-top: .8rem;
+  background: #ffffff;
+}
+.award .total .progressBar div {
+  background: #ff577f;
+  height: .6rem;
+  z-index: -1;
+}
+.award .goods {
+  padding: 0 5%;
+  margin-top: 1.5rem;
+}
+.award .goods ul {
+  display: table;
+}
+.award .goods ul li {
+  width: 33.33%;
+  float: left;
+  position: relative;
+}
+.award .goods ul li .box {
+  padding: 0 .3rem;
+}
+.award .goods ul li .box img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 100%;
+}
+.award .goods ul li .text {
+  width: 100%;
+  bottom: 1rem;
+  position: relative;
+  text-align: center;
+  font-size: .5rem;
+  margin: 0 .5rem;
+}
+.award .goods ul li .text div:first-of-type {
+  width: 45%;
+  position: absolute;
+  left: 0;
+  border-radius: 1rem 0 0 1rem;
+  padding: .1rem;
+}
+.award .goods ul li .text div:last-of-type {
+  width: 55%;
+  position: absolute;
+  left: 2rem;
+  border-radius: 0 1rem 1rem 0;
+  padding: .1rem;
+}
+.award .goods ul li .check div:first-of-type {
+  background: #ffffff;
+  color: #ff577f;
+}
+.award .goods ul li .check div:last-of-type {
+  background: #ff577f;
+  color: #ffffff;
+}
+.award .goods ul li .Nocheck div:first-of-type {
+  background: #ffffff;
+  color: #cdcdcd;
+}
+.award .goods ul li .Nocheck div:last-of-type {
+  background: #cdcdcd;
+  color: #ffffff;
+}
+.award .goods ul li .Radio {
+  padding: .5rem 0;
+  font-size: .65rem;
+  color: #ffffff;
+  padding-bottom: 1.5rem;
+  margin: 0;
+}
+.award .goods ul li .Radio label {
+  display: inline-block;
+  width: 70%;
+}
+.award .goods ul li input[type='radio'] {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: bottom;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/activity/getNew/checkbox.png) no-repeat center top;
+  background-size: cover;
+  border: none;
+  margin-right: .1rem;
+  vertical-align: top;
+}
+.award .goods ul li input[type='radio']:checked {
+  background-position: center bottom;
+}
+.award .goods .btn {
+  margin: 0 5%;
+}
+.award .goods .btn img {
+  width: 100%;
+  height: 2.5rem;
+}
+.award .goods .btn p {
+  color: #ffffff;
+  font-size: .6rem;
+  text-align: center;
+  margin: .45rem 0 1.45rem 0;
+}
+.award .list div {
+  text-align: center;
+  margin-bottom: .75rem;
+}
+.award .list div img {
+  width: 30%;
+  vertical-align: middle;
+}
+.award .list div button {
+  border: none;
+  background: #ffffff;
+  color: #ff577f;
+  border-radius: 1rem;
+  padding: .2rem .8rem;
+}
+.award .list .null img {
+  margin-top: 1rem;
+}
+.award .list .null p {
+  color: #ffffff;
+  margin: 0;
+  font-size: .75rem;
+}
+.award .list ul {
+  list-style: none;
+  padding: 0 0.5rem;
+  margin: 0;
+}
+.award .list ul li {
+  float: left;
+  width: 100%;
+}
+.award .list ul li div {
+  display: inline-block;
+}
+.award .list ul li div:nth-of-type(1) img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+.award .list ul li div:nth-of-type(2) {
+  font-size: .7rem;
+  color: #ffffff;
+  text-align: left;
+}
+.award .list ul li div:nth-of-type(3) {
+  font-size: .65rem;
+  color: #ffffff;
+}
+.award .list ul li div:nth-of-type(3) span {
+  display: block;
+}
+.award_footer {
+  height: 3.2rem;
+  background: rgba(48, 28, 76, 0.5);
+  position: fixed;
+  bottom: 0;
+}
+.award_footer div {
+  height: 3.2rem;
+  padding: .5rem;
+}
+.award_footer div img {
+  width: 40%;
+}
+.ReceiveModal .modal-inner {
+  background: #ffffff!important;
+  position: static;
+}
+.ReceiveModal .modal-title {
+  font-size: .9rem;
+  color: #4a009d;
+  font-weight: bold;
+}
+.ReceiveModal .close {
+  position: absolute;
+  right: -0.5rem;
+  top: -1rem;
+  width: 1rem;
+  height: 1rem;
+}
+.ReceiveModal p {
+  margin: 0;
+  font-size: .6rem;
+  color: #999999;
+  text-align: left;
+}
+.ReceiveModal p:nth-of-type(1) {
+  font-size: .65rem;
+  color: #666666;
+}
+.ReceiveModal p:nth-of-type(2) img {
+  width: .5rem;
+  height: .5rem;
+  margin-right: .5rem;
+}
+.ReceiveModal input {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  border: 0;
+  margin: .3rem 0;
+  background: transparent;
+  border: 1px solid #cccccc;
+  color: #999999;
+  font-size: .6rem;
+  padding: .2rem .6rem;
+}
+.ReceiveModal input:nth-of-type(1) {
+  width: 100%;
+  padding: 0 .6rem;
+}
+.ReceiveModal .prohibit {
+  border: 1px solid #cccccc;
+  color: #ffffff;
+  background: #cccccc;
+}
+.ReceiveModal .modal-buttons {
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 0 0 .3rem .3rem;
+}
+.ReceiveModal .modal-button {
+  background: #9f49ff;
+  color: #ffffff;
+  margin-top: -2rem;
+  border-radius: 1rem;
+}
+.ReceiveModal .modal-button:first-child:last-child {
+  border-radius: 1rem;
+}
+.ReceiveModal .customize-popup {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  display: none;
+}
+.ReceiveModal .customize-popup input {
+  width: 45%;
+}
+.ReceiveModal .customize-popup .img_popup {
+  width: 30%;
+  vertical-align: middle;
+  margin-left: .2rem;
+}
+.ReceiveModal .customize-popup a {
+  width: 30%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+.ReceiveModal .msgCode input {
+  width: 55%;
+  padding: 0 .6rem;
+}
+.ReceiveModal .msgCode button {
+  width: 40%;
+  margin-left: 5%;
+  border: none;
+  border: 1px solid #9f49ff;
+  color: #9f49ff;
+  border-radius: 1rem;
+  font-size: .6rem;
+  padding: .6rem 3%;
+  background: transparent;
+}

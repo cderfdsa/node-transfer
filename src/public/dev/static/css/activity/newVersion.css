@@ -1,0 +1,31 @@
+.activity_newVersion {
+  /* header */
+  /* contant */
+}
+.activity_newVersion.bar .pull-right.icon {
+  background: url(/static/img/task/icon_share.png) no-repeat;
+  background-size: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: .45rem;
+}
+.activity_newVersion.content {
+  background: #ffecf5;
+}
+/* include */
+.activity_newVersion_include {
+  position: relative;
+  background: #ffecf5;
+}
+.activity_newVersion_include img {
+  width: 100%;
+}
+.activity_newVersion_include a {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 21%;
+  width: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}

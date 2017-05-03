@@ -1,0 +1,31 @@
+<!-- 头部开始 -->
+<heade head-title="'签到记录'"></heade>
+<!-- content: start -->
+<div class="content taskSignRecord" ng-if="data.length">
+<!-- 签到区块：列表 -->
+	<section ng-repeat="mo in monthArr">
+	<!-- 日期 -->
+		<h1 class="yearDate">{{mo.replace("-",".")}}</h1>
+		<ul >
+		<!-- 记录 -->
+			<li class="row" ng-repeat="list in data |filter : {updatedAt : mo}">
+				<div class="time col-20">
+					<p class="dayText">{{list.date}}</p>
+					<p class="timeText">{{list.dateDay}}</p>
+				</div>
+				<span  class="col-80 text">
+					{{list.remark}}
+				</span>
+			</li>
+		</ul>
+	</section>
+
+</div>
+
+<!-- 签到记录为空 -->
+<div class="content taskSignRecord" ng-if="data!=undefined&&!data.length" >
+	<div class="imgbox">
+		<img src="/static/img/userCenter/u6.png">
+		<p>亲还没有签到记录，要加油呦~</p>
+	</div>
+</div>

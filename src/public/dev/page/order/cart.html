@@ -1,0 +1,151 @@
+<!-- 购物车 -->
+<heade class="order_cart_header {{hideRight}}" head-title="'购物车'" head-righttext="btnText" head-rightfn="showEditBtn"></heade>
+
+<!-- content -->
+<div class="content order_cart">
+    <!-- goods list: start -->
+    <div class="mainBox" ng-if="data.cart.length" ng-show="!cartNone">
+        <div class="checkAll">
+            <div class="checkAllBox">
+                <input type="checkbox" id="checkAllBox" ng-checked="checkedAll" ng-click="checkedFn(1)">
+                <label for="checkAllBox">全选</label>
+                <!-- <span>包邮</span> -->
+            </div>
+            <div class="dec" ng-click="popup('open')">
+                <i class="mark"></i>满50免邮偏远地区另计<i class="icon_right icon icon-right pull-right"></i>
+            </div>
+        </div>
+        <ul class="goodsList" id="swipe-delete">
+            <li ng-repeat="list in data.cart" ng-show="!list.isDelete">
+                <div class="listBox clearfix">
+                    <input type="checkbox" ng-checked="list.checked" ng-model="list.checked" class="checkItem" ng-click="checkedFn(0, $index)">
+                    <img ng-src="http://img.beautysite.cn{{list.image}}" class="limg" />
+                    <div class="rightBox clearfix">
+                        <p class="countDown" ng-if="list.type">有效期：{{list.day||0}}天 {{list.hh}}:{{list.mm}}:{{list.ss}}</p>
+                        <a class="{{list.type&&'oneline'}}" href="javascript: void(0);" ng-click="linkGoodsUri(list.product, list.type)">
+                            <span ng-if="list.type">
+                                {{['', '兑换', '赠品'][list.type]}}
+                            </span>
+                            {{list.productName}}
+                        </a>
+                        <div class="prop">{{list.standardName}}</div>
+                        <div class="clearfix">
+                            <dd class="l_f">{{list.type!=1?'¥':''}}{{list.price}}{{list.type==1?'颜值':''}}</dd>
+                            <div class="l_addNumber clearfix" ng-if="!list.type">
+                                <span class="l_cut" ng-click="cut($index)">-</span>
+                                <span class="l_number">{{list.qty}}</span>
+                                <span class="l_add" ng-click="add($index)">+</span>
+                            </div>
+                            <span class="pull-right" ng-if="list.type">x {{list.qty}}</span>
+                        </div>
+                    </div>
+                    <div class="actions clearfix">
+                        <div class="toCollect pull-left" ng-click="collectFn($index)"><span>移入<br>收藏夹</span></div>
+                        <div class="del pull-left" ng-click="delFn($index)"><span>删除</span></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a class="goHome" href="#/home">&gt;&gt;继续去逛逛</a>
+
+        <!-- 失效 等待接口 -->
+        <!-- <ul class="invalidGoods">
+            <li class="clearfix">
+                <a href="">
+                    <span class="widget pull-left">失效</span>
+                    <img src="12312" alt="" class="pull-left">
+                    <div>
+                        <p>12312sdasdf松动送送送送送送送送送送送送送送送送送送送</p>
+                        <p>对不起，宝贝已经卖光了呦~</p>
+                        <p>x1</p>
+                    </div>
+                </a>
+            </li>
+            <li class="clearfix">
+                <a href="">
+                    <span class="widget pull-left">失效</span>
+                    <img src="12312" alt="" class="pull-left">
+                    <div>
+                        <p>12312sdasdf松动送送送送送送送送送送送送送送送送送送送</p>
+                        <p>对不起，宝贝已经卖光了呦~</p>
+                        <p>x1</p>
+                    </div>
+                </a>
+            </li>
+            <li><button type="button">清空失效宝贝</button></li>
+        </ul> -->
+
+        <!-- total: start -->
+        <div class="shopCarBottom clearfix">
+            <div class="pull-left">
+                <input type="checkbox" id="checkAllBoxBottom" ng-checked="checkedAll" ng-click="checkedFn(1)">
+                <label for="checkAllBoxBottom">全选</label>
+            </div>
+            <div class="total pull-right" ng-show="!showEdit">
+                <p>
+                    <span>合计：</span>
+                    <span class="totalMoney">¥<span id="total_money">{{totalMoney| number:2}}</span></span>
+                </p>
+                <div ng-click="settlementFn()">去结算(<span id="totalQty">{{qty}}</span>)</div>
+            </div>
+            <div class="editBtn pull-right clearfix" ng-show="showEdit">
+                <div class="collectAllBtn pull-left" ng-click="collectFn()">移入收藏夹</div>
+                <div class="detAllBtn pull-left" ng-click="delFn()">删除</div>
+            </div>
+        </div>
+        <!-- total: end -->
+
+        <!-- 免邮popup: start -->
+        <div class="modal_popup" ng-class="popupClass" id="postModal" ng-click="popup('close')">
+            <div class="popup-content">
+                <h1 class="popup-head">运费说明</h1>
+                <div class="popup-body">
+                    <p>
+                        运费为全国范围除了新疆、内蒙、西藏、宁夏满<span class="c-f69">150</span>元免邮外，其余地区为满<span class="c-f69">50</span>元免邮。
+                    </p>
+                    <p>
+                        不足部分，运费的收费标准为：
+                    </p>
+                    <ul>
+                        <li>上海、浙江、江苏、安徽运费为6元；</li>
+                        <li>江西、河南、湖北、山东、福建、北京、天津、河北、湖南、山西、陕西为8元；</li>
+                        <li>甘肃、贵州、辽宁、四川、重庆、内蒙古、广西、广东、青海、云南、海南、黑龙江、吉林、宁夏为10元；</li>
+                        <li>新疆、西藏为20元。</li>
+                    </ul>
+                </div>
+                <div class="popup-foot">
+                    <button type="button" ng-click="popup('open')">关闭</button>
+                </div>
+            </div>
+        </div>
+        <!-- 免邮popup: end -->
+    </div>
+    <!-- goods list: end -->
+
+    <!-- shopCar empty -->
+    <div class="emptyBox" ng-show="data.cart!=undefined && cartNone">
+        <div class="banner">
+            <img src="/static/img/order/empty.png">
+            <a href="#/home">去逛逛</a>
+        </div>
+        <div class="hotGoods">
+            <h2><span><i></i>看看热品</span></h2>
+
+            <ul class="clearfix">
+                <li class="pull-left" ng-repeat="hotList in data.hot_list">
+                    <a href="#/goods/detail/{{hotList._id}}">
+                        <div>
+                            <img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{hotList.images}}" alt="">
+                            <div class="noGood" ng-if="!hotList.inventoryCount"></div>
+                        </div>
+                        <h3>【{{hotList.introduction}}】{{hotList.name}}</h3>
+                        <p class="clearfix"><span>￥</span>{{hotList.price}}<span class="pull-right">原价：￥{{hotList.marketPrice}}</span></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<foot></foot>

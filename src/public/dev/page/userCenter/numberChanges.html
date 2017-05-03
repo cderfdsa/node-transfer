@@ -1,0 +1,31 @@
+<!--更换手机绑定  -->
+<!-- header: start -->
+<heade head-title="'更换手机绑定'">
+</heade>
+<!-- header: end -->
+
+<!-- 更换手机绑定主页 -->
+<div class="content userCenternumberChanges">
+	
+	<!-- 表单 -->
+	
+		<h1>您已绑定手机号:{{userInfo.filtermobile}}</h1>
+		<ul novalidate>
+			<li>
+				<input type="text" maxlength="11" placeholder="请输入原手机号" ng-model="oldMobile" required>
+			</li>
+			<li>
+				<input type="text" maxlength="11" placeholder="手机号" ng-model="newMobile">
+			</li>
+			<li>
+				<input type="text" maxlength="4" placeholder="验证码" class="inp" ng-model="captchaCode" ng-disabled="buttonStatus == 'disabled'">
+				<button ng-click="getCode(0)" class="text {{default}}">{{buttonText}}</button>
+			</li>
+		</ul>
+		<div>
+			<p>短信收不到？<span ng-click="getCode(1)">尝试语音验证码</span></p>
+		</div>
+		<button class="sure" ng-click="submit()">确定</button>
+	
+</div>
+

@@ -1,0 +1,52 @@
+.userCenter_ambCenter_explain {
+  background: #f2f2f2;
+}
+.userCenter_ambCenter_explain ul {
+  margin: 0 ;
+  padding: 0 ;
+  list-style: none;
+  background: #ffffff;
+  font-size: 0;
+  margin-top: .5rem;
+  overflow: hidden;
+}
+.userCenter_ambCenter_explain ul li {
+  font-size: .6rem;
+  padding: .5rem;
+  position: relative;
+}
+.userCenter_ambCenter_explain ul li a {
+  color: #666666;
+  display: block;
+}
+.userCenter_ambCenter_explain ul li a img {
+  height: 1.5rem;
+  width: 1.5rem;
+  vertical-align: middle;
+}
+.userCenter_ambCenter_explain ul li a img:last-of-type {
+  width: .45rem;
+  height: .75rem;
+  position: absolute;
+  right: .5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.userCenter_ambCenter_explain ul li a p {
+  display: inline-block;
+  margin: 0 .5rem;
+}
+.userCenter_ambCenter_explain ul li:after {
+  content: "";
+  background: #e6e6e6;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: .5rem;
+  bottom: 0;
+}
+.userCenter_ambCenter_explain ul li:last-of-type:after {
+  content: "";
+  display: none;
+}

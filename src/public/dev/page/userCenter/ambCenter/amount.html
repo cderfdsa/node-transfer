@@ -1,0 +1,102 @@
+<!-- 业绩/收益 -->
+<heade class="circle_left userCenter_ambCenter_amount_header" head-righttext="'说明'" head-rightfn="explainLink"></heade>
+
+<div class="tab row">
+    <a class="col-50 {{tab==0&&'active'}}" href="#/userCenter/ambCenter/amount/exploit">业绩</a>
+    <a class="col-50 {{tab==1&&'active'}}" href="#/userCenter/ambCenter/amount/income">收益</a>
+</div>
+
+<div class="content userCenter_ambCenter_amount">
+    <section class="banner">
+       <div class="totalAmount" ng-click="amountDetailLink(undefined, 0)">
+           <h3>本月{{['业绩', '收益'][tab]}}（元）</h3>
+           <p>{{[amountData.monthExploit, amountData.monthIncome][tab]| number: 2}}</p>
+       </div>
+
+       <div class="amount row">
+           <div class="col-50" ng-click="amountDetailLink(undefined, 0)">
+               <span>累计{{['业绩', '收益'][tab]}}（元）</span>
+               <span>{{[amountData.totalExploit, amountData.totalIncome][tab]| number: 2}}</span>
+           </div>
+           <div class="col-50" ng-click="amountDetailLink(undefined, 1)">
+               <span>待确认{{['业绩', '收益'][tab]}}（元）</span>
+               <span>{{[amountData.frozenExploit, amountData.unconfirmIncome][tab]| number: 2}}</span>
+           </div>
+       </div>
+    </section>
+
+   <section class="detailAmount row">
+       <div class="col-33" ng-click="amountDetailLink(0, 0)">
+           <span>{{[amountData.directExploit, amountData.detailIncome.directIncome][tab]| number: 2}}</span>
+           <span>本人{{['业绩', '收益'][tab]}}</span>
+       </div>
+       <div class="col-33" ng-click="amountDetailLink([2, 7][tab], 0)">
+           <span>{{[amountData.indirectExploit, amountData.detailIncome.indirectIncome][tab]| number: 2}}</span>
+           <span>关联{{['业绩', '收益'][tab]}}</span>
+       </div>
+       <div class="col-33" ng-click="amountDetailLink([1, 9][tab], 0)">
+           <span>{{[amountData.inviteExploit, amountData.detailIncome.inviteAmbaIncome][tab]| number: 2}}</span>
+           <span>邀请大使{{['业绩', '收益'][tab]}}</span>
+       </div>
+       <div class="col-33" ng-if="tab==1" ng-click="amountDetailLink(8, 0)">
+           <span>{{amountData.detailIncome.inviteMemberIncome| number: 2}}</span>
+           <span>邀请新用户收益</span>
+       </div>
+       <div class="col-33" ng-if="tab==1" ng-click="amountDetailLink(1, 0)">
+           <span>{{amountData.detailIncome.taskIncome| number: 2}}</span>
+           <span>高级任务收益</span>
+       </div>
+       <div class="col-33" ng-if="tab==1" ng-click="amountDetailLink(2, 0)">
+           <span>{{amountData.detailIncome.representIncome| number: 2}}</span>
+           <span>代言费</span>
+       </div>
+   </section>
+
+    <section class="analyse">
+        <div class="line">
+            <img src="/static/img/userCenter/analysis.png" alt="收入分析">
+        </div>
+        <div class="pie">
+            <div>
+                <canvas id="myChart" width="240" height="240"></canvas>
+            </div>
+            <div class="incomeNo">
+                <span>总{{['业绩', '收益'][tab]}}（元）</span>
+                <span>{{[amountData.totalExploit, amountData.totalIncome][tab]| number: 2}}</span>
+            </div>
+            <div class="noMoneyTip" ng-if="data.totalMoney!= undefined&&!data.totalMoney">暂时没有收入哦~</div>
+        </div>
+        <div class="desc clearfix row">
+            <span class="col-33">
+                <i></i>
+                <span>本人{{['业绩', '收益'][tab]}}</span>
+                <span>{{([amountData.directExploit, amountData.detailIncome.directIncome][tab]/[amountData.totalExploit, amountData.totalIncome][tab]*100| number: 2) || 0}}%</span>
+            </span>
+            <span class="col-33">
+                <i></i>
+                <span>邀请大使{{['业绩', '收益'][tab]}}</span>
+                <span>{{([amountData.inviteExploit, amountData.detailIncome.inviteAmbaIncome][tab]/[amountData.totalExploit, amountData.totalIncome][tab]*100| number: 2) || 0}}%</span>
+            </span>
+            <span class="col-33" ng-if="tab == 1">
+                <i></i>
+                <span>高级任务收益</span>
+                <span>{{(amountData.detailIncome.taskIncome/[amountData.totalExploit, amountData.totalIncome][tab]*100| number: 2) || 0}}%</span>
+            </span>
+            <span class="col-33 indirect">
+                <i></i>
+                <span>关联{{['业绩', '收益'][tab]}}</span>
+                <span>{{([amountData.indirectExploit, amountData.detailIncome.indirectIncome][tab]/[amountData.totalExploit, amountData.totalIncome][tab]*100| number: 2) || 0}}%</span>
+            </span>
+            <span class="col-33" ng-if="tab == 1">
+                <i></i>
+                <span>邀请新用户收益</span>
+                <span>{{(amountData.detailIncome.inviteMemberIncome/[amountData.totalExploit, amountData.totalIncome][tab]*100| number: 2) || 0}}%</span>
+            </span>
+            <span class="col-33" ng-if="tab == 1">
+                <i></i>
+                <span>代言费</span>
+                <span>{{(amountData.detailIncome.representIncome/[amountData.totalExploit, amountData.totalIncome][tab]*100| number: 2) || 0}}%</span>
+            </span>
+        </div>
+    </section>
+</div>

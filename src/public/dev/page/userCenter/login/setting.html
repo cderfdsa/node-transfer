@@ -1,0 +1,53 @@
+<heade class="userCenter_login_setting_header" head-title="'设置'" head-rightfn="saveUserInfo"></heade>
+
+<!-- 设置 -->
+<div class="content userCenter_login_setting">
+	<div class="list-block">
+		<ul>
+			<li>
+				<a href="#/userCenter/userInfo">
+					<div class="item-content">
+					  <div class="item-inner">
+						<div class="item-title">个人信息</div>
+							<span class="icon icon-right" ></span>
+					  </div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#/userCenter/login/bindAccount">
+					<div class="item-content">
+					  <div class="item-inner">
+						<div class="item-title">账号绑定</div>
+							<span class="icon icon-right" ></span>
+					  </div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#/userCenter/login/realID">
+					<div class="item-content">
+					  <div class="item-inner">
+						<div class="item-title">实名认证</div>
+							<span class="icon icon-right" ></span>
+					  </div>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="#/community/rule">
+					<div class="item-content">
+					  <div class="item-inner">
+						<div class="item-title">社区规范</div>
+							<span class="icon icon-right" ></span>
+					  </div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="userCenter_login_setting_btn" >
+	<button ng-show="isLogin!=undefined && isLogin && !isWeiXin" ng-click="loginout()"
+>退出</button>
+</div>

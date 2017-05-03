@@ -1,0 +1,50 @@
+<!-- 大使专题页 -->
+<heade
+    class="circle_left userCenter_ambCenter_special_header"
+    head-title="'招募美妆合伙人'"
+    head-rightFn="popupShare">
+ </heade>
+
+<!-- 大使专题页 -->
+<div class="content userCenter_ambCenter_special">
+    <div ng-include="'/page/userCenter/ambCenter/include/special.html'">
+    </div>
+
+    <!-- bind mobile Popup -->
+    <div class="popup popup-bindMobile">
+        <p>
+            <a href="javascript: void(0);" class="close-popup">
+                <img src="/static/img/userCenter/ambCenter/icon_popupClose.png" alt="">
+            </a>
+        </p>
+        <p>
+            <img src="/static/img/userCenter/ambCenter/icon_tip.png">
+            输入手机号，获取美妆礼包＆会员特权＆大使通行证
+        </p>
+        <p>
+            <input type="text" maxlength="11" ng-model="mobile"
+            ng-change="canSubmit()"
+            placeholder="请输入手机号">
+        </p>
+        <p class="clearfix">
+            <input type="text" maxlength="6" ng-model="captcha"
+            ng-change="canSubmit()"
+            placeholder="请输入验证码">
+            <button class="pull-right {{smsCaptchaStatus}} captchaBtn" type="button" ng-click="getCode(0)" ng-bind-html="smsCaptchaText"></button>
+        </p>
+        <p>
+            收不到短信？<span ng-click="getCode(0)">尝试语音验证码</span>
+        </p>
+        <p><button class="{{active}}" type="button" ng-click="submit()">确认</button></p>
+    </div>
+</div>
+
+<!-- 购买 -->
+<nav class="bar bar-tab userCenter_ambCenter_special_footer">
+    <a class="tab-item external" href="http://www.sobot.com/chat/h5/index.html?sysNum=223c05fc5274431aba46d0555930a877&source=1">
+        <img src="/static/img/userCenter/ambCenter/service.png">
+    </a>
+    <span class="tab-item" ng-click="buy()">
+        <img src="/static/img/userCenter/ambCenter/{{saleNone?'sold_out':'apply_btn'}}.png">
+    </span>
+</nav>

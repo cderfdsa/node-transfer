@@ -1,0 +1,36 @@
+<!-- 美妆合肥试点产品活动 -->
+<div class="content activityPilotProduct">
+	<!-- 头部 -->
+	<header class="header clearfix">
+		<img src="/static/img/activity/bg_top.png" alt="" class="pull-left">全国首家互联网+美妆体验平台
+		<img src="/static/img/activity/bg_top.png" alt="" class="pull-right">
+	</header>
+	<!-- 图片展示选择部分 -->
+	<div class="img">
+		<img class="bg" src="/static/img/activity/bg.png" alt="">
+		<img class="title animated bounceIn" src="/static/img/activity/title.png" alt="">
+		<img class="title_detail animated rotateIn" src="/static/img/activity/title_detail.png" alt="">
+		<input type="checkbox" ng-checked="arr.checked" ng-click="checkboxFn($index)" ng-repeat="arr in data | limitTo: 2" ng-show="arr.standards.inventory">
+	</div>
+
+	<!-- 商品列表 -->
+	<div class="list">
+		<ul class="clearfix">
+			<li class="pull-left" ng-repeat="list in array1">
+				<div>
+					<input type="checkbox" ng-checked="list.checked" ng-click="checkboxFn($index, 1)" ng-show="list.standards.inventory">
+					<img ng-src="{{list.images?list.images:'/static/img/loading-200.jpg'}}" alt=""  ng-click="checkboxFn($index, 1)">
+					<img class="nogood" src="/static/img/activity/nogood.png" alt="" ng-show="!list.standards.inventory">
+					<h3>【{{list.name}}】{{list.introduction}}</h3>
+					<p><span>￥{{list.price}}</span><span>原价：￥{{list.marketPrice}}</span></p>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 尾部 -->
+	<div class="footer clearfix {{status?'animated slideInUp':''}}">
+		<div class="pull-left"><span>合计：</span><span id="money">￥{{money|number:2}}</span><span id="saveMoney">（共省￥{{saveMoney|number:2}}）</span></div>
+		<div class="pull-left" ng-click="settlement()">去结算（{{num}}）</div>
+	</div>
+</div>

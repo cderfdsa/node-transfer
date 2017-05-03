@@ -1,0 +1,177 @@
+<!-- 商品详情 -->
+<heade
+	class="goods_detail_header"
+	head-rightfn="share"
+	head-leftfn="leftFn"
+></heade>
+
+<!-- content: start -->
+<div class="content goods_detail {{headerForm?'h5Bottom':''}}">
+	<!-- banner: start -->
+    <section class="banner">
+        <ul class="banner_list clearfix swiper-wrapper">
+            <li class="swiper-slide" ng-repeat="image in data.images">
+                <img ng-src="http://img.beautysite.cn{{image}}!/fw/750" alt="">
+            </li>
+        </ul>
+        <div class="swiper-pagination"><span></span></div>
+    </section>
+	<!-- banner: end -->
+
+	<!-- 特卖商品 -->
+	<div class="event clearfix" ng-if="data.event">
+		<span class="pull-left">￥<span>{{data.price}}</span></span>
+		<div class="pull-left">
+			<p>{{data.virtualBuyCount}}人已购买</p>
+			<p>
+				<span>￥{{data.marketPrice}}</span>
+				<span>{{data.discount}}折</span>
+			</p>
+		</div>
+		<div class="pull-right countDown">
+			还剩<span>{{day||0}}</span>天<span>{{hh||'00'}}</span>:<span>{{mm||'00'}}</span>:<span>{{ss||'00'}}</span>.<span>{{ms||0}}</span>
+		</div>
+	</div>
+
+	<!-- 商品head头信息：start -->
+	<section class="goods_head">
+		<h2>【{{data.introduction}}】{{data.name}}</h2>
+		<div class="goodsInfo clearfix" ng-if="!data.event">
+			<span>￥<span>{{data.price}}</span></span>
+			<span>￥{{data.marketPrice}}</span>
+			<span>{{data.discount}}折</span>
+			<span class="pull-right" ng-if="!userInfo && !userInfo.seniorMember">{{data.virtualBuyCount}}人已购买</span>
+			<span class="pull-right rebate" ng-if="userInfo.seniorMember">
+				<span>返</span>
+				<span>{{data.rebateRatio*100|number: 0}}<span>%</span></span>
+				<span><span>￥</span>{{data.rebatePrice|number: 2}}</span>
+			</span>
+		</div>
+	</section>
+	<!-- 商品head头信息：end -->
+
+	<!-- ensure: start -->
+	<nav class="bar-tab goods_ensure">
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/static/img/goods/z1.png" alt="">
+			正品保证
+		</a>
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/static/img/goods/z2.png" alt="">
+			火速送达
+		</a>
+		<!-- <a href="javascript:void(0);" class="tab-item">
+			<img src="/static/img/goods/z3.png" alt="">
+			免费试用
+		</a> -->
+		<a href="javascript:void(0);" class="tab-item">
+			<img src="/static/img/goods/z4.png" alt="">
+			无忧退货
+		</a>
+	</nav>
+	<!-- ensure: end -->
+
+	<!-- comment: start -->
+	<section class="comment" ng-if="comment.count">
+		<ul>
+			<li class="comment_title clearfix">
+				商品评论（{{totalComment.totalComment}}）
+				<a href="#/goods/comment/{{proId}}" class="pull-right">
+					好评度：<span class="red">{{totalComment.favorableRate| number: 0}}%</span> <i class="icon icon-right"></i>
+				</a>
+			</li>
+			<li class="common_list" ng-repeat="commentList in comment.rows | limitTo: 1">
+				<div class="clearfix userBox">
+					<img class="photo pull-left" ng-src="{{commentList.member.headImg ? commentList.member.headImg + (commentList.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/120' : '') : '/static/img/userCenter/default_avatar.png'}}" alt="">
+					<span class="pull-right">{{commentList.createdAt| date: "yyyy-MM-dd"}}</span>
+					<div>
+						<div>
+							<div>
+								<span>
+									{{commentList.member.nickName}}
+								</span>
+								<img ng-src="http://img.beautysite.cn/icon/L{{commentList.member.level}}.png" alt="">
+								<img ng-if="commentList.member.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{commentList.member.seniorMember.level}}_mini.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<p class="clearfix">
+					<span class="pull-left" class="star">
+						<i class="{{commentList.stars>$index?'ing':''}}" ng-repeat="star in [0,1,2,3,4]"></i>
+					</span>
+				</p>
+				<p class="clearfix">
+					<span class="textComment">{{commentList.commentBtnStatus?commentList.shortTextComment:commentList.textComment}}</span>
+					<span class="showAllComment {{commentList.commentBtnStatus?'pull-right':''}}" ng-click="showCommentFn($index)" ng-show="commentList.showCommentBtn">{{commentList.commentBtnStatus?"全文":"收起"}}</span>
+				</p>
+			</li>
+			<li class="toAllBtn text-center" ng-if="totalComment.totalComment>1">
+				<a href="#/goods/comment/{{proId}}">查看全部评论</a>
+			</li>
+		</ul>
+	</section>
+	<!-- comment: end -->
+
+	<!-- detail: start -->
+	<section class="goods_detail_list"></section>
+	<!-- detail: end -->
+</div>
+<!-- content: end -->
+
+<!-- footer: start -->
+<nav class="bar bar-tab goodsDetailFooter clearfix" ng-if="headerForm">
+	<a href="http://www.sobot.com/chat/h5/index.html?sysNum=223c05fc5274431aba46d0555930a877&source=1" class="tab-item">
+		<img src="/static/img/goods/service.png" alt="">
+		客服
+	</a>
+	<a href="javascript:void(0);" class="tab-item" ng-click="collectFn()">
+		<img class="{{isCollect?'animated bounce':''}}" ng-src="/static/img/goods/star5{{isCollect?'_active':''}}.png" alt="">
+		收藏
+	</a>
+	<a href="#/order/cart" class="tab-item" limitlogin="#/order/cart">
+		<span ng-if="cartNums">{{cartNums}}</span>
+		<img src="/static/img/goods/icon_cart.png" alt="">
+		购物车
+	</a>
+	<a href="javascript:void(0);" class="tab-item" ng-click="buyModalFn('open', 0)" ng-if="data!=undefined&&data.status==2&&inventoryAll">加入购物车</a>
+	<!-- <a href="javascript:void(0);" class="tab-item" ng-show="data.status==2&&inventoryAll" ng-click="buyModalFn('open', 1)">立即购买</a> -->
+	<a href="javascript:void(0);" class="tab-item none" ng-if="data!=undefined&&data.status==2&&inventoryAll==0">抢光了</a>
+	<a href="javascript:void(0);" class="tab-item none" ng-if="data!=undefined&&data.status!=2">{{data.status==3?"抢光了":"待上线"}}</a>
+</nav>
+<!-- footer: end -->
+
+
+<!-- buy modal: start -->
+<div class="buy_modal" ng-class="popupClass">
+	<div class="modal_content">
+		<div class="clearfix titles">
+			<img class="pull-left" src="http://img.beautysite.cn{{data.images[0]}}" alt="">
+			<div class="pull-left descrip">
+				<h3>{{data.name}}</h3>
+				<div>
+					<span>￥<span>{{data.price}}</span></span>
+					<span>￥{{data.price}}</span>
+				</div>
+			</div>
+			<img src="/static/img/goods/times.png" alt="" class="pull-right close" ng-click="buyModalFn('close')">
+		</div>
+
+		<div class="specification">
+			<label for="">规格</label>
+			<div>
+				<span class="{{standard.inventory ? '' : 'disabled'}}" ng-class="standard.focus" ng-repeat="standard in data.standards" ng-click="specificationFn($index)">{{standard.name}}</span>
+			</div>
+		</div>
+		<div class="number">
+			<label for="">数量</label>
+			<div class="changeNo">
+				<span class="{{cutStatus}}" ng-click="cutFn()">-</span>
+				<input type="text" readonly="readonly" value="{{No}}">
+				<span class="{{addStatus}}" ng-click="addFn()">+</span>
+			</div>
+		</div>
+		<button type="button" ng-click="selectedFn()">确 定</button>
+	</div>
+</div>
+<!-- buy modal: end -->

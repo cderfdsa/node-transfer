@@ -1,0 +1,35 @@
+<!-- 完善信息 -->
+<heade class="userCenter_login_prefectInfo_header" head-title="'基本信息'" head-righttext="'跳过'" head-rightfn="headRightFn"></heade>
+
+<div class="content userCenter_login_prefectInfo">
+	<form>
+		<div class="line">
+			<div class="headeImg">
+				<img src="{{viewImgUrl?'http://img.beautysite.cn'+viewImgUrl+'!/fw/164':'static/img/userCenter/camera.png'}}">
+			</div>
+			<div class="uploadFile"></div>
+		</div>
+
+		<div class="line input">
+			<label>昵称</label>
+			<input class="nickName" type="text" name="nickName" ng-model="nickName">
+			<img src="static/img/userCenter/icon_pen.png" >
+		</div>
+
+		<div class="line input">
+			<label>你是</label>
+			<input type="radio" name="sex" value="2" ng-model="sex" id="girl" class="girl" ng-checked="true">
+			<label for="girl" class="girl">
+				<img src="static/img/userCenter/girl.png">
+			</label>
+
+			<input type="radio" name="sex" value="1" ng-model="sex" id="boy">
+			<label for="boy" class="boy">
+				<img src="static/img/userCenter/boy.png">
+			</label>
+
+		</div>
+
+		<button type="submit" ng-click="submit()" class="submit">开始美妆</button>
+	</form>
+</div>

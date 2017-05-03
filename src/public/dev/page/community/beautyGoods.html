@@ -1,0 +1,34 @@
+<heade class="community_beautyGoods circle_left" head-title="'美物商品'"></heade>
+
+<div class="content community_beautyGoods">
+	<div class="searchbar" >
+		<div class="search-input">
+			<label class="icon icon-search" for="search"></label>
+			<input type="search" id='search' placeholder="{{tags.length ? '' : '输入商品名、分类或功效'}}" readonly>
+			<ul class="search_tags clearfix" ng-click="clickTag($event)">
+				<li class="pull-left" ng-repeat="tag in tags">{{tag}}<i ng-click="researchTag(tag)"></i></li>
+				<li class="clearTags pull-right" ng-show="tags.length" ng-click="researchTag()"></li>
+			</ul>
+		</div>
+	</div>
+
+	<ul class="goods">
+		<li class="clearfix" ng-repeat="list in data.rows" ng-click="toNote($index)">
+			<div class="box">
+				<div class="imgbox">
+					<img class="lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{list.images}}">
+				</div>
+				<div class="goodsText">
+					<h2>{{list.name}}</h2>
+					<p>
+						￥{{list.price}}
+						<span>￥{{list.marketPrice}}</span>
+						<a href="">{{list.discount}}折</a>
+					</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+
+	<img src="/static/img/goods/searchNone.png" alt="" class="searchNone" ng-show="data.count !== undefined && !data.count">
+</div>

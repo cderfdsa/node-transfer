@@ -1,0 +1,33 @@
+.page {
+  background: #faf7f0;
+  max-width: 750px;
+}
+.userCenter_redPacketExplain {
+  color: #959597;
+}
+.userCenter_redPacketExplain ul {
+  color: #959597;
+  padding-left: 0;
+  margin: 0 0.3rem;
+  list-style: none;
+}
+.userCenter_redPacketExplain ul li {
+  background-color: #ffffff;
+  padding: 0.5rem 0.5rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+.userCenter_redPacketExplain ul li h1 {
+  color: #959597;
+  font-size: 0.7rem;
+  margin: 0;
+}
+.userCenter_redPacketExplain ul li .Disc {
+  margin-left: 0.4rem;
+  font-size: 0.6rem;
+}
+.userCenter_redPacketExplain ul li .Disc li {
+  margin: 0;
+  padding: 0;
+  list-style: initial;
+}

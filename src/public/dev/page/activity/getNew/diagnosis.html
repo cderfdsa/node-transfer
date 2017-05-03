@@ -1,0 +1,14 @@
+<!--拉新活动 -->
+<div class="content getNew_diagnosis">
+	<img id="bg_diagnosis" src="/static/img/activity/getNew/bg_diagnosis.jpg" hidden>
+	<img id="headImg" src="{{data.memberInfo.headImg}}" hidden>
+	<img id="qrCode" ng-src="{{data.qrcode.ticket}}" hidden>
+	
+	<img crossOrigin="Anonymous" ng-src="{{diagnosisSrc}}">
+	<div class="footer clearfix">
+		<div class="pull-left">
+			长按保存图片，分享给微信好友求解药。
+		</div>
+		<button class="pull-right" ng-click="productDiagnosis(1)">误诊，再来一次</button>
+	</div>
+</div>

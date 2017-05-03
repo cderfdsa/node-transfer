@@ -1,0 +1,39 @@
+.platform_signIn {
+  background: #f2f2f2;
+  padding: 0 6.7%;
+  color: #555;
+}
+
+.platform_signIn .banner {
+  padding: 21.3% 0 16%;
+}
+
+.platform_signIn .banner img {
+  display: block;
+  margin: auto;
+  width: 48.4%;
+}
+
+.platform_signIn form input {
+  padding: .6rem .9rem;
+  font-size: .7rem;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  margin-bottom: 4%;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.platform_signIn form input[type="submit"] {
+  background: #ccc;
+  font-size: .9rem;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.platform_signIn form img {
+  width: 43.6%;
+  margin: 1.07% auto 5.87%;
+  display: block;
+}

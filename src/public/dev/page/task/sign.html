@@ -1,0 +1,64 @@
+<!-- 每日签到 -->
+
+<heade head-title="'每日签到'" class="circle_left" head-righttext="'签到记录'" head-rightfn="headRightFn"  head-leftfn="headLeftFn"></heade>
+
+<div class="content taskSign" ng-click="slideUpFn()">
+	<!-- 用户信息 -->
+	<section class="userInfo">
+		<div class="photo">
+			<img ng-src="{{userInfo.headImg ? userInfo.headImg + (userInfo.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+		</div>
+		<div class="level">
+            <div>
+                <span>{{userInfo.nickName?userInfo.nickName:'游客'}}</span>
+                <img src="http://img.beautysite.cn/icon/L{{userInfo.level}}.png" alt="">
+            </div>
+        </div>
+		<p>亲，今日签到可获{{todayName}}，本月共签到{{signdNo?signdNo:0}}次~</p>
+	</section>
+
+	<!-- 签到表 -->
+	<section class="signTable">
+		<h2><i class="left"></i>{{signCalendar[0].date | date:'yyyy'}}年{{signCalendar[0].date | date:'M'}}月签到奖励<i class="right"></i></h2>
+		<div class="tbody">
+			<div class="tbody_box {{slideUp?'hover':''}}">
+				<ul class="clearfix {{nextHalfMonth}}">
+					<li class="pull-left {{calendar.type?calendar.passSignd?calendar.type==1?'red':'':'red_gray':calendar.passSignd?calendar.faceValue>=60?'noSign':'signed':'unload'}}" ng-repeat="calendar in signCalendar" ng-if="calendar.name">
+						<span>{{calendar.name}}</span>
+						<span>{{calendar.date | date:'M'+'月'}}{{calendar.date | date:'d'+'日'}}</span>
+						<img class="{{calendar.signd?'geted':'get'}}" ng-src="/static/img/task/{{calendar.signd?'geted':'get'}}.png" alt="" ng-if="calendar.signd || calendar.today" ng-click="signModal(calendar.type==1?9:!calendar.type?8:'', calendar.date, calendar.signd, $event)">
+						<span class="{{calendar.passSignd?'redFont':'red_grayFont'}}" ng-if="calendar.coupon">{{calendar.coupon.value}}</span>
+					</li>
+				</ul>
+			</div>
+			<img class="slideButton" ng-src="/static/img/task/button_slide{{slideUp?'Up':'Down'}}.png" alt="" ng-click="slideFn($event)">
+		</div>
+	</section>
+	<img class="bg_bottom" src="/static/img/task/bg_bottom.png" alt="">
+
+	<!-- 连续签到惊喜 -->
+	<section class="signSurprise">
+		<h2>连续签到有惊喜</h2>
+		<div class="clearfix">
+			<div class="pull-left clearfix box" ng-repeat="continuity in signContinuity | limitTo: 3">
+				<img ng-src="/static/img/task/pic{{$index}}.png" alt="" ng-click="signModal($index)">
+				<div class="getmodal" ng-if="$index==2?(continuity.canReceived || signContinuity[$index+1].canReceived):continuity.canReceived">
+					<button type="button" ng-click="signAward($index)">点击领取</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 签到说明 -->
+	<section class="signExplain">
+		<h2>每日签到说明</h2>
+		<ol>
+			<li>1. 每日签到可持续累积颜值，颜值可以在【颜值换礼】频道免费兑换各种正品美妆&大牌中小样等；以及【免费试用】频道由校园大使提供美妆免费试用服务。</li>
+			<li>2. 连续签到奖励的红包可在“我的—红包”中点击查看。</li>
+			<li>3. 连续签到奖励的产品会在购物车中，随任意订单一同发货，赠品有效期30天。</li>
+			<li>4. 连续签到21天奖励的产品数量有限，若已抢完可选择领取红包，红包可抵扣现金。</li>
+			<li>5. 除签到外，还可以通过完成任务或购买分享产品获得更多颜值，详情可见“任务-任务说明”。</li>
+			<li>6. 连续签到次数仅限当月有效，次月将会将上月签到次数清零。</li>
+		</ol>
+	</section>
+</div>

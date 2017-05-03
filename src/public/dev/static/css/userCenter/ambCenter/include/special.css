@@ -1,0 +1,198 @@
+/* dialog */
+.mask {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+}
+
+.mask.fade {
+  opacity: 1;
+}
+
+.dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  background: #fff;
+  z-index: 20;
+  opacity: 0;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.dialog.bigger {
+  transform: translate(-50%, -50%) scale(2);
+  -webkit-transform: translate(-50%, -50%) scale(2);
+}
+
+.dialog.fade {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
+}
+
+html {
+  font-size: 20px;
+}
+
+html, body {
+  height: 100%;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.cf:after {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+body {
+  width: 100%;
+  max-width: 750px;
+  margin: auto;
+  overflow: hidden;
+  /* insert content */
+  /* photo dialog */
+}
+
+body .icon_share {
+  width: 0;
+  height: 0;
+}
+
+body .insertContent {
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+body .insertContent .bgContent {
+  position: relative;
+  height: 0;
+  padding-top: 1764%;
+  background: url(/static/img/userCenter/ambCenter/bg_ambCenterSpecial.png) no-repeat;
+  background-size: cover;
+  margin-bottom: 3.2rem;
+}
+
+body .insertContent .photoContent {
+  position: absolute;
+  bottom: 19%;
+  left: 10%;
+  width: 80%;
+  font-size: 0;
+}
+
+body .insertContent .photoContent .cf {
+  position: relative;
+}
+
+body .insertContent .photoContent img {
+  margin-right: 1.34%;
+  margin-bottom: 1%;
+  width: 23.9%;
+}
+
+body .insertContent .photoContent img.mr0 {
+  margin-right: 0;
+}
+
+body .insertContent .photoContent img.big {
+  width: 49.2%;
+}
+
+body .insertContent .photoContent .rippleClick {
+  width: 21.21%;
+  position: absolute;
+  left: 30%;
+  bottom: 0;
+  height: 0;
+  padding-bottom: 21.21%;
+}
+
+body .insertContent .photoContent .rippleClick img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+body .insertContent .photoContent .rippleClick div {
+  width: 26%;
+  height: 26%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  background: #ff587f;
+  position: absolute;
+  left: 48.5%;
+  top: 0;
+  margin-top: 49%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+
+body .insertContent .photoContent .rippleClick div:nth-child(2) {
+  opacity: .4;
+  animation: ripple1 .8s infinite;
+}
+
+body .insertContent .photoContent .rippleClick div:nth-child(3) {
+  opacity: .2;
+  animation: ripple2 .8s infinite;
+}
+
+body .insertContent .backTop {
+  position: fixed;
+  width: 2.2rem;
+  right: .5rem;
+  bottom: 20%;
+  z-index: 1;
+  display: none;
+}
+
+body .special_dialog {
+  width: 88%;
+  font-size: .55rem;
+  color: #fd577f;
+  line-height: 2;
+  background: transparent;
+}
+
+body .special_dialog .dialog_text {
+  background: url(/static/img/userCenter/ambCenter/bg_specialModal.png) no-repeat;
+  background-size: 100% 100%;
+  padding: 33.33% 9.09% 9.09%;
+}
+
+body .special_dialog .dialog_text p:last-child {
+  text-align: right;
+}
+
+body .special_dialog .closeDialog {
+  text-align: center;
+  padding-top: 6%;
+}
+
+body .special_dialog .closeDialog img {
+  width: 14.55%;
+}

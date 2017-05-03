@@ -1,0 +1,63 @@
+.userCenter_ambCenter_poster_header .bg {
+  background: #fff;
+}
+
+.userCenter_ambCenter_poster_header .title {
+  color: #000;
+}
+
+.userCenter_ambCenter_poster_header.circle_left .icon-left:before {
+  background: url(/static/img/userCenter/ambCenter/icon_circleLeft_black.png) no-repeat center top;
+  background-size: cover;
+}
+
+.userCenter_ambCenter_poster {
+  font-size: 0;
+}
+
+.userCenter_ambCenter_poster img {
+  padding-bottom: 3.2rem;
+  width: 100%;
+}
+
+.userCenter_ambCenter_poster footer {
+  height: 3.2rem;
+  padding: .5rem .5rem;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.userCenter_ambCenter_poster footer p {
+  margin: 0;
+  font-size: .65rem;
+  color: #fff;
+  line-height: 1;
+}
+
+.userCenter_ambCenter_poster footer p:nth-child(1) {
+  margin-bottom: .4rem;
+}
+
+.userCenter_ambCenter_poster footer p span {
+  color: #ff577f;
+  font-size: .6rem;
+}
+
+.userCenter_ambCenter_poster footer p span span {
+  font-size: 1rem;
+}
+
+.userCenter_ambCenter_poster footer a {
+  font-size: .7rem;
+  display: inline-block;
+  height: 2.2rem;
+  background: #ff577f;
+  color: #fff;
+  width: 35.733%;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  text-align: center;
+}

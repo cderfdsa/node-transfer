@@ -1,0 +1,84 @@
+<!-- 账号绑定 -->
+<heade head-title="'账号绑定'"  head-rightfn="saveUserInfo" class="userCenter_login_bindAccount_header"></heade>
+
+<!-- 账号绑定 -->
+<div class="content userCenter_login_bindAccount">
+	<div class="list-block">
+		<ul>
+			<li ng-click="replace()">
+				<div class="item-content">
+					<div class="item-media">
+				  		<img src="/static/img/userCenter/Telephone.png">
+				  	</div>
+				  	<div class="item-inner">
+						<div class="item-title">手机号码</div>
+						<div class="pull-right" >
+							{{userInfo.user.mobile}}
+							<a  ng-if="userInfo.user.mobile!=undefined&&!userInfo.user.mobile">去绑定</a>
+							<span class="icon icon-right" ></span>
+						</div>
+				  	</div>
+				</div>
+			</li>
+			<!-- <li>
+				<div class="item-content" >
+					<div class="item-media">
+				  		<img src="/static/img/userCenter/WeChat.png">
+				  	</div>
+				  	<div class="item-inner">
+						<div class="item-title">微信账号</div>
+						<div class="pull-right" ng-click="thirdLogin('weixin', thirdBindList.indexOf(0)>-1)" ng-if="isWeixin || thirdBindList.indexOf(0)>-1">
+							<a class="{{thirdBindList.indexOf(0)>-1?'bound':''}}" ng-if="thirdBindList!=undefined">{{thirdBindList.indexOf(0)>-1?'已绑定':'去绑定'}}</a>
+							<span class="icon icon-right" ></span>
+						</div>
+					  	</div>
+					</div>
+			</li> -->
+			<!-- <li ng-show="!isWeixin">
+				<div class="item-content" >
+					<div class="item-media">
+				  		<img src="/static/img/userCenter/QQ.png">
+				  	</div>
+					<div class="item-inner">
+						<div class="item-title">QQ账号</div>
+						<div class="pull-right" ng-click="thirdLogin('qq', thirdBindList.indexOf(2)>-1)">
+							<a class="{{thirdBindList.indexOf(2)>-1?'bound':''}}" ng-if="thirdBindList!=undefined">{{thirdBindList.indexOf(2)>-1?'已绑定':'去绑定'}}</a>
+							<span class="icon icon-right" id="qqLoginBtn" ></span>
+						</div>
+					</div>
+				</div>
+			</li> -->
+			<li ng-show="!isWeixin">
+				<div class="item-content">
+					<div class="item-media">
+				  		<img src="/static/img/userCenter/blog.png">
+				  	</div>
+					<div class="item-inner">
+						<div class="item-title">新浪微博</div>
+						<div class="pull-right" ng-click="thirdLogin('weibo', thirdBindList.indexOf(1)>-1)">
+							<a class="{{thirdBindList.indexOf(1)>-1?'bound':''}}" ng-if="thirdBindList!=undefined">{{thirdBindList.indexOf(1)>-1?'已绑定':'去绑定'}}</a>
+							<span class="icon icon-right" ></span>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<ul >
+			<li ng-click="toPassword()">
+				<a>
+					<div class="item-content">
+						<div class="item-media">
+					  		<img src="/static/img/userCenter/password.png">
+					  	</div>
+						<div class="item-inner">
+							<div class="item-title">设置/修改密码</div>
+							<a >
+								<span class="icon icon-right" ></span>
+							</a>
+						</div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>

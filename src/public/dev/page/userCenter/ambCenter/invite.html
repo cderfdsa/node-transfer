@@ -1,0 +1,36 @@
+<!-- 邀请大使/邀请闺蜜好友 -->
+
+<heade
+     class="circle_left"
+     head-title="['邀请大使', '邀请闺蜜好友'][type]"
+     head-righttext="['', '邀请记录'][type]"
+     head-rightfn="inviteRecordLink">
+</heade>
+
+<div class="content userCenter_ambCenter_invite">
+    <div class="content-box">
+        <img class="banner" ng-src="/static/img/userCenter/ambCenter/invite_banner{{type}}.png" alt="">
+        <p>
+            <a href="#/userCenter/ambCenter/explain">规则说明</a>
+            <img src="/static/img/userCenter/ambCenter/arrow_right.png" alt="">
+        </p>
+        <p ng-if="type == 1" class="row">
+            <span class="tip  col-33">100颜值</span>
+            <span class="col-50">邀请闺蜜好友成功，我得100颜值奖励。</span>
+        </p>
+        <p class="row">
+            <span class="tip col-33">{{['￥50-100现金', '￥10现金'][type]}}</span>
+            <span class="col-50">{{['邀请成功，我得50-100元现金奖励。', '闺蜜好友完成首单，我得10元现金奖励。'][type]}}</span>
+        </p>
+        <p class="row" ng-if="user.seniorMember">
+            <span class="tip  col-33">{{['永久提成', '丰厚提成'][type]}}</span>
+            <span class="col-50">{{['今后TA的业绩我也有提成。', '闺蜜好友购物，我得丰厚订单提成。'][type]}}</span>
+        </p>
+
+        <button type="button" ng-click="share()">{{['立即邀请', '送TA188元闺蜜礼包'][type]}}</button>
+
+        <footer>
+            <img src="/static/img/userCenter/ambCenter/invite_foot.png" alt="">
+        </footer>
+    </div>
+</div>

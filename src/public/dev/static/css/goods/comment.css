@@ -1,0 +1,101 @@
+.goodsComment {
+  background: #f2f2f2;
+  font-size: .7rem;
+}
+.goodsComment.app {
+  padding-bottom: 2rem;
+}
+.goodsComment ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.goodsComment ul li {
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  padding: 0 .4rem;
+}
+.goodsComment .comment_title {
+  margin-bottom: .5rem;
+  color: #666;
+  line-height: 2.2rem;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: none;
+}
+.goodsComment .comment_title .deg {
+  color: #333;
+  margin-left: 2%;
+}
+.goodsComment .comment_title .deg .red {
+  color: #f5416c;
+}
+.goodsComment .comment_title .deg .icon {
+  color: #ccc;
+}
+.goodsComment .comment_title .viewContent {
+  color: #333;
+}
+.goodsComment .comment_title .viewContent [type='checkbox'] {
+  width: .9rem;
+  height: .9rem;
+  vertical-align: middle;
+  margin-top: -0.1rem;
+  margin-right: .1rem;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/goods/checkbox.png) no-repeat center top;
+  background-size: cover;
+  border: none;
+}
+.goodsComment .comment_title .viewContent [type='checkbox']:checked {
+  background: url(/static/img/goods/checkbox.png) no-repeat center bottom;
+  background-size: cover;
+}
+.goodsComment .common_list {
+  padding-bottom: .7rem;
+}
+.goodsComment .common_list p {
+  margin: 0;
+  line-height: 1.25rem;
+}
+.goodsComment .common_list p.top {
+  padding-top: .5rem;
+  line-height: 1.5rem;
+}
+.goodsComment .common_list p.top img {
+  vertical-align: middle;
+  width: .8rem;
+  height: .8rem;
+}
+.goodsComment .common_list p.top img:first-of-type {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.goodsComment .common_list .pull-right {
+  color: #999;
+  font-size: .6rem;
+}
+.goodsComment .common_list i {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  margin-right: .3rem;
+  background: url(/static/img/goods/star.png) no-repeat left bottom;
+  background-size: cover;
+}
+.goodsComment .common_list i.ing {
+  background-position: left top;
+}
+.goodsComment .commentNone {
+  text-align: center;
+  font-size: .8rem;
+  color: #999;
+  margin-top: 40%;
+}
+.goodsComment .commentNone img {
+  width: 4rem;
+  display: block;
+  margin: 0 auto .4rem;
+}

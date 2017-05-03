@@ -1,0 +1,114 @@
+<!-- 确认订单 -->
+<heade class="order_confirm_header" head-title="'确认订单'"></heade>
+
+<!-- content -->
+<div class="content order_confirm">
+    <div class="list-block">
+        <ul>
+            <li class="item-content" ng-if="address">
+                <div class="item-inner">
+                    <div class="item-title">{{address.linkman}}</div>
+                    <div class="item-after">{{address.mobile}}</div>
+                </div>
+            </li>
+            <li class="item-content">
+                <a href="#/userCenter/address?type=select" class="item-inner">
+                    <div class="item-title address" ng-if="address">{{address.addressStr}}</div>
+                    <div class="item-title address" ng-if="!address">
+                        <img src="/static/img/order/location_danger.png">请填写收货地址
+                    </div>
+                    <div class="item-after" ng-if="address">
+                        <span class="{{address.type?'outSchool':'inSchool'}}" ng-show="address">{{address.type?'快递配送':'大使专送'}}</span>
+                        <i class="icon icon-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="item-content">
+                <div class="item-inner">
+                    <input type="text" ng-model="remark" placeholder="订单备注">
+                </div>
+            </li>
+
+            <li class="goods_list">
+                <ul>
+                    <li class="clearfix" ng-repeat="good in orderConfirmProducts track by $index">
+                        <img class="pull-left" ng-src="{{good.product.images[0].indexOf('http://img.beautysite.cn')>-1?good.product.images[0]:'http://img.beautysite.cn'+good.product.images[0]+'!/fw/88'}}" alt="">
+                        <div>
+                            <p>
+                                <span ng-if="good.cart && good.cart.type">
+                                    {{['', '兑换', '赠品'][good.cart ? good.cart.type : 0]}}
+                                </span>
+                                {{good.product.name}}
+                            </p>
+                            <p class="clearfix">{{good.cart.type!=1?'¥':''}}{{good.cart.price}}{{good.cart.type==1?'颜值':''}}（规格：{{good.standard.name}}）<span class="pull-right">x{{good.qty}}</span></p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">费用详细</div>
+                </div>
+            </li>
+            <li class="item-content" ng-if="seniorMember">
+                <div class="item-inner">
+                    <div class="item-title">大使折扣<span>（特卖商品不参与折扣）</span></div>
+                    <div class="item-after {{(oldPrice - goodsPrice)&&'active'}}">-￥{{(oldPrice - goodsPrice)| number: 2}}元</div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">商品金额</div>
+                    <div class="item-after">￥{{oldPrice| number: 2}}元</div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">运费</div>
+                    <div class="item-after">￥{{(postage || 0)| number: 2}}</div>
+                </div>
+            </li>
+            <li class="clearfix postage">
+                赠品/兑换商品单独拿走需要支付运费哦~
+                <span class="pull-right" ng-click="popup('open')">
+                    <img src="/static/img/order/mark_default.png" alt="">
+                    运费说明
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- 免邮popup: start -->
+    <div class="modal_popup" ng-class="popupClass" id="postModal" ng-click="popup('close')">
+        <div class="popup-content">
+            <h1 class="popup-head">运费说明</h1>
+            <div class="popup-body">
+                <p>
+                    运费为全国范围除了新疆、内蒙、西藏、宁夏满<span class="c-f69">150</span>元免邮外，其余地区为满<span class="c-f69">50</span>元免邮。
+                </p>
+                <p>
+                    不足部分，运费的收费标准为：
+                </p>
+                <ul>
+                    <li>上海、浙江、江苏、安徽运费为6元；</li>
+                    <li>江西、河南、湖北、山东、福建、北京、天津、河北、湖南、山西、陕西为8元；</li>
+                    <li>甘肃、贵州、辽宁、四川、重庆、内蒙古、广西、广东、青海、云南、海南、黑龙江、吉林、宁夏为10元；</li>
+                    <li>新疆、西藏为20元。</li>
+                </ul>
+            </div>
+            <div class="popup-foot">
+                <button type="button" ng-click="popup('open')">关闭</button>
+            </div>
+        </div>
+    </div>
+    <!-- 免邮popup: end -->
+
+</div>
+
+<nav class="bar bar-tab order_confirm_footer">
+    <span class="tab-item external">￥{{(totalPrice || goodsPrice || 0)| number: 2}}</span>
+    <span class="tab-item external">
+        <button type="submit" ng-click="submitOrder()">确认下单</button>
+    </span>
+</nav>

@@ -1,0 +1,61 @@
+.address_popup {
+  background: #fff;
+  font-size: .8rem;
+  height: 17.7rem;
+  top: auto;
+  bottom: 0;
+}
+.address_popup .address_popup_title {
+  width: 100%;
+  color: #999;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+}
+.address_popup .address_popup_title span {
+  width: 33.33%;
+  border-bottom: .1rem solid transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.address_popup .address_popup_title span.active {
+  color: #333;
+  border-bottom-color: #ff577f;
+}
+.address_popup .address_popup_content {
+  color: #333;
+  height: 15.4rem;
+  overflow-y: scroll;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+}
+.address_popup .address_popup_content:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: auto;
+  right: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #f3d3dd;
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.address_popup .address_popup_content li {
+  height: 2.2rem;
+  line-height: 2.2rem;
+  padding-left: .5rem;
+}
+.address_popup .address_popup_content li.active {
+  color: #ff577f;
+  background: #fff7f9;
+}

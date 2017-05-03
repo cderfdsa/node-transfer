@@ -1,0 +1,35 @@
+@font-face {
+  font-family: HYQINGKONGTIJ;
+  src: url("/static/font/HYQINGKONGTIJ.ttf");
+}
+
+.getNew {
+  font-family: 'HYQINGKONGTIJ';
+}
+
+.getNew img {
+  width: 100%;
+}
+
+.getNew a {
+  font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-top: 119.7%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  font-size: .8rem;
+  color: #b80034;
+  font-weight: bold;
+  display: block;
+  width: 77%;
+  height: 0;
+  padding-bottom: 13%;
+  text-align: center;
+}
+
+.getNew a span {
+  margin-top: 3%;
+  display: block;
+}

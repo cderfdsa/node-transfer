@@ -1,0 +1,63 @@
+<div class="content platform_search">
+	<header class="clearfix">
+		<img src="/static/img/platform/search_top.png">
+		<button class="pull-right" type="button" ng-click="quit()">退出</button>
+	</header>
+
+	<h2>欢迎您，{{type==0?loginData.name:loginData}}</h2>
+
+	<section ng-if="type==1">
+		<h2>推广素材</h2>
+		<p class="copyLink">
+			<textarea id="copy">
+				{{'http://wap.beautysite.cn/share/userCenter/ambCenter/special?code=' + loginData}}
+			</textarea>
+			<span>长按复制推广链接</span>
+		</p>
+		<p>
+			<a class="downloadBtn" href="javascript: void(0);" ng-click="downLoad(2)">下载推广海报</a>
+			<span>下载您的专属推广海报</span>
+		</p>
+		<!-- <p class="save" ng-show="aa">
+			<img src="/static/img/platform/icon_saved.png">已保存到手机
+		</p> -->
+	</section>
+
+	<section class="formBox">
+		<h2>推广效果查询</h2>
+		<p class="date">
+			<input id="startDate" type="text" name="" ng-model="startDate" placeholder="选择开始日期">
+			<input id="endDate" type="text" name="" ng-model="endDate" placeholder="选择结束日期" readonly ng-click="onlyEndDate()">
+		</p>
+		<p>
+			<input type="text" name="" ng-model="code" placeholder="请输入邀请码" ng-show="type==0">
+			<button type="submit" ng-click="search()">查询</button>
+		</p>
+	</section>
+
+	<section class="table" ng-if="data">
+		<h2>共发展{{data.totalAmbaNums}}个大使</h2>
+		<table ng-if="data.count">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>{{type==1?'日期':'邀请码'}}</th>
+					<th>被扫码次数</th>
+					<th>发展大使数</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="list in data.rows">
+					<td>{{list.id}}</td>
+					<td>{{type == 1 ? (list.date| date:"yyyy-MM-dd") : list.code}}</td>
+					<td>{{list.scanNums}}</td>
+					<td>{{list.ambassadorNums}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</section>
+</div>
+
+<!--
+		下载海报及交互
+ -->

@@ -1,0 +1,32 @@
+.activity_represent {
+  /* header */
+  /* contant */
+}
+.activity_represent.bar .pull-right.icon {
+  background: url(/static/img/task/icon_share.png) no-repeat;
+  background-size: contain;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: .45rem;
+}
+.activity_represent.content {
+  background: #ffecf5;
+}
+/* include */
+.activity_represent_include {
+  position: relative;
+  background: #ffecf5;
+  padding-top: .4rem;
+}
+.activity_represent_include img {
+  width: 100%;
+}
+.activity_represent_include a {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-bottom: 21%;
+  width: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}

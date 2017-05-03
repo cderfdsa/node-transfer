@@ -1,0 +1,41 @@
+<!-- 我的用户 -->
+<heade class="userCenter_ambCenter_bestieUser_header circle_left" head-title="'我的用户'"></heade>
+
+<div class="content userCenter_ambCenter_bestieUser">
+	<p>
+		已绑定用户：<span>{{data.count}}</span>个,
+		还可绑定用户：<span>{{data.left}}</span>个
+	</p>
+	<p>闺蜜好友列表
+	<span class="pull-right" ng-click="toExplain()"><img src="static/img/userCenter/ambCenter/icon_doubt.png" >规则说明</span></p>
+	<ul>
+		<li ng-repeat="item in data.rows">
+			<div class="user clearfix">
+				<div class="photo" ng-click="toHome(item)">
+					<img ng-src="{{item.member.headImg ? item.member.headImg + (item.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}">
+				</div>
+				<div class="imgBox">
+					<div>
+						<span>{{item.member.nickName}}</span>
+						<img ng-src="http://img.beautysite.cn/icon/L{{item.member.level}}.png!/fw/120">
+					</div>
+					<p>贡献收益：￥{{item.profit}}</p>
+				</div>
+				<a href="" ng-click="unbind(item)">解绑</a>
+			</div>
+			<div class="usertime">
+				<div>
+					<p>加入时间:</p>
+					<p>{{item.createdAt| date:"yyyy-MM-dd HH:mm:ss"}}</p>
+				</div>
+				<div>
+					<p>最后登录时间：</p>
+					<p>{{item.member.lastLogin| date:"yyyy-MM-dd HH:mm:ss"}}</p>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="imgbox"  ng-if="data.rows!=undefined&&!data.rows.length" >
+		<img src="/static/img/userCenter/ambCenter/null.png">
+	</div>
+</div>

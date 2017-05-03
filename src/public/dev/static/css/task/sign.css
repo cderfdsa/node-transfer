@@ -1,0 +1,548 @@
+.taskSign {
+  font-size: 0;
+  background: #fff;
+  /* 用户信息 */
+  padding-top: .5rem;
+  /* 签到表 */
+  /* 连续签到惊喜 */
+  /* 签到说明 */
+}
+.taskSign .userInfo {
+  background: url(/static/img/task/bg_info.png) no-repeat center top;
+  background-size: 100% 100%;
+  padding-bottom: .75rem;
+}
+.taskSign .userInfo .photo {
+  width: 4.9rem;
+  height: 4.9rem;
+  margin: auto;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  padding: .4rem;
+  background: url(/static/img/task/photo_bg.png) no-repeat center center;
+  background-size: 4.7rem 4.7rem;
+}
+.taskSign .userInfo .photo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.taskSign .userInfo .level {
+  margin: 0 2rem;
+  color: #c97690;
+  text-align: center;
+}
+.taskSign .userInfo .level div {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+.taskSign .userInfo .level div span {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+  padding-right: 1rem;
+}
+.taskSign .userInfo .level div img {
+  width: .8rem;
+  height: .8rem;
+  position: absolute;
+  right: 0;
+  top: .1rem;
+}
+.taskSign .userInfo p {
+  text-align: center;
+  color: #c97690;
+  margin: 0;
+  line-height: 1.2rem;
+  font-size: .5rem;
+}
+.taskSign .signTable {
+  padding: .4rem 0;
+  position: relative;
+}
+.taskSign .signTable h2 {
+  font-size: .7rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  line-height: 1.8rem;
+  background: #ffe0eb;
+  color: #c97f90;
+  border: 1px solid #eebbce;
+  border-bottom: none;
+  border-radius: .5rem .5rem 0 0;
+  -webkit-border-radius: .5rem .5rem 0 0;
+  position: relative;
+  width: 96%;
+  margin: auto;
+}
+.taskSign .signTable h2 i {
+  display: block;
+  position: absolute;
+  top: .6rem;
+  width: .5rem;
+  height: .5rem;
+  background: #fff;
+  border: 1px solid #f8cadb;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.taskSign .signTable h2 i:before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 1.3rem;
+  background: #f8cadb;
+  position: absolute;
+  left: .2rem;
+  bottom: .4rem;
+}
+.taskSign .signTable h2 i.left {
+  left: .6rem;
+}
+.taskSign .signTable h2 i.right {
+  right: .6rem;
+}
+.taskSign .signTable .tbody {
+  background: #fff;
+  width: 96%;
+  margin: auto;
+  z-index: 10;
+}
+.taskSign .signTable .tbody .tbody_box {
+  border: 1px solid #eebbce;
+  border-radius: 0 0 .5rem .5rem;
+  -webkit-border-radius: 0 0 .5rem .5rem;
+  height: 11.2rem;
+  overflow: hidden;
+  position: relative;
+  transition: height 1s ease;
+  -webkit-transition: height 1s ease;
+  z-index: 11;
+}
+.taskSign .signTable .tbody .tbody_box.hover {
+  height: 18.56rem;
+}
+.taskSign .signTable ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+}
+.taskSign .signTable ul.nextHalfMonth {
+  top: auto;
+  bottom: 0;
+}
+.taskSign .signTable ul li {
+  width: 14.28%;
+  text-align: center;
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+  padding-top: 1.6rem;
+  position: relative;
+  max-height: 3.7rem;
+  /* 已签到颜值 */
+  /* 缺签样式 */
+  /* 已签到红包 */
+  /* 未签到红包 */
+  /* 红包金额样式 */
+}
+.taskSign .signTable ul li img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.taskSign .signTable ul li img.geted {
+  top: .9rem;
+  width: 2rem;
+}
+.taskSign .signTable ul li img.get {
+  top: 1.1rem;
+  width: 90%;
+}
+.taskSign .signTable ul li:nth-of-type(7n) {
+  border-right: none;
+}
+.taskSign .signTable ul li span {
+  margin-bottom: .3rem;
+  display: block;
+  font-size: .5rem;
+  color: #ccc;
+}
+.taskSign .signTable ul li span:first-of-type {
+  color: #f5416c;
+}
+.taskSign .signTable ul li.unload {
+  background: url(/static/img/task/lips_gray.png) no-repeat center top;
+  background-size: 1.5rem 1rem;
+  background-position: center .5rem;
+}
+.taskSign .signTable ul li.unload span:first-of-type {
+  color: #999;
+}
+.taskSign .signTable ul li.signed {
+  background: url(/static/img/task/lips_red.png) no-repeat center top;
+  background-size: 1.5rem 1rem;
+  background-position: center .5rem;
+}
+.taskSign .signTable ul li.noSign {
+  background: url(/static/img/task/lips_violet.png) no-repeat center top;
+  background-size: 1.5rem 1rem;
+  background-position: center .5rem;
+}
+.taskSign .signTable ul li.noSign span:first-of-type {
+  color: #8261ff;
+}
+.taskSign .signTable ul li.red_gray {
+  background: url(/static/img/task/red_gray.png) no-repeat center top;
+  background-size: 100% 100%;
+}
+.taskSign .signTable ul li.red_gray span:first-of-type {
+  color: #999;
+}
+.taskSign .signTable ul li.red {
+  background: url(/static/img/task/red.png) no-repeat center top;
+  background-size: 100% 100%;
+}
+.taskSign .signTable ul li.red span:first-of-type {
+  color: #f69;
+}
+.taskSign .signTable ul li .redFont,
+.taskSign .signTable ul li .red_grayFont {
+  position: absolute;
+  font-style: .6rem;
+  font-weight: bold;
+  top: .8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+}
+.taskSign .signTable ul li .redFont {
+  color: #ff0;
+}
+.taskSign .signTable .slideButton {
+  width: 2rem;
+  position: absolute;
+  bottom: -1.7rem;
+  left: auto;
+  right: .7rem;
+  z-index: 10;
+}
+.taskSign .bg_bottom {
+  width: 100%;
+}
+.taskSign .signSurprise {
+  background: #ffe8f0;
+  color: #c97f90;
+  font-size: .5rem;
+  padding: 0 1rem;
+}
+.taskSign .signSurprise h2 {
+  font-size: .7rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  line-height: 1.8rem;
+  background: url(/static/img/task/title_line.png) no-repeat center center;
+  background-size: contain;
+}
+.taskSign .signSurprise .box {
+  height: 4.4rem;
+  position: relative;
+}
+.taskSign .signSurprise .box:nth-of-type(1) {
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: .5rem;
+}
+.taskSign .signSurprise .box:nth-of-type(2) {
+  width: 48%;
+}
+.taskSign .signSurprise .box img {
+  width: 100%;
+  height: 100%;
+}
+.taskSign .signSurprise .box .getmodal {
+  height: 4.4rem;
+  background: rgba(245, 65, 108, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+}
+.taskSign .signSurprise .box .getmodal button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border: none;
+  width: 4.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  border-radius: .75rem;
+  -webkit-border-radius: .75rem;
+  font-size: .7rem;
+  color: #fff;
+  font-weight: bold;
+  background: #f5416c;
+}
+.taskSign .signSurprise .box.box_last {
+  width: 100%;
+}
+.taskSign .signExplain {
+  background: #ffe8f0;
+  line-height: 2;
+  color: #c97f90;
+  font-size: .6rem;
+  padding: 1rem;
+}
+.taskSign .signExplain h2 {
+  font-size: .7rem;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  background: url(/static/img/task/title_line.png) no-repeat center center;
+  background-size: contain;
+}
+.taskSign .signExplain ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 领取奖品弹窗 */
+.signModal {
+  width: 90%;
+  margin-left: -45%;
+  background: #fff;
+  margin-top: 0 !important;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.signModal.modal-in {
+  transform: translate3d(0, 0, 0) scale(1) translateY(-50%);
+  -webkit-transform: translate3d(0, 0, 0) scale(1) translateY(-50%);
+}
+.signModal .modal-inner {
+  padding: 0;
+  background: #fff;
+  border-radius: .35rem;
+  -webkit-border-radius: .35rem;
+}
+.signModal .modal-inner .modal-title {
+  background: #ff97bd;
+  font-size: .8rem;
+  color: #fff;
+  font-weight: bold;
+  line-height: 1.7rem;
+  border-radius: .35rem .35rem 0 0;
+  -webkit-border-radius: .35rem .35rem 0 0;
+}
+.signModal .modal-inner .modal-title .close {
+  height: 1.7rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.signModal .modal-inner .modal-title img {
+  width: .75rem;
+  margin: .5rem;
+}
+.signModal .modal-inner:after {
+  height: 0;
+}
+.signModal .modal-buttons {
+  padding: .5rem;
+  height: 2.6rem;
+  background: #fff;
+  border-radius: 0 0 .35rem .35rem;
+  -webkit-border-radius: 0 0 .35rem .35rem;
+}
+.signModal .modal-buttons .modal-button {
+  border-radius: .75rem;
+  -webkit-border-radius: .75rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: .65rem;
+  color: #999;
+  font-weight: bold;
+  border: 1px solid #999;
+  width: 50%;
+}
+.signModal .modal-buttons .modal-button:last-of-type {
+  background: #f69;
+  color: #fff;
+  margin-left: .75rem;
+  border-color: #f69;
+}
+.signModal .modal-buttons .modal-button:first-of-type {
+  color: #f5416c;
+  background: #fff;
+  border: 1px solid #f5416c;
+}
+.signModal .modal-text .typeBox {
+  padding: 1.2rem 0;
+}
+.signModal .modal-text span {
+  display: block;
+  color: #c97f90;
+  font-size: .6rem;
+}
+.signModal .modal-text .modal-button:last-of-type {
+  background: #f69;
+  color: #fff;
+  border-color: #f69;
+}
+.signModal .modal-text .type0 img,
+.signModal .modal-text .type1 img {
+  max-width: 6rem;
+}
+.signModal .modal-text .type2 img,
+.signModal .modal-text .type3 img {
+  max-width: 100%;
+}
+.signModal .modal-text .type2 [type="radio"],
+.signModal .modal-text .type3 [type="radio"] {
+  margin-top: .4rem;
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/goods/checkbox1.png) no-repeat center top;
+  background-size: cover;
+}
+.signModal .modal-text .type2 [type="radio"]:checked,
+.signModal .modal-text .type3 [type="radio"]:checked {
+  background-position: center bottom;
+}
+.signModal .modal-text .typeImgBox {
+  position: relative;
+}
+.signModal .modal-text .typeNoneLeft {
+  width: 20%;
+  position: absolute;
+  top: 26%;
+  left: 10%;
+}
+.signModal .modal-text .hidden {
+  display: none;
+}
+.signModal .modal-text .typeNoneRight {
+  width: 20%;
+  position: absolute;
+  top: 26%;
+  right: 14%;
+}
+.signModal .modal-text .type4 img,
+.signModal .modal-text .type5 img,
+.signModal .modal-text .type6 img,
+.signModal .modal-text .type7 img,
+.signModal .modal-text .type8 img,
+.signModal .modal-text .type9 img {
+  width: 8rem;
+  display: block;
+  margin: auto;
+}
+.signModal .modal-text .type4 div.right,
+.signModal .modal-text .type5 div.right,
+.signModal .modal-text .type6 div.right,
+.signModal .modal-text .type7 div.right,
+.signModal .modal-text .type8 div.right,
+.signModal .modal-text .type9 div.right {
+  padding-left: 1.8rem;
+  background: url(/static/img/task/right.png) no-repeat left center;
+  background-size: 1.6rem 1.6rem;
+  text-align: left;
+  display: inline-block;
+  margin-top: .6rem;
+}
+.signModal .modal-text .type4 p,
+.signModal .modal-text .type5 p,
+.signModal .modal-text .type6 p,
+.signModal .modal-text .type7 p,
+.signModal .modal-text .type8 p,
+.signModal .modal-text .type9 p {
+  margin: 0;
+  color: #f5416c;
+  font-size: .6rem;
+}
+.signModal .modal-text .type4 p:first-of-type,
+.signModal .modal-text .type5 p:first-of-type,
+.signModal .modal-text .type6 p:first-of-type,
+.signModal .modal-text .type7 p:first-of-type,
+.signModal .modal-text .type8 p:first-of-type,
+.signModal .modal-text .type9 p:first-of-type {
+  font-size: .7rem;
+  font-weight: bold;
+}
+.signModal .modal-text .type3 .radio {
+  width: 50% !important;
+  display: inline-block;
+}
+.signModal .modal-text .type3 .radio:first-of-type input {
+  margin-right: 21%;
+}
+.signModal .modal-text .type3 .radio:last-of-type input {
+  margin-left: 5%;
+}
+.signModal .modal-text .desc {
+  background: #fff;
+  font-size: .6rem;
+  color: #666;
+  padding-top: .5rem;
+  border-top: 1px solid #e6e6e6;
+  margin: 0 .7rem;
+}
+.signModal .modal-text .desc img {
+  width: .8rem;
+  margin-right: .3rem;
+  vertical-align: middle;
+  display: inline-block;
+}
+.signModal .modal-text .line {
+  height: 0;
+  border-top: 1px solid #e6e6e6;
+}
+/*
+ * 签到领取弹层改动
+ * 张凌<zhangl@meiwan.me> 2016-05-25
+ */
+.modal_type0,
+.modal_type1,
+.modal_type2,
+.modal_type3 {
+  background: url(/static/img/task/bg_continuityModal.png) repeat;
+  background-size: 6px 100%;
+}
+.modal_type0 .modal-inner,
+.modal_type1 .modal-inner,
+.modal_type2 .modal-inner,
+.modal_type3 .modal-inner {
+  background: transparent;
+}
+.modal_type0 .modal-buttons,
+.modal_type1 .modal-buttons,
+.modal_type2 .modal-buttons,
+.modal_type3 .modal-buttons {
+  background: transparent;
+  border-top: 1px solid #eebacd;
+}
+.modal_type0 .modal-button:first-of-type,
+.modal_type1 .modal-button:first-of-type,
+.modal_type2 .modal-button:first-of-type,
+.modal_type3 .modal-button:first-of-type {
+  background: #feecf3 !important;
+}

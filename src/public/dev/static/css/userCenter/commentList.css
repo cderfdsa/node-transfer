@@ -1,0 +1,80 @@
+.page {
+  background: #faf7f0;
+}
+.userCentercommentList {
+  /*标签样式*/
+  /*评论列表样式*/
+}
+.userCentercommentList .buttons-tab {
+  height: 2.2rem;
+  margin: 0.5rem 0;
+}
+.userCentercommentList .buttons-tab a {
+  font-size: 0.7rem;
+  color: #333333;
+}
+.userCentercommentList .buttons-tab a span {
+  color: #f5416c;
+}
+.userCentercommentList .buttons-tab .active {
+  color: #666666;
+  border: none;
+}
+.userCentercommentList .buttons-tab .tick {
+  width: 0.8rem;
+  height: 0.8rem;
+  vertical-align: middle;
+}
+.userCentercommentList .buttons-tab:after {
+  border-color: #dbdbdb;
+}
+.userCentercommentList .listContent .list-block {
+  border-top: 1px solid #f9f8ef;
+  margin: 0;
+  background-color: white;
+}
+.userCentercommentList .listContent .list-block .item-title-row {
+  height: 2.5rem;
+}
+.userCentercommentList .listContent .list-block .item-title {
+  margin: auto 0;
+}
+.userCentercommentList .listContent .list-block .item-inner {
+  padding: 0;
+  background-image: none;
+  padding-right: 0.5rem;
+}
+.userCentercommentList .listContent .list-block .item-inner:after {
+  width: 0;
+}
+.userCentercommentList .listContent .list-block .productimg {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0.45rem 0;
+  vertical-align: middle;
+}
+.userCentercommentList .listContent .list-block .iconimg {
+  height: 0.75rem;
+  width: 0.75rem;
+  vertical-align: middle;
+}
+.userCentercommentList .listContent .list-block .heart {
+  width: 0.5rem;
+  height: 0.4rem;
+}
+.userCentercommentList .listContent .list-block .text {
+  font-size: 0.7rem;
+  color: #333333;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+.userCentercommentList .listContent .list-block span {
+  font-size: 0.4rem;
+  color: #656565;
+  padding: 0 0.25rem;
+}
+.userCentercommentList .listContent .list-block .item-after {
+  font-size: 0.6rem;
+  color: #cccccc;
+  margin-top: 1rem;
+}

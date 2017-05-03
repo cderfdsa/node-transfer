@@ -1,0 +1,139 @@
+.page {
+  background: #faf7f0;
+  max-width: 750px;
+}
+.userCentermyAddress {
+  margin: 0 0.5rem 2.5rem;
+}
+.userCentermyAddress ul {
+  list-style: none;
+  padding-left: 0;
+  font-size: 0.7rem;
+}
+.userCentermyAddress ul li {
+  margin-top: 0.5rem;
+  background: #ffffff;
+  border: #e6e6e6 solid 1px;
+  padding: 0.5rem;
+  position: relative;
+}
+.userCentermyAddress ul li .default {
+  width: 10%;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+}
+.userCentermyAddress ul li h2 {
+  font-size: 0.8rem;
+  margin: 0;
+  font-width: bold;
+  color: #808080;
+}
+.userCentermyAddress ul li p {
+  margin: 0;
+  color: #fc6899;
+}
+.userCentermyAddress ul li .text {
+  position: relative;
+}
+.userCentermyAddress ul li .text .address {
+  color: #b2b2b2;
+  width: 80%;
+}
+.userCentermyAddress ul li .text .img {
+  width: 18%;
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.userCentermyAddress ul li .buttons {
+  margin-top: 0.3rem;
+  text-align: right;
+}
+.userCentermyAddress ul li .buttons .info {
+  color: #fc6899;
+}
+.userCentermyAddress ul li .buttons .defaultclass {
+  color: #808080;
+}
+.userCentermyAddress ul li .buttons a {
+  color: #808080;
+  margin-left: 0.5rem;
+}
+.userCentermyAddress .nullbox {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+.userCentermyAddress .nullbox .nullimg {
+  width: 16%;
+}
+.userCentermyAddress .blank {
+  height: 1.5rem;
+  background-color: #fff;
+}
+.userCentermyAddress_footer {
+  background: #f69 !important;
+  margin: 0;
+}
+.userCentermyAddress_footer .title {
+  color: #fff;
+  font-size: 0.9rem;
+}
+/*弹窗自定义样式*/
+.addressModal .popup_container .customize_popup input {
+  width: 50%;
+  border: 1px solid #cccccc;
+  border-radius: 0.2rem;
+  padding: 0 0.5rem;
+}
+.addressModal .popup_container .customize_popup input:focus {
+  border: 1px solid #ff4d7d;
+}
+.addressModal .popup_container .customize_popup img {
+  margin-left: 0.3rem;
+  width: 20%;
+}
+.addressModal .popup_container .customize_popup a {
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+.addressModal .modal-inner {
+  background-color: #ffffff;
+}
+.addressModal .modal-inner:after {
+  content: '';
+  background-color: #ffffff;
+}
+.addressModal .modal-buttons {
+  background: #ffffff;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.addressModal .modal-button:nth-last-child(1) {
+  background: #F69;
+  color: #ffffff;
+}
+.addressModal .modal-button {
+  width: 30%;
+  font-size: 0.7rem;
+  color: #ff4d7d;
+  border: 1px solid #ff4d7d;
+  background: #ffffff;
+  height: 1.5rem;
+  margin: 0.3rem 0.5rem 0.5rem 0;
+  text-align: center;
+  border-radius: 1rem;
+  line-height: 1.5rem;
+}
+.addressModal .modal-button:first-child:last-child {
+  border-radius: 2rem 2rem 2rem 2rem;
+  height: 1.4rem;
+  width: 40%;
+  line-height: 1.4rem;
+  padding: 0;
+}
+.addressModal .modal-button:after {
+  content: "";
+  background-color: #ffffff;
+}

@@ -1,0 +1,171 @@
+<!-- 个人中心 -->
+<div class="content userCenter_index">
+	<a href="#/userCenter/login/setting"  class="pull-left setting">
+		<img src="/static/img/userCenter/setting.png">
+	</a>
+	<a href="#/userCenter/message/{{data.id}}" class="pull-right news">
+		<img src="/static/img/userCenter/news.png">
+		<i ng-if="msg">
+			{{msg>9?"9":msg}}<span ng-if="msg>9">+</span>
+		</i>
+	</a>
+	<section class="top">
+		<div class="photo clearfix">
+			<img src="/static/img/userCenter/partner.png" class="partner" ng-if="CommunityStat.seniorPackage">
+			<a href="#/community/home/{{data.id}}">
+				<img class="pull-left imgphoto" src="{{data.headImg ? data.headImg + (data.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+
+			</a>
+			 <div class="userInfo">
+                <div>
+                    <span ng-if="data.nickName">{{data.nickName}}</span>
+                    <img ng-src="/static/img/userCenter/{{data.sex==1?'boy':'girl'}}_icon.png" class="sex">
+                </div>
+                <p class="iconimg">
+					<img ng-src="http://img.beautysite.cn/icon/{{['G','B','G'][data.sex]}}_L{{data.level}}.png!/fw/120" ng-click="toLevel(0)">
+					<img ng-src="http://img.beautysite.cn/icon/S{{data.seniorMember.level}}.png" ng-click="toLevel(1)" ng-if="data.seniorMember.level">
+				</p>
+				<!-- <span ng-if="data.signature">{{data.signature}}</span>
+					<span class="notSignIn" ng-if="notSignIn">
+						<a href="#/userCenter/login/signIn/1">登陆</a>/
+						<a href="#/userCenter/login/signIn/0">注册</a>
+				</span> -->
+            </div>
+			<a id="icon_right" href="#/userCenter/userInfo" class="pull-right" >
+				<i class="icon icon-right"></i>
+			</a>
+		</div>
+		<ul class="disc clearfix">
+			<li class="pull-left">
+				<a href="#/userCenter/redPacket/0">
+					<span>{{CommunityStat.couponCount || 0}}</span><span>红包</span>
+				</a>
+			</li>
+			<li class="pull-left">
+				<a href="#/userCenter/myfaceValue">
+					<span>{{data.faceValue || 0}}</span><span>颜值</span>
+				</a>
+			</li>
+			<li class="pull-left">
+				<a href="#/userCenter/level/0">
+					<span>{{data.expValue || 0}}</span><span>气质值</span>
+				</a>
+			</li>
+			<li class="pull-left">
+				<a href="javascript:void(0)">
+					<span>{{CommunityStat.wowValue || 0}}</span><span>WOW</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="info">
+		<ul>
+			<!-- <li class="fullInfo clearfix border_top border_bottom" ng-if="true||mission!=undefined&&mission">
+				<a href="javascript:$.toast('还没开通，敬请期待哦^_^')">
+					<img class="pull-left" src="/static/img/goods/mark.png" alt="">完善个人信息，秒赚100颜值~
+				</a>
+				ng-if="data.seniorMember"
+			</li> -->
+			<li class="order" ng-if="data.seniorMember">
+				大使中心
+			</li>
+			<li class="trial" ng-if="data.seniorMember">
+				<a href="#/userCenter/secretary/0">
+					<img src="/static/img/userCenter/icon_announcement.png" alt="">大使公告
+					<span ng-if="CommunityStat.seniorNotice">{{CommunityStat.seniorNotice}}</span>
+				</a>
+				<a href="#/userCenter/ambCenter/myAmb">
+					<img src="/static/img/userCenter/icon_amb.png" alt="">我的大使
+				</a>
+				<a href="#/userCenter/ambCenter/bestieUser">
+					<img src="/static/img/userCenter/icon_myuser.png" alt="">我的用户
+				</a>
+				<a href="#/userCenter/ambCenter">
+					<img src="/static/img/userCenter/icon_more.png" alt="">更多
+				</a>
+			</li>
+
+			<li class="task clearfix">成长任务
+				<a class="pull-right" href="#/task/grow">做任务，秒赚颜值！
+					<i class="icon icon-right pull-right"></i></a>
+			</li>
+
+			<li class="order clearfix ">我的订单
+			</li>
+			<li class="orderDesc ">
+				<a href="#/order/myOrder/1">
+					<img src="/static/img/userCenter/icon_buy.png" alt="">购买
+					<span ng-if="CommunityStat.unpayOrderNums">{{CommunityStat.unpayOrderNums}}</span>
+				</a>
+				<a href="{{duibaRecord}}">
+					<img src="/static/img/userCenter/icon_change.png" alt="">兑换
+				</a>
+				<a href="javascript:$.toast('正在紧张开发中，敬请期待~')">
+					<img src="/static/img/userCenter/icon_refund.png" alt="">退款
+				</a>
+				<a href="javascript:$.toast('还没开通，敬请期待哦^_^')">
+					<img src="/static/img/userCenter/icon_service.png" alt="">服务
+				</a>
+			</li>
+
+			<li class="experience">我的社区</li>
+			<li class="my">
+				<a href="#/userCenter/fans/1/{{data.id}}">
+					<p>{{CommunityStat.fansCount}}</p>粉丝
+				</a>
+				<a href="#/userCenter/follow/1/{{data.id}}">
+					<p>{{CommunityStat.followCount}}</p>关注
+				</a>
+				<a href="#/community/home/{{data.id}}?type=0">
+					<p>{{CommunityStat.poCount}}</p>PO图
+				</a>
+				<a  href="#/community/home/{{data.id}}?type=1">
+					<p>{{CommunityStat.noteCount}}</p>代言笔记
+				</a>
+			</li>
+			<li class="experienceDesc clearfix">
+				<a href="#/userCenter/collect">
+					<img src="/static/img/userCenter/icon_like.png" alt="">收藏
+				</a>
+				<a href="#/userCenter/myComment">
+					<img src="/static/img/userCenter/icon_comment-1.png" alt="">我的评论
+				</a>
+				<a href="#/userCenter/balance/0">
+					<img src="/static/img/userCenter/icon_balance.png" alt="">我的余额
+				</a>
+				<a href="#/task/sign">
+					<img src="/static/img/userCenter/icon_past.png" alt="">签到
+				</a>
+				<!-- <a href="#/userCenter/ambCenter/special" ng-if="!data.seniorMember">
+					<img src="/static/img/userCenter/icon_application.png" alt="">申请大使
+						<img src="/static/img/userCenter/ambCenter/new.png" class="newIcon">
+				</a>
+ -->				<a href="http://www.sobot.com/chat/h5/index.html?sysNum=223c05fc5274431aba46d0555930a877&source=1">
+					<img src="/static/img/userCenter/icon_Customer_Service .png" alt="">客服
+				</a>
+				<a href="#/userCenter/suggest">
+					<img src="/static/img/userCenter/icon_fed_back.png" alt="">意见反馈
+				</a>
+				<a href="#/userCenter/ambCenter/invite/1" ng-if="!data.seniorMember">
+					<img src="/static/img/userCenter/rebate.png" alt="" >邀请返利
+				</a>
+			</li>
+		</ul>
+		<!-- 红包 -->
+	<!-- 	<img class="redPacketBtn" src="/static/img/userCenter/clickMe.png" alt="" ng-click="redPacketFn()" ng-show="CommunityStat.canReceiveMonthCoupon"> -->
+	</section>
+	<!-- <div class="want"> -->
+		<!-- 我要邀请大使 -->
+		<!-- <img class="wantAmb" src="/static/img/userCenter/wantAmb.png" ng-if="data.seniorMember!=undefined&&data.seniorMember" ng-click="want(1)"> -->
+		<!-- 我要当合伙人 -->
+		<!-- <img class="wantInvite" src="/static/img/userCenter/wantInvite.png" ng-if="data.seniorMember!=undefined&&!data.seniorMember" ng-click="want(2)"> -->
+	<!-- </div> -->
+</div>
+
+<foot></foot>
+
+<!-- 大使新手引导 -->
+<div class="userCenter_ambGuide" ng-if="data.seniorMember && userCenterAmbGuide">
+		<img ng-src="/static/img/userCenter/ambGuide.png" ng-click="isVisitedAmbGuide()">
+</div>

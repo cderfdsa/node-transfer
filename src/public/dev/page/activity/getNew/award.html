@@ -1,0 +1,95 @@
+<div class="content award">
+	<img src="static/img/activity/getNew/logo.png" class="title_text">
+	<section class="total">
+		<h1>我已收到<span>{{user.count}}</span>颗解药</h1>
+		<div class="progressBar">
+			<div class="progressBar_list">
+			</div>
+		</div>
+	</section>
+	<section class="goods">
+		<ul>
+			<li class="clearfix" >
+				<div class="box">
+					<img src="static/img/activity/getNew/gift_8.png">
+				</div>
+				<div class="text {{user.count>=8?'check':'Nocheck'}}">
+					<div>集齐</div>
+					<div>8颗药</div>
+				</div>
+				<div class="Radio">
+					<input type="radio" name="gift" class="gift"  value="1" ng-model="gift" ng-disabled="!(user.count>=8)" ng-checked="user.count>=8">
+					<label for="gift" class="gift">
+						气味图书馆小香瓶
+					</label>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="box">
+					<img src="static/img/activity/getNew/gift_20.png">
+				</div>
+				<div class="text {{user.count>=20?'check':'Nocheck'}}">
+					<div>集齐</div>
+					<div>20颗药</div>
+				</div>
+				<div class="Radio">
+					<input type="radio" name="gift" class="gift"  value="2" ng-model="gift" ng-disabled="!(user.count>=20)" >
+					<label for="gift" class="gift">
+						BeautyPlus原液精华
+					</label>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="box">
+					<img src="static/img/activity/getNew/gift_30.png" >
+				</div>
+				<div class="text {{user.count>=30?'check':'Nocheck'}}">
+					<div>集齐</div>
+					<div>30颗药</div>
+				</div>
+				<div class="Radio">
+					<input  type="radio" name="gift" class="gift" value="3" ng-model="gift" ng-disabled="!(user.count>=30)">
+					<label for="gift" class="gift">
+						BeautyPlus BB霜
+					</label>
+				</div>
+			</li>
+		</ul>
+		<div class="btn" ng-click="Receive()">
+			<img src="{{receive?'static/img/activity/getNew/unreceive.png':(user.count>=8?'static/img/activity/getNew/receive_btn.png':'static/img/activity/getNew/prohibit_btn.png')}}">
+			<p>注：每个人只能领取一个奖品</p>
+		</div>
+	</section>
+	<section class="list">
+		<div>
+			<img src="static/img/activity/getNew/line.png">
+			<button>好心人榜</button>
+			<img src="static/img/activity/getNew/line.png">
+		</div>
+		<div class="null" ng-if="!user.rows.length">
+			<img src="static/img/activity/getNew/icon_none.png">
+			<p>虽然还没有人送解药，</p>
+			<p>但是表放弃治疗，Hold住啊~</p>
+		</div>
+		<ul ng-if="user.rows.length">
+			<li class="clearfix" ng-repeat="list in user.rows" ng-if="user">
+				<div>
+					<img ng-src="{{list.headImg ? list.headImg + (list.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100':''):'/static/img/userCenter/default_avatar.png'}}">
+				</div>
+				<div>
+					{{list.nickName}}送了一颗解药
+				</div>
+				<div class="pull-right">
+					{{list.createdAt| date:"yyyy-MM-dd"}}
+					<span>{{list.createdAt| date:"HH:mm:ss"}}</span>
+				</div>
+			</li>
+		</ul>
+	</section>
+</div>
+<div class="award_footer">
+	<div>
+		<img src="static/img/activity/getNew/go_button.png" ng-click="toClick(1)">
+		<img src="static/img/activity/getNew/see_btn.png" class="pull-right" ng-click="toClick(2)">
+	</div>
+</div>

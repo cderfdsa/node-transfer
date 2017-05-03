@@ -1,0 +1,164 @@
+<!-- 实名认证 -->
+<heade class="circle_left" head-title="'实名认证'" head-righttext="[0, 1].indexOf(data.status)>-1?'': '提交'" head-rightfn="headRightFn"></heade>
+
+<div class="content userCenter_login_realID">
+	<!-- success -->
+	<img class="success" src="/static/img/userCenter/login/idSuccess.png" alt="" ng-if="data.status==1">
+	<!-- error -->
+	<div class="error clearfix" ng-if="data.status==2">
+		<img class="pull-left" src="/static/img/userCenter/login/idError.png" alt="">
+		<span>非常抱歉，认证未通过审核。{{data.remark&&'原因：'+data.remark+'。'}}</span>
+	</div>
+	<!-- 审核中 -->
+	<div class="verify clearfix" ng-if="data.status==0">
+		认证正在审核中，请稍后...
+	</div>
+
+	<!-- 覆盖的弹层 -->
+	<div class="disableModal" ng-if="data.status==0 || data.status==1"></div>
+	
+	<!-- form -->
+	<div class="list-block {{[0, 1].indexOf(data.status)==-1?'':'formSuccess'}}">
+		<ul>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							<span>*</span>姓名
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写真实姓名" ng-model="data.name" ng-readonly="[0, 1].indexOf(data.status)>-1">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							<span>*</span>身份证号
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写身份证号" ng-model="data.idCard" ng-readonly="[0, 1].indexOf(data.status)>-1" maxlength="18">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							<span>*</span>学校
+						</div>
+						<div class="item-input">
+							<input id="selectSchool" type="text" placeholder="请选择学校名称" ng-model="data.school" ng-readonly="true">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							<span>*</span>入学年份
+						</div>
+						<div class="item-input">
+							<input id="schoolYear" type="text" placeholder="请选择入学年份" ng-model="data.schoolYear" ng-readonly="true">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li class="uploadImg clearfix">
+
+				<div class="pull-left">
+					<span>*</span>照片
+				</div>
+				<div class="right">
+					学生证带钢印的页面/录取通知书/校园一 卡通，三者选其一上传。
+					<div class="clearfix">
+						<div class="uploadFile">
+							<img src="{{data.img?'http://img.beautysite.cn'+data.img[0]+'!/fw/150':'/static/img/userCenter/login/addImg.png'}}">
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="list-block {{[0, 1].indexOf(data.status)==-1?'':'formSuccess'}}">
+		<ul>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							院系
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写院系信息" ng-model="data.department" ng-readonly="[0, 1].indexOf(data.status)>-1">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							微信号
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写微信号" ng-model="data.weixin" ng-readonly="[0, 1].indexOf(data.status)>-1">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							QQ
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写QQ号" ng-model="data.qq" ng-readonly="[0, 1].indexOf(data.status)>-1" maxlength="16">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							寝室地址
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写寝室号" ng-model="data.dormitory" ng-readonly="[0, 1].indexOf(data.status)>-1">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							邮箱
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写邮箱 " ng-model="data.email" ng-readonly="[0, 1].indexOf(data.status)>-1">
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="item-content">
+					<div class="item-inner">
+						<div class="item-title label">
+							支付宝账号
+						</div>
+						<div class="item-input">
+							<input type="text" placeholder="请填写支付宝账号" ng-model="data.alipay" ng-readonly="[0, 1].indexOf(data.status)>-1">
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>

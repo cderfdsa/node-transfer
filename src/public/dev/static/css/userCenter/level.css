@@ -1,0 +1,311 @@
+@charset "UTF-8";
+.userCenter_level {
+  background: #f2f2f2;
+  /* top banner */
+  /* privilege table */
+}
+
+.userCenter_level .banner {
+  background: #ffece1;
+  margin-bottom: .5rem;
+}
+
+.userCenter_level .banner p {
+  margin: 0;
+}
+
+.userCenter_level .banner p:nth-child(1) {
+  padding: .4rem .5rem;
+  text-align: right;
+}
+
+.userCenter_level .banner p:nth-child(1) a {
+  display: inline-block;
+  text-align: center;
+  padding: 0 .5rem;
+  height: 1rem;
+  line-height: 1rem;
+  color: #ff587f;
+  border: 1px solid #ff587f;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  font-size: .5rem;
+}
+
+.userCenter_level .banner p:last-child {
+  height: 1.2rem;
+  line-height: 1.2rem;
+  color: #b26170;
+  font-size: .6rem;
+  padding: 0 .5rem;
+  background: #ffd0d2;
+}
+
+.userCenter_level .banner p:last-child span.brown {
+  color: #ab5162;
+}
+
+.userCenter_level .banner p:last-child span.first {
+  margin-right: .7rem;
+}
+
+.userCenter_level .banner .levelSwiper {
+  margin-bottom: .65rem;
+  overflow: hidden;
+}
+
+.userCenter_level .banner .levelSwiper .ambLevelBanner .level_tip .levelNo {
+  margin-top: .2rem;
+}
+
+.userCenter_level .banner .levelSwiper .ambLevelBanner .level_tip img:nth-child(3) {
+  margin-top: 0.1rem !important;
+}
+
+.userCenter_level .banner .levelSwiper .ambLevelBanner .progress {
+  margin-top: .5rem;
+}
+
+.userCenter_level .banner .swiper-slide {
+  height: 6.4rem;
+}
+
+.userCenter_level .banner .swiper-slide .progress {
+  height: .3rem;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  padding: 0 .82rem;
+}
+
+.userCenter_level .banner .swiper-slide .progress span {
+  display: block;
+  content: '';
+  background: #ff577f;
+  height: .3rem;
+  transition: width 1s;
+  -webkit-transition: width 1s;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip img {
+  display: block;
+  margin: auto;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip img:nth-child(1) {
+  width: 3rem;
+  margin-bottom: .1rem;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip img:nth-child(2) {
+  width: 1.7rem;
+  margin-bottom: .2rem;
+  transition: width .5s;
+  -webkit-transition: width .5s;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip .headImg {
+  position: absolute;
+  width: 3.52rem;
+  top: 1.56rem;
+  left: .2rem;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip span {
+  font-size: .5rem;
+  color: #c59698;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip .levelNo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  color: #e2b9bb;
+  font-size: .65rem;
+  font-weight: bold;
+  margin-top: -.2rem;
+}
+
+.userCenter_level .banner .swiper-slide .level_tip .levelNo span {
+  font-size: .4rem;
+  display: inline;
+  color: #e2b9bb;
+}
+
+.userCenter_level .banner .swiper-slide.expect .level_tip img {
+  width: 2rem;
+}
+
+.userCenter_level .banner .swiper-slide.active .level_tip img:nth-child(2) {
+  width: 2.2rem;
+}
+
+.userCenter_level .banner .swiper-slide.active .level_tip .levelNo {
+  font-size: .75rem;
+}
+
+.userCenter_level .banner .swiper-slide.active .level_tip .levelNo span {
+  font-size: .55rem;
+}
+
+.userCenter_level .banner .swiper-slide.self .progress {
+  padding-left: 1.92rem;
+}
+
+.userCenter_level .banner .swiper-slide.self .level_tip img:nth-child(2) {
+  width: 3.9rem;
+}
+
+.userCenter_level .banner .swiper-slide.self .level_tip img:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3.7rem;
+  height: 3.7rem;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  margin-top: -.35rem;
+}
+
+.userCenter_level .banner .swiper-slide.self .level_tip span {
+  color: #ff577f;
+}
+
+.userCenter_level .privilege {
+  background: #fff;
+}
+
+.userCenter_level .privilege li {
+  width: 50%;
+  padding: 9.33% .5rem;
+  font-size: .6rem;
+  color: #666;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  height: 0;
+}
+
+.userCenter_level .privilege li:nth-of-type(2n) {
+  border-right: none;
+}
+
+.userCenter_level .privilege li img, .userCenter_level .privilege li div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+.userCenter_level .privilege li img {
+  width: 2.5rem;
+  left: .5rem;
+}
+
+.userCenter_level .privilege li div {
+  left: 3rem;
+  padding: 0 .5rem;
+}
+
+/* 特权弹窗 */
+.privilegeModal .modal-inner {
+  padding: 0;
+  background: #fff;
+  border-radius: .4rem .4rem 0 0;
+  -webkit-border-radius: .4rem .4rem 0 0;
+}
+
+.privilegeModal .modal-inner .modal-title {
+  height: 1.7rem;
+  line-height: 1.7rem;
+  font-size: .8rem;
+  background: #ff577f;
+  color: #fff;
+  border-radius: .4rem .4rem 0 0;
+  -webkit-border-radius: .4rem .4rem 0 0;
+}
+
+.privilegeModal .modal-inner .modal-text {
+  position: relative;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0 .6rem;
+}
+
+.privilegeModal .modal-inner .modal-text img {
+  width: 6rem;
+}
+
+.privilegeModal .modal-inner .afterText {
+  color: #5f5f5f;
+  font-size: .6rem;
+  padding: 1rem 1.5rem 1.5rem;
+}
+
+.privilegeModal .modal-inner:after {
+  display: none;
+}
+
+.privilegeModal .modal-buttons {
+  background: #fff;
+  height: auto;
+  border-radius: 0 0 .4rem .4rem;
+  -webkit-border-radius: 0 0 .4rem .4rem;
+}
+
+.privilegeModal .modal-buttons .modal-button {
+  background: #fff;
+  width: auto;
+  padding: 0;
+}
+
+.privilegeModal .modal-buttons .modal-button:nth-child(1) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #ff577f;
+  height: 1.7rem;
+  border-radius: 0 .4rem 0 0;
+  -webkit-border-radius: 0 .4rem 0 0;
+}
+
+.privilegeModal .modal-buttons .modal-button:nth-child(1):after {
+  display: none;
+}
+
+.privilegeModal .modal-buttons .modal-button:nth-child(1) img {
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}
+
+.privilegeModal .modal-buttons .modal-button:nth-child(2) {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  color: #ff577f;
+  font-size: .8rem;
+  border: 1px solid #ff577f;
+  border-radius: .75rem;
+  -webkit-border-radius: .75rem;
+  width: 60%;
+  margin-bottom: 1.2rem;
+}

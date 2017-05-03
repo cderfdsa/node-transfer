@@ -1,0 +1,39 @@
+<!-- 我的收货地址 -->
+<!-- header: start -->
+<heade head-title="'我的收货地址'">
+</heade>
+<!-- header: end -->
+
+<!-- 我的收货地址主页 -->
+<div class="content userCentermyAddress">
+	<section ng-show="addresses.length">
+		<ul>
+			<li ng-repeat="address in addresses" ng-click="selectFn($index)">
+				<img ng-show="address._id == defaultID" src="/static/img/userCenter/default.png" class="default">
+				<h2>{{address.linkman}}</h2>
+				<p>{{address.mobile}}</p>
+				<div class="text">
+					<p class= "address">{{address.addressStr}}</p>
+					<span>
+						<img ng-show="!address.type" src="/static/img/userCenter/ambassador.png" class="img">
+						<img ng-show="address.type" src="/static/img/userCenter/distribution.png" class="img">
+					</span>
+				</div>
+				<div class="buttons" ng-if="pageType != 'select'">
+					<a href="javascript:void(0);" class="info {{address._id == defaultID ? default:false || addresses.isDefault ? default:false}}" ng-click="info(address)">{{ address._id == defaultID ? "已默认" : "设置默认" }}</a>
+					<a href="javascript:void(0);" ng-click="delete($event, address)">删除</a>
+					<a href="javascript:void(0);"  ng-click="change($event, address)">修改</a>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<!-- 没有数据 -->
+	<section ng-show="addresses!=undefined&&!addresses.length">
+		<div class="nullbox">
+			<img ng-show="address._id == defaultID" src="/static/img/userCenter/null.png" class="nullimg">
+		</div>
+	</section>
+</div>
+<nav class="bar bar-tab footer userCentermyAddress_footer">
+	<div class="title" ng-click="addAddress()">添加新地址</div>
+</nav>

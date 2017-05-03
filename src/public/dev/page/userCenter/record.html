@@ -1,0 +1,48 @@
+<!-- 头部开始 -->
+<heade head-title="title"></heade>
+<!-- content: start -->
+<div class="content userCenterrecord" ng-if="data.length">
+		<!--列表 -->
+		<div class="contentBox" ng-repeat="mo in monthArr">
+		<!-- 总表时间 -->
+			<div class="content-block-title"><b>{{mo.replace("-", ".")}}</b></div> 
+			<div class="list-block">
+				<ul>
+				<!-- ，每条据信息 -->
+					<li class="item-content" ng-repeat="list in data | filter : {updatedAt : mo}">
+							<div class="item-media"></div>
+					        <div class="item-inner row">
+						        <div class="col-60 row">
+						    		<div class="item col-40">
+						    		<!--今天 -->
+						          		<p class="textColor">{{list.date}}</p>
+						          	<!-- 时间 -->
+						          		<p class="textColor">{{list.dateDay}}</p>
+					         		</div>
+							        <div class="item col-60">
+							        <!-- 粉色字 -->
+								          <p class="pink">{{list.typeName}}</p>
+								    <!-- 状态 -->
+								          <p class="bigfont">{{list.content}}</p>
+							        </div>
+							    </div>
+							    <div class="col-40 right">
+							    <!-- 消费 -->
+							    	<p>{{!list.type?'￥'+(list.value|number:2):'消耗：'+list.value+'颜值'}}</p>
+							    </div>
+			        		</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+</div>
+
+<!-- 没有数据 -->
+<div class="content userCenterrecord" ng-if="!data.length">
+	<div class="imgbox">
+		<img src="/static/img/userCenter/u5.png">
+		<p>该用户还没有操作记录哦吆~</p>
+	</div>
+</div>
+
+                                                

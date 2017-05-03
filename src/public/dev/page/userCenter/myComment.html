@@ -1,0 +1,51 @@
+<heade head-title="'我的评论'" class="circle_left"></heade>
+<!-- content:有评论状态 -->
+<div class="content userCenterMyComment">
+	<div ng-if="data.count">
+		<!-- 评论头部 -->
+		<section class="producthead">
+			<div class="custome row">
+				<img src="{{toMycomment_photo}}" class="imghead">
+				<span>{{toMycomment_nickName}}</span>
+				<img src="/static/img/userCenter/Level_{{toMycomment_level}}.png" class="imgicon" >
+			</div>
+			<p>
+				亲，您当前共发表{{data.count}}个评论
+			</p>
+		</section>
+		<section class="infinite-scroll infinite-scroll-bottom " data-distance="100">
+		<!-- 用户评论 -->
+			<div class="list-block media-list">
+			  		<!-- 列表容器 -->
+			  	<div class="item" ng-repeat="row in data.rows">
+			        <a href="#/goods/detail/{{row.product}}" class="item-link item-content" >
+			        <!-- 图片容器 -->
+				        <div class="item-media">
+				          	<img class="lazy productimg" src="/static/img/loading.gif" lazySrc="http://img.beautysite.cn{{row.img}}">
+				        </div>
+				        <!-- 内容容器 -->
+				        <div class="item-inner">
+				            <div class="item-title-row">
+					              <div class="item-title">{{row.productName}}</div>
+					              <div class="item-after">{{row.updatedAt}}</div>
+				            </div>
+				            <!-- 爱心 -->
+				            <div class="item-text">
+				            	<img src="/static/img/userCenter/u{{row.stars>$index?'8':'10'}}.png" class="heart" ng-repeat="star in [0,1,2,3,4]">
+				            </div>
+				        </div>
+			        </a>
+			        <!-- 评论内容 -->
+			        <div class="text" ng-if="row.textComment">{{row.textComment}}</div>
+				</div>
+			</div>	
+		</section>
+	</div>
+
+	<!-- contentt:无评论状态 -->
+	<div class="commentNone"  ng-if="!data.count" >
+		<img src="/static/img/userCenter/u11.png">
+		<p>亲，你还没有发表评论哦~</p>
+	</div>
+</div>
+

@@ -1,0 +1,97 @@
+.page {
+  background: #faf7f0;
+}
+.userCenterSuggest {
+  padding-top: .6rem;
+}
+.userCenterSuggest .widget {
+  background: #fff;
+  padding: .3rem .4rem 0;
+}
+.userCenterSuggest .widget label {
+  font-size: .8rem;
+  color: #666;
+  lheight: 1.5rem;
+  line-height: 1.5rem;
+}
+.userCenterSuggest ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 3.6rem;
+}
+.userCenterSuggest ul li {
+  font-size: .6rem;
+  color: #f5416c;
+  margin-right: .3rem;
+  border: 1px solid #f5416c;
+  border-radius: .75rem;
+  line-height: 1rem;
+  width: 3.2rem;
+  text-align: center;
+  margin-top: .15rem;
+  position: relative;
+}
+.userCenterSuggest ul li.checked:after {
+  content: '';
+  display: block;
+  width: .7rem;
+  height: .7rem;
+  background: red;
+  background: url(/static/img/userCenter/tip_true.png) no-repeat right bottom;
+  background-size: contain;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+}
+.userCenterSuggest .textBlock {
+  position: relative;
+  font-size: .7rem;
+  margin-bottom: 1.25rem;
+}
+.userCenterSuggest .textBlock textarea {
+  padding: .5rem;
+  width: 100%;
+  height: 10rem;
+  resize: none;
+  border-color: #dbdbdb;
+  border-width: 1px 0;
+}
+.userCenterSuggest .textBlock span {
+  color: #ccc;
+  position: absolute;
+  right: .5rem;
+  bottom: .6rem;
+}
+.userCenterSuggest button {
+  font-size: .9rem;
+  color: #fff;
+  background: #ccc;
+  line-height: 2.2rem;
+  width: 80%;
+  border: none;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+  display: block;
+  margin: auto;
+}
+.userCenterSuggest button.canSubmit {
+  background: #fe679a;
+}
+.toast_success {
+  text-align: center;
+  font-size: .8rem;
+  padding-top: .7rem;
+  width: 10rem;
+  height: 5rem;
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  background: rgba(0, 0, 0, 0.7);
+}
+.toast_success img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: auto;
+  margin-bottom: .2rem;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "mwweb",
+  "version": "1.9.7",
+  "description": "meiwan front end code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.meiwan.me:zzy/mwweb.git"
+  },
+  "keywords": [
+    "mw",
+    "fe"
+  ],
+  "author": "zhangling",
+  "license": "ISC",
+  "dependencies": {
+    "fis3": "^3.4.19",
+    "fis3-parser-less2": "^0.1.1",
+    "fis3-parser-node-sass": "^0.1.9"
+  }
+}

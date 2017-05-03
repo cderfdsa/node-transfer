@@ -1,0 +1,219 @@
+/**
+ * 求开通 页	20160408
+ * zhangling	771152260@qq.com
+ */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.cf {
+	content: '';
+	display: table;
+	clear: both;
+}
+.l_back {
+	background: url(/static/img/applyOpen/icon.png) no-repeat left top;
+	width: 44px;
+	height: 44px;
+	left: 38px;
+}
+
+/*warn*/
+.warn {
+	color: #f90;
+	font-size: 30px;
+	text-align: center;
+	padding: 30px 0;
+	font-weight: bold;
+}
+.warn span {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background: #f90;
+	color: #fff;
+	border-radius: 18px;
+	-webkit-border-radius: 18px;
+	text-align: center;
+}
+
+/*点赞求开通*/
+.praise {
+	background: #ff97bd;
+	color: #fff;
+	margin-bottom: 24px;
+	padding: 0 24px 24px;
+}
+.praise h2,
+.register h2 {
+	font-size: 28px;
+	text-align: center;
+	padding: 9px;
+	margin-bottom: 12px;
+}
+.praise h2 {
+	background: url(/static/img/applyOpen/bg_praise_title.png) no-repeat center top;
+}
+.praise .box .top,
+.praise .box .bottom {
+	background: url(/static/img/applyOpen/bg_praiseBox.png);
+}
+.praise .box .left {
+	width: 50%;
+}
+.praise .box .left h3 {
+	padding-left: 10%;
+	margin-bottom: 4px;
+	padding-top: 26px;
+}
+.progressBar {
+	width: 272px;
+	border: 1px solid #a690f9;
+	background-color: #dcd3ff;
+	margin-left: 10%;
+	position: relative;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+}
+.progressBar span {
+	display: inline-block;
+	height: 34px;
+	line-height: 34px;
+	z-index: 1;
+	position: relative;
+}
+.progressBar,
+.progressBar i {
+	height: 34px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	overflow: hidden;
+}
+.progressBar i {
+	display: block;
+	position: absolute;
+	left: 0;
+	background-color: #b8a5ff;
+	transition: width 2s;
+	-moz-transition: width 2s;	/* Firefox 4 */
+	-webkit-transition: width 2s;	/* Safari 和 Chrome */
+	-o-transition: width 2s;
+}
+.praise .box button {
+	width: 220px;
+	height: 80px;
+	border: none;
+	color: #fff;
+	background: url(/static/img/applyOpen/bg_praise_button.png) no-repeat center top;
+	margin: 40px 34px 34px 0;
+	font-size: 34px;
+	background-size: contain;
+}
+.praise .box button i {
+	display: inline-block;
+	width: 64px;
+	height: 45px;
+	vertical-align: bottom;
+	background: url(/static/img/applyOpen/icon.png) no-repeat left bottom;
+}
+.box .top {
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 1px;
+	border-radius: 16px 16px 0 0;
+	-webkit-border-radius: 16px 16px 0 0;
+}
+.box .bottom {
+	overflow: hidden;
+	border-radius: 16px 16px 0 0;
+	-webkit-border-radius: 0 0 16px 16px;
+}
+.praise h3,
+.register h3 {
+	color: #333;
+	font-size: 26px;
+	padding-left: 5%;
+	line-height: 2;
+	padding-top: 20px;
+}
+ol {
+	width: 100%;
+	margin-bottom: 20px;
+}
+.praise li,
+.register li {
+	color: #666;
+	float: left;
+	width: 45%;
+	line-height: 2;
+	font-size: 22px;
+}
+.praise li:nth-of-type(2n) {
+	margin-left: 5%;
+}
+.register li {
+	width: 46%;
+}
+li:nth-of-type(2n+1) {
+	margin-left: 5%;
+}
+.register .bottom li {
+	width: 30%;
+}
+
+/*报名开通*/
+.register {
+	background: #aa94f9;
+	color: #fff;
+	padding: 0 24px 24px;
+}
+.register h2 {
+	background: url(/static/img/applyOpen/bg_register_title.png) no-repeat center top;
+}
+.register .box .top,
+.register .box .bottom {
+	background: url(/static/img/applyOpen/bg_registerBox.png);
+}
+.register a {
+	display: block;
+	text-align: center;
+	color: #fff;
+	font-size: 36px;
+	margin: auto;
+	width: 93%;
+	margin: auto;
+	margin-bottom: 48px;
+	margin-top: 30px;
+	height: 80px;
+	line-height: 80px;
+	background: url(/static/img/applyOpen/bg_button.png) no-repeat center top;
+	background-size: contain;
+}
+
+/*toast*/
+#toast {
+	background: rgba(0,0,0,.6);
+	width: 72%;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	text-align: center;
+	margin: auto;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	height: 220px;
+	line-height: 2;
+	font-size: 26px;
+	color: #fff;
+	padding-top: 40px;
+	display: none;
+}
+#toast h2 {
+	font-size: 30px;
+}

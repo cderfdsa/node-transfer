@@ -1,0 +1,56 @@
+/* 绑定手机号码 */
+.userCenter_login_bindPhone_header .icon-left:before {
+  content: '';
+  position: absolute;
+  background: url(/static/img/userCenter/icon_circleLeft.png) no-repeat center top;
+  background-size: cover;
+  width: 1.1rem;
+  height: 1.1rem;
+  left: 0;
+  top: .5rem;
+}
+.userCenter_login_bindPhone {
+  background: #f2f2f2;
+  font-size: 0.7rem;
+  color: #bdbdbd;
+}
+.userCenter_login_bindPhone .bindPhone {
+  background: #ffffff;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+.userCenter_login_bindPhone .bindPhone .phone {
+  margin: 0 10%;
+}
+.userCenter_login_bindPhone .bindPhone .phone span {
+  color: #555555;
+  margin-left: 0.5rem;
+}
+.userCenter_login_bindPhone .formtemplate_box .formLine img {
+  width: 7%;
+}
+.bindPhone .formtemplate_box {
+  background: #ffffff!important;
+  padding: 0 auto!important;
+  margin: 0!important;
+}
+.bindPhone .formtemplate_box .voice {
+  text-align: left !important;
+  clear: both;
+  overflow: hidden;
+}
+.bindPhone .formtemplate_box .voice span {
+  color: #ff577f!important;
+}
+.bindPhone .formtemplate_box .password img {
+  margin-top: 1.2rem;
+}
+.bindPhone .formtemplate_box .formLine input {
+  color: #555555;
+}
+.bindPhone .formtemplate_box .smsCaptcha {
+  font-size: 0.6rem;
+}
+.bindPhone .formtemplate_box .smsCaptcha button {
+  padding: 0 3%;
+}

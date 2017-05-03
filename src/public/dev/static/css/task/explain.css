@@ -1,0 +1,180 @@
+.taskExplain {
+  /*tab栏*/
+  /*升级方式*/
+  /*等级说明栏分类*/
+  /*等级特权福利内容*/
+  /*任务规则*/
+}
+.taskExplain .tab {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #b65c71;
+  position: relative;
+}
+.taskExplain .tab .col-50 {
+  border-bottom: 1px solid #ebdcde;
+  padding: 0.75rem 0.5rem;
+  background-color: #ffffff;
+  margin-left: 0;
+  width: 50%;
+  position: relative;
+}
+.taskExplain .tab .active {
+  color: #f5416c;
+  font-weight: bold;
+}
+.taskExplain .tab .col-50.active:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  height: 3px;
+  background: #f5416c;
+  margin-left: 10%;
+}
+.taskExplain .tab:after {
+  content: "";
+  position: absolute;
+  right: 50%;
+  width: 1px;
+  height: 60%;
+  background: #ebdcde;
+  margin-top: 0.5rem;
+}
+.taskExplain .tabText {
+  padding: 1.5rem 0.5rem;
+  font-size: 0.6rem;
+}
+.taskExplain .tabText h5 {
+  font-size: 0.65rem;
+  color: #b65c71;
+  margin: 0;
+  font-weight: bold;
+}
+.taskExplain .tabText .btn {
+  margin: 0 0.5rem;
+  margin-top: 0.5rem;
+}
+.taskExplain .tabText .btn button {
+  color: #ffffff;
+  background-color: #ff97bd;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 0.4rem;
+}
+.taskExplain .tabLevel h5 {
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  color: #b65c71;
+  margin: 0;
+  border-bottom: 1px solid #ebdcde;
+}
+.taskExplain .tabLevel .tabs {
+  margin: 0 auto;
+  text-align: center;
+  border-bottom: 1px solid #ebdcde;
+  font-size: 0.7rem;
+  color: #c88c98;
+}
+.taskExplain .tabLevel .tabs .col-30 {
+  margin-left: 0;
+  width: 33.3%;
+  padding: 0.5rem 0;
+  border-right: 1px solid #ebdcde;
+  position: relative;
+}
+.taskExplain .tabLevel .active {
+  background-color: #ffffff;
+  color: #876aef;
+  font-weight: bold;
+}
+.taskExplain .tabLevel .col-30.active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #a995ff;
+}
+.taskExplain .levelText {
+  font-size: 0.6rem;
+  color: #333333;
+}
+.taskExplain .levelText .row {
+  background-color: #ffffff;
+  margin-left: 0;
+  border-bottom: 1px solid #ebdcde;
+}
+.taskExplain .levelText .row .col-30 {
+  width: 33.3%;
+  height: 4.5rem;
+  border-right: 1px solid #ebdcde;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #ebdcde;
+}
+.taskExplain .levelText .row .col-30 .subhead {
+  width: .8rem;
+  position: absolute;
+  left: 0.5rem;
+}
+.taskExplain .levelText .row .col-30 .text {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.taskExplain .levelText .row .col-30 .textP {
+  color: #b2b2b2;
+  font-size: 0.5rem;
+}
+.taskExplain .levelText .row .col-30 p {
+  margin: 0;
+}
+.taskExplain .task {
+  padding: 0 0.5rem 1.2rem;
+}
+.taskExplain .task h5 {
+  padding-top: 1.2rem;
+  font-size: 0.65rem;
+  color: #b65c71;
+  margin: 0;
+  border-bottom: 1px solid #ebdcde;
+  font-weight: bold;
+}
+.taskExplain .task ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.6rem;
+  margin: 0;
+}
+.taskExplain .task ul li {
+  padding: 0.5rem 0 0 0;
+}
+.taskExplain .task ul li button {
+  color: #ffffff;
+  background-color: #ff97bd;
+  border: none;
+  border-radius: 0.4rem;
+  -webkit-border-radius: 0.4rem;
+  font-size: 0.4rem;
+}
+.taskExplain .task ul li h1 {
+  color: #999999;
+  font-size: 0.6rem;
+  margin: 0;
+}
+.taskExplain .task ul li p {
+  margin: 0;
+  color: #999999;
+}
+.taskExplain .task ul li span {
+  color: #333333;
+}
+.taskExplain .task ul li p:nth-last-child(1) {
+  margin-left: 0.5rem;
+}

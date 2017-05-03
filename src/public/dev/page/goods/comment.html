@@ -1,0 +1,39 @@
+<!-- 商品评论 -->
+<!-- header: start -->
+<heade head-title="'商品评论'"></heade>
+<!-- header: end -->
+
+<div class="content goodsComment {{headerForm?'':'app'}}">
+	<ul ng-if="data.count">
+		<li class="comment_title clearfix">
+			全部评论（{{totalComment.totalComment}}）
+			<span class="deg">
+				好评度：<span class="red">{{totalComment.favorableRate| number: 0}}%</span></i>
+			</span>
+			<span class="pull-right viewContent">
+				<input type="checkbox" id="viewContent" ng-init="viewChecked=true" ng-checked="viewChecked" ng-model="viewChecked">
+				<label for="viewContent">只看有内容的</label>
+			</span>
+		</li>
+		<li class="common_list" ng-repeat="list in data.rows" ng-show="viewChecked?list.textComment:true">
+			<p class="clearfix top">
+				<img class="lazy" src="/static/img/userCenter/default_avatar.png" lazySrc="{{list.member.headImg ? list.member.headImg + (list.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+				{{list.member.nickName}}
+				<img ng-src="http://img.beautysite.cn/icon/L{{list.member.level}}.png" alt="">
+				<img ng-if="list.member.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{list.member.seniorMember.level}}_mini.png" alt="">
+				<span class="pull-right">{{list.updatedAt| date: 'yyyy-MM-dd'}}</span>
+			</p>
+			<p>
+				<span class="star">
+					<i class="{{list.stars>$index?'ing':''}}" ng-repeat="star in [0,1,2,3,4]"></i>
+				</span>
+			</p>
+			<p>{{list.textComment}}</p>
+		</li>
+	</ul>
+
+	<div class="commentNone" ng-if="data.count!=undefined&&!data.count">
+		<img src="/static/img/userCenter/u11.png" alt="">
+		亲，你还没有发表评论哦！
+	</div>
+</div>

@@ -1,0 +1,227 @@
+@charset "UTF-8";
+.userCenter_inviteBonus .contentBox {
+  background: url("/static/img/userCenter/bg_inviteBonus.png") no-repeat;
+  background-size: 100% 100%;
+  height: 0;
+  padding-bottom: 485%;
+  position: relative;
+}
+
+.userCenter_inviteBonus .contentBox .photo {
+  width: 16%;
+  position: absolute;
+  left: 8.4%;
+  top: 0;
+  margin-top: 3.3%;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+
+.userCenter_inviteBonus .contentBox form {
+  font-size: .7rem;
+  padding-top: 93.33%;
+}
+
+.userCenter_inviteBonus .contentBox form p {
+  padding: 0 7.3%;
+  margin: 0 0 .5rem;
+}
+
+.userCenter_inviteBonus .contentBox form p input, .userCenter_inviteBonus .contentBox form p button {
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  border: 1px solid #666;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  padding: 0 .9rem;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(2) input {
+  width: 60%;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(2) button {
+  width: 37%;
+  color: #ff577f;
+  border-color: #ff577f;
+  background: transparent;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(2) button.disabled {
+  border-color: #ccc;
+  line-height: 1.2;
+  color: #ccc;
+  font-size: .5rem;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(3) {
+  color: #999;
+  text-align: center;
+  margin: .75rem 0 0;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(3) span {
+  color: #ff577f;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(4) {
+  color: #fff;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(4) button {
+  border: none;
+  width: 100%;
+  padding-bottom: 16.88%;
+  height: 0;
+  background: url("/static/img/userCenter/btn_receive.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(5) {
+  text-align: center;
+}
+
+.userCenter_inviteBonus .contentBox form p:nth-child(5) img {
+  width: 32%;
+}
+
+.userCenter_inviteBonus .contentBox .dowanloadApp {
+  font-size: .7rem;
+  color: #ff3b6a;
+  border: 1px solid #ff3b6a;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 7.3% 44%;
+  text-align: center;
+  height: 2rem;
+  line-height: 2rem;
+  width: 85.4%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+}
+
+.userCenter_inviteBonus .contentBox .dowanloadApp img {
+  width: 1rem;
+  margin-right: .4rem;
+}
+
+.userCenter_inviteBonus .contentBox .qrCode {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.userCenter_inviteBonus .successBox {
+  background: url("/static/img/userCenter/bg_shareSucc.png") no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.userCenter_inviteBonus .successBox .red img {
+  width: 31.87%;
+}
+
+.userCenter_inviteBonus .successBox .clearfix {
+  margin: auto;
+  width: 10.1rem;
+  text-align: left;
+}
+
+.userCenter_inviteBonus .successBox .clearfix img {
+  width: 1.725rem;
+  margin-right: .3rem;
+}
+
+.userCenter_inviteBonus .successBox .clearfix span {
+  color: #555;
+  display: block;
+}
+
+.userCenter_inviteBonus .successBox .clearfix span:nth-child(1) {
+  font-size: .7rem;
+  font-weight: bold;
+}
+
+.userCenter_inviteBonus .successBox .clearfix span:nth-child(2) {
+  font-size: .6rem;
+}
+
+.userCenter_inviteBonus .successBox .btn {
+  width: 92%;
+  margin: .8rem auto;
+  height: 0;
+  padding-bottom: 12.4%;
+  background: url("/static/img/userCenter/downloadAppBtn.png") no-repeat;
+  background-size: 100% 100%;
+  display: block;
+}
+
+.userCenter_inviteBonus .successBox .see {
+  margin-bottom: 12.93%;
+}
+
+.userCenter_inviteBonus .successBox .see a {
+  color: #ff3b6a;
+  font-size: .7rem;
+}
+
+.userCenter_inviteBonus .successBox .qr {
+  width: 61.73%;
+}
+
+.popup-overlay {
+  z-index: 9;
+}
+
+/*弹窗自定义样式*/
+.imgCaptchaModal {
+  background: #fff;
+}
+
+.imgCaptchaModal .modal-inner, .imgCaptchaModal .modal-button {
+  background: #fff;
+}
+
+.imgCaptchaModal .modal-inner:after, .imgCaptchaModal .modal-button:after {
+  display: none;
+}
+
+.imgCaptchaModal .modal-button:first-child:last-child {
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  border: 1px solid #ff4d7d;
+  color: #ff4d7d;
+  font-size: 0.7rem;
+  padding: 0;
+  width: 40%;
+  height: 1.4rem;
+  line-height: 1.4rem;
+}
+
+.imgCaptchaModal .modal-text input {
+  width: 50%;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+  padding: 0 .5rem;
+}
+
+.imgCaptchaModal .modal-text input:focus {
+  border: 1px solid #ff4d7d;
+}
+
+.imgCaptchaModal .modal-text img {
+  margin-left: 0.3rem;
+  width: 20%;
+}
+
+.imgCaptchaModal .modal-text a {
+  width: 30%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}

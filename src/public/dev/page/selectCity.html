@@ -1,0 +1,51 @@
+<div class="page selectCity">
+    <!-- 头部 -->
+    <div class="header2 s_fixheader">
+        <div class="title">选择城市</div>
+        <a class="l_back" href="javascript:void(0);history.back();"></a>
+    </div>
+    <!-- 搜索框 -->
+    <div class="s_search s_fixsearch">
+        <div class="s_searchDiv">
+            <i class="icon-search"></i>
+            <input type="text" id="s_search" class="s_color999" placeholder="请输入城市"  ng-model="searchName" ng-change="searchFn()" />
+            <i class="icon-remove-sign" id="s_rm" ng-click="searchClose()"></i>
+        </div>
+        <span class="s_cancelSearch" ng-click="searchClose()">取消</span>
+    </div>
+
+    <div class="s_min">
+        <div class="s_city">
+            <div class="s_title_1"><i></i>定位</div>
+            <div class="s_div_1">
+                <a class="s_btnCom s_act {{locate.class}}" id="locateStatus" href="{{locateUrl}}">{{locate.name}}</a>
+            </div>
+            <div class="s_title_1"><i class="s_rm"></i>热门</div>
+            <div class="s_div_1">
+                <a class="s_btnCom" ng-repeat="cityArr in data | limitTo:9" href="#/selectSchool/{{cityArr.id}}">{{cityArr.name}}</a>
+            </div>
+            <!-- 城市列表 -->
+            <div ng-repeat="firstLetter in firstLetterArr | orderBy">
+                <div class="s_title_1 s_dwzm"  con="{{firstLetter.toUpperCase()}}">{{firstLetter.toUpperCase()}}</div>
+                <div class="s_Citytype" ng-repeat="cityArr in data | filter:{firstLetter: firstLetter}">
+                    <div class="s_vd">
+                        <a href="#/selectSchool/{{cityArr.id}}">{{cityArr.name}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右边字母 -->
+        <div class="s_dw">
+            <p id="s_dcvv">
+                <a ng-repeat="firstLetter in firstLetterArr | orderBy" ng-class="{s_act: $index == aIndex}" ng-click="JumpCityFn($event, $index)">{{firstLetter.toUpperCase()}}</a>
+                <a>#</a>
+            </p>
+        </div>
+        <!-- 搜索框城市列表 -->
+        <div class="s_searchCon">
+            <div class="s_cf s_Citytype">
+                <div class="s_vd" ng-repeat="cityArr in data | filter: searchNameFn"><a href="#/selectSchool/{{cityArr.id}}">{{cityArr.name+'/'+cityArr.pinyin}}</a></div>
+            </div>
+        </div>
+    </div>
+</div>

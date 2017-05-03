@@ -1,0 +1,17 @@
+<heade head-title="'建议反馈'" class="circle_left"></heade>
+
+<div class="content userCenterSuggest">
+	<div class="clearfix widget">
+		<label for="" class="pull-left">反馈类型</label>
+		<ul class="clearfix">
+			<li class="pull-left {{widget.checked}}" ng-click="checkFn($index)" ng-repeat="widget in widgets">{{widget.name}}</li>
+		</ul>
+	</div>
+
+	<div class="textBlock">
+		<textarea placeholder="请输入您的宝贵建议，帮助我们不断改进" ng-model="areaText" ng-keyup="textAreaFn()"></textarea>
+		<span>{{areaText.length?areaText.length:0}}/100</span>
+	</div>
+
+	<button type="button" class="{{type&&areaText.length>1 ? 'canSubmit' : ''}}" ng-click="submmitFn()">提交</button>
+</div>

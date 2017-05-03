@@ -1,0 +1,125 @@
+<!-- 微信红包主页 -->
+<div class="content activityRedBag" >
+<!-- 表单登录 -->
+	<div ng-show="success==1">
+		<section  class="poster">
+			<img src="/static/img/activity/bg2.jpg" class="bg">
+		</section>
+		<section class="list" >
+			<div class="form" novalidate>
+				<input type="tel" placeholder="请输入手机号" ng-model="mobile" maxlength="11" required>
+			</div>
+			<div  class="form row">
+				<input  type="tel" placeholder="请输入验证码"  class="inp col-80"  maxlength="6" ng-model="captchaCode">
+				<button class="text {{default}}" ng-click="getCode(0)" ng-disabled="mobile.$invalid">{{buttonText}}</button>
+			</div>
+			<div class="form textCode">
+				<p>短信收不到？<span ng-click="getCode(1)">尝试语音验证码</span></p>
+			</div>
+			<div  class="form " ng-click="submit()">
+				<img src="/static/img/activity/btn.png" class="btn">
+				<p><b>立即领取</b></p>
+			</div>
+		</section>
+		<!-- 领取规则 -->
+		<section class="regulation">
+			<div class="nav">
+				<img src="/static/img/activity/nav_1.png" >
+			</div>
+			<ul>
+				<li class="row">
+					<div class="listBtn col-20">1</div>
+					<div class="col-80">红包领取后30天内有效；</div>
+				</li>
+				<li class="row">
+					<div class="listBtn col-20">2</div>
+					<div class="col-80">红包发放至美妆商城账户，登录后即可使用；</div>
+				</li>
+				<li class="row">
+					<div class="listBtn col-20" >3</div>
+					<div class="col-80">红包仅在线支付时使用，每张订单仅限使用一张红包，红包不找零；</div>
+				</li>
+				<li class="row">
+					<div class="listBtn col-20">4</div>
+					<div class="col-80">美妆商城保留法律范围内允许对活动的解释权。</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+
+<!-- 代金券领取成功页面 -->
+	<div class="success1" ng-show="success==2">
+		<section  class="poster">
+			<img src="/static/img/activity/bg2.jpg" class="bg">
+		</section>
+		<section class="lists">
+		<!-- 代金券 -->
+			<div class="bg">
+				<div class="text">
+					<button>美妆商城代金券</button>
+					<p>￥<span>{{dataproduct.value?dataproduct.value:data.value}}</span></p>
+					<p class="mobile">已存入账户：{{user.mobile?user.mobile:mobile}}</p>
+				</div>
+			</div>
+		</section>
+		<!-- 按钮 -->
+		<section class="buttons"  >
+				<img src="/static/img/activity/btn_2.png" ng-click="toPublicNo()">
+		</section>
+		<!-- 用户列表-->
+		<section class="regulations">
+			<div class="nav">
+				<img src="/static/img/activity/nav_2.png" >
+			</div>
+			<ul>
+				<li class="clearfix" ng-repeat="list in rows">
+					<img class="pull-left" src="{{list.headImg ? list.headImg + (list.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" >
+					<div class="item">
+						<p class="name">{{list.nickName}}:{{list.desc}}</p>
+						<p class="clearfix"><span>{{list.updatedAt}}</span><span>￥<b>{{list.value}}</b></span></p>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+
+<!--已领过页面 -->
+	<div class="success2" ng-show="success==3">
+		<section  class="poster">
+			<img src="/static/img/activity/bg2.jpg" class="bg">
+		</section>
+		<section class="lists">
+			<div class="bg">
+				<div class="submit">
+					<div>
+						<img src="/static/img/activity/toast_pink.png" />
+						<span>{{err}}</span>
+					</div>
+					<p class="number" ng-show="shownumber">已存入账户：{{user.mobile?user.mobile:mobile}}</p>
+				</div>
+			</div>
+		</section>
+		<!-- 按钮 -->
+		<section class="buttons" ng-show="shownumber" >
+			 <div class="btn" ng-click="toPublicNo()">
+				<img src="/static/img/activity/btn_2.png">
+			</div>
+		</section>
+		<!-- 用户列表-->
+		<section class="regulations">
+			<div class="nav">
+				<img src="/static/img/activity/nav_2.png" >
+			</div>
+			<ul>
+				<li class="clearfix" ng-repeat="list in rows">
+					<img class="pull-left" src="{{list.headImg ? list.headImg + (list.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" >
+					<div class="item">
+						<p class="name">{{list.nickName}}:{{list.desc}}</p>
+						<p class="clearfix"><span>{{list.updatedAt}}</span><span>￥<b>{{list.value}}</b></span></p>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</div>
+</div>
+

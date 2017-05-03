@@ -1,0 +1,34 @@
+.userCentertemperamentValue {
+  background: #f2f2f2;
+}
+.userCentertemperamentValue .list-block {
+  margin: 0;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  color: #555555;
+}
+.userCentertemperamentValue .list-block ul li {
+  padding: 0;
+}
+.userCentertemperamentValue .list-block ul li .item-inner {
+  padding: 0.7rem 0.5rem;
+  margin: 0;
+}
+.userCentertemperamentValue .list-block ul li p {
+  margin: 0;
+}
+.userCentertemperamentValue .list-block ul li .time {
+  font-size: 0.5rem;
+  color: #cccccc;
+}
+.userCentertemperamentValue .list-block ul li .value {
+  color: #ff577f;
+}
+.userCentertemperamentValue .nullValue {
+  text-align: center;
+  padding-top: 5rem ;
+  margin: 0 auto;
+}
+.userCentertemperamentValue .nullValue img {
+  width: 40%;
+}

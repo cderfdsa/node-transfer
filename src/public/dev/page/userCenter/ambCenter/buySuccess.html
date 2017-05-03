@@ -1,0 +1,33 @@
+<!-- 购买成功  -->
+
+<heade
+     head-title="'申请成功'" class="userCenter_ambCenter_buySuccess_header" head-rightfn="headRightFn">
+</heade>
+
+<div class="content userCenter_ambCenter_buySuccess">
+        <div class="banner">
+            <p> <img src="/static/img/userCenter/ambCenter/success.png" alt=""></p>
+            <p>
+                尊敬的合伙人，恭喜加入美妆大家庭！
+            </p>
+            <p>
+                专属见面礼＆2年校园大使通行证已放入你的账户
+            </p>
+            <p>{{mobile.slice(0,3) + '****' + mobile.slice(7,11)}}</p>
+        </div>
+        <img class="banner2" ng-src="/static/img/userCenter/ambCenter/buySuc2.png" alt="">
+        <p ng-if="type == 1" class="row">
+            <span class="tip  col-33">100颜值</span>
+            <span class="col-50">邀请闺蜜好友成功，我得100颜值奖励。</span>
+        </p>
+        <p class="row">
+            <span class="tip col-33">￥50-100现金</span>
+            <span class="col-50">邀请成功，我得50-100元现金奖励。</span>
+        </p>
+        <p class="row">
+            <span class="tip  col-33">永久提成</span>
+            <span class="col-50">今后TA的业绩我也有提成。</span>
+        </p>
+
+        <button type="button" ng-click="share()">立即邀请</button>
+</div>

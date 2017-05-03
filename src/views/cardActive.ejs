@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="wap-font-scale" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    <title>激活美玩特权卡（大使版）</title>
+    <link rel="stylesheet" type="text/css" href="/bk/css/activationCard.css">
+</head>
+<body>
+    <p>
+        <label>卡号：</label><input type="text" id="code">
+        <input type="hidden" id="openId" value="<%=openId%>">
+    </p>
+    <p>激活该卡，用户可凭该卡背面的支付密码在美玩【招募合伙人】页面抵扣合伙人费用。</p>
+    <button type="button">激活</button>
+    <script src="/bk/js/zepto.min.js"></script>
+    <script src="/bk/js/pingpp.js"></script>
+    <script type="text/javascript">
+        $("button").on("click", function(){
+            $("button").attr("disabled","disabled");
+            var code = $("#code").val(),
+                openId = $("#openId").val();
+            if (!code) {
+                alert('请填写激活卡号！');
+                return;
+            }
+            if(!openId) {
+              alert('授权失败！');
+              return;
+            }
+            $.post('/api/seniorCard/createCharge', {
+                code: code,
+                openId: openId
+            }, function(data) {
+              $("button").removeAttr("disabled");
+              if(data.err == 1){
+                alert(data.errMsg);
+              } else {
+                pingpp.createPayment(data.data,function(result,err){
+                  console.log(JSON.stringify(err));
+                  console.log(JSON.stringify(result));
+                });
+              }
+            })
+        })
+    </script>
+</body>
+</html>

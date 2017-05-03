@@ -1,0 +1,342 @@
+.page {
+  background: #ffffff;
+  max-width: 750px;
+}
+/*页面整个内容区域*/
+.activitygoodsRedPacket {
+  /*领取页面*/
+  /*领取后的海报区域*/
+  /*过期不能领取*/
+  /*已领可用*/
+  /*号码表单*/
+  /*活动规则*/
+}
+.activitygoodsRedPacket .poster .posterimg {
+  font-size: 0;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+.activitygoodsRedPacket .poster .posterimg .bg {
+  width: 100%;
+}
+.activitygoodsRedPacket .poster .text {
+  position: absolute;
+  top: 20%;
+  text-align: center;
+  font-size: 0.7rem;
+  color: #ffffff;
+  padding: 0 2rem;
+}
+.activitygoodsRedPacket .poster .text a {
+  color: #fcf679;
+  border: 1px solid #fcf679;
+  padding: 0 0.2rem;
+  border-radius: 3rem;
+  display: inline-block;
+}
+.activitygoodsRedPacket .poster .posternumber {
+  font-size: 0.7rem;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 10%;
+  color: #ff4d7d;
+}
+.activitygoodsRedPacket .poster .posternumber p {
+  margin: 0;
+}
+.activitygoodsRedPacket .poster .posternumber span {
+  font-size: 2.8rem;
+}
+.activitygoodsRedPacket .receive .posterimg {
+  position: relative;
+  color: black;
+  font-size: 0.7rem;
+  /*领取成功文字区域*/
+}
+.activitygoodsRedPacket .receive .posterimg .bg {
+  width: 100%;
+}
+.activitygoodsRedPacket .receive .posterimg .submit {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  /*金额*/
+  /*按钮*/
+}
+.activitygoodsRedPacket .receive .posterimg .submit .check {
+  width: 10%;
+  vertical-align: top;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .text {
+  width: 75%;
+  display: inline-block;
+  margin-left: 0.3rem;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .text p {
+  margin: 0;
+  text-align: left;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .text p b {
+  color: #ff4d7d;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .number {
+  text-align: center;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .number p {
+  color: #ff4d7d;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .number p span {
+  font-size: 3rem;
+}
+.activitygoodsRedPacket .receive .posterimg .submit .btn {
+  width: 80%;
+}
+.activitygoodsRedPacket .getdefeat {
+  font-size: 0;
+}
+.activitygoodsRedPacket .getdefeat .posterimg {
+  font-size: 0;
+  position: relative;
+}
+.activitygoodsRedPacket .getdefeat .posterimg .bg {
+  width: 100%;
+}
+.activitygoodsRedPacket .getdefeat .submit {
+  position: absolute;
+  top: 20%;
+  font-size: 0.7rem;
+  color: #666666;
+  text-align: center;
+}
+.activitygoodsRedPacket .getdefeat .submit .row {
+  width: 80%;
+  margin: 0 auto;
+}
+.activitygoodsRedPacket .getdefeat .submit .row .check {
+  width: 15%;
+  vertical-align: bottom;
+}
+.activitygoodsRedPacket .getdefeat .submit .row .text {
+  display: inline-block;
+  width: 80%;
+}
+.activitygoodsRedPacket .getdefeat .submit .row .text p {
+  margin: 0;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+.activitygoodsRedPacket .getdefeat2 {
+  font-size: 0;
+}
+.activitygoodsRedPacket .getdefeat2 .posterimg {
+  font-size: 0;
+  position: relative;
+}
+.activitygoodsRedPacket .getdefeat2 .posterimg .bg {
+  width: 100%;
+}
+.activitygoodsRedPacket .getdefeat2 .submit {
+  position: absolute;
+  bottom: 10%;
+  font-size: 0.7rem;
+  color: #666666;
+  text-align: center;
+}
+.activitygoodsRedPacket .getdefeat2 .submit .row {
+  width: 80%;
+  margin: 0 auto;
+}
+.activitygoodsRedPacket .getdefeat2 .submit .row .check {
+  width: 15%;
+  vertical-align: middle;
+}
+.activitygoodsRedPacket .getdefeat2 .submit .row .text {
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
+}
+.activitygoodsRedPacket .getdefeat2 .submit .row .text p {
+  margin: 0;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+.activitygoodsRedPacket .getdefeat2 .btn {
+  margin-top: 3rem;
+  width: 80%;
+}
+.activitygoodsRedPacket .list {
+  padding: 1rem;
+  background: #ffe8e8;
+}
+.activitygoodsRedPacket .list .form {
+  margin-bottom: 0.5rem;
+  position: relative;
+  width: 100%;
+}
+.activitygoodsRedPacket .list .row {
+  margin-left: 0;
+  width: 100%;
+}
+.activitygoodsRedPacket .list input {
+  width: 100%;
+  border: 1px solid #666666;
+  border-radius: 5rem;
+  padding: 0.5rem 0.5rem;
+  margin: 0;
+}
+.activitygoodsRedPacket .list .inp {
+  width: 60%;
+  padding-left: 0.5rem;
+}
+.activitygoodsRedPacket .list button {
+  width: 35%;
+  background: #ffffff;
+  color: #ff4d7d;
+  border: 1px solid #ff4d7d;
+  border-radius: 6rem;
+  float: right;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+}
+.activitygoodsRedPacket .list .disabled {
+  color: #666666;
+  border: 1px solid#666666;
+}
+.activitygoodsRedPacket .list .btn {
+  width: 100%;
+}
+.activitygoodsRedPacket .list p {
+  margin: 0;
+  width: 100%;
+  line-height: 2.2rem;
+  font-size: 0.85rem;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  text-align: center;
+}
+.activitygoodsRedPacket .list .textCode {
+  padding: 1rem 0;
+}
+.activitygoodsRedPacket .list .textCode p {
+  font-size: 0.7rem;
+  color: #cccccc;
+}
+.activitygoodsRedPacket .list .textCode p span {
+  color: #ff4d7d;
+}
+.activitygoodsRedPacket .regulation {
+  padding: 0.5rem 1.2rem;
+  background: #ffffff;
+  color: #4d3838;
+  font-size: 0.6rem;
+}
+.activitygoodsRedPacket .regulation .nav img {
+  width: 100%;
+  overflow: hidden;
+}
+.activitygoodsRedPacket .regulation ul {
+  list-style: none;
+  padding: 0;
+}
+.activitygoodsRedPacket .regulation ul li {
+  margin-top: 0.5rem;
+}
+.activitygoodsRedPacket .regulation ul li .listBtn {
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #fb8bb1;
+  border-radius: 5rem;
+  color: #ffffff;
+  font-size: 0.5rem;
+  text-align: center;
+}
+.activitygoodsRedPacket .regulation ul li .listBtn .col-80 {
+  width: 85%;
+}
+/* 弹窗样式 */
+/*弹窗自定义样式*/
+.imgModal .popup_container .input_text {
+  width: 50%;
+  border: 1px solid #cccccc;
+  border-radius: 0.2rem;
+  padding: 0 0.5rem;
+}
+.imgModal .popup_container .img_popup {
+  margin-left: 0.3rem;
+  width: 20%;
+}
+.imgModal .popup_container input:focus {
+  border: 1px solid #ff4d7d;
+}
+.imgModal .popup_container a {
+  width: 30%;
+  margin-left: 0.3rem;
+  font-size: 0.7rem;
+  text-decoration: underline;
+}
+.imgModal .modal-inner {
+  background-color: #ffffff;
+}
+.imgModal .modal-inner:after {
+  content: '';
+  background-color: #ffffff;
+}
+.imgModal .modal-buttons {
+  background: #ffffff;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+.imgModal .modal-button {
+  width: 50%;
+  font-size: 0.7rem;
+  color: #ff4d7d;
+  border: 1px solid #ff4d7d;
+  background: #ffffff;
+  height: auto;
+}
+.imgModal .modal-button:first-child:last-child {
+  border-radius: 2rem 2rem 2rem 2rem;
+  height: 1.4rem;
+  width: 40%;
+  line-height: 1.4rem;
+  padding: 0;
+}
+.imgModal .modal-button:after {
+  content: "";
+  background-color: #ffffff;
+}
+/* 错误提示 */
+.toast_success {
+  text-align: center;
+  font-size: 0.7rem;
+  padding-top: 0.5rem;
+  width: 13.5rem;
+  height: 7rem;
+  -webkit-border-radius: 0.2rem;
+  background: rgba(0, 0, 0, 0.7);
+  line-height: 1.5;
+}
+.toast_success p {
+  margin: 0;
+  padding: 0;
+}
+.toast_success img {
+  width: 2rem;
+  height: 2rem;
+  display: block;
+  margin: auto;
+  margin-bottom: 0.2rem;
+}
+/* popup: 微信二维码 */
+.popup_wxCode {
+  height: auto;
+  top: auto;
+  bottom: 0;
+  font-size: 0;
+}
+.popup_wxCode img {
+  width: 100%;
+}

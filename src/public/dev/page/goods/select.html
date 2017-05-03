@@ -1,0 +1,41 @@
+<!-- 商品分类 -->
+<!-- 头部标题 -->
+<heade class="circle_left" head-title="'商品分类'"></heade>
+
+<!-- 搜索 -->
+<div class="bar bar-header-secondary goodsSelect">
+	<div class="searchbar">
+		<div class="search-input">
+			<label class="icon icon-search" for="search"></label>
+			<input type="search" id='search' placeholder='请输入商品关键词' ng-focus="toSearch()"/>
+		</div>
+	</div>
+</div>
+
+<div class="content goodsSelect">
+	<!-- 标签页切换 -->
+	<div class="clearfix tabBox">
+		<div class="pull-left tab">
+			<div class="{{tab.active}}" ng-repeat="tab in data" ng-click="tabFn($index)">
+				<img src="http://img.beautysite.cn{{tab.image}}" alt="">
+				{{tab.name}}
+			</div>
+		</div>
+		<div class="pull-left tabs">
+			<ul class="tabContent {{list.active}}" ng-repeat="list in data">
+				<li class="pull-left" ng-repeat="content in list.sub" ng-click="toGoodsList(content.id, content.name)">
+					<div class="imgBox">
+						<img src="http://img.beautysite.cn{{content.image}}" alt="">
+					</div>
+					{{content.name}}
+				</li>
+				<li class="pull-left" ng-click="toGoodsList(id[$index], list.name)">
+					<div class="imgBox">
+						<img src="/static/img/goods/select_default.jpg" alt="">
+					</div>
+					{{list.name}}
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

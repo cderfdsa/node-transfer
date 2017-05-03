@@ -1,0 +1,6 @@
+.page.selectCity {
+	min-height: auto;
+}
+.selectCity .s_Citytype:last-of-type .s_vd {
+    border-bottom: none;
+}

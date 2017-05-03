@@ -1,0 +1,31 @@
+<!-- 气质值 -->
+<!-- header: start -->
+<heade head-title="'气质值'" class="circle_left"></heade>
+<!-- header: end -->
+
+<!-- 气质值主页 -->
+<div class="content userCentertemperamentValue" ng-if="data.rows.length">
+		<div class="list-block">
+			<ul>
+				<li class="item-content" ng-repeat="item in data.rows">
+					<div class="item-media"></div>
+					<div class="item-inner">
+						<div>
+							<p>{{item.remark}}</p>
+							<p class="time">{{item.createdAt}}</p>
+						</div>
+						<div>
+							<p class="value">{{item.value}}</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+</div> 
+<!-- 空态 -->
+<div class="content userCentertemperamentValue"  ng-if="data.rows!==undefined&&!data.rows.length">
+	<div class="nullValue" >
+		<img src="/static/img/userCenter/temperamentValue.png">
+	</div>
+</div>
+	

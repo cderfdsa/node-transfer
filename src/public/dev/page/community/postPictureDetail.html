@@ -1,0 +1,150 @@
+<!-- po图详情 -->
+<heade class="community_postPictureDetail_header circle_left" head-title="'详情'" head-rightfn="headRightFn">
+</heade>
+
+<div class="content community_postPictureDetail">
+    <div class="main">
+        <!-- 帖子详情 -->
+        <section class="postList">
+            <!-- 代言笔记封面 -->
+            <div  class="imgBox clearfix {{cardList.cardDetail.image.length==2&&'po'}}" ng-if="cardList.cardDetail.type==1">
+                <img class="pull-left" ng-src="http://img.beautysite.cn{{img}}!/fw/{{cardList.cardDetail.image.length==1?'600':'300'}}" alt="" ng-repeat="img in cardList.cardDetail.image track by $index">
+                <i class="icon" ng-if="cardList.cardDetail.wowValue" ng-click="toWowList()">{{cardList.cardDetail.wowValue}}</i>
+            </div>
+            <!-- 头像 -->
+            <div class="head clearfix" >
+                <div class="avatar pull-left" ng-click="downHome()">
+                    <img ng-src="{{cardList.memberInfo.headImg ? cardList.memberInfo.headImg + (cardList.memberInfo.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+                </div>
+                <div class="level">
+                    <div class="userInfo">
+                        <div >
+                            <span >{{cardList.memberInfo.nickName}}</span>
+                            <img src="http://img.beautysite.cn/icon/L{{cardList.memberInfo.level}}.png" alt="">
+                            <img ng-if="cardList.memberInfo.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{cardList.memberInfo.seniorMember.level}}_mini.png" alt="">
+                            <img src="/static/img/community/icon_{{cardList.memberInfo.sex==1?'boy':'girl'}}.png">
+                        </div>
+                    </div>
+                    <p><img src="/static/img/community/icon_location.png" alt="">{{cardList.memberInfo.schoolInfo.name||'火星大学'}}</p>
+                </div>
+                <button type="button" class="{{cardList.cardDetail.hasFollowed && 'faned'}}" ng-click="fanFn()" ng-if="!cardList.cardDetail.isSelf">{{cardList.cardDetail.hasFollowed ? '已粉' : '+粉TA'}}</button>
+            </div>
+            <!-- po图文字与图片 -->
+            <div  ng-if="!cardList.cardDetail.type">
+                <p class="shortText" ng-if="!cardList.cardDetail.type">
+                    <span  class="tags" ng-if="cardList.cardDetail.tags.length">
+                        <a href="#/community/topicDetail/{{tag}}" ng-repeat="tag in cardList.cardDetail.tags">#{{tag}}</a>
+                    </span>
+                    {{cardList.cardDetail.content[0].data}}
+                </p>
+                <p class="publicDate" >发表时间：{{cardList.cardDetail.createdAt}}</p>
+                <div class="imgBox clearfix {{cardList.cardDetail.image.length==2&&'po'}}" ng-if="!cardList.cardDetail.type">
+                    <img class="pull-left" ng-src="http://img.beautysite.cn{{img}}!/fw/{{cardList.cardDetail.image.length==1?'600':'300'}}" alt="" ng-repeat="img in cardList.cardDetail.image track by $index">
+                    <i class="icon" ng-if="cardList.cardDetail.wowValue" ng-click="toWowList()">{{cardList.cardDetail.wowValue}}</i>
+                </div>
+            </div>
+            <!-- 代言笔记内容 -->
+            <div ng-repeat="goods in cardList.cardDetail.content" ng-if="cardList.cardDetail.type==1">
+                <p class="shortText" ng-if="!goods.type">
+                    <span  class="tags" ng-if="cardList.cardDetail.tags.length">
+                        <a href="#/community/topicDetail/{{tag}}" ng-repeat="tag in cardList.cardDetail.tags">#{{tag}}</a>
+                    </span>
+                    {{goods.data}}
+                </p>
+
+                <div class="imgBox clearfix" ng-if="goods.type == 1">
+                    <img class="pull-left" ng-src="http://img.beautysite.cn{{goods.data}}!/fw/{{cardList.cardDetail.image.length==1?'600':'300'}}" alt="" >
+                </div>
+
+                <div class="goods clearfix" ng-if="goods.type == 2">
+                    <div class="goodsImg pull-left" ng-click="togoods(goods)">
+                        <img ng-src="http://img.beautysite.cn{{goods.obj.images}}" alt="">
+                    </div>
+                    <div class="goodsText clearfix" >
+                        <h2 ng-click="togoods(goods)">【{{goods.obj.introduction}}】{{goods.obj.name}}</h2>
+                        <p>￥{{goods.obj.price}}
+                            <span>￥{{goods.obj.marketPrice}}</span>
+                        </p>
+                        <button class="pull-right clearfix" ng-click="receiveredBag(goods)">领拔草红包</button>
+                    </div>
+                </div>
+            </div>
+            <div  ng-if="cardList.cardDetail.type==1">
+                <p class="publicDate" >发表时间：{{cardList.cardDetail.createdAt}}</p>
+            </div>
+            <ul class="flowers clearfix">
+                <li class="pull-left" ng-repeat="flower in cardList.cardDetail.wow.rows">
+                    <a href="#/community/home/{{flower.memberId}}">
+                        <img ng-src="{{flower.memberInfo.headImg ? flower.memberInfo.headImg + (flower.memberInfo.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+                    </a>
+                </li>
+                 <a href="#/community/wow/{{cardList.cardDetail._id}}?hasWow={{cardList.cardDetail.hasWow}}" class="more" ng-if="cardList.cardDetail.wow.count>0">···
+                </a>
+            </ul>
+        </section>
+
+        <section class="wowbtn" ng-click="initWow()">
+            <img src="/static/img/community/detail_default-btn.png" alt="">
+        </section>
+
+        <!-- 评论列表 -->
+        <section class="commentList" ng-if="data.count">
+            <h5 >评论({{data.count}})</h5>
+            <ul>
+                <li ng-repeat = "item in data.rows | orderBy:'-updatedAt' " >
+                    <div class="head clearfix">
+                        <div class="avatar pull-left" ng-click="toHome(item)">
+                            <img ng-src="{{item.member.headImg ? item.member.headImg + (item.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+                        </div>
+                         <div class="level" ng-click="commentCard($index,item, type, $event)">
+                            <div class="user">
+                                <div >
+                                    <span >{{item.member.nickName}}</span>
+                                    <img ng-src="http://img.beautysite.cn/icon/L{{item.member.level}}.png" alt="">
+                                    <img ng-if="item.member.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{item.member.seniorMember.level}}_mini.png" alt="">
+                                    <img ng-src="/static/img/community/icon_{{item.member.sex==1?'boy':'girl'}}.png">
+                                </div>
+                            </div>
+                            <p><img src="/static/img/community/icon_location.png" alt="">{{cardList.memberInfo.schoolInfo.name||'火星大学'}}
+                            <span class="pull-right">{{item.date}}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text commenttext" >
+                        <span ng-show="item.sourceNickname">回复<a href="#/community/home/{{item.sourceId}}">{{item.sourceNickname}}</a></span>
+                        <span class="commen" ng-click="commentCard($index,item, type, $event)">{{item.content}}</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- 空评论列表 -->
+        <section class="commentNone" ng-if="data.count!=undefined&&!data.count"> 
+            <div class="imgbg">
+                <img src="/static/img/community/comment_none.png" alt="">
+            </div>
+             <button class="comment_none" ng-click="comment(type)">评论</button>
+        </section>
+    </div>
+</div>
+<nav class="bar bar-tab community_noteDetail_footnav">
+    <div class="operation clearfix" ng-show="showComment">
+        <div class="pull-left">
+            <i class="icon"></i>
+            {{cardList.cardDetail.browseNums>10000?(cardList.cardDetail.browseNums/10000|number:1):(cardList.cardDetail.browseNums||'')}}
+            <span ng-if="cardList.cardDetail.browseNums>10000">万</span>
+        </div>
+        <div class="pull-left">
+            <a ng-click="comment(type)">
+                <i class="icon"></i>
+                {{cardList.cardDetail.commentNums>10000?(cardList.cardDetail.commentNums/10000|number:1):(cardList.cardDetail.commentNums||'')}}
+                <span ng-if="cardList.cardDetail.commentNums>10000">万</span>
+            </a>
+        </div>
+        <div class="pull-left" ng-click="wxShare()"><i class="icon"></i></div>
+    </div>
+
+    <div class="inputBox clearfix" ng-show="!showComment">
+        <input type="text" placeholder="{{itemname?'回复'+itemname :''}}" ng-model="commentText" id="input" ng-change="disabled()" autocomplete="off">
+       <button class="{{disabled}} pull-right"  ng-click="submit(type)">发送</button>
+    </div>
+</nav>

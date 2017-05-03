@@ -1,0 +1,134 @@
+/* Variables */
+.userCenter_wow {
+  background: #f2f2f2;
+}
+.userCenter_wow ul {
+  background: #fff;
+}
+.userCenter_wow ul li {
+  position: relative;
+  overflow: hidden;
+  margin-left: .5rem;
+  font-size: .65rem;
+  color: #333;
+  padding: .4rem 0;
+}
+.userCenter_wow ul li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #e6e6e6;
+  display: block;
+  z-index: 15;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.userCenter_wow ul li img.pull-right {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin-right: .5rem;
+  margin-top: .5rem;
+}
+.userCenter_wow ul li .leftBox {
+  max-width: 72%;
+}
+.userCenter_wow ul .level .user {
+  margin-left: 2.7rem;
+  margin-right: 3.5rem;
+  padding-top: .2rem;
+  color: #333;
+}
+.userCenter_wow ul .level .user div {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+.userCenter_wow ul .level .user div span {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+.userCenter_wow ul .level .user div img {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+.userCenter_wow ul .level .user div img:first-of-type {
+  right: -1.2rem;
+  top: 0;
+}
+.userCenter_wow ul .level .user div img:nth-of-type(2) {
+  right: -2.3rem !important;
+  top: 0;
+}
+.userCenter_wow ul .level .user div img:last-of-type {
+  width: .8rem;
+  height: .8rem;
+  right: -3.2rem;
+  top: .1rem;
+}
+.userCenter_wow ul .level p {
+  font-size: .5rem;
+  color: #999;
+}
+.userCenter_wow ul .level p .icon {
+  width: .5rem;
+  height: .6rem;
+  background: url(/static/img/userCenter/icon_location.png) no-repeat center center;
+  background-size: contain;
+  margin-right: .15rem;
+  vertical-align: top;
+}
+.userCenter_wow ul p {
+  margin: 0;
+  margin-left: 2.7rem;
+}
+.userCenter_wow ul p.date {
+  font-size: .5rem;
+  color: #999;
+}
+.userCenter_wow ul p.date {
+  margin-top: .2rem;
+}
+.userCenter_wow ul .userInfo .headImg {
+  position: relative;
+}
+.userCenter_wow ul .userInfo .headImg img:nth-of-type(1) {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.userCenter_wow ul .userInfo .headImg img:nth-of-type(2) {
+  width: 1.1rem;
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+}
+.userCenter_wow ul .wowDetail span {
+  color: #ff577f;
+  margin-left: .4rem;
+}
+.userCenter_wow ul .wowDetail span img {
+  width: 2.1rem;
+}
+.userCenter_wow .loadAll,
+.userCenter_wow .swipLoad {
+  background-color: #f2f2f2;
+}
+.userCenter_wow .none {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}

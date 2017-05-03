@@ -1,0 +1,46 @@
+<!-- 用户等级 -->
+<heade class="circle_left" head-title="'我的等级'" head-righttext="['怎么涨气质？','怎么升等级？'][type]" head-rightfn="headRightFn"></heade>
+
+<div class="content userCenter_level">
+	<section class="banner">
+		<p><a href="{{['#/userCenter/temperamentValue','#/userCenter/ambCenter/achievementDetail'][type]}}">{{['明细','业绩明细'][type]}}</a></p>
+		<div class="levelSwiper">
+            <ul class="banner_list clearfix swiper-wrapper {{type==1&&'ambLevelBanner'}}">
+                <li class="swiper-slide"></li>
+                <li class="swiper-slide {{userInfo.user.level-1==$index&&'self'}} {{activeIndex-1==$index&&'active'}}" ng-repeat="user in userGrade">
+                    <div class="level_tip">
+                        <img ng-if="type == 0" ng-src="http://img.beautysite.cn/icon/{{['B','G'][userInfo.user.sex-1]}}{{userInfo.user.level<$index+1?'_1':''}}_L{{$index+1}}.png!/fw/120">
+                        <img ng-if="type == 1" ng-src="http://img.beautysite.cn/icon/S{{$index+1}}{{userInfo.user.level<$index+1?'-1':''}}.png!/fw/120">
+                        <img ng-src="/static/img/userCenter/icon_{{userInfo.user.level-1==$index?'now':userInfo.user.level-1<$index?'future':'deadline'}}.png" alt="">
+                        <img class="pull-left" ng-src="{{userInfo.user.headImg ? userInfo.user.headImg + (userInfo.user.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" ng-if="userInfo.user.level-1==$index">
+                        <span ng-if="type==0">{{user.min}}</span>
+                        <i class="levelNo" ng-if="userInfo.user.level-1!=$index">{{['L','S'][type]}}<span>{{$index+1}}</span></i>
+                    </div>
+                    <div class="progress">
+                        <span ng-style="{width:user.line}"></span>
+                    </div>
+                </li>
+                <li class="swiper-slide expect">
+                    <div class="level_tip">
+                        <img src="/static/img/userCenter/level_expect.png" alt="">
+                    </div>
+                </li>
+            </ul>
+		</div>
+		<p>
+            当前{{['气质值','等级业绩进度'][type]}}：<span class="brown first">{{[userInfo.user.expValue, totalIncome][type]||0}}{{type==1&&userGrade[userInfo.user.level]? '/' + userGrade[userInfo.user.level].min + '（已完成/目标）' : ''}}</span>
+            <span ng-if="userInfo.user.level>=userGrade.length">更多敬请期待~</span>
+            <span ng-if="userInfo.user.level<userGrade.length&&type==0">升级还差<span class="brown">{{userGrade[userInfo.user.level-1].max - userInfo.user.expValue > 0 ? userGrade[userInfo.user.level-1].max - userInfo.user.expValue : 0 }}</span>{{['点气质','元业绩'][type]}}~</span>
+        </p>
+	</section>
+
+	<section class="privilege">
+		<ul class="clearfix" ng-repeat="list in userGrade" ng-if="activeIndex == $index+1">
+			<li class="pull-left clearfix" ng-repeat="privilege in list.privilege track by $index" ng-click="privilegeModal(privilege)">
+                <img class="pull-left" ng-src="{{privilege.icon}}!/fw/120">
+                <div>{{privilege.name}}</div>
+            </li>
+            <li class="pull-left clearfix" ng-if="list.privilege.length%2"></li>
+		</ul>
+	</section>
+</div>

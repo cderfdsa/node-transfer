@@ -1,0 +1,91 @@
+<!-- 成长中心 -->
+<heade
+	head-title="'成长中心'"
+	class="circle_left"
+	head-leftfn="headLeftFn"
+></heade>
+
+<div class="content task_grow" >
+	<section class="newbieTask">
+		<h1 ng-show="missions['0'].length>0">新手报道</h1>
+		<div class="list-block">
+			<ul>
+				<li class="item-content" ng-repeat="newbieTask in missions['0']" ng-click="toModal(newbieTask)" ng-show="newbieTask.finishTimes!=newbieTask.times">
+					<div class="item-media"></div>
+			        <div class="item-inner ">
+				        <div class="remark">{{newbieTask.name}}</div>
+				        <div class="img">
+				        	<img ng-src="{{newbieTask.rewardType==1?'static/img/task/icon_cash.png':'static/img/task/icon_face.png'}}">
+				        </div>
+				        <p class="face {{newbieTask.rewardType==1?'blue':''}}">{{newbieTask.reward==0?"查看说明":newbieTask.reward}}</p>
+
+				         <div class="temperamentimg">
+				        	<img src="static/img/task/icon_temperament.png">
+				        </div>
+				        <p class="temperament">{{newbieTask.exp}}</p>
+				        <div class="text">
+				        	<span class="{{newbieTask.finishTimes?'pink':''}}" ng-show="newbieTask.cycle>=0">{{newbieTask.finishTimes}}<b>/{{newbieTask.times}}</b></span>
+				        	<span ng-show="newbieTask.cycle<0"><b>不限</b></span>
+				        	<span class="icon icon-right"></span>
+				        </div>
+	        		</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="newbieTask">
+		<h1 ng-show="missions['1'].length>0">日常任务</h1>
+		<div class="list-block">
+			<ul>
+				<li class="item-content" ng-repeat="Dailytasks in missions['1']" ng-click="toModal(Dailytasks)">
+					<div class="item-media"></div>
+			        <div class="item-inner ">
+				        <div class="remark">{{Dailytasks.name}}</div>
+				        <div class="img">
+				        	<img ng-src="{{Dailytasks.rewardType==1?'static/img/task/icon_cash.png':'static/img/task/icon_face.png'}}">
+				        </div>
+				        <p class="face {{Dailytasks.rewardType==1?'blue':''}}">{{Dailytasks.reward==0?"查看说明":Dailytasks.reward}}</p>
+				         <div class="temperamentimg">
+				        	<img src="static/img/task/icon_temperament.png">
+				        </div>
+				        <p class="temperament">{{Dailytasks.exp}}</p>
+				        <div class="text">
+				        	<span class="{{Dailytasks.finishTimes?'pink':''}}" ng-show="Dailytasks.finishTimes!=Dailytasks.times"
+				        	ng-if="Dailytasks.cycle>=0">{{Dailytasks.finishTimes}}<b>/{{Dailytasks.times}}</b></span>
+				        	<span ng-show="Dailytasks.cycle<0"><b>不限</b></span>
+				        	<span ng-show="Dailytasks.finishTimes==Dailytasks.times"><b>已完成</b></span>
+				        	<span class="icon icon-right"></span>
+				        </div>
+	        		</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="newbieTask">
+		<h1 ng-show="missions['2'].length>0">高级任务</h1>
+		<div class="list-block">
+			<ul>
+				<li class="item-content" ng-repeat="Advancedtask in missions['2']" ng-click="toModal(Advancedtask)">
+					<div class="item-media"></div>
+			        <div class="item-inner ">
+				        <div class="remark">{{Advancedtask.name}}</div>
+				        <div class="img">
+				        	<img ng-src="{{Advancedtask.rewardType==1?'static/img/task/icon_cash.png':'static/img/task/icon_face.png'}}">
+				        </div>
+				        <p class="face {{Advancedtask.rewardType==1?'blue':''}}">{{Advancedtask.reward==0?"查看说明":Advancedtask.reward}}</p>
+				         <div class="temperamentimg">
+				        	<img src="static/img/task/icon_temperament.png">
+				        </div>
+				        <p class="temperament">{{Advancedtask.exp}}</p>
+				        <div class="text">
+				        	<span class="{{Advancedtask.finishTimes?'pink':''}}" ng-show="Advancedtask.finishTimes!=Advancedtask.times" ng-if="Advancedtask.cycle>=0">{{Advancedtask.finishTimes}}<b>/{{Advancedtask.times}}</b></span>
+				        	<span ng-show="Advancedtask.cycle<0"><b>不限</b></span>
+				        	<span ng-show="Advancedtask.finishTimes==Advancedtask.times"><b>已完成</b></span>
+				        	<span class="icon icon-right"></span>
+				        </div>
+	        		</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</div>

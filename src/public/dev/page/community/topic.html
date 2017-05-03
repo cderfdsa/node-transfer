@@ -1,0 +1,26 @@
+<!-- 话题 -->
+<heade class="community_topic_header" head-title="'话题'"></heade>
+
+<div class="content community_topic">
+	<section class="topicList">
+		<ul>
+			<li ng-repeat = "item in data | orderBy:order" >
+				<a href="#/community/topicDetail/{{item.name}}">
+					<div class="imgbox">
+						<img src="http://img.beautysite.cn{{item.image}}!/fw/600" class="img" alt="">
+					</div>
+				</a>
+				<a href="#/community/topicDetail/{{item.name}}" class="text">
+					<p>
+						{{item.name | limitTo:6}}
+						<span ng-if="item.name.length>=7">···</span>
+					</p>
+					<p>已被围观{{item.browseNums}}次</p>
+				</a>
+				 <div class="btn" ng-click="subscribe(item)">
+					<a class="{{item.hasSubscribe&&'defult'}}">{{item.hasSubscribe?"已Mark":"Mark"}}</a>
+				</div>
+			</li>
+		</ul>
+	</section>
+</div>

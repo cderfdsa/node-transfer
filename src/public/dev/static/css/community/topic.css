@@ -1,0 +1,78 @@
+.community_topic_header .pull-left {
+  height: 1rem;
+  width: 1rem;
+  margin-top: .6rem;
+  background: url(/static/img/community/icon_leftbtn.png) no-repeat center;
+  background-size: cover;
+}
+.community_topic_header .pull-left:before {
+  content: '';
+}
+/*内容区域*/
+.community_topic {
+  background-color: #f2f2f2;
+  color: #555555;
+}
+.community_topic .topicList {
+  font-size: 0.7rem;
+}
+.community_topic .topicList li {
+  width: 100%;
+  padding: 0.6rem;
+  border-bottom: 1px solid #e6e6e6;
+  background: #FFFFFF;
+}
+.community_topic .topicList li a {
+  color: #555555;
+}
+.community_topic .topicList li a .imgbox {
+  width: 30%;
+  height: 3.2rem;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  overflow: hidden;
+}
+.community_topic .topicList li a .imgbox .img {
+  width: 100%;
+}
+.community_topic .topicList li .text {
+  display: inline-table;
+  text-align: left;
+  vertical-align: middle;
+  margin-left: 0.3rem;
+}
+.community_topic .topicList li .text p {
+  margin: 0;
+}
+.community_topic .topicList li .text p:nth-last-child(1) {
+  color: #999999;
+  font-size: 0.5rem;
+}
+.community_topic .topicList li .btn {
+  line-height: 3.2rem;
+  float: right;
+}
+.community_topic .topicList li .btn a {
+  font-size: 0.6rem;
+  padding: 0.3rem 1rem;
+  color: #f0436e;
+  border: 1px solid #f0436e;
+  border-radius: 1rem;
+}
+.community_topic .topicList li .btn .defult {
+  color: #cccccc;
+  background: #f6f6f6;
+  border: 1px solid #e6e6e6;
+}
+.community_topic .down {
+  padding: 1.5rem 0;
+  font-size: 0.6rem;
+  color: #999999;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+}
+.community_topic .down img {
+  width: 30%;
+}

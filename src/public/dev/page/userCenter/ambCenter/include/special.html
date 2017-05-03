@@ -1,0 +1,199 @@
+<!-- 大使套餐页面模板 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>大使套餐-美妆商城</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="/common/mod/style/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/css/userCenter/ambCenter/include/special.css">
+	<style>
+		@keyframes ripple1 {
+		    0% {
+				width: 26%;
+                height: 26%;
+		    }
+
+		    50% {
+		        width: 52%;
+                height: 52%;
+		    }
+
+		    100% {
+		        width: 52%;
+                height: 52%;
+		    }
+		}
+		@keyframes ripple2 {
+		    from {
+				width: 52%;
+                height: 52%;
+		    }
+
+		    to {
+		        width: 78%;
+                height: 78%;
+		    }
+		}
+	</style>
+</head>
+<body>
+	<!-- share hack -->
+	<img class="icon_share" src="/static/img/userCenter/ambCenter/icon_share.png">
+	<div class="insertContent">
+		<div class="bgContent">
+			<div class="photoContent">
+				<div class="cf">
+					<img class="big fl" src="/static/img/userCenter/ambCenter/special_photo1.png" alt="" class="fl" onclick="$.m(0).open()">
+					<div class="rippleClick">
+						<img src="/static/img/userCenter/ambCenter/rippleClick.png">
+						<div></div>
+						<div></div>
+					</div>
+					<div>
+						<img src="/static/img/userCenter/ambCenter/special_photo2.png" alt="" onclick="$.m(1).open()">
+						<img class="mr0" src="/static/img/userCenter/ambCenter/special_photoTriangle.png" alt="">
+						<img src="/static/img/userCenter/ambCenter/special_photoRed.png" alt="">
+						<img class="mr0" src="/static/img/userCenter/ambCenter/special_photo3.png" alt="" onclick="$.m(2).open()">
+					</div>
+				</div>
+				<div class="cf">
+					<img class="big fr mr0" src="/static/img/userCenter/ambCenter/special_photo7.png" alt="" onclick="$.m(5).open()">
+					<div>
+						<img src="/static/img/userCenter/ambCenter/special_photo4.png" alt="" onclick="$.m(3).open()">
+						<img src="/static/img/userCenter/ambCenter/special_photo5.png" alt="" onclick="$.m(4).open()">
+						<img src="/static/img/userCenter/ambCenter/special_photoRed.png" alt="">
+						<img src="/static/img/userCenter/ambCenter/special_photo6.png" alt="" onclick="$.m(6).open()">
+					</div>
+				</div>
+				<div>
+					<img src="/static/img/userCenter/ambCenter/special_photo8.png" alt="" onclick="$.m(7).open()">
+					<img src="/static/img/userCenter/ambCenter/special_photo9.png" alt="" onclick="$.m(8).open()">
+					<img src="/static/img/userCenter/ambCenter/special_photoRed.png" alt="">
+					<img class="mr0" src="/static/img/userCenter/ambCenter/special_photo10.png" alt="" onclick="$.m(9).open()">
+				</div>
+			</div>
+		</div>
+
+		<img class="backTop" src="/static/img/userCenter/ambCenter/backTop.png">
+	</div>
+
+
+	<script src="/common/lib/zepto/zepto.min.js"></script>
+	<script class="includeJs">
+		$.dialog = function(opt){
+			return {
+				// 打开
+				open: function(){
+					this.mergeOptions();
+					this.createMask();
+					this.createDialog();
+				},
+
+				// 合并参数
+				mergeOptions: function(){
+					this.options = $.extend({
+						extraClass: '',		// 自定义class
+						autoClose: true, 	// 点击任意关闭
+						text: '',			// 内容
+						close: ''
+					}, opt || {})
+				},
+
+				// 创建并插入 mask
+				createMask: function(){
+					$('<div class="mask"></div>').appendTo("body");
+					setTimeout('$(".mask").addClass("fade")', 50);
+				},
+
+				// 创建并插入 dialog
+				createDialog: function(){
+					var self = this;
+
+					$('<div class="dialog ' + self.options.extraClass + '"></div>').appendTo("body");
+					$('<div class="dialog_text">' + self.options.text + '</div>').appendTo(".dialog");
+					$('<div class="closeDialog">' + self.options.close + '</div>').appendTo(".dialog");
+					setTimeout('$(".dialog").addClass("bigger")', 50);
+					setTimeout('$(".dialog").addClass("fade")', 300);
+
+					if (self.options.autoClose) {
+						$(".mask, .dialog").on("click", function(){
+							self.close();
+						})
+					}
+
+					$(".dialog .closeDialog").on("click", function(){
+						self.close();
+					})
+				},
+
+				// 关闭
+				close: function(){
+					this.destroy();
+				},
+
+				// 移除
+				destroy: function(){
+					$(".mask, .dialog").removeClass("fade");
+					setTimeout('$(".dialog").removeClass("bigger")', 300);
+					setTimeout('$(".dialog, .mask").remove();', 500);
+				}
+			}
+		}
+
+		$(function(){
+			var dialogText = [
+				'女孩子孜孜不倦追求美妆大概都是天性，我也不例外。抱着新鲜又喜欢的心理，我报名了美妆的校园经理，这么长时间来，不仅收获了很多志同道合的小伙伴，更重要的是给自己带来了更广阔的天空，今年初获得联合利华的校园代言机会，让我看到了自己的无限可能，当然这一切都要从加入美妆的那一刻开始！',
+				'一开始决定做美妆纯粹是为了自己买美妆产品优惠，因为相比国内专柜而言真的是便宜了很多，抱着自己购物优惠的心加入了美妆大家庭。在加入后，凭着自己的努力和大家的鼓励支持，很快就从一级大使升级成为了三级大使并一直维持，现在我的业绩在全国排名十二，收入也在不断增加。想想加入美妆已经半年了，这半年来收获了许多好用的产品，认识了同校同区域的许多优秀大使，同时也收获了一群朋友。美妆这个大家庭，加入了就想一直呆在这。',
+				'因为美妆的出现，让我的大学生活有了不一样的色彩。一开始，大家的鼓励让我在迷茫中不断突破，第一个月就拿下了200+个客户，为今后的业绩打下了扎实的基础。在我尝到了独立的快感和自信的同时，也得到了每个月至少1500的薪水，业绩好的时候还常拿到3000＋，这在大学生涯中绝对是一件值得炫耀的事，当然最为难忘的还是得到的韩国游奖励，诸如此类的精神与物质财富让我能在茫茫人海中找准自己的方向，一个字——值！',
+				'很荣幸成为了美妆大使，这段时间以来收获了很多感触也很多：进入美妆后不仅有专业的培训而且每个月都会有经验分享大会，让我学到了很多美妆护肤知识，现在的我也能画一个精致的妆容自信的走出去；除此之外还结识了一群又美又自信的学姐学妹们，真的很开心。这段时间的经历也让我深刻领悟到：只要认真做，回报绝不会让自己失望，收入就是最直接的证明。感谢美妆，让我成为经济独立又自信的自己~',
+				'2015年11月10日，我遇见了ta。ta很nice，给了我归属感。当我疲惫，ta让我知道我不是一个人在努力，ta告诉我年轻就应该去多做点事。ta很功利，你付出了多少努力，ta就会给你多少回应。如果你够优秀，ta会时常给你准备惊喜，po你美照秀恩爱、送你礼物过生日、带你旅游看世界。因为功利，所以更加努力。这一年，我们一起成长一起进步，彼此见证着对方的蜕变。现在是时候公布答案了，ta的名字叫做美妆商城。',
+				'最早接触美妆商城是大一的时候应聘美妆线下体验店店员，当时就被体验店的氛围所吸引，在体验店工作的半年时间内向美妆的彩妆老师学到很多化妆护肤技巧。大二加入美妆商城校园大使行列，在美妆商城做校园大使的时光是我大学前两年最开心的一段经历，我认识了学校内很多爱美的女孩，也认识了我关系最好的两个闺蜜，去年年底我们还受邀免费参加了美妆韩国游学的活动。总之在美妆，玩的开心，学的开心，赚的开心！！ ',
+				'不知不觉，我在美妆商城这个平台工作快一年了，现在的坚持所带来的收获是当初那个动不动就想放弃的我怎么也不会想到的。这一年，我的沟通能力有了大幅度的提升，结交了一群有共同话题和兴趣的朋友。最重要的是靠自己走上了经济独立的道路，现在每月的薪资让我能够买自己喜欢的东西和给父母买礼物，我享受这样靠自己努力的美好生活~希望未来的日子一直和美妆相伴~',
+				'从一开始抱着试试的心态加入美妆，到现在全心全意将她作为自己的事业，这其中少不了美妆这个大家庭的支持。对我来说它不只是份兼职，更是自己蜕变的过程：我学会了护肤化妆，学会了与人沟通，学会了自信，学会了独立坚强。也正是这些，今年初还拿到了薇婷的活动奖金，这也是证明自己的一个亮点吧~',
+				'从校园经理做到区域经理，这一路走来，我收获了太多太多，不管是精神上的荣誉还是物质上的鼓励，都让我在这短短的一年成长很多。今年暑假我还有幸去了美妆总部实习，漂亮整洁的办公室环境让我非常惊喜。在实习的两个月里，我充分接触到了市场部以外的部门工作，学习到了非常多实用的东西。并且正规的公司制度也在不断的提高我的职业概念，这段实习经历带给我的帮助是在学校远远学不到的，我很感谢美妆，也感谢努力的自己~',
+				'刚开始接触美妆，抱着打发时间的心态，后来感觉美妆激起我极大的兴趣和不服输的心。刚开始由于一些原因会受到一些小打击，然而我这个人就是喜欢挑战，把不可能的事变为可能，在老大的鼓励下一步步坚持下来，还获得了去韩国游的机会，同时也认识了更多的朋友，打开了交际圈，也锻炼了自己的能力，最重要的是从当初的灰头土脸到现在能画出自我感觉精致的妆容，学会了很多的护肤美妆知识，慢慢变成更好的自己。最后真的很感谢美妆，让我遇到你。你才是我的小幸运。'
+			],
+			afterText = [
+				'上海师范大学——郑宇薇',
+				'上海建桥学院——王诗仪',
+				'上海海洋大学——刘婧云',
+				'上海立达职业技术学院——许贝儿',
+				'华东政法大学——江吟泓',
+				'上海工程技术大学——林小力',
+				'上海海事大学——李晓晓',
+				'上海工程技术大学——张彤彤',
+				'上海海事大学——柯春晓',
+				'上海工商外国语学院——梁若诗'
+			];
+
+			$.m = function(index){
+				return $.dialog({
+					extraClass: 'special_dialog',
+					text: '<p>' + dialogText[index] + '</p><p>Form:' + afterText[index] + '</p>',
+					close: '<img src="/static/img/userCenter/ambCenter/close_specialModal.png">'
+				})
+			}
+
+			$(".backTop").on("click", function(){
+				var top = $(".insertContent").scrollTop(),
+					scroll = 0;
+				var  interVal = setInterval(function(){
+					$(".insertContent").scrollTop(top - scroll)
+					if ($(".insertContent").scrollTop() == 0)
+						clearInterval(interVal);
+					scroll += 100;
+				}, 10)
+			})
+
+			$(".insertContent").on("scroll", function(){
+				if ($(this).scrollTop() >= $(window).width()/2)
+					$(".backTop").show();
+				else
+					$(".backTop").hide();
+			})
+		})
+
+	</script>
+<script type="text/javascript" charset="utf-8" src="http://127.0.0.1:8132/livereload.js"></script></body>
+</html>

@@ -1,0 +1,160 @@
+<!-- 订单支付 -->
+<heade head-title="'订单支付'" head-leftfn="headLeftFn"></heade>
+
+<!-- content -->
+<div class="content order_pay">
+    <div class="list-block">
+        <ul>
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">收货人：{{data.linkman}}</div>
+                    <div class="item-after">{{data.mobile}}</div>
+                </div>
+            </li>
+            <li class="item-content {{!data.remark&&'borderNone'}}">
+                <div class="item-inner">
+                    <div class="item-title address">
+                        <img src="/static/img/order/location_danger.png">
+                        {{data.address}}
+                    </div>
+                    <div class="item-after" ng-if="data.address">
+                        <span class="{{data.addressType ?'outSchool':'inSchool'}}">{{data.addressType?'快递配送':'大使专送'}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="item-content" ng-if="data.remark">
+                {{data.remark}}
+            </li>
+
+            <li class="goods_list">
+                <ul>
+                    <li class="clearfix" ng-repeat="good in data.OrderProducts track by $index">
+                        <a href="javascript: void(0);" ng-click="linkGoodsUri(good.productId, good.type)">
+                            <img class="pull-left" ng-src="{{good.image.indexOf('http://img.beautysite.cn')>-1?good.image:'http://img.beautysite.cn'+good.image+'!/fw/88'}}" alt="">
+                            <div>
+                                <p>
+                                    <span ng-if="good.type">
+                                        {{['', '兑换', '赠品'][good.type]}}
+                                    </span>
+                                    {{good.name}}
+                                </p>
+                                <p class="clearfix">{{good.type!=1?'¥':''}}{{good.price}}{{good.type==1?'颜值':''}}（规格：{{good.standardName}}）<span class="pull-right">x{{good.qty}}</span></p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="item-content priceTitle borderNone">
+                <div class="item-inner">
+                    <div class="item-title">费用详细</div>
+                </div>
+            </li>
+            <li class="item-content" ng-if="userInfo.seniorMember">
+                <div class="item-inner">
+                    <div class="item-title">大使折扣<span>（特卖商品不参与折扣）</span></div>
+                    <div class="item-after {{data.seniorDiscountPrice&&'active'}}">
+                        -￥{{data.seniorDiscountPrice| number: 2}}元
+                    </div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">商品金额</div>
+                    <div class="item-after">￥{{data.totalPrice| number: 2}}元</div>
+                </div>
+            </li>
+            <li class="item-content">
+                <div class="item-inner">
+                    <div class="item-title">使用红包</div>
+                    <div class="item-after">
+                        <span ng-if="data.discountPrice!=undefined&&!data.discountPrice&&coupons!=undefined&&!coupons.length">暂无可用红包</span>
+                        <a href="#/order/coupons/{{data.orderId}}" ng-if="from !='myOrder' && (data.discountPrice || orderCouponsSelect)">
+                        {{orderCouponsSelect.id=='none'?'有可用红包':'-'+data.discountPrice+'元'}}
+                            <i class="icon icon-right"></i>
+                        </a>
+                        <a href="javascript:void(0);" ng-if="from == 'myOrder' && (data.discountPrice!=undefined || orderCouponsSelect)">
+                        {{data.discountPrice+'元'}}
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="item-content borderNone">
+                <div class="item-inner">
+                    <div class="item-title">运费</div>
+                    <div class="item-after">￥{{data.postage| number: 2}}</div>
+                </div>
+            </li>
+            <li class="clearfix postage">
+                <span class="pull-right" ng-click="popup('open')">
+                    <img src="/static/img/order/mark_default.png" alt="">
+                    运费说明
+                </span>
+            </li>
+            <li class="item-content borderNone balance">
+                <div class="item-inner" ng-click="checkPayType(0)">
+                    <div class="item-title">
+                        余额：<span>{{balance}}元</span>
+                        <span ng-if="balancePayPrice&&payTypeObj[0].checked">（使用{{balancePayPrice| number: 2}}元）</span>
+                    </div>
+                </div>
+                <input ng-if="balance" type="checkbox" name="payType" ng-checked="payTypeObj[0].checked">
+            </li>
+            <li class="item-content selectPayTypeTitle">
+                选择支付方式
+            </li>
+            <li class="item-content payContent" ng-if="!isWeiXin">
+                <div class="item-inner" ng-click="checkPayType(2)">
+                    <div class="item-title">
+                        <img src="/static/img/order/alipay.png">支付宝支付
+                    </div>
+                </div>
+                <input type="checkbox" name="payType" value="4" ng-checked="payTypeObj[2].checked" readonly="true">
+            </li>
+            <li class="item-content payContent" ng-if="isWeiXin">
+                <div class="item-inner" ng-click="checkPayType(1)">
+                    <div class="item-title">
+                        <img src="/static/img/order/wechat.png">微信支付
+                    </div>
+                </div>
+                <input type="checkbox" name="payType" value="0" ng-checked="payTypeObj[1].checked">
+            </li>
+        </ul>
+    </div>
+
+    <!-- 免邮popup: start -->
+    <div class="modal_popup" ng-class="popupClass" id="postModal" ng-click="popup('close')">
+        <div class="popup-content">
+            <h1 class="popup-head">运费说明</h1>
+            <div class="popup-body">
+                <p>
+                    运费为全国范围除了新疆、内蒙、西藏、宁夏满<span class="c-f69">150</span>元免邮外，其余地区为满<span class="c-f69">50</span>元免邮。
+                </p>
+                <p>
+                    不足部分，运费的收费标准为：
+                </p>
+                <ul>
+                    <li>上海、浙江、江苏、安徽运费为6元；</li>
+                    <li>江西、河南、湖北、山东、福建、北京、天津、河北、湖南、山西、陕西为8元；</li>
+                    <li>甘肃、贵州、辽宁、四川、重庆、内蒙古、广西、广东、青海、云南、海南、黑龙江、吉林、宁夏为10元；</li>
+                    <li>新疆、西藏为20元。</li>
+                </ul>
+            </div>
+            <div class="popup-foot">
+                <button type="button" ng-click="popup('open')">关闭</button>
+            </div>
+        </div>
+    </div>
+    <!-- 免邮popup: end -->
+
+</div>
+
+<nav class="bar bar-tab order_confirm_footer">
+    <span class="tab-item external">
+        ￥{{needPayPrice| number: 2}}
+        <span ng-if="data.discountPrice">(已优惠￥{{data.discountPrice}})</span>
+    </span>
+    <span class="tab-item external">
+        <button class="{{payBtnClass}}" type="submit" ng-click="payOrder()">{{time}}</button>
+    </span>
+</nav>

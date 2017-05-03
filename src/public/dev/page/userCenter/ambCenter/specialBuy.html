@@ -1,0 +1,125 @@
+<!-- 购买校园大使套餐 -->
+<heade class="userCenter_ambCenter_specialBuy_header circle_left" head-title="'申请美妆合伙人'"></heade>
+<!-- 购买校园大使套餐主页 -->
+<div class="content userCenter_ambCenter_specialBuy">
+	<section class="code">
+		<div class="Price clearfix">
+			<img src="static/img/userCenter/ambCenter/mw_partner.png">
+			<div class="pull-right clearfix">
+				<p>原价：￥1000.00</p>
+				<p>￥<span>298</span>.00</p>
+			</div>
+		</div>
+		<img src="static/img/userCenter/ambCenter/line.png">
+		<div class="Invitation">
+			<p><img src="static/img/userCenter/ambCenter/plum_icon.png"><span>合伙人邀请码：</span><input type="text" ng-model="inviteCode"></p>
+			<p>
+			<img src="static/img/userCenter/ambCenter/icon.png">
+			合伙人采用邀请制，请从您的推荐人获取邀请码。如有疑问，请咨询客服。</p>
+		</div>
+	</section>
+
+	<section class="package">
+		<div class="header">
+			<p>
+				<a >赠品一</a>
+				2年校园大使福利（原价：￥<span>730</span>.00）
+			</p>
+			<p>
+				<a >赠品二</a>
+				合伙人见面礼（二选一）
+			</p>
+		</div>
+		<ul>
+			<li class="clearfix" >
+				<div class="box">
+					<img src="static/img/userCenter/ambCenter/goods.png">
+				</div>
+				<div class="Radio">
+					<input type="radio" value="0" name="gift" class="gift" ng-checked="!cashCoupon" ng-model="gift">
+					<label  for="gift" class="gift">
+						价值625元美妆礼盒
+					</label>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="box">
+					<img src="static/img/userCenter/ambCenter/cashCoupon.png">
+				</div>
+				<div class="Radio">
+					<input type="radio" value="1"  class="gift" name="gift" ng-checked="cashCoupon" ng-model="gift">
+					<label for="gift" class="gift">
+						350元现金抵用券
+					</label>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<!-- 收件信息 -->
+	<section class="userForm" ng-hide="gift==1">
+		<p>美妆礼盒需要邮寄，请留下您的详情地址</p>
+		<img src="static/img/userCenter/ambCenter/specialBuy_line.png">
+		<ul>
+			<li>
+				收货人：
+				<input type="text" ng-model="linkman">
+			</li>
+			<li>
+				联系电话:
+				<input type="tel" maxlength="11" ng-model="mobile">
+			</li>
+			<li>
+				省、市、区：<input class="inp" id="selectAddress" type="text">
+			</li>
+			<li>
+				详细地址：
+				<input type="text" ng-model="addressStr">
+			</li>
+		</ul>
+		<img src="static/img/userCenter/ambCenter/specialBuy_line.png">
+	</section>
+	<section class="pay">
+		<p>选择支付方式</p>
+		<ul>
+			<li ng-show="isWeiXin">
+				<div>
+					<img src="static/img/userCenter/ambCenter/WeChat.png" alt="">
+				</div>
+				<p>微信支付</p>
+				<input class="pull-right" type="radio" name="payType" value="0" ng-checked="isWeiXin" ng-model="payType">
+			</li>
+			<li ng-show="!isWeiXin">
+				<div>
+					<img src="static/img/userCenter/ambCenter/Alipay.png" alt="">
+				</div>
+				<p>支付宝</p>
+				<input class="pull-right" type="radio" name="payType" value="4" ng-checked="!isWeiXin" ng-model="payType">
+			</li>
+			<li>
+				<div>
+					<img src="static/img/userCenter/ambCenter/card.png" alt="">
+				</div>
+				<p>
+					秘钥支付<br>
+					<span>适用于线下已支付298元购买实体卡的同学</span>
+				</p>
+				<input class="pull-right" type="radio" name="payType" value="5" ng-model="payType">
+			</li>
+			<li class="cardInput" ng-show="payType==5">
+				<div></div>
+				<p>
+					<input type="text" name="cardPasswd" placeholder="请输入实体卡背面涂层的秘钥" ng-model="cardPasswd">
+				</p>
+			</li>
+		</ul>
+	</section>
+</div>
+<div class="btn">
+	<div ng-click="customerService()">
+		<img src="/static/img/goods/service.png" >
+		<p>客服</p>
+	</div>
+	<div ng-click="toPay()">
+		立即抢购
+	</div>
+</div>

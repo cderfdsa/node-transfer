@@ -1,0 +1,40 @@
+<heade class="circle_left" head-title="'评论'"></heade>
+
+<div class="content userCenter_comment">
+	<ul ng-if="data.count">
+		<li ng-repeat="list in data.rows" class="clearfix" ng-click="toCardDetail($index)">
+			<div class="pull-left leftBox">
+				<div class="userInfo clearfix">
+					<div class="headImg pull-left">
+						<a href="#/community/home/{{list.member.id}}">
+							<img class="lazy" src="static/img/userCenter/default_avatar.png" lazySrc="{{list.member.headImg ? list.member.headImg + (list.member.headImg.indexOf('http://img.beautysite.cn')>-1 ? '!/fw/100' : '') : 'static/img/userCenter/default_avatar.png'}}" alt="">
+						</a>
+					</div>
+					<div class="level" >
+	                    <div class="user">
+	                        <div >
+	                            <span >{{list.member.nickName}}</span>
+	                            <img ng-src="http://img.beautysite.cn/icon/L{{list.member.level}}.png" alt="">
+	                            <img ng-if="list.member.seniorMember" ng-src="http://img.beautysite.cn/icon/S{{list.member.seniorMember.level}}_mini.png" alt="">
+	                            <img ng-src="/static/img/community/icon_{{list.member.sex==1?'boy':'girl'}}.png">
+	                        </div>                 
+	                    </div>
+	                    <p class="school">
+	                    	<i class="icon"></i>{{list.member.schoolInfo.name || '火星大学'}}
+	                    </p>
+	                </div>
+				</div>
+				<p class="commentDetail">
+					<!-- {{list.sourceNickname:"回复"}} -->
+					<!-- <a href="#/community/home/{{list.sourceId}}" class="name" ng-if="{{list.sourceNickname}}">@{{list.sourceNickname}}</a> -->
+					<!-- {{list.sourceNickname:"："}} -->
+					{{list.remark}}
+				</p>
+				<p class="date">{{list.createdAt}}</p>
+			</div>
+			<img class="pull-right lazy" src="/static/img/loading-200.jpg" lazySrc="http://img.beautysite.cn{{list.img}}!/fw/150" alt="">
+		</li>
+	</ul>
+
+	<img class="none" src="/static/img/userCenter/none.png" ng-if="data.count!=undefined&&!data.count" alt="">
+</div>

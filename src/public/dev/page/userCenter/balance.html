@@ -1,0 +1,57 @@
+<!-- 余额明细 -->
+<heade class="circle_left" head-title="'余额明细'"></heade>
+
+<div class="content userCenter_balance">
+    <div class="withdraw">
+        <p>账户余额（元）</p>
+        <p class="clearfix">
+            <span>{{balanceAmount.balance| number: 2}}</span>
+            <button class="pull-right" type="button" ng-click="applyWithdraw()" ng-if="userInfo.seniorMember">申请提现</button>
+        </p>
+        <p>冻结余额（元）：{{balanceAmount.frozen| number: 2}}</p>
+    </div>
+
+    <!-- tab -->
+    <tab
+        tab-texts="['全部明细', '收入明细', '支出明细']"
+        tab-active="type"
+        tab-callback="changeTab">
+    </tab>
+
+    <!-- list -->
+    <div class="list-block" ng-if="data.count">
+        <ul>
+            <li class="item-content" ng-repeat="list in data.rows">
+                <div class="item-inner">
+                    <div class="item-title">
+                        <span>
+                            {{[
+                                '本人收益',
+                                '高级任务返利',
+                                '代言费',
+                                '系统奖励',
+                                '提现',
+                                '消费',
+                                '其他',
+                                '关联收益',
+                                '邀请新用户',
+                                '邀请大使'
+                            ][list.type]}}
+                        </span>
+                        <span>{{list.updatedAt| date:"yyyy-MM-dd HH:mm:ss"}}</span>
+                    </div>
+                    <div class="item-after {{list.income?'plus':'minus'}}">
+                        {{list.value| number: 2}}
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- list none -->
+    <img
+        class="none"
+        src="/static/img/userCenter/ambCenter/null.png"
+        ng-if="data.count!=undefined&&!data.count"
+    >
+</div>

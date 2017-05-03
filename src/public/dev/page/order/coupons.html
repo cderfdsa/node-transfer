@@ -1,0 +1,41 @@
+<!-- 使用红包 -->
+<heade head-title="'使用红包'">
+</heade>
+
+<div class="content order_coupons">
+    <div class="onUse" ng-click="checkCoupons('none')">
+        不使用红包
+        <input class="pull-right" type="radio" name="bonus" ng-checked="noneChecked">
+    </div>
+
+    <ul>
+		<li class="clearfix" ng-repeat="list in data" ng-click="checkCoupons($index)">
+			<div class="pull-left no">
+				<p>{{list.name}}</p>
+				<p ng-if="list.value">
+					<span>{{(list.value|number: 2).split('.')[0]}}</span>
+					<span>.{{(list.value|number: 2).split('.')[1]}}</span>元
+				</p>
+			</div>
+			<div class="box">
+				<h3>{{list.remark}}</h3>
+				<div class="clearfix">
+					<div class="pull-left">
+						<p>满{{list.minValue}}元使用</p>
+						<p>
+							{{list.updatedAt| date : 'yyyy-MM-dd'}}至
+							{{list.endDate| date : 'yyyy-MM-dd'}}
+						</p>
+					</div>
+                </div>
+				<input type="radio" name="bonus"  ng-checked="list.checked">
+			</div>
+		</li>
+	</ul>
+</div>
+
+<nav class="bar bar-tab order_coupons_footer">
+    <span class="tab-item external">
+        <button type="submit" ng-click="submitCoupons()">确认</button>
+    </span>
+</nav>

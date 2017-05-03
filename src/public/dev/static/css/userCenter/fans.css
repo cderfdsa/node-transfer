@@ -1,0 +1,148 @@
+/* Variables */
+.userCenter_fans {
+  background: #f2f2f2;
+}
+.userCenter_fans ul {
+  background: #fff;
+}
+.userCenter_fans ul li {
+  position: relative;
+  overflow: hidden;
+  margin-left: .5rem;
+  font-size: .65rem;
+  color: #333;
+  padding: .4rem 0;
+}
+.userCenter_fans ul li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  background-color: #e6e6e6;
+  display: block;
+  z-index: 15;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+.userCenter_fans ul li button.pull-right {
+  width: 4rem;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  text-align: center;
+  border-radius: .6rem;
+  -webkit-border-radius: .6rem;
+  margin-right: .5rem;
+  border: 1px solid #ff577f;
+  color: #ff577f;
+  font-size: 0.6rem;
+  background: #fff;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+.userCenter_fans ul li button.pull-right.faned {
+  background: #f6f6f6;
+  color: #ccc;
+  border-color: #e6e6e6;
+}
+.userCenter_fans ul li .leftBox {
+  max-width: 70%;
+}
+.userCenter_fans ul p {
+  margin: 0;
+  margin-left: 2.7rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.userCenter_fans ul p.name {
+  font-size: 0.6rem;
+  color: #555;
+  margin-top: .35rem;
+}
+.userCenter_fans ul p.school,
+.userCenter_fans ul p.date {
+  font-size: .5rem;
+  color: #999;
+}
+.userCenter_fans ul p .icon {
+  width: .5rem;
+  height: .6rem;
+  background: url(/static/img/userCenter/icon_location.png) no-repeat center center;
+  background-size: contain;
+  margin-right: .15rem;
+  vertical-align: top;
+}
+.userCenter_fans ul .userInfo .headImg {
+  position: relative;
+}
+.userCenter_fans ul .userInfo .headImg img:nth-of-type(1) {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+.userCenter_fans ul .userInfo .level .user {
+  margin-left: 2.7rem;
+  margin-right: 3.5rem;
+  padding-top: .2rem;
+  color: #333;
+}
+.userCenter_fans ul .userInfo .level .user div {
+  display: inline-block;
+  max-width: 100%;
+  position: relative;
+}
+.userCenter_fans ul .userInfo .level .user div span {
+  font-size: 0.7rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 100%;
+}
+.userCenter_fans ul .userInfo .level .user div img {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+}
+.userCenter_fans ul .userInfo .level .user div img:first-of-type {
+  right: -1.2rem;
+  top: 0;
+}
+.userCenter_fans ul .userInfo .level .user div img:nth-of-type(2) {
+  right: -2.3rem !important;
+  top: 0;
+}
+.userCenter_fans ul .userInfo .level .user div img:last-of-type {
+  width: .8rem;
+  height: .8rem;
+  margin-left: .2rem;
+  right: -3.2rem;
+  top: 0.1rem;
+}
+.userCenter_fans ul .userInfo .level p {
+  color: #999;
+  font-size: .5rem;
+}
+.userCenter_fans ul .userInfo .level p img {
+  width: .5rem;
+  margin-right: .2rem;
+  margin-bottom: -0.1rem;
+}
+.userCenter_fans .none {
+  width: 45%;
+  position: absolute;
+  top: 16.7%;
+  left: 27.5%;
+}
+.userCenter_fans .loadAll,
+.userCenter_fans .swipLoad {
+  background-color: #f2f2f2;
+}

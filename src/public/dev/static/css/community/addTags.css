@@ -1,0 +1,65 @@
+/* Variables */
+.community_addTags_header .pull-left {
+  height: 1rem;
+  width: 1rem;
+  margin-top: .55rem;
+  background: url(/static/img/goods/icon_1.png) no-repeat center bottom;
+  background-size: cover;
+}
+.community_addTags_header .pull-left:before {
+  content: '';
+}
+.community_addTags {
+  background: #f2f2f2;
+  font-size: 0.7rem;
+}
+.community_addTags h3 {
+  color: #666;
+  margin-bottom: .4rem;
+}
+.community_addTags li {
+  font-size: 0.6rem;
+  color: #c24c69;
+  border: 1px solid #e7bec8;
+  border-radius: .1rem;
+  line-height: 1rem;
+  padding: 0 .7rem;
+  margin: 0 .5rem .7rem 0;
+  background: #fff;
+}
+.community_addTags li:last-of-type {
+  margin-right: 0;
+}
+.community_addTags .addTags {
+  background: #fff;
+  padding: .6rem .5rem;
+}
+.community_addTags .addTags .add {
+  margin-bottom: .4rem;
+}
+.community_addTags .addTags input {
+  border: 1px solid #ffb3c5;
+  width: 78%;
+}
+.community_addTags .addTags input,
+.community_addTags .addTags button {
+  padding: .3rem .6rem;
+  border-radius: .8rem;
+  -webkit-border-radius: .8rem;
+}
+.community_addTags .addTags button {
+  background: #ccc;
+  color: #fff;
+  border: none;
+  width: 20%;
+  padding-bottom: .2rem;
+}
+.community_addTags .addTags button.active {
+  background: #ff577f;
+}
+.community_addTags .addTags .added {
+  margin-top: .8rem;
+}
+.community_addTags .hotTags {
+  padding: .5rem;
+}

@@ -1,0 +1,71 @@
+<!-- 编辑收货地址 -->
+<heade
+    head-title="'收货地址'"
+     head-leftfn="back"
+    head-righttext="'保存'"
+    head-rightfn="submit"
+></heade>
+
+<div class="content userCenter_addressEdit">
+    <div class="list-block">
+        <ul>
+            <li>
+                <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title label">收货人</div>
+                        <div class="item-input">
+                            <input type="text" ng-model="linkman" placeholder="请输入收货人姓名">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="item-content">
+                <div class="item-inner">
+                    <div class="item-title label">联系电话</div>
+                        <div class="item-input">
+                            <input type="text" ng-model="mobile" placeholder="请输入联系电话" maxlength="11">
+                        </div>
+                    </div>
+                </div>
+            </li>
+          </ul>
+    </div>
+
+    <!-- tab -->
+    <tab
+        tab-texts="['快递配送']"
+        tab-active="type"
+        tab-callback="tabFn"
+    ></tab>
+
+    <!-- 快递配送 -->
+    <div class="amb">
+        <div class="addressSelect">
+            <input type="text" placeholder="请选择地址" readonly id="selectAddress" value="">
+            <span class="icon icon-down"></span>
+        </div>
+        <div>
+            <input type="text" ng-model="address" name="{{['bedroom','detailAddress'][type]}}" placeholder="{{['所在寝室','详细地址'][type]}}">
+        </div>
+    </div>
+
+    <!-- 设置默认地址 -->
+    <div  class="list-block defaultAddress">
+        <div class="item-content">
+          <div class="item-input clearfix">
+              <span>设置为默认地址</span>
+              <label class="label-switch pull-right">
+                  <input type="checkbox" id="isDefault">
+                  <div class="checkbox"></div>
+              </label>
+          </div>
+        </div>
+    </div>
+
+    <!-- explain -->
+    <!-- <div class="explain">
+        <p>大使专送：是由学校内的美妆校园大使负责提供的送货服务。</p>
+        <p>快递配送：是由外部物流公司负责送货的服务。</p>
+    </div>
+ --></div>

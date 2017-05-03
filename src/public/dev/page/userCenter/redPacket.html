@@ -1,0 +1,42 @@
+<!-- 我的红包 -->
+<!-- header: start -->
+<heade class="userCente_redPacket_header" head-title="'红包'" head-righttext="'兑换'" head-rightfn="headRightFn">
+</heade>
+<!-- header: end -->
+
+<!-- 我的红包主页 -->
+<div class="content userCente_redPacket">
+	<!-- tab -->
+    <tab tab-texts="['可使用', '已使用', '已过期']" tab-active="tabActive" tab-callback="tabMenuFn"></tab>
+
+	<section ng-if="data.count">
+		<p class="explain"><a href="#/userCenter/redPacketExplain"><i></i>红包说明</a></p>
+		<ul>
+			<li class="clearfix {{tabActive==2&&'overdue'}}" ng-repeat="list in data.rows">
+				<div class="pull-left no">
+					<p>{{list.name}}</p>
+					<p ng-if="list.value">
+						<span>{{(list.value|number: 2).split('.')[0]}}</span>
+						<span>.{{(list.value|number: 2).split('.')[1]}}</span>元
+					</p>
+				</div>
+				<div class="box">
+					<h3>{{list.remark}}</h3>
+					<div class="clearfix">
+						<div class="pull-left">
+							<p>满{{list.minValue}}元使用</p>
+							<p>
+								{{list.startDate| date : 'yyyy-MM-dd'}}至
+								{{list.endDate| date : 'yyyy-MM-dd'}}
+							</p>
+						</div>
+						<img class="pull-right" ng-src="/static/img/userCenter/{{tabActive < 2 ? 'use' : 'expired'}}.png" ng-if="tabActive != 0">
+					</div>
+				</div>
+			</li>
+		</ul>
+	</section>
+
+	<img class="none" src="/static/img/userCenter/redPacket_none.png" ng-if="data!=undefined&&!data.count">
+</div>
+

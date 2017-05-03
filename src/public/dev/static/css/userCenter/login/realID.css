@@ -1,0 +1,117 @@
+/* Variables */
+.userCenter_login_realID {
+  background: #f2f2f2;
+  padding-top: .5rem;
+  /* success */
+  /* error */
+  /* form */
+}
+.userCenter_login_realID .success {
+  position: absolute;
+  z-index: 1;
+  top: 1.1rem;
+  right: .55rem;
+  width: 4.5rem;
+  z-index: 16;
+}
+.userCenter_login_realID .error,
+.userCenter_login_realID .verify {
+  padding: .5rem;
+  color: #ff3e38;
+  font-size: .6rem;
+  background: #fffce2;
+  border-top: 1px solid #edde99;
+  border-bottom: 1px solid #edde99;
+  position: relative;
+}
+.userCenter_login_realID .error span,
+.userCenter_login_realID .verify span {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 2.2rem;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  margin-right: .5rem;
+}
+.userCenter_login_realID .error img,
+.userCenter_login_realID .verify img {
+  width: 1.5rem;
+  margin-right: .3rem;
+  margin-top: .12rem;
+}
+.userCenter_login_realID .list-block {
+  margin: 0 0 .5rem;
+  font-size: .65rem;
+  color: #555;
+}
+.userCenter_login_realID .list-block.formSuccess .item-inner:after {
+  background: #fff;
+}
+.userCenter_login_realID .list-block input {
+  font-size: .6rem;
+  border: none;
+  padding: 0 0 0 .25rem;
+  margin: 0;
+  width: 100%;
+  height: 2.15rem;
+}
+.userCenter_login_realID .list-block:last-child .item-title.label {
+  padding-left: .5rem;
+}
+.userCenter_login_realID .list-block .uploadImg {
+  color: #999;
+  padding-left: .75rem;
+  margin-top: .75rem;
+  overflow: hidden;
+}
+.userCenter_login_realID .list-block .uploadImg .pull-left {
+  width: 24%;
+  color: #555;
+}
+.userCenter_login_realID .list-block .uploadImg .pull-left span {
+  color: #ff577f;
+}
+.userCenter_login_realID .list-block .uploadImg .right {
+  margin-left: 24%;
+  margin-right: .9rem;
+}
+.userCenter_login_realID .list-block .uploadImg .right .clearfix {
+  min-height: 4.5rem;
+  position: relative;
+}
+.userCenter_login_realID .list-block .uploadImg .right .uploadFile {
+  width: 30%;
+  margin: .6rem 0;
+  padding-bottom: 30%;
+}
+.userCenter_login_realID .list-block .uploadImg .right .uploadFile img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: #fff;
+  margin: 0;
+}
+.userCenter_login_realID .item-title.label {
+  width: 24%;
+}
+.userCenter_login_realID .item-title span {
+  color: #ff577f;
+  display: inline-block;
+  width: .5rem;
+}
+.userCenter_login_realID .disableModal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+.toast-login-realID {
+  border-radius: .2rem;
+  -webkit-border-radius: .2rem;
+  min-width: 10rem;
+  height: 3rem;
+  line-height: 3rem;
+}

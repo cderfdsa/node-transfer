@@ -1,0 +1,77 @@
+.page {
+  background: #faf7f0;
+}
+.orderDetail {
+  font-size: .5rem;
+  padding-top: .5rem;
+  color: #6c6c6c;
+}
+.orderDetail h2 {
+  font-size: .7rem;
+  font-weight: normal;
+  margin: 0;
+}
+.orderDetail p {
+  margin: 0;
+}
+.orderDetail .tip {
+  border-top: 1px solid #edde99;
+  border-bottom: 1px solid #edde99;
+  color: #f90;
+  background: #fffce2;
+  font-size: .7rem;
+  padding: .2rem .4rem;
+  font-weight: bold;
+}
+.orderDetail .goods {
+  background: #fff;
+  margin: .3rem;
+}
+.orderDetail .goods .bottom {
+  margin: 0 .75rem;
+  line-height: 2rem;
+  font-size: .7rem;
+}
+.orderDetail .goods .bottom:last-of-type {
+  border-top: 1px solid #cfcfcf;
+}
+.orderDetail .goods .bottom .num {
+  color: #f69;
+}
+.orderDetail .goods ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.orderDetail .goods li {
+  padding: 1rem 0;
+}
+.orderDetail .goods li img {
+  width: 4rem;
+  margin: 0 .5rem;
+}
+.orderDetail .goods li div {
+  margin-left: 5rem;
+}
+.orderDetail .goods li h2 {
+  padding: .2rem .4rem .2rem 0;
+}
+.orderDetail .goods li p {
+  color: #bbb;
+}
+.orderDetail .goods li p span {
+  display: inline-block;
+  width: 5rem;
+}
+.orderDetail .info {
+  background: #fff;
+  margin: .3rem;
+  padding: 0 .75rem .4rem;
+  line-height: 2;
+}
+.orderDetail .info h2 {
+  padding-top: .4rem;
+}
+.orderDetail .info p {
+  color: #bbb;
+}

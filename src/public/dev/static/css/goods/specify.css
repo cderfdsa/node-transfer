@@ -1,0 +1,135 @@
+.goods_specify {
+  /* header */
+  /* content */
+  /* 空态页 */
+}
+.goods_specify.bar {
+  background: url(/common/directive/header/bg.png) repeat-x left top;
+  background-size: .6rem 100%;
+}
+.goods_specify.bar .title {
+  color: #fff;
+  font-size: .9rem;
+}
+.goods_specify.bar .pull-left {
+  color: #fff;
+}
+.goods_specify.bar .pull-left.icon {
+  font-size: .9rem;
+}
+.goods_specify.bar.bar:after {
+  height: 0;
+}
+.goods_specify.content {
+  margin-bottom: 3.2rem;
+}
+.goods_specify .specify_content {
+  margin-bottom: 1.5rem;
+}
+.goods_specify .specify_content .tip {
+  margin: .7rem 0 .5rem;
+  padding: 0 .4rem;
+  line-height: 1.5rem;
+  background: #fffce2;
+  border-top: 1px solid #edde99;
+  border-bottom: 1px solid #edde99;
+  color: #f90;
+  font-size: .6rem;
+}
+.goods_specify .specify_content .tip img {
+  width: .6rem;
+  height: .6rem;
+  vertical-align: middle;
+  margin-right: .2rem;
+}
+.goods_specify .specify_content ul.goodsList {
+  padding-left: .4rem;
+}
+.goods_specify .specify_content li {
+  width: 50%;
+}
+.goods_specify .specify_content .goodsBox {
+  margin-right: .4rem;
+  margin-bottom: .4rem;
+}
+.goods_specify .specify_content .goodsBox .imgBox {
+  background: #fff;
+  position: relative;
+  height: 0;
+  padding-top: 100%;
+}
+.goods_specify .specify_content .goodsBox .imgBox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.goods_specify .specify_content .goodsBox .imgBox .noGood {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(/static/img/goods/nogood.png) no-repeat center;
+  background-size: cover;
+}
+.goods_specify .specify_content .goodsBox h2 {
+  font-weight: normal;
+  margin: .25rem;
+  color: #888;
+  font-size: .7rem;
+  height: 2.1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.goods_specify .specify_content .goodsBox p {
+  margin: 0;
+  color: #f69;
+  font-size: .65rem;
+}
+.goods_specify .specify_content .goodsBox input[type="radio"] {
+  width: 1rem;
+  height: 1rem;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  background: url(/static/img/activity/checkbox.png) no-repeat center bottom;
+  background-size: cover;
+  border: none;
+}
+.goods_specify .specify_content .goodsBox input[type="radio"]:checked {
+  background-position: center top;
+}
+.goods_specify .specify_empty {
+  width: 65.2%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+}
+.goods_specify.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: .5rem 1.3rem;
+  border-top: 1px solid #dbdbdb;
+  text-align: center;
+}
+.goods_specify.footer a {
+  width: 100%;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  font-size: .9rem;
+  font-weight: bold;
+  color: #fff;
+  background: #ff577f;
+  border-radius: 1.1rem;
+  -webkit-border-radius: 1.1rem;
+}
