@@ -57,41 +57,5 @@ router.get "/page/seniorDesc",(req,res) ->
     res.redirect "/?from=app#/userCenter/ambCenter/explain"
   else
     res.redirect "/#/userCenter/ambCenter/explain"
-  # res.redirect "/page/activity/include/represent.html"
-
-  # if reg.test(agent)
-  #   if agent.match(/Android/)
-  #     res.locals.origin = 2
-  #   else
-  #     res.locals.origin = 1
-  #   res.locals.isMobile = true
-  # else
-  #   res.locals.origin = 0
-  #   res.locals.isMobile = false
-
-# router.all "*",(req,res) ->
-#   proxy = new Proxy()
-#   config = new Config()
-#   config.get "api",(err,api) ->
-#     if err?
-#       res.json err:1,errMsg:err.message
-#     else
-#       url = proxy.getProxyUrl req.path
-#       if url?
-#         agent = req.get "User-Agent"
-#         opts =
-#           url:"http://#{api.host}:#{api.port}#{url}"
-#           method:req.method
-#           qs:req.query
-#           headers:
-#             "User-Agent":agent
-#         if req.is "json"
-#           opts.json = true
-#           opts.body = req.body
-#         else if req.is "urlencoded"
-#           opts.form = req.body
-#         request(opts).pipe(res)
-#       else
-#         res.json err:1,errMsg:"无访问权限"
 
 module.exports = router
