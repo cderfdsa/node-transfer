@@ -69,11 +69,11 @@ switch app.get "env"
 		redisconfig = require('./config/redis.json')
 	when "dev"
 		app.set "domain",".meiwan.me"
-		redisconfig = require('./config/test/redis.json')
+		redisconfig = require('./config/redis.json').test
 		app.use express.static(path.join(__dirname, '../src/public'))
 	else
 		app.set "domain",".meiwan.me"
-		redisconfig = require('./config/test/redis.json')
+		redisconfig = require('./config/redis.json').test
 		app.use express.static(path.join(__dirname, 'public'))
 
 app.use session(

@@ -3,7 +3,6 @@
 express = require "express"
 router = express.Router()
 Proxy = require "./../proxy/index"
-Config = require "./../commons/config"
 Member = require "./../model/member"
 
 request = require "request"
