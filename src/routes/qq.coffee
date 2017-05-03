@@ -1,18 +1,19 @@
 # passport 实现 QQ 登录
-express = require "express"
+
+express = require 'express'
 router = express.Router()
-passport = require "passport"
-QQStrategy = require("passport-qq").Strategy
-AuthCtrl = require "./../ctrl/authCtrl"
+passport = require 'passport'
+QQStrategy = require('passport-qq').Strategy
+AuthCtrl = require './../ctrl/authCtrl'
 opt = null
 wilddogConfig.get "web"
 .then (web) ->
   opt =
-    callbackURL:web.backUrl.qq
-  wilddogConfig.get "auth"
+    callbackURL: web.backUrl.qq
+  wilddogConfig.get 'auth'
 .then (auth)->
-  opt.clientID=auth.qq.id
-  opt.clientSecret=auth.qq.key
+  opt.clientID = auth.qq.id
+  opt.clientSecret = auth.qq.key
   qqStrategy = new QQStrategy opt,(accessToken, refreshToken, profile, done) ->
     user =
       source:2
@@ -21,7 +22,6 @@ wilddogConfig.get "web"
       headImg:profile._json.figureurl_qq_2
       sex:if profile._json.gender is "男" then 1 else 2
     done null,user
-
 
   passport.use qqStrategy
   router.get "/",passport.authenticate("qq"),(req,res) ->

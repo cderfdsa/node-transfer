@@ -32,7 +32,7 @@ pm2 start node-transfer/dist/bin/www[ --name node-transfer]
 |    |    |
 |    |    |─── ctrl	# 控制器
 |    |    |
-|    |    |─── modal	# modal
+|    |    |─── model	# modal
 |    |    |
 |    |    |─── db	# 数据库服务
 |    |    |    |
