@@ -1,15 +1,16 @@
-express = require('express')
-subdomain = require "express-subdomain"
-path = require('path')
-favicon = require('serve-favicon')
-log4js = require('log4js')
-session = require "express-session"
-cookieParser = require('cookie-parser')
-bodyParser = require('body-parser')
-RedisStore = require("connect-redis")(session)
+express = require 'express'
+subdomain = require 'express-subdomain'
+path = require 'path'
+favicon = require 'serve-favicon'
+log4js = require 'log4js'
+session = require 'express-session'
+cookieParser = require 'cookie-parser'
+bodyParser = require 'body-parser'
+RedisStore = require('connect-redis')(session)
+WilddogConfig = require './model/config'
 
-global.Redis = require('./db/redis')
-WilddogConfig = require('./model/config')
+# global
+global.Redis = require './db/redis'
 global.wilddogConfig = new WilddogConfig
 global.wilddogConfig.auth (err) ->
   if err
