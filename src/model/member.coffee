@@ -1,9 +1,10 @@
-# create by zl at 2016-07-28 11:35
-Promise = require "bluebird"
-request = require "request"
+# create by zl at 2017-05-03
+
+Promise = require 'bluebird'
+request = require 'request'
 module.exports =
 class Member
-  @detail:(token) ->
+  @detail: (token) ->
     new Promise (resolve,reject) ->
       wilddogConfig.get "api"
       .then (data) ->
@@ -16,7 +17,6 @@ class Member
           resolve body
       .catch (err)->
         reject err
-
 
   @flushToken:(token) ->
     new Promise (resolve,reject) ->
